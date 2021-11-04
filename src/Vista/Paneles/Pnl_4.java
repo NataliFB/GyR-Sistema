@@ -2,11 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
-package Paneles;
+package Vista.Paneles;
 
 import static java.awt.Frame.MAXIMIZED_BOTH;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
-import login1.Login1;
 
 /**
  *
