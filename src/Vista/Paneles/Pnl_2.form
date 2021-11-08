@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
-  <SyntheticProperties>
-    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-  </SyntheticProperties>
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -28,10 +25,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="tbpContenedor" min="-2" pref="603" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="162" max="32767" attributes="0"/>
-          </Group>
+          <Component id="tbpContenedor" min="-2" pref="603" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -124,7 +118,7 @@
                                       <Component id="btnLimpiar" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="btnBorrar" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="418" max="32767" attributes="0"/>
+                                      <EmptySpace pref="236" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -198,7 +192,7 @@
                           <Component id="btnBorrar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="291" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="283" max="32767" attributes="0"/>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -401,7 +395,7 @@
                                       <Component id="btnEli" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="215" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="50" max="32767" attributes="0"/>
                           </Group>
                           <Component id="jScrollPane2" alignment="1" max="32767" attributes="0"/>
                       </Group>
@@ -634,7 +628,7 @@
                                       <Component id="btnElim" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="285" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="126" max="32767" attributes="0"/>
                           </Group>
                           <Component id="jScrollPane3" alignment="1" max="32767" attributes="0"/>
                       </Group>
@@ -877,7 +871,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="195" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>

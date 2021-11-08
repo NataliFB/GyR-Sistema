@@ -4,11 +4,7 @@
  */
 package Vista.Frames;
 
-import Vista.Paneles.Pnl_1;
-import Vista.Paneles.Pnl_2;
-import Vista.Paneles.Pnl_3;
-import Vista.Paneles.Pnl_4;
-import Vista.Paneles.Pnl_5;
+import Vista.Paneles.*;
 
 /**
  *
@@ -196,30 +192,40 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void btn_timbreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_timbreActionPerformed
         Pnl_1 timbre=new Pnl_1();
         pnl_prin.removeAll();
+        pnl_prin.repaint();
+        timbre.setSize(928, 603);
         pnl_prin.add(timbre).setVisible(true);
     }//GEN-LAST:event_btn_timbreActionPerformed
 
     private void btn_adjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_adjActionPerformed
         Pnl_2 adj=new Pnl_2();
         pnl_prin.removeAll();
+        pnl_prin.repaint();
+        adj.setSize(928, 603);
         pnl_prin.add(adj).setVisible(true); 
     }//GEN-LAST:event_btn_adjActionPerformed
 
     private void btn_comActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_comActionPerformed
         Pnl_3 com=new Pnl_3();
         pnl_prin.removeAll();
+        pnl_prin.repaint();
+        com.setSize(928, 603);
         pnl_prin.add(com).setVisible(true); 
     }//GEN-LAST:event_btn_comActionPerformed
 
     private void btn_facActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_facActionPerformed
         Pnl_4 fac=new Pnl_4();
         pnl_prin.removeAll();
+        pnl_prin.repaint();
+        fac.setSize(928, 603);
         pnl_prin.add(fac).setVisible(true); 
     }//GEN-LAST:event_btn_facActionPerformed
 
     private void btn_renActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_renActionPerformed
         Pnl_5 ren=new Pnl_5();
         pnl_prin.removeAll();
+        pnl_prin.repaint();
+        ren.setSize(928, 603);
         pnl_prin.add(ren).setVisible(true); 
     }//GEN-LAST:event_btn_renActionPerformed
 

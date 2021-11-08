@@ -1,25 +1,20 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package Vista.Paneles;
 
-import javax.swing.plaf.basic.BasicInternalFrameUI;
-
 /**
  *
- * @author natal
+ * @author Aaron
  */
-public class Pnl_2 extends javax.swing.JInternalFrame {
+public class Pnl_2 extends javax.swing.JPanel {
 
     /**
-     * Creates new form Pnl_1
+     * Creates new form Pnl_Adj
      */
     public Pnl_2() {
         initComponents();
-        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
-        BasicInternalFrameUI ui=(BasicInternalFrameUI)this.getUI();
-        ui.setNorthPane(null);
     }
 
     /**
@@ -230,7 +225,7 @@ public class Pnl_2 extends javax.swing.JInternalFrame {
                                 .addComponent(btnLimpiar)
                                 .addGap(35, 35, 35)
                                 .addComponent(btnBorrar)
-                                .addContainerGap(418, Short.MAX_VALUE))))))
+                                .addContainerGap(236, Short.MAX_VALUE))))))
             .addComponent(jScrollPane1)
         );
         pnlAdjudicadaLayout.setVerticalGroup(
@@ -283,7 +278,7 @@ public class Pnl_2 extends javax.swing.JInternalFrame {
                     .addComponent(btnLimpiar)
                     .addComponent(btnBorrar))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -374,7 +369,7 @@ public class Pnl_2 extends javax.swing.JInternalFrame {
                                 .addComponent(btnLim)
                                 .addGap(37, 37, 37)
                                 .addComponent(btnEli)))
-                        .addGap(0, 215, Short.MAX_VALUE))
+                        .addGap(0, 50, Short.MAX_VALUE))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
@@ -502,7 +497,7 @@ public class Pnl_2 extends javax.swing.JInternalFrame {
                                 .addComponent(btnLimp)
                                 .addGap(37, 37, 37)
                                 .addComponent(btnElim)))
-                        .addGap(0, 285, Short.MAX_VALUE))
+                        .addGap(0, 126, Short.MAX_VALUE))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
@@ -640,7 +635,7 @@ public class Pnl_2 extends javax.swing.JInternalFrame {
                         .addGroup(pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cmbOrd, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(195, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pnlEntregadaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane4)
@@ -691,8 +686,8 @@ public class Pnl_2 extends javax.swing.JInternalFrame {
 
         tbpContenedor.addTab("Entregada", pnlEntregada);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -702,12 +697,8 @@ public class Pnl_2 extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(tbpContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 603, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 162, Short.MAX_VALUE))
+            .addComponent(tbpContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 603, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
 
