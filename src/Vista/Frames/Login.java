@@ -132,7 +132,7 @@ public class Login extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
+                        .addGap(86, 86, 86)
                         .addComponent(jLabel1)))
                 .addContainerGap(19, Short.MAX_VALUE))
         );

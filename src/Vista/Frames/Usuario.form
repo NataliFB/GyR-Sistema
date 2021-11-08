@@ -117,9 +117,6 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/img1/icons8_user_30px_4.png"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Perfil"/>
       </Properties>
     </Component>
@@ -155,9 +152,6 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/img1/icons8_contract_30px_1.png"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Contrataciones"/>
       </Properties>
     </Component>

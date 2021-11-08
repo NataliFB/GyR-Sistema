@@ -53,7 +53,6 @@ public class Usuario extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img1/icons8_user_30px_4.png"))); // NOI18N
         jLabel1.setText("Perfil");
 
         jLabel2.setText("Usuario:");
@@ -64,7 +63,6 @@ public class Usuario extends javax.swing.JFrame {
 
         jLabel5.setText("Nivel administrativo:");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img1/icons8_contract_30px_1.png"))); // NOI18N
         jLabel6.setText("Contrataciones");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
