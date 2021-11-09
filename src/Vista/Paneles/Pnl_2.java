@@ -118,6 +118,8 @@ public class Pnl_2 extends javax.swing.JPanel {
         jLabel29 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable4 = new javax.swing.JTable();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jDateChooser2 = new com.toedter.calendar.JDateChooser();
 
         pnlAdjudicada.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -139,14 +141,19 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         jLabel10.setText("Ordenar por");
 
+        btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnAgregar.setText("Agregar");
 
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
         btnModificar.setText("Modificar");
 
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
         btnBuscar.setText("Buscar");
 
+        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiar.setText("Limpiar");
 
+        btnBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
         btnBorrar.setText("Borrar");
 
         rbtFirme.setText("En firme");
@@ -225,7 +232,7 @@ public class Pnl_2 extends javax.swing.JPanel {
                                 .addComponent(btnLimpiar)
                                 .addGap(35, 35, 35)
                                 .addComponent(btnBorrar)
-                                .addContainerGap(236, Short.MAX_VALUE))))))
+                                .addContainerGap(248, Short.MAX_VALUE))))))
             .addComponent(jScrollPane1)
         );
         pnlAdjudicadaLayout.setVerticalGroup(
@@ -278,7 +285,7 @@ public class Pnl_2 extends javax.swing.JPanel {
                     .addComponent(btnLimpiar)
                     .addComponent(btnBorrar))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -298,16 +305,21 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         jLabel12.setText("Entregado");
 
+        btnInsertar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnInsertar.setText("Agregar");
 
         cmbOrden.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
 
+        btnModifi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
         btnModifi.setText("Modificar");
 
+        btnBus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
         btnBus.setText("Buscar");
 
+        btnLim.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLim.setText("Limpiar");
 
+        btnEli.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
         btnEli.setText("Eliminar");
 
         jLabel17.setText("Ordenar por:");
@@ -430,14 +442,19 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         jLabel21.setText("Ordenar por:");
 
+        btnAgreg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnAgreg.setText("Agregar");
 
+        btnMod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
         btnMod.setText("Modificar");
 
+        btnBusc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
         btnBusc.setText("Buscar");
 
+        btnLimp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimp.setText("Limpiar");
 
+        btnElim.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
         btnElim.setText("Eliminar");
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
@@ -563,14 +580,19 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         jLabel28.setText("Empresa");
 
+        btnAg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnAg.setText("Agregar");
 
+        btnMo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
         btnMo.setText("Modificar");
 
+        btnBu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
         btnBu.setText("Buscar");
 
+        btnLi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLi.setText("Limpiar");
 
+        btnBo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
         btnBo.setText("Borrar");
 
         cmbOrd.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Empresa", "Descripción", "Días de entrega", "Último día para entrega", "Lugar de entrega", "Fecha de entrega" }));
@@ -632,10 +654,12 @@ public class Pnl_2 extends javax.swing.JPanel {
                                         .addGap(18, 18, 18)
                                         .addComponent(btnBo)))))
                         .addGap(18, 18, 18)
-                        .addGroup(pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(cmbOrd, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(txtDesc)
+                            .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(54, Short.MAX_VALUE))
             .addGroup(pnlEntregadaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane4)
@@ -651,15 +675,18 @@ public class Pnl_2 extends javax.swing.JPanel {
                     .addComponent(jLabel23)
                     .addComponent(txtDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel24)
-                    .addComponent(txtDiasEntregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel25))
+                .addGroup(pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel24)
+                        .addComponent(txtDiasEntregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel25))
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26)
                     .addComponent(txtLugarEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel27))
+                    .addComponent(jLabel27)
+                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlEntregadaLayout.createSequentialGroup()
                         .addGap(32, 32, 32)
@@ -727,6 +754,8 @@ public class Pnl_2 extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> cmbOrden;
     private javax.swing.JComboBox<String> cmbOrdenado;
     private javax.swing.JComboBox<String> cmbOrdenar;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
