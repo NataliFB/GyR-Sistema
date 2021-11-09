@@ -85,12 +85,16 @@ public class Pnl_3 extends javax.swing.JPanel {
 
         jLabel4.setText("Costo");
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         jButton1.setText("Agregar");
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
         jButton2.setText("Modificar");
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
         jButton3.setText("Buscar");
 
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         jButton4.setText("Limpiar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,6 +102,7 @@ public class Pnl_3 extends javax.swing.JPanel {
             }
         });
 
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
         jButton5.setText("Borrar");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Contratación", "Proveedor", "Objeto", "Costo", "Monto ofertado", "Cuentas", "Banco", "Observación" }));
@@ -150,7 +155,7 @@ public class Pnl_3 extends javax.swing.JPanel {
                         .addComponent(jButton4)
                         .addGap(27, 27, 27)
                         .addComponent(jButton5)
-                        .addContainerGap(218, Short.MAX_VALUE))))
+                        .addContainerGap(230, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

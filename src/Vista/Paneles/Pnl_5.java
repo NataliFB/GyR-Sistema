@@ -91,14 +91,19 @@ public class Pnl_5 extends javax.swing.JPanel {
 
         jLabel13.setText("Monto total dólares");
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         jButton1.setText("Agregar");
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
         jButton2.setText("Modificar");
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
         jButton3.setText("Buscar");
 
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         jButton4.setText("Limpiar");
 
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
         jButton5.setText("Borrar");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Numero Factura", "Proveedor", "Fecha", "Cedula", "Telefono", "Nacionalidad", "Descripcion", "Subtotal Colones", "Subtotal Dolares", "IVA", "IVA Dolares", "Monto total", "Monto total dolares" }));
