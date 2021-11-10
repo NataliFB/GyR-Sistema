@@ -20,14 +20,14 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         setLocationRelativeTo(null);
-        txtuser.setFocusable(true);
-        txtuser.setToolTipText("Usuario");
-        txtpw.setToolTipText("Contraseña");
+        txtuUsuario.setFocusable(true);
+        txtuUsuario.setToolTipText("Usuario");
+        txtPassword.setToolTipText("Contraseña");
     }
     
     public void Ingresar(){
-        String user = txtuser.getText();
-        String pw = new String(txtpw.getPassword());
+        String user = txtuUsuario.getText();
+        String pw = new String(txtPassword.getPassword());
 
         if (user.isEmpty() || pw.isEmpty()){
             JOptionPane.showMessageDialog(null,"Algún campo está vacío.");
@@ -56,10 +56,10 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        enter = new javax.swing.JButton();
-        exit = new javax.swing.JButton();
-        txtuser = new javax.swing.JTextField();
-        txtpw = new javax.swing.JPasswordField();
+        btnIngresar = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
+        txtuUsuario = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,34 +71,34 @@ public class Login extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/contraseña.png"))); // NOI18N
 
-        enter.setText("Ingresar");
-        enter.addActionListener(new java.awt.event.ActionListener() {
+        btnIngresar.setText("Ingresar");
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enterActionPerformed(evt);
+                btnIngresarActionPerformed(evt);
             }
         });
-        enter.addKeyListener(new java.awt.event.KeyAdapter() {
+        btnIngresar.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                enterKeyPressed(evt);
+                btnIngresarKeyPressed(evt);
             }
         });
 
-        exit.setText("Salir");
-        exit.addActionListener(new java.awt.event.ActionListener() {
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitActionPerformed(evt);
+                btnSalirActionPerformed(evt);
             }
         });
 
-        txtuser.addActionListener(new java.awt.event.ActionListener() {
+        txtuUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtuserActionPerformed(evt);
+                txtuUsuarioActionPerformed(evt);
             }
         });
 
-        txtpw.addActionListener(new java.awt.event.ActionListener() {
+        txtPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtpwActionPerformed(evt);
+                txtPasswordActionPerformed(evt);
             }
         });
 
@@ -118,13 +118,13 @@ public class Login extends javax.swing.JFrame {
                                 .addComponent(jLabel3)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtuser)
-                            .addComponent(txtpw)))
+                            .addComponent(txtuUsuario)
+                            .addComponent(txtPassword)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(enter, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
-                            .addComponent(exit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(btnIngresar, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                            .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(39, 39, 39))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,15 +148,15 @@ public class Login extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(txtuser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtuUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel2))
                         .addGap(18, 18, 18)
-                        .addComponent(txtpw, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
-                .addComponent(enter)
+                .addComponent(btnIngresar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(exit)
+                .addComponent(btnSalir)
                 .addGap(0, 33, Short.MAX_VALUE))
         );
 
@@ -174,25 +174,25 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtuserActionPerformed
+    private void txtuUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtuUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtuserActionPerformed
+    }//GEN-LAST:event_txtuUsuarioActionPerformed
 
-    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_exitActionPerformed
+    }//GEN-LAST:event_btnSalirActionPerformed
 
-    private void enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterActionPerformed
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         Ingresar();
-    }//GEN-LAST:event_enterActionPerformed
+    }//GEN-LAST:event_btnIngresarActionPerformed
 
-    private void txtpwActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpwActionPerformed
+    private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtpwActionPerformed
+    }//GEN-LAST:event_txtPasswordActionPerformed
 
-    private void enterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_enterKeyPressed
+    private void btnIngresarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnIngresarKeyPressed
         
-    }//GEN-LAST:event_enterKeyPressed
+    }//GEN-LAST:event_btnIngresarKeyPressed
 
     /**
      * @param args the command line arguments
@@ -231,14 +231,14 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton enter;
-    private javax.swing.JButton exit;
+    private javax.swing.JButton btnIngresar;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JPasswordField txtpw;
-    private javax.swing.JTextField txtuser;
+    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField txtuUsuario;
     // End of variables declaration//GEN-END:variables
 }
