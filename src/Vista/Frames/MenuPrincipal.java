@@ -41,6 +41,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btn_ren = new rsbuttom.RSButtonMetro();
         jButton2 = new javax.swing.JButton();
         btn_IngresarContr = new rsbuttom.RSButtonMetro();
+        btn_ren1 = new rsbuttom.RSButtonMetro();
         pnl_prin = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -109,6 +110,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btn_ren1.setText("Proveedores");
+        btn_ren1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ren1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -127,7 +135,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
                             .addComponent(btn_timbre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_IngresarContr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btn_IngresarContr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_ren1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -149,7 +158,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addComponent(btn_fac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(btn_ren, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 273, Short.MAX_VALUE)
+                .addGap(10, 10, 10)
+                .addComponent(btn_ren1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 228, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addContainerGap())
         );
@@ -191,7 +202,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(pnl_prin, javax.swing.GroupLayout.DEFAULT_SIZE, 642, Short.MAX_VALUE)
+            .addComponent(pnl_prin, javax.swing.GroupLayout.DEFAULT_SIZE, 648, Short.MAX_VALUE)
         );
 
         pack();
@@ -258,6 +269,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pnl_prin.add(view).setVisible(true);
     }//GEN-LAST:event_btn_IngresarContrActionPerformed
 
+    private void btn_ren1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ren1ActionPerformed
+        Pnl_Proveedor prov=new Pnl_Proveedor();
+        pnl_prin.removeAll();
+        pnl_prin.repaint();
+        prov.setSize(928, 603);
+        pnl_prin.add(prov).setVisible(true); 
+    }//GEN-LAST:event_btn_ren1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -300,6 +319,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private rsbuttom.RSButtonMetro btn_com;
     private rsbuttom.RSButtonMetro btn_fac;
     private rsbuttom.RSButtonMetro btn_ren;
+    private rsbuttom.RSButtonMetro btn_ren1;
     private rsbuttom.RSButtonMetro btn_timbre;
     private javax.swing.JButton jButton2;
     private javax.swing.JMenu jMenu1;
