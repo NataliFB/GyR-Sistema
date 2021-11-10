@@ -55,7 +55,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jPanel1" max="32767" attributes="0"/>
-          <Component id="pnl_prin" alignment="0" pref="642" max="32767" attributes="0"/>
+          <Component id="pnl_prin" alignment="0" pref="648" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -82,6 +82,7 @@
                       </Group>
                       <Component id="jButton2" max="32767" attributes="0"/>
                       <Component id="btn_IngresarContr" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btn_ren1" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -106,7 +107,9 @@
                   <Component id="btn_fac" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Component id="btn_ren" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="273" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  <Component id="btn_ren1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="228" max="32767" attributes="0"/>
                   <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -189,6 +192,14 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_IngresarContrActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="rsbuttom.RSButtonMetro" name="btn_ren1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Proveedores"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_ren1ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
