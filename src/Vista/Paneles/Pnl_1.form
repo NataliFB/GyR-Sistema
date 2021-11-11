@@ -376,7 +376,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel26">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Dias Habiles"/>
+                <Property name="text" type="java.lang.String" value="Tiempo"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtDiasHabiles">

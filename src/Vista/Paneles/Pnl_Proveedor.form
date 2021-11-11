@@ -129,15 +129,15 @@
                                               <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="txtCuenta2" pref="215" max="32767" attributes="0"/>
-                                                  <Component id="txtBanco2" pref="215" max="32767" attributes="0"/>
-                                                  <Component id="txtBanco3" pref="215" max="32767" attributes="0"/>
-                                                  <Component id="txtCuenta3" pref="215" max="32767" attributes="0"/>
+                                                  <Component id="txtCuenta2" max="32767" attributes="0"/>
+                                                  <Component id="txtBanco2" max="32767" attributes="0"/>
+                                                  <Component id="txtBanco3" max="32767" attributes="0"/>
+                                                  <Component id="txtCuenta3" max="32767" attributes="0"/>
                                                   <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="41" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
@@ -154,7 +154,7 @@
                                                   <Component id="txtBanco1" min="-2" pref="215" max="-2" attributes="0"/>
                                                   <Component id="txtCuenta1" min="-2" pref="215" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace min="0" pref="29" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
