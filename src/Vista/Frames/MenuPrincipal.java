@@ -12,8 +12,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     public MenuPrincipal() {
         initComponents();
-        this.setExtendedState(MAXIMIZED_BOTH);
+        //this.setExtendedState(MAXIMIZED_BOTH);
 
+        Ingresar();
+    }
+    
+    public void Ingresar(){
         ModIngresarContr model = new ModIngresarContr();
         Pn_IngresarContr view = new Pn_IngresarContr();
         
@@ -22,9 +26,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         
         pnl_prin.removeAll();
         pnl_prin.repaint();
-        view.setSize(872, 573);
+        view.setSize(1010, 714);
         pnl_prin.add(view).setVisible(true);
-        
     }
 
     @SuppressWarnings("unchecked")
@@ -156,7 +159,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addComponent(btn_ren, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(btn_ren1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 306, Short.MAX_VALUE)
                 .addComponent(btnSalir)
                 .addContainerGap())
         );
@@ -168,7 +171,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pnl_prin.setLayout(pnl_prinLayout);
         pnl_prinLayout.setHorizontalGroup(
             pnl_prinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 945, Short.MAX_VALUE)
+            .addGap(0, 1010, Short.MAX_VALUE)
         );
         pnl_prinLayout.setVerticalGroup(
             pnl_prinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -181,13 +184,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pnl_prin, javax.swing.GroupLayout.DEFAULT_SIZE, 945, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnl_prin, javax.swing.GroupLayout.DEFAULT_SIZE, 1010, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(pnl_prin, javax.swing.GroupLayout.DEFAULT_SIZE, 671, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(pnl_prin, javax.swing.GroupLayout.DEFAULT_SIZE, 714, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -201,7 +207,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Pnl_1 timbre = new Pnl_1();
         pnl_prin.removeAll();
         pnl_prin.repaint();
-        timbre.setSize(928, 603);
+        timbre.setSize(1022, 700);
         pnl_prin.add(timbre).setVisible(true);
     }//GEN-LAST:event_btn_timbreActionPerformed
 
@@ -209,7 +215,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Pnl_2 adj = new Pnl_2();
         pnl_prin.removeAll();
         pnl_prin.repaint();
-        adj.setSize(928, 603);
+        adj.setSize(1022, 700);
         pnl_prin.add(adj).setVisible(true);
     }//GEN-LAST:event_btn_adjActionPerformed
 
@@ -217,7 +223,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Pnl_3 com = new Pnl_3();
         pnl_prin.removeAll();
         pnl_prin.repaint();
-        com.setSize(928, 603);
+        com.setSize(1022, 700);
         pnl_prin.add(com).setVisible(true);
     }//GEN-LAST:event_btn_comActionPerformed
 
@@ -225,7 +231,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Pnl_4 fac = new Pnl_4();
         pnl_prin.removeAll();
         pnl_prin.repaint();
-        fac.setSize(928, 603);
+        fac.setSize(1022, 700);
         pnl_prin.add(fac).setVisible(true);
     }//GEN-LAST:event_btn_facActionPerformed
 
@@ -233,7 +239,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Pnl_5 ren=new Pnl_5();
         pnl_prin.removeAll();
         pnl_prin.repaint();
-        ren.setSize(928, 603);
+        ren.setSize(1010, 714);
         pnl_prin.add(ren).setVisible(true); 
     }//GEN-LAST:event_btn_renActionPerformed
 
@@ -242,23 +248,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btn_IngresarContrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IngresarContrActionPerformed
-        ModIngresarContr model = new ModIngresarContr();
-        Pn_IngresarContr view = new Pn_IngresarContr();
-
-        CtrlIngresarContr controlador = new CtrlIngresarContr(view, model);
-        view.setVisible(true);
-
-        pnl_prin.removeAll();
-        pnl_prin.repaint();
-        view.setSize(872, 573);
-        pnl_prin.add(view).setVisible(true);
+        Ingresar();
     }//GEN-LAST:event_btn_IngresarContrActionPerformed
 
     private void btn_ren1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ren1ActionPerformed
         Pnl_Proveedor prov=new Pnl_Proveedor();
         pnl_prin.removeAll();
         pnl_prin.repaint();
-        prov.setSize(928, 603);
+        prov.setSize(1022, 700);
         pnl_prin.add(prov).setVisible(true); 
     }//GEN-LAST:event_btn_ren1ActionPerformed
 
@@ -273,7 +270,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

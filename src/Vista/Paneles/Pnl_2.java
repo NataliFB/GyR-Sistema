@@ -49,8 +49,6 @@ public class Pnl_2 extends javax.swing.JPanel {
         rbtFirme = new javax.swing.JRadioButton();
         rbtDuda = new javax.swing.JRadioButton();
         jLabel16 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         rbtnHabil = new javax.swing.JRadioButton();
         rbtnNat = new javax.swing.JRadioButton();
         cmbEntre = new javax.swing.JComboBox<>();
@@ -60,6 +58,8 @@ public class Pnl_2 extends javax.swing.JPanel {
         jScrollPane5 = new javax.swing.JScrollPane();
         txtaObs = new javax.swing.JTextArea();
         jLabel34 = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         pnlOrden = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtNumeroOrden = new javax.swing.JTextField();
@@ -244,21 +244,6 @@ public class Pnl_2 extends javax.swing.JPanel {
         jLabel16.setText("Estado");
         pnlAdjudicada.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(773, 106, -1, -1));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "N° Contratación", "Empresa", "M Entrega", "Descripción", "Lugar/Institución", "Días de entrega", "Estado", "Encargado", "Observaciones"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        pnlAdjudicada.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 332, 1322, 477));
-
         rbtnHabil.setText("Hábiles");
         rbtnHabil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -299,6 +284,21 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         jLabel34.setText("Observaciones");
         pnlAdjudicada.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(723, 221, -1, -1));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "N° Contratación", "Empresa", "M Entrega", "Descripción", "Lugar/Institución", "Días de entrega", "Estado", "Encargado", "Observaciones"
+            }
+        ));
+        jScrollPane9.setViewportView(jTable1);
+
+        pnlAdjudicada.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 1080, 250));
 
         tbpContenedor.addTab("Adjudicada", pnlAdjudicada);
 
@@ -439,7 +439,7 @@ public class Pnl_2 extends javax.swing.JPanel {
                                         .addComponent(txtOrden, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
                                         .addComponent(txtEnc2))
                                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 153, Short.MAX_VALUE)))
+                        .addGap(0, 376, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         pnlOrdenLayout.setVerticalGroup(
@@ -484,7 +484,7 @@ public class Pnl_2 extends javax.swing.JPanel {
                     .addComponent(jLabel17)
                     .addComponent(cmbOrden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -620,7 +620,7 @@ public class Pnl_2 extends javax.swing.JPanel {
                 .addComponent(jLabel21)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cmbOrdenado, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(147, Short.MAX_VALUE))
+                .addContainerGap(279, Short.MAX_VALUE))
         );
         pnlDemandaLayout.setVerticalGroup(
             pnlDemandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -826,7 +826,7 @@ public class Pnl_2 extends javax.swing.JPanel {
                                     .addComponent(jLabel27)
                                     .addComponent(jLabel38)
                                     .addComponent(jLabel39))))
-                        .addGap(0, 139, Short.MAX_VALUE)))
+                        .addGap(0, 273, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         pnlEntregadaLayout.setVerticalGroup(
@@ -887,13 +887,11 @@ public class Pnl_2 extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tbpContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 1143, Short.MAX_VALUE)
+            .addComponent(tbpContenedor)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(tbpContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 603, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 22, Short.MAX_VALUE))
+            .addComponent(tbpContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 700, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1047,6 +1045,7 @@ public class Pnl_2 extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;

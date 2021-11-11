@@ -237,7 +237,7 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
                                             .addComponent(txtBanco3)
                                             .addComponent(txtCuenta3)
                                             .addComponent(jScrollPane1))))
-                                .addGap(0, 41, Short.MAX_VALUE))
+                                .addGap(0, 73, Short.MAX_VALUE))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
                                 .addComponent(btnLim)
@@ -361,7 +361,7 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 672, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 277, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
