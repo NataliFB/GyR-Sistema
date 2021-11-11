@@ -163,7 +163,7 @@ public class Pnl_1 extends javax.swing.JPanel {
 
         jLabel24.setText("Encargado contratación");
 
-        jLabel26.setText("Dias Habiles");
+        jLabel26.setText("Tiempo");
 
         jLabel28.setText("Encargado envio");
 
