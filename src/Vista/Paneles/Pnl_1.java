@@ -257,7 +257,7 @@ public class Pnl_1 extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Numero Contrato", "Producto", "Monto", "Encargado", "Estado"
+                "Numero Contrato", "Institución", "Producto", "Monto", "Estado", "Enc. de Contratacion", "Enc. de Envio", "Observaciones"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
