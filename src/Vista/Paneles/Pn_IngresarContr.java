@@ -13,6 +13,7 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btgEstado = new javax.swing.ButtonGroup();
         spnContrataciones = new javax.swing.JScrollPane();
         tblContrataciones = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
@@ -35,6 +36,11 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        txtResponsable = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -43,7 +49,7 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
 
             },
             new String [] {
-                "N° de Contratación", "Descripción", "Fecha de Publicación", "Fecha de Apertura", "Estado del Concurso"
+                "N° de Contratación", "Descripción", "Fecha de Publicación", "Fecha de Apertura", "Estado del Concurso", "Responsable", "Estado"
             }
         ));
         spnContrataciones.setViewportView(tblContrataciones);
@@ -57,16 +63,16 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         txaContratacion.setRows(5);
         spnContratacion.setViewportView(txaContratacion);
 
-        jPanel1.add(spnContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 44, 280, 100));
+        jPanel1.add(spnContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 44, 280, 80));
 
         txaDescripcion.setColumns(20);
         txaDescripcion.setRows(5);
         spnDescripcion.setViewportView(txaDescripcion);
 
         jPanel1.add(spnDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(607, 44, 280, 100));
-        jPanel1.add(txtFechaPublicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 187, 280, -1));
+        jPanel1.add(txtFechaPublicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 280, -1));
         jPanel1.add(txtFechaApertura, new org.netbeans.lib.awtextra.AbsoluteConstraints(607, 187, 280, -1));
-        jPanel1.add(txtEstadoConcurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 253, 280, -1));
+        jPanel1.add(txtEstadoConcurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 280, -1));
 
         cmbOrdenar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fecha", "Institución", "Contratación", "Monto colones", "Monto Dolares", "Renta 2%", "Cambios", "Descripción", "Estado", "Institución cedida", "Transferencia", "Banco", "Fecha Cancelado", "Efectivo", "Tarjeta", "Monto-Renta" }));
         jPanel1.add(cmbOrdenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 340, 150, -1));
@@ -98,22 +104,38 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 44, -1, -1));
 
         jLabel3.setText("Fecha de publicación");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 193, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
 
         jLabel4.setText("Fecha de Apertura");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 193, -1, -1));
 
         jLabel5.setText("Estado del Concurso");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 259, -1, 17));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, 17));
 
         jLabel18.setText("Ordenar por:");
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 340, -1, -1));
+
+        jLabel6.setText("Responsable");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, -1, -1));
+        jPanel1.add(txtResponsable, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 250, 280, -1));
+
+        jLabel7.setText("Estado");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, -1, -1));
+
+        btgEstado.add(jRadioButton1);
+        jRadioButton1.setText("Enviada");
+        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, -1, -1));
+
+        btgEstado.add(jRadioButton2);
+        jRadioButton2.setText("Descartada");
+        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, -1, -1));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 970, 383));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup btgEstado;
     public javax.swing.JButton btnBorrar;
     public javax.swing.JButton btnBuscar;
     public javax.swing.JButton btnIngresar;
@@ -126,7 +148,11 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane spnContratacion;
     private javax.swing.JScrollPane spnContrataciones;
     private javax.swing.JScrollPane spnDescripcion;
@@ -136,5 +162,6 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
     public javax.swing.JTextField txtEstadoConcurso;
     public javax.swing.JTextField txtFechaApertura;
     public javax.swing.JTextField txtFechaPublicacion;
+    private javax.swing.JTextField txtResponsable;
     // End of variables declaration//GEN-END:variables
 }
