@@ -84,7 +84,7 @@ public class CtrlIngresarContr implements ActionListener {
             modC.setFechaApertura(modC.getFechaApertura().trim());
             modC.setEstadoConcurso(modC.getEstadoConcurso().trim());
 
-            pnlC.txaNumContratacion.setText(modC.getNumContratacion());
+            pnlC.txaContratacion.setText(modC.getNumContratacion());
             pnlC.txaDescripcion.setText(modC.getDescripcion());
             pnlC.txtFechaPublicacion.setText(modC.getFechaPublicacion());
             pnlC.txtFechaApertura.setText(modC.getFechaApertura());
@@ -98,7 +98,7 @@ public class CtrlIngresarContr implements ActionListener {
     }
 
     private void Limpiar() {
-        pnlC.txaNumContratacion.setText("");
+        pnlC.txaContratacion.setText("");
         pnlC.txaDescripcion.setText("");
         pnlC.txtFechaPublicacion.setText("");
         pnlC.txtFechaApertura.setText("");
