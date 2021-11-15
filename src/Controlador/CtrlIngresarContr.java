@@ -21,13 +21,13 @@ public class CtrlIngresarContr implements ActionListener {
     public CtrlIngresarContr(Pn_IngresarContr pnlContratacion, ModIngresarContr modContratacion) {
         this.pnlC = pnlContratacion;
         this.modC = modContratacion;
-        this.pnlC.btnIngresar.addActionListener(this);
-        this.pnlC.btnLimpiar.addActionListener(this);
+        this.pnlC.btnInsertarContratacion.addActionListener(this);
+        this.pnlC.btnLimpiarContratacion.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == pnlC.btnIngresar) {
+        if (e.getSource() == pnlC.btnInsertarContratacion) {
             int i;
             String Portapapeles = getPortapapeles();
 
@@ -92,7 +92,7 @@ public class CtrlIngresarContr implements ActionListener {
 
         }
 
-        if (e.getSource() == pnlC.btnLimpiar) {
+        if (e.getSource() == pnlC.btnLimpiarContratacion) {
             Limpiar();
         }
     }

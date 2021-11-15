@@ -28,270 +28,150 @@ public class Pnl_4 extends javax.swing.JPanel {
 
         btgMoneda = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
+        txtContratacionFacturas = new javax.swing.JTextField();
+        txtDescripcionFacturas = new javax.swing.JTextField();
+        txtTransferenciaFacturas = new javax.swing.JTextField();
+        txtEstadoFacturas = new javax.swing.JTextField();
+        txtEfectivoFacturas = new javax.swing.JTextField();
+        txtInstitucionFacturas = new javax.swing.JTextField();
+        txtMontoFacturas = new javax.swing.JTextField();
+        txtRentaFacturas = new javax.swing.JTextField();
+        txtInstCedidaFacturas = new javax.swing.JTextField();
+        txtBancoFacturas = new javax.swing.JTextField();
+        txtObservacionFacturas = new javax.swing.JTextField();
+        jdcFechaFacturas = new com.toedter.calendar.JDateChooser();
+        jdcCanceladoFacturas = new com.toedter.calendar.JDateChooser();
+        rdbColones = new javax.swing.JRadioButton();
+        rbtDolares = new javax.swing.JRadioButton();
+        btnInsertarFacturas = new javax.swing.JButton();
+        btnModificarFacturas = new javax.swing.JButton();
+        btnBuscarFacturas = new javax.swing.JButton();
+        btnLimpiarFacturas = new javax.swing.JButton();
+        btnEliminarFacturas = new javax.swing.JButton();
+        cmbOrdenFacturas = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtNumeroContratacion = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        txtRenta = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        txtTransferencia = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        btnAgregar = new javax.swing.JButton();
-        btnModificar = new javax.swing.JButton();
-        btnBuscar = new javax.swing.JButton();
-        btnBorrar = new javax.swing.JButton();
-        btnLimpiar = new javax.swing.JButton();
-        jLabel18 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        txtDescripcion = new javax.swing.JTextField();
-        txtInstitucionCedida = new javax.swing.JTextField();
-        txtBanco = new javax.swing.JTextField();
-        txtEfectivo = new javax.swing.JTextField();
-        txtMonto = new javax.swing.JTextField();
-        txtInstitucion = new javax.swing.JTextField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel1 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jLabel6 = new javax.swing.JLabel();
-        txtEstado = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        txtObservacion = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jLabel35 = new javax.swing.JLabel();
+        spnFacturas = new javax.swing.JScrollPane();
+        tblFacturas = new javax.swing.JTable();
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Facturas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 18))); // NOI18N
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(txtContratacionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 46, 190, -1));
+        jPanel1.add(txtDescripcionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 130, 190, -1));
+        jPanel1.add(txtTransferenciaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 172, 190, -1));
+        jPanel1.add(txtEstadoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 214, 190, -1));
+        jPanel1.add(txtEfectivoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 298, 190, -1));
+
+        txtInstitucionFacturas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtInstitucionFacturasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtInstitucionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 46, 190, -1));
+
+        txtMontoFacturas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMontoFacturasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtMontoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 88, 190, -1));
+        jPanel1.add(txtRentaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 130, 190, -1));
+        jPanel1.add(txtInstCedidaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 214, 190, -1));
+        jPanel1.add(txtBancoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 256, 190, -1));
+        jPanel1.add(txtObservacionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 298, 190, -1));
+        jPanel1.add(jdcFechaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 88, 190, -1));
+        jPanel1.add(jdcCanceladoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 256, 190, -1));
+
+        btgMoneda.add(rdbColones);
+        rdbColones.setText("Colones");
+        jPanel1.add(rdbColones, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 173, -1, -1));
+
+        btgMoneda.add(rbtDolares);
+        rbtDolares.setText("Dolares");
+        jPanel1.add(rbtDolares, new org.netbeans.lib.awtextra.AbsoluteConstraints(679, 173, -1, -1));
+
+        btnInsertarFacturas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
+        btnInsertarFacturas.setText("Agregar");
+        jPanel1.add(btnInsertarFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
+
+        btnModificarFacturas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
+        btnModificarFacturas.setText("Modificar");
+        jPanel1.add(btnModificarFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 350, -1, -1));
+
+        btnBuscarFacturas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
+        btnBuscarFacturas.setText("Buscar");
+        jPanel1.add(btnBuscarFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, -1, -1));
+
+        btnLimpiarFacturas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
+        btnLimpiarFacturas.setText("Limpiar");
+        jPanel1.add(btnLimpiarFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, -1, -1));
+
+        btnEliminarFacturas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
+        btnEliminarFacturas.setText("Eliminar");
+        jPanel1.add(btnEliminarFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, -1, 33));
+
+        cmbOrdenFacturas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
+        jPanel1.add(cmbOrdenFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 360, 250, -1));
 
         jLabel2.setText("Fecha de Factura");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 94, -1, -1));
 
         jLabel3.setText("Institución");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(449, 49, -1, -1));
 
         jLabel4.setText("Número de Contratación");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 49, -1, -1));
 
         jLabel5.setText("Monto");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 91, -1, -1));
 
         jLabel7.setText("Renta 2%");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 133, -1, -1));
 
         jLabel9.setText("Descripción");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 133, -1, -1));
 
         jLabel11.setText("Institución cedida");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 217, -1, -1));
 
         jLabel12.setText("Transferencia");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 175, -1, -1));
 
         jLabel13.setText("Banco");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 259, -1, -1));
 
         jLabel14.setText("Fecha cancelado");
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 259, -1, -1));
 
         jLabel15.setText("Efectivo");
-
-        btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
-        btnAgregar.setText("Agregar");
-
-        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
-        btnModificar.setText("Modificar");
-        btnModificar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnModificarActionPerformed(evt);
-            }
-        });
-
-        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
-        btnBuscar.setText("Buscar");
-
-        btnBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
-        btnBorrar.setText("Borrar");
-        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBorrarActionPerformed(evt);
-            }
-        });
-
-        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
-        btnLimpiar.setText("Limpiar");
-
-        jLabel18.setText("Ordenar por:");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fecha", "Institución", "Contratación", "Monto colones", "Monto Dolares", "Renta 2%", "Cambios", "Descripción", "Estado", "Institución cedida", "Transferencia", "Banco", "Fecha Cancelado", "Efectivo", "Tarjeta", "Monto-Renta" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-
-        txtMonto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtMontoActionPerformed(evt);
-            }
-        });
-
-        txtInstitucion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtInstitucionActionPerformed(evt);
-            }
-        });
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 298, -1, -1));
 
         jLabel1.setText("Moneda:");
-
-        btgMoneda.add(jRadioButton1);
-        jRadioButton1.setText("Colones");
-
-        btgMoneda.add(jRadioButton2);
-        jRadioButton2.setText("Dolares");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 175, -1, -1));
 
         jLabel6.setText("Estado");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 217, -1, -1));
 
         jLabel8.setText("Observacion");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 301, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnAgregar)
-                        .addGap(20, 20, 20)
-                        .addComponent(btnModificar)
-                        .addGap(20, 20, 20)
-                        .addComponent(btnBuscar)
-                        .addGap(20, 20, 20)
-                        .addComponent(btnLimpiar)
-                        .addGap(20, 20, 20)
-                        .addComponent(btnBorrar)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel18)
-                        .addGap(10, 10, 10)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel2)
-                                        .addComponent(jLabel9)
-                                        .addComponent(jLabel12)
-                                        .addComponent(jLabel14))
-                                    .addGap(55, 55, 55))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel4)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel15))
-                                .addGap(102, 102, 102)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(txtEfectivo, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                            .addComponent(txtNumeroContratacion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                            .addComponent(jDateChooser1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                            .addComponent(txtDescripcion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                            .addComponent(jDateChooser2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtTransferencia, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                            .addComponent(txtEstado, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(100, 100, 100)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGap(2, 2, 2)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel1)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel11)
-                                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING))
-                                            .addComponent(jLabel7))
-                                        .addGap(6, 6, 6)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(txtBanco, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtInstitucionCedida, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(jRadioButton1)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jRadioButton2))
-                                            .addComponent(txtInstitucion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                                            .addComponent(txtMonto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                                            .addComponent(txtRenta, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtObservacion))
-                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtNumeroContratacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtInstitucion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel5)
-                        .addComponent(txtMonto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtRenta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel9)
-                        .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel7)))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jLabel12)
-                    .addComponent(txtTransferencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(txtInstitucionCedida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
-                    .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel13)
-                        .addComponent(txtBanco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel14))
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel15)
-                        .addGap(6, 6, 6))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtEfectivo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel8)
-                        .addComponent(txtObservacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAgregar)
-                    .addComponent(btnModificar)
-                    .addComponent(btnBuscar)
-                    .addComponent(btnLimpiar)
-                    .addComponent(btnBorrar)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel18))
-                .addGap(10, 10, 10))
-        );
+        jLabel35.setText("Ordenar por:");
+        jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 360, -1, -1));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblFacturas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null, null, null, null, null},
@@ -302,7 +182,7 @@ public class Pnl_4 extends javax.swing.JPanel {
                 "Fecha", "Institución", "Contratación", "Monto Colones", "Monto Dolares", "Renta 2%", "Descripción", "Estado", "Institución cedida", "Transferencia", "Banco", "Fecha Cancelado", "Efectivo"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        spnFacturas.setViewportView(tblFacturas);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -312,60 +192,46 @@ public class Pnl_4 extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
+                    .addComponent(spnFacturas))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(5, 5, 5)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(spnFacturas, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+    private void txtMontoFacturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoFacturasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnModificarActionPerformed
+    }//GEN-LAST:event_txtMontoFacturasActionPerformed
 
-    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+    private void txtInstitucionFacturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInstitucionFacturasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnBorrarActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void txtMontoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMontoActionPerformed
-
-    private void txtInstitucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInstitucionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtInstitucionActionPerformed
+    }//GEN-LAST:event_txtInstitucionFacturasActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgMoneda;
-    private javax.swing.JButton btnAgregar;
-    private javax.swing.JButton btnBorrar;
-    private javax.swing.JButton btnBuscar;
-    private javax.swing.JButton btnLimpiar;
-    private javax.swing.JButton btnModificar;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
+    private javax.swing.JButton btnBuscarFacturas;
+    private javax.swing.JButton btnEliminarFacturas;
+    private javax.swing.JButton btnInsertarFacturas;
+    private javax.swing.JButton btnLimpiarFacturas;
+    private javax.swing.JButton btnModificarFacturas;
+    private javax.swing.JComboBox<String> cmbOrdenFacturas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -373,20 +239,22 @@ public class Pnl_4 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField txtBanco;
-    private javax.swing.JTextField txtDescripcion;
-    private javax.swing.JTextField txtEfectivo;
-    private javax.swing.JTextField txtEstado;
-    private javax.swing.JTextField txtInstitucion;
-    private javax.swing.JTextField txtInstitucionCedida;
-    private javax.swing.JTextField txtMonto;
-    private javax.swing.JTextField txtNumeroContratacion;
-    private javax.swing.JTextField txtObservacion;
-    private javax.swing.JTextField txtRenta;
-    private javax.swing.JTextField txtTransferencia;
+    private com.toedter.calendar.JDateChooser jdcCanceladoFacturas;
+    private com.toedter.calendar.JDateChooser jdcFechaFacturas;
+    private javax.swing.JRadioButton rbtDolares;
+    private javax.swing.JRadioButton rdbColones;
+    private javax.swing.JScrollPane spnFacturas;
+    private javax.swing.JTable tblFacturas;
+    private javax.swing.JTextField txtBancoFacturas;
+    private javax.swing.JTextField txtContratacionFacturas;
+    private javax.swing.JTextField txtDescripcionFacturas;
+    private javax.swing.JTextField txtEfectivoFacturas;
+    private javax.swing.JTextField txtEstadoFacturas;
+    private javax.swing.JTextField txtInstCedidaFacturas;
+    private javax.swing.JTextField txtInstitucionFacturas;
+    private javax.swing.JTextField txtMontoFacturas;
+    private javax.swing.JTextField txtObservacionFacturas;
+    private javax.swing.JTextField txtRentaFacturas;
+    private javax.swing.JTextField txtTransferenciaFacturas;
     // End of variables declaration//GEN-END:variables
 }
