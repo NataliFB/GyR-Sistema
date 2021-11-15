@@ -26,17 +26,13 @@ public class Pnl_5 extends javax.swing.JPanel {
         txtFacturaRenta = new javax.swing.JTextField();
         txtDescripcionRenta = new javax.swing.JTextField();
         jdcFechaRenta = new com.toedter.calendar.JDateChooser();
-        rbtGastoRenta = new javax.swing.JRadioButton();
-        rbtVentaRenta = new javax.swing.JRadioButton();
-        rbtColonesRenta = new javax.swing.JRadioButton();
-        rbtDolares = new javax.swing.JRadioButton();
         btnInsertarRenta = new javax.swing.JButton();
         btnModificarRenta = new javax.swing.JButton();
         btnBuscarRenta = new javax.swing.JButton();
         btnLimpiarRenta = new javax.swing.JButton();
         btnEliminarRenta = new javax.swing.JButton();
-        cbxModalidadRenta = new javax.swing.JComboBox<>();
         cmbOrdenRenta = new javax.swing.JComboBox<>();
+        cbxModalidadRenta = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -47,7 +43,11 @@ public class Pnl_5 extends javax.swing.JPanel {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
+        rbtGastoRenta = new javax.swing.JRadioButton();
+        rbtVentaRenta = new javax.swing.JRadioButton();
         jLabel14 = new javax.swing.JLabel();
+        rbtColonesRenta = new javax.swing.JRadioButton();
+        rbtDolares = new javax.swing.JRadioButton();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
@@ -71,22 +71,6 @@ public class Pnl_5 extends javax.swing.JPanel {
         jPanel1.add(txtDescripcionRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 214, 190, -1));
         jPanel1.add(jdcFechaRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(581, 46, 220, -1));
 
-        btgTipo.add(rbtGastoRenta);
-        rbtGastoRenta.setText("Gasto");
-        jPanel1.add(rbtGastoRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(581, 298, -1, -1));
-
-        btgTipo.add(rbtVentaRenta);
-        rbtVentaRenta.setText("Ventas");
-        jPanel1.add(rbtVentaRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(743, 298, -1, -1));
-
-        btgMoneda.add(rbtColonesRenta);
-        rbtColonesRenta.setText("Colones");
-        jPanel1.add(rbtColonesRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(581, 131, -1, -1));
-
-        btgMoneda.add(rbtDolares);
-        rbtDolares.setText("Dolares");
-        jPanel1.add(rbtDolares, new org.netbeans.lib.awtextra.AbsoluteConstraints(739, 131, -1, -1));
-
         btnInsertarRenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnInsertarRenta.setText("Agregar");
         jPanel1.add(btnInsertarRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
@@ -107,11 +91,11 @@ public class Pnl_5 extends javax.swing.JPanel {
         btnEliminarRenta.setText("Eliminar");
         jPanel1.add(btnEliminarRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, -1, 33));
 
-        cbxModalidadRenta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Según Demanda", "Cantidad Definida", "Del 50%", "Parcial" }));
-        jPanel1.add(cbxModalidadRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 256, 190, -1));
-
         cmbOrdenRenta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
         jPanel1.add(cmbOrdenRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 360, 250, -1));
+
+        cbxModalidadRenta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Según Demanda", "Cantidad Definida", "Del 50%", "Parcial" }));
+        jPanel1.add(cbxModalidadRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 256, 190, -1));
 
         jLabel1.setText("Proveedor");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 133, -1, -1));
@@ -143,8 +127,24 @@ public class Pnl_5 extends javax.swing.JPanel {
         jLabel17.setText("Tipo de ");
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(462, 300, -1, -1));
 
+        btgTipo.add(rbtGastoRenta);
+        rbtGastoRenta.setText("Gasto");
+        jPanel1.add(rbtGastoRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(581, 298, -1, -1));
+
+        btgTipo.add(rbtVentaRenta);
+        rbtVentaRenta.setText("Ventas");
+        jPanel1.add(rbtVentaRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(743, 298, -1, -1));
+
         jLabel14.setText("Moneda");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(462, 133, -1, -1));
+
+        btgMoneda.add(rbtColonesRenta);
+        rbtColonesRenta.setText("Colones");
+        jPanel1.add(rbtColonesRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(581, 131, -1, -1));
+
+        btgMoneda.add(rbtDolares);
+        rbtDolares.setText("Dolares");
+        jPanel1.add(rbtDolares, new org.netbeans.lib.awtextra.AbsoluteConstraints(739, 131, -1, -1));
 
         jLabel19.setText("Subtotal");
         jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(462, 175, -1, -1));
