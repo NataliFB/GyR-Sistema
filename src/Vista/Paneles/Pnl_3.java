@@ -52,6 +52,8 @@ public class Pnl_3 extends javax.swing.JPanel {
         txaObservacionesDemanda = new javax.swing.JTextArea();
         jLabel43 = new javax.swing.JLabel();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
@@ -64,6 +66,8 @@ public class Pnl_3 extends javax.swing.JPanel {
             }
         ));
         jScrollPane1.setViewportView(jTable1);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 427, 967, 197));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Por comprar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 18))); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -185,26 +189,7 @@ public class Pnl_3 extends javax.swing.JPanel {
         jLabel43.setText("Observación");
         jPanel1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 40, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 967, 415));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtProveedorRealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProveedorRealActionPerformed
