@@ -246,7 +246,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Pnl_Proveedor prov=new Pnl_Proveedor();
         pnl_prin.removeAll();
         pnl_prin.repaint();
-        prov.setSize(1022, 700);
         pnl_prin.add(prov).setVisible(true); 
     }//GEN-LAST:event_btn_ren1ActionPerformed
 
