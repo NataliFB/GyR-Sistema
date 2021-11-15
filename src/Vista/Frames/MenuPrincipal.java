@@ -210,7 +210,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Pnl_2 adj = new Pnl_2();
         pnl_prin.removeAll();
         pnl_prin.repaint();
-//        adj.setSize(1022, 700);
         pnl_prin.add(adj).setVisible(true);
     }//GEN-LAST:event_btn_adjActionPerformed
 
@@ -218,7 +217,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Pnl_3 com = new Pnl_3();
         pnl_prin.removeAll();
         pnl_prin.repaint();
-        com.setSize(1022, 700);
         pnl_prin.add(com).setVisible(true);
     }//GEN-LAST:event_btn_comActionPerformed
 
