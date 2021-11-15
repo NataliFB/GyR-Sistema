@@ -123,7 +123,6 @@ public class CtrlIngresarContr implements ActionListener {
             // Y si el dato se puede conseguir como String java, lo sacamos por pantalla
             if (t.isDataFlavorSupported(dataFlavorStringJava)) {
                 Portapapeles = (String) t.getTransferData(dataFlavorStringJava);
-                System.out.println(Portapapeles);
             }
         } catch (Exception e) {
             System.out.println(e.toString());
