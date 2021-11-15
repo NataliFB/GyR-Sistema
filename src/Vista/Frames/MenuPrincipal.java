@@ -12,7 +12,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     public MenuPrincipal() {
         initComponents();
-        //this.setExtendedState(MAXIMIZED_BOTH);
+        this.setExtendedState(MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
         VentanaContratacion();
     }
@@ -210,7 +210,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Pnl_2 adj = new Pnl_2();
         pnl_prin.removeAll();
         pnl_prin.repaint();
-//        adj.setSize(1022, 700);
         pnl_prin.add(adj).setVisible(true);
     }//GEN-LAST:event_btn_adjActionPerformed
 
@@ -218,7 +217,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Pnl_3 com = new Pnl_3();
         pnl_prin.removeAll();
         pnl_prin.repaint();
-        com.setSize(1022, 700);
         pnl_prin.add(com).setVisible(true);
     }//GEN-LAST:event_btn_comActionPerformed
 
@@ -226,7 +224,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Pnl_4 fac = new Pnl_4();
         pnl_prin.removeAll();
         pnl_prin.repaint();
-        fac.setSize(1022, 700);
         pnl_prin.add(fac).setVisible(true);
     }//GEN-LAST:event_btn_facActionPerformed
 
@@ -234,7 +231,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Pnl_5 ren=new Pnl_5();
         pnl_prin.removeAll();
         pnl_prin.repaint();
-        ren.setSize(1010, 714);
         pnl_prin.add(ren).setVisible(true); 
     }//GEN-LAST:event_btn_renActionPerformed
 

@@ -303,7 +303,7 @@ public class Pnl_1 extends javax.swing.JPanel {
         ));
         spnMuestras.setViewportView(tblMuestras);
 
-        pnlMuestras.add(spnMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 346, 960, 243));
+        pnlMuestras.add(spnMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 346, 970, 243));
 
         cmbOrdenMuestras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Contratación", "Objeto", "Fecha entrega", "Fecha retiro", "Estado" }));
         pnlMuestras.add(cmbOrdenMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 297, -1, -1));
@@ -368,7 +368,7 @@ public class Pnl_1 extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
     }// </editor-fold>//GEN-END:initComponents
 
