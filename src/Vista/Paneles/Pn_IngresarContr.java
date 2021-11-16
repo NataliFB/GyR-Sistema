@@ -21,7 +21,6 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         txaDescripcion = new javax.swing.JTextArea();
         txtFechaPublicacion = new javax.swing.JTextField();
         txtFechaApertura = new javax.swing.JTextField();
-        txtEstadoConcurso = new javax.swing.JTextField();
         txtResponsable = new javax.swing.JTextField();
         rbtEnviada = new javax.swing.JRadioButton();
         rbtDescartada = new javax.swing.JRadioButton();
@@ -35,7 +34,6 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
@@ -51,7 +49,7 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         txaContratacion.setRows(5);
         spnContratacion.setViewportView(txaContratacion);
 
-        jPanel1.add(spnContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 280, 80));
+        jPanel1.add(spnContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 280, 100));
 
         txaDescripcion.setColumns(20);
         txaDescripcion.setRows(5);
@@ -59,17 +57,16 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
 
         jPanel1.add(spnDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 40, 280, 100));
         jPanel1.add(txtFechaPublicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 280, -1));
-        jPanel1.add(txtFechaApertura, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 200, 280, -1));
-        jPanel1.add(txtEstadoConcurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 280, -1));
-        jPanel1.add(txtResponsable, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 250, 280, -1));
+        jPanel1.add(txtFechaApertura, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 280, -1));
+        jPanel1.add(txtResponsable, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 280, -1));
 
         btgEstado.add(rbtEnviada);
         rbtEnviada.setText("Enviada");
-        jPanel1.add(rbtEnviada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, -1));
+        jPanel1.add(rbtEnviada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 200, -1, -1));
 
         btgEstado.add(rbtDescartada);
         rbtDescartada.setText("Descartada");
-        jPanel1.add(rbtDescartada, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
+        jPanel1.add(rbtDescartada, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 200, -1, -1));
 
         btnInsertarContratacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnInsertarContratacion.setText("Agregar");
@@ -104,16 +101,13 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
         jLabel4.setText("Fecha de Apertura");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, -1, -1));
-
-        jLabel5.setText("Estado del Concurso");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, 17));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
 
         jLabel6.setText("Responsable");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, -1, -1));
 
         jLabel7.setText("Estado");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, -1, -1));
 
         jLabel35.setText("Ordenar por:");
         jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 310, -1, -1));
@@ -147,7 +141,6 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
@@ -159,7 +152,6 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
     public javax.swing.JTable tblContrataciones;
     public javax.swing.JTextArea txaContratacion;
     public javax.swing.JTextArea txaDescripcion;
-    public javax.swing.JTextField txtEstadoConcurso;
     public javax.swing.JTextField txtFechaApertura;
     public javax.swing.JTextField txtFechaPublicacion;
     private javax.swing.JTextField txtResponsable;

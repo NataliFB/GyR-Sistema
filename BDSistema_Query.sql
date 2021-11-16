@@ -5,7 +5,7 @@ USE BD_Sistema
 -- Tabla para guardar los roles --
 
 CREATE TABLE roles(
-	cod_rol SMALLINT PRIMARY KEY,
+	cod_rol SMALLINT PRIMARY KEY,	
 	nombre_rol VARCHAR(50) not null
 )
 
@@ -15,8 +15,6 @@ INSERT INTO roles values (1,'Administrador')
 INSERT INTO roles values (2,'Nivel Básico')
 INSERT INTO roles values (3,'Contador')
 
-SELECT * FROM roles
-
 -- Tabla de Empleado --
 
 CREATE TABLE Empleado(
@@ -24,13 +22,9 @@ CREATE TABLE Empleado(
 	nombre_Empleado VARCHAR(50) NOT NULL,
 	appelido1_Empleado VARCHAR(50) NOT NULL,
 	appelido2_Empleado VARCHAR(50) NOT NULL,
-	cod_rol int,
+	color_empleado VARCHAR(7) NOT NULL,
+	cod_rol SMALLINT,
 	FOREIGN KEY (cod_rol) REFERENCES roles(cod_rol)
-)
-
-CREATE TABLE marca_Entradas(
-	cod_Entrada INT IDENTITY(0,1) PRIMARY KEY,
-	hora_entrada 
 )
 
 -- Tabla de Contrataciones. Aquí se almacenan las contrataciones ingresadas
@@ -43,9 +37,11 @@ CREATE TABLE contrataciones(
 	fecha_apertura DATETIME NOT NULL 
 )
 
-CREATE TABLE proveedor(
-	cod_Proveedor SMALLINT IDENTITY(0,1) PRIMARY KEY,
-	nombre_prov VARCHAR(100) not null,
-	cedula_juridica SMALLINT not null,
-	telefono 
+-- Tabla para guardar el estado de cada contratacion una vez ya se sepa
+
+CREATE TABLE estado_contratacion(
+	estado BIT NOT NULL,
+	cod_Contratacion VARCHAR(50),
+	FOREIGN KEY (cod_Contratacion) REFERENCES contrataciones(cod_Contratación) 
 )
+

@@ -74,21 +74,15 @@ public class CtrlIngresarContr implements ActionListener {
                 }
             }
 
-            for (i = i + 3; i < Portapapeles.length(); i++) {
-                modC.setEstadoConcurso(modC.getEstadoConcurso() + Portapapeles.charAt(i));
-            }
-
             modC.setNumContratacion(modC.getNumContratacion().trim());
             modC.setDescripcion(modC.getDescripcion().trim());
             modC.setFechaPublicacion(modC.getFechaPublicacion().trim());
             modC.setFechaApertura(modC.getFechaApertura().trim());
-            modC.setEstadoConcurso(modC.getEstadoConcurso().trim());
 
             pnlC.txaContratacion.setText(modC.getNumContratacion());
             pnlC.txaDescripcion.setText(modC.getDescripcion());
             pnlC.txtFechaPublicacion.setText(modC.getFechaPublicacion());
             pnlC.txtFechaApertura.setText(modC.getFechaApertura());
-            pnlC.txtEstadoConcurso.setText(modC.getEstadoConcurso());
 
         }
 
@@ -102,13 +96,11 @@ public class CtrlIngresarContr implements ActionListener {
         pnlC.txaDescripcion.setText("");
         pnlC.txtFechaPublicacion.setText("");
         pnlC.txtFechaApertura.setText("");
-        pnlC.txtEstadoConcurso.setText("");
 
         modC.setNumContratacion("");
         modC.setDescripcion("");
         modC.setFechaPublicacion("");
         modC.setFechaApertura("");
-        modC.setEstadoConcurso("");
     }
 
     private String getPortapapeles() {
