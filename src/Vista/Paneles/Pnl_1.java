@@ -48,6 +48,8 @@ public class Pnl_1 extends javax.swing.JPanel {
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        cmbTipoGarantías = new javax.swing.JComboBox<>();
         pnlTimbres = new javax.swing.JPanel();
         txtContratacionTimbres = new javax.swing.JTextField();
         txtMontoTimbres = new javax.swing.JTextField();
@@ -190,11 +192,17 @@ public class Pnl_1 extends javax.swing.JPanel {
         jLabel41.setText("Monto");
         pnlGarantias.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 107, -1, -1));
 
-        jLabel42.setText("Encargo de envio");
-        pnlGarantias.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 191, -1, -1));
+        jLabel42.setText("Tipo de Garantía");
+        pnlGarantias.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 230, -1, -1));
 
         jLabel15.setText("Ordenar por:");
         pnlGarantias.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(617, 345, -1, -1));
+
+        jLabel43.setText("Encargo de envio");
+        pnlGarantias.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 191, -1, -1));
+
+        cmbTipoGarantías.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Seleccione>", "De Cumplimiento", "De Participación", "De Bien" }));
+        pnlGarantias.add(cmbTipoGarantías, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 230, 250, -1));
 
         jTabbedPane1.addTab("Garantías", pnlGarantias);
 
@@ -392,6 +400,7 @@ public class Pnl_1 extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> cmbOrdenMuestras;
     private javax.swing.JComboBox<String> cmbOrdenarGarantias;
     private javax.swing.JComboBox<String> cmbOrdenarTimbres;
+    private javax.swing.JComboBox<String> cmbTipoGarantías;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -416,6 +425,7 @@ public class Pnl_1 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel5;
