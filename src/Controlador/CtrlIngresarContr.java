@@ -5,13 +5,8 @@ import Vista.Paneles.Pn_IngresarContr;
 import java.awt.*;
 import java.awt.datatransfer.*;
 import java.awt.event.*;
-import java.io.IOException;
 import Vista.Frames.MenuPrincipal;
 
-/**
- *
- * @author Aaron
- */
 public class CtrlIngresarContr implements ActionListener {
 
     private Pn_IngresarContr pnlC;
@@ -28,6 +23,7 @@ public class CtrlIngresarContr implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == pnlC.btnInsertarContratacion) {
+            Limpiar();
             int i;
             String Portapapeles = getPortapapeles();
 
