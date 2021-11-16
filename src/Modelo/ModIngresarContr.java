@@ -1,10 +1,6 @@
 
 package Modelo;
 
-/**
- *
- * @author Aaron
- */
 public class ModIngresarContr {
     
     private String NumContratacion = "";
