@@ -11,7 +11,6 @@ public class ModIngresarContr {
     private String Descripcion = "";
     private String FechaPublicacion = "";
     private String FechaApertura = "";
-    private String EstadoConcurso = "";
 
     public String getNumContratacion() {
         return NumContratacion;
@@ -43,14 +42,6 @@ public class ModIngresarContr {
 
     public void setFechaApertura(String FechaApertura) {
         this.FechaApertura = FechaApertura;
-    }
-
-    public String getEstadoConcurso() {
-        return EstadoConcurso;
-    }
-
-    public void setEstadoConcurso(String EstadoConcurso) {
-        this.EstadoConcurso = EstadoConcurso;
     }
     
 }
