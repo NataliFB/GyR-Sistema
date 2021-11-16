@@ -1,17 +1,12 @@
-USE BD_Sistema
+use BD_Sistema
 
--- Tabla de garantias
-
-CREATE TABLE garantias(
-	cod_garantia INT IDENTITY(0,1) PRIMARY KEY,
-	fecha_pago DATE NOT NULL,
-	fecha_devolucion DATE default(null),
-	tiempo DATE NOT NULL,
-	estado VARCHAR(30) DEFAULT('Pendiente'),
-	objeto VARCHAR(50) NOT NULL,
-	observaciones VARCHAR(100) DEFAULT('Ninguna observación'),
+CREATE TABLE Timbres(
+	cod_timbre INT IDENTITY(0,1) PRIMARY KEY,
 	monto MONEY NOT NULL,
-
+	estado VARCHAR(30) DEFAULT('Pendiente'),
+	producto VARCHAR(100) NOT NULL,
+	observaciones VARCHAR(100) DEFAULT ('Ninguna observación'),
+	
 	encargado_envio SMALLINT NOT NULL,
 	cod_empleado SMALLINT NOT NULL,
 	cod_Contratacion VARCHAR(50) NOT NULL,
