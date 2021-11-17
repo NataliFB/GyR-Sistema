@@ -20,7 +20,7 @@ CREATE TABLE empleado(
 	nombre_Empleado VARCHAR(50) NOT NULL,
 	appelido1_Empleado VARCHAR(50) NOT NULL,
 	appelido2_Empleado VARCHAR(50) NOT NULL,
-	color_empleado VARCHAR(7) NOT NULL,
+	color_empleado VARCHAR(7) NOT NULL UNIQUE,
 	cod_rol SMALLINT,
 	FOREIGN KEY (cod_rol) REFERENCES roles(cod_rol)
 )

@@ -26,3 +26,4 @@ CREATE TABLE responsable(
 	FOREIGN KEY (cod_Contratacion) REFERENCES contrataciones(cod_Contratacion),
 	FOREIGN KEY (cod_Empleado) REFERENCES empleado(cod_Empleado)
 )
+					
