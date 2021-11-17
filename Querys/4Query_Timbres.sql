@@ -1,6 +1,6 @@
 use BD_Sistema
-
-CREATE TABLE Timbres(
+	
+CREATE TABLE timbres(
 	cod_timbre INT IDENTITY(0,1) PRIMARY KEY,
 	monto MONEY NOT NULL,
 	estado VARCHAR(30) DEFAULT('Pendiente'),

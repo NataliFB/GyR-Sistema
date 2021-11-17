@@ -186,7 +186,7 @@ public class Pnl_1 extends javax.swing.JPanel {
         jLabel39.setText("Objeto");
         pnlGarantias.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 65, -1, -1));
 
-        jLabel40.setText("Entregado Contratación");
+        jLabel40.setText("Encargado Contratación");
         pnlGarantias.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 149, -1, -1));
 
         jLabel41.setText("Monto");
