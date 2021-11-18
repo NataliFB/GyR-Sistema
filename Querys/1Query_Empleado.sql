@@ -16,11 +16,17 @@ INSERT INTO roles values (3,'Contador')
 -- Tabla de Empleado --
 
 CREATE TABLE empleado(
-	cod_Empleado SMALLINT IDENTITY(0,1) PRIMARY KEY,
-	nombre_Empleado VARCHAR(50) NOT NULL,
-	appelido1_Empleado VARCHAR(50) NOT NULL,
-	appelido2_Empleado VARCHAR(50) NOT NULL,
-	color_empleado VARCHAR(7) NOT NULL UNIQUE,
+	cod_empleado SMALLINT IDENTITY PRIMARY KEY,
+	nombre_empleado VARCHAR(50) NOT NULL,
+	appelido1_empleado VARCHAR(50) NOT NULL,
+	appelido2_empleado VARCHAR(50) NOT NULL,
 	cod_rol SMALLINT,
 	FOREIGN KEY (cod_rol) REFERENCES roles(cod_rol)
+)
+
+CREATE TABLE colores(
+	cod_color VARCHAR(7) PRIMARY KEY,
+
+	cod_empleado SMALLINT NOT NULL,
+	FOREIGN KEY (cod_empleado) REFERENCES empleado(cod_empleado)
 )

@@ -1,7 +1,8 @@
 USE BD_Sistema
 
 CREATE TABLE muestras(
-	cod_muestra INT IDENTITY(0,1),
+	cod_muestra INT IDENTITY PRIMARY KEY,
+	institucion VARCHAR(100) NOT NULL,
 	objeto VARCHAR(100) NOT NULL,
 	cantidad TINYINT NOT NULL,
 	fecha_entrega DATE NOT NULL,

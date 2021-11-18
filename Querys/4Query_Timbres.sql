@@ -1,7 +1,8 @@
 use BD_Sistema
 	
 CREATE TABLE timbres(
-	cod_timbre INT IDENTITY(0,1) PRIMARY KEY,
+	cod_timbre INT IDENTITY PRIMARY KEY,
+	institucion VARCHAR(100) NOT NULL,
 	monto MONEY NOT NULL,
 	estado VARCHAR(30) DEFAULT('Pendiente'),
 	producto VARCHAR(100) NOT NULL,
