@@ -16,13 +16,14 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         txtTelProv = new javax.swing.JTextField();
         txtContProv = new javax.swing.JTextField();
         txtCorreoProv = new javax.swing.JTextField();
         txtProvReal = new javax.swing.JTextField();
-        txtCedProv = new javax.swing.JTextField();
+        txtCelProv = new javax.swing.JTextField();
         txtUbicacionProv = new javax.swing.JTextField();
         txtProvFantasia = new javax.swing.JTextField();
         txtCuenta1 = new javax.swing.JTextField();
@@ -57,6 +58,8 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        txtCedProv1 = new javax.swing.JTextField();
         spnProveedor = new javax.swing.JScrollPane();
         tblProv = new javax.swing.JTable();
 
@@ -67,11 +70,17 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Proveedores", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 18))); // NOI18N
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel3.add(txtTelProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 250, -1));
-        jPanel3.add(txtContProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 250, -1));
+        jPanel3.add(txtContProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 250, -1));
         jPanel3.add(txtCorreoProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 250, -1));
         jPanel3.add(txtProvReal, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 250, -1));
-        jPanel3.add(txtCedProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 250, -1));
-        jPanel3.add(txtUbicacionProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 275, 250, -1));
+
+        txtCelProv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCelProvActionPerformed(evt);
+            }
+        });
+        jPanel3.add(txtCelProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 250, -1));
+        jPanel3.add(txtUbicacionProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 250, -1));
 
         txtProvFantasia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,39 +141,39 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         txaArticulos.setRows(5);
         spnArticulos.setViewportView(txaArticulos);
 
-        jPanel3.add(spnArticulos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 250, 46));
+        jPanel3.add(spnArticulos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 250, 46));
 
         cmbOrdenProv.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
-        jPanel3.add(cmbOrdenProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 380, 250, -1));
+        jPanel3.add(cmbOrdenProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 450, 250, -1));
 
         btnInsertarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnInsertarProv.setText("Agregar");
-        jPanel3.add(btnInsertarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, -1, -1));
+        jPanel3.add(btnInsertarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, -1, -1));
 
         btnModificarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
         btnModificarProv.setText("Modificar");
-        jPanel3.add(btnModificarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, -1, -1));
+        jPanel3.add(btnModificarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 440, -1, -1));
 
         btnBuscarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
         btnBuscarProv.setText("Buscar");
-        jPanel3.add(btnBuscarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, -1, -1));
+        jPanel3.add(btnBuscarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 440, -1, -1));
 
         btnLimpiarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarProv.setText("Limpiar");
-        jPanel3.add(btnLimpiarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, -1, -1));
+        jPanel3.add(btnLimpiarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 440, -1, -1));
 
         btnEliminarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
         btnEliminarProv.setText("Eliminar");
-        jPanel3.add(btnEliminarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, -1, 33));
+        jPanel3.add(btnEliminarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, -1, 33));
 
-        jLabel8.setText("Teléfono");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+        jLabel8.setText("Celular");
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
 
         jLabel9.setText("Cuenta 1");
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 40, -1, -1));
 
         jLabel10.setText("Artículos");
-        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
+        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
 
         jLabel12.setText("Banco 1");
         jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 80, -1, -1));
@@ -179,13 +188,13 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         jPanel3.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 275, -1, -1));
 
         jLabel29.setText("Cédula");
-        jPanel3.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
+        jPanel3.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, -1));
 
         jLabel30.setText("Contacto");
-        jPanel3.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, -1));
+        jPanel3.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
 
         jLabel31.setText("Ubicación");
-        jPanel3.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 275, -1, -1));
+        jPanel3.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
 
         jLabel25.setText("Proveedor Fantasía");
         jPanel3.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
@@ -203,9 +212,19 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 240, -1, -1));
 
         jLabel35.setText("Ordenar por:");
-        jPanel3.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 380, -1, -1));
+        jPanel3.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 450, -1, -1));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 970, 420));
+        jLabel17.setText("Teléfono");
+        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+
+        txtCedProv1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCedProv1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(txtCedProv1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 250, -1));
+
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 970, 490));
 
         tblProv.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -220,9 +239,9 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         ));
         spnProveedor.setViewportView(tblProv);
 
-        jPanel2.add(spnProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 434, 967, 190));
+        jPanel2.add(spnProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 494, 967, 210));
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 720));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtProvFantasiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProvFantasiaActionPerformed
@@ -253,6 +272,14 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCuenta3ActionPerformed
 
+    private void txtCelProvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCelProvActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCelProvActionPerformed
+
+    private void txtCedProv1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedProv1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCedProv1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBuscarProv;
@@ -260,6 +287,7 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
     private javax.swing.JButton btnInsertarProv;
     private javax.swing.JButton btnLimpiarProv;
     private javax.swing.JButton btnModificarProv;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cmbOrdenProv;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -268,6 +296,7 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel28;
@@ -287,7 +316,8 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
     private javax.swing.JTextField txtBanco1;
     private javax.swing.JTextField txtBanco2;
     private javax.swing.JTextField txtBanco3;
-    private javax.swing.JTextField txtCedProv;
+    private javax.swing.JTextField txtCedProv1;
+    private javax.swing.JTextField txtCelProv;
     private javax.swing.JTextField txtContProv;
     private javax.swing.JTextField txtCorreoProv;
     private javax.swing.JTextField txtCuenta1;

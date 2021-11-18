@@ -141,8 +141,8 @@ public class Pnl_1 extends javax.swing.JPanel {
         btnBorrarGarantias.setText("Borrar");
         pnlGarantias.add(btnBorrarGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(508, 339, -1, -1));
 
-        cmbOrdenarGarantias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Contratación", "Monto", "Estado", "Producto", "Encargado" }));
-        pnlGarantias.add(cmbOrdenarGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(694, 342, 180, -1));
+        cmbOrdenarGarantias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Seleccione>", "Contratación", "Cumplimiento", "Monto", "Estado", "Producto", "Encargado" }));
+        pnlGarantias.add(cmbOrdenarGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(694, 342, 240, -1));
 
         txaObservacionesGarantias.setColumns(20);
         txaObservacionesGarantias.setRows(5);
@@ -201,7 +201,7 @@ public class Pnl_1 extends javax.swing.JPanel {
         jLabel43.setText("Encargo de envio");
         pnlGarantias.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 191, -1, -1));
 
-        cmbTipoGarantías.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Seleccione>", "De Cumplimiento", "De Participación", "De Bien" }));
+        cmbTipoGarantías.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Seleccione>", "De Cumplimiento", "De Participación" }));
         pnlGarantias.add(cmbTipoGarantías, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 230, 250, -1));
 
         jTabbedPane1.addTab("Garantías", pnlGarantias);
@@ -372,7 +372,7 @@ public class Pnl_1 extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 979, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 979, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
