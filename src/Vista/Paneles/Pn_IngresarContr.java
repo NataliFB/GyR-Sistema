@@ -70,6 +70,11 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
 
         btnInsertarContratacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnInsertarContratacion.setText("Agregar");
+        btnInsertarContratacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInsertarContratacionActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnInsertarContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
 
         btnModificarContratacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
@@ -88,7 +93,12 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         btnEliminarContratacion.setText("Eliminar");
         jPanel1.add(btnEliminarContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, -1, 33));
 
-        cmbOrdenContratacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
+        cmbOrdenContratacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Seleccione>", "Fecha y hora de apertura", "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
+        cmbOrdenContratacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbOrdenContratacionActionPerformed(evt);
+            }
+        });
         jPanel1.add(cmbOrdenContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 307, 250, -1));
 
         jLabel1.setText("Número de Contratación");
@@ -126,6 +136,14 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
 
         add(spnContrataciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 364, 967, 260));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnInsertarContratacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarContratacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnInsertarContratacionActionPerformed
+
+    private void cmbOrdenContratacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbOrdenContratacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbOrdenContratacionActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

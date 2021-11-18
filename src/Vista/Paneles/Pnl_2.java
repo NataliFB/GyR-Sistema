@@ -76,6 +76,8 @@ public class Pnl_2 extends javax.swing.JPanel {
         jLabel31 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
+        cmbModalidadAdjudicada1 = new javax.swing.JComboBox<>();
+        jLabel36 = new javax.swing.JLabel();
         pnlDemanda = new javax.swing.JPanel();
         txtContratacionDemanda = new javax.swing.JTextField();
         txtEntregaDemanda = new javax.swing.JTextField();
@@ -248,8 +250,8 @@ public class Pnl_2 extends javax.swing.JPanel {
         pnlOrden.add(txtDescripcionOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 20, 250, -1));
         pnlOrden.add(txtNumeroOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 60, 250, -1));
         pnlOrden.add(txtLugarEntOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 100, 250, -1));
-        pnlOrden.add(txtEncargadoOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 150, 250, -1));
-        pnlOrden.add(jdcLimiteOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 154, 250, -1));
+        pnlOrden.add(txtEncargadoOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 140, 250, -1));
+        pnlOrden.add(jdcLimiteOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 154, 240, -1));
 
         tblOrden.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -270,7 +272,7 @@ public class Pnl_2 extends javax.swing.JPanel {
         txaObservacionesOrden.setRows(5);
         scpObservacionesOrden.setViewportView(txaObservacionesOrden);
 
-        pnlOrden.add(scpObservacionesOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 196, 250, -1));
+        pnlOrden.add(scpObservacionesOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 180, 250, -1));
 
         btnInsertarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnInsertarOrden.setText("Agregar");
@@ -320,10 +322,16 @@ public class Pnl_2 extends javax.swing.JPanel {
         pnlOrden.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 154, -1, -1));
 
         jLabel33.setText("Encargado");
-        pnlOrden.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 150, -1, -1));
+        pnlOrden.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, -1, -1));
 
         jLabel41.setText("Observación");
-        pnlOrden.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 196, -1, -1));
+        pnlOrden.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, -1, 10));
+
+        cmbModalidadAdjudicada1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elegir", "Según demanda", "Cantidad definida", "Del 50%", "Parcial" }));
+        pnlOrden.add(cmbModalidadAdjudicada1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 250, -1));
+
+        jLabel36.setText("Modalidad entrega");
+        pnlOrden.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
 
         tbpContenedor.addTab("Orden", pnlOrden);
 
@@ -541,6 +549,7 @@ public class Pnl_2 extends javax.swing.JPanel {
     private javax.swing.JButton btnModificarEntrega;
     private javax.swing.JButton btnModificarOrden;
     private javax.swing.JComboBox<String> cmbModalidadAdjudicada;
+    private javax.swing.JComboBox<String> cmbModalidadAdjudicada1;
     private javax.swing.JComboBox<String> cmbModalidadEntregada;
     private javax.swing.JComboBox<String> cmbOrdenDemanda;
     private javax.swing.JComboBox<String> cmbOrdenEntregada;
@@ -573,6 +582,7 @@ public class Pnl_2 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;

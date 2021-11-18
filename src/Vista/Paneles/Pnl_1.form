@@ -190,12 +190,14 @@
             <Component class="javax.swing.JComboBox" name="cmbOrdenarGarantias">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="5">
-                    <StringItem index="0" value="Contrataci&#xf3;n"/>
-                    <StringItem index="1" value="Monto"/>
-                    <StringItem index="2" value="Estado"/>
-                    <StringItem index="3" value="Producto"/>
-                    <StringItem index="4" value="Encargado"/>
+                  <StringArray count="7">
+                    <StringItem index="0" value="&lt;Seleccione&gt;"/>
+                    <StringItem index="1" value="Contrataci&#xf3;n"/>
+                    <StringItem index="2" value="Cumplimiento"/>
+                    <StringItem index="3" value="Monto"/>
+                    <StringItem index="4" value="Estado"/>
+                    <StringItem index="5" value="Producto"/>
+                    <StringItem index="6" value="Encargado"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -204,7 +206,7 @@
               </AuxValues>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="694" y="342" width="180" height="-1"/>
+                  <AbsoluteConstraints x="694" y="342" width="240" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -387,11 +389,10 @@
             <Component class="javax.swing.JComboBox" name="cmbTipoGarant&#xed;as">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
+                  <StringArray count="3">
                     <StringItem index="0" value="&lt;Seleccione&gt;"/>
                     <StringItem index="1" value="De Cumplimiento"/>
                     <StringItem index="2" value="De Participaci&#xf3;n"/>
-                    <StringItem index="3" value="De Bien"/>
                   </StringArray>
                 </Property>
               </Properties>
