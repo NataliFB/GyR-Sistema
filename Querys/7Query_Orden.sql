@@ -1,7 +1,7 @@
 USE BD_Sistema
 
 CREATE TABLE orden(
-	cod_orden INT IDENTITY(0,1) PRIMARY KEY,
+	cod_orden INT IDENTITY PRIMARY KEY,
 	dias_entrega TINYINT NOT NULL,
 	vigencia_contrato TINYINT NOT NULL,
 	fecha_limite DATE NOT NULL,
@@ -9,6 +9,7 @@ CREATE TABLE orden(
 	num_orden INT NOT NULL,
 	lugar_entrega VARCHAR(100) NOT NULL,
 	observaciones VARCHAR(100) DEFAULT ('Ninguna observación'),
+	modalidad VARCHAR(100) NOT NULL,
 
 	cod_empleado SMALLINT NOT NULL,
 	cod_Contratacion VARCHAR(50) NOT NULL,

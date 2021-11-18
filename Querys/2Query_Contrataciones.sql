@@ -25,5 +25,4 @@ CREATE TABLE responsable(
 	cod_Contratacion VARCHAR(50) NOT NULL,
 	FOREIGN KEY (cod_Contratacion) REFERENCES contrataciones(cod_Contratacion),
 	FOREIGN KEY (cod_Empleado) REFERENCES empleado(cod_Empleado)
-)
-					
+)			

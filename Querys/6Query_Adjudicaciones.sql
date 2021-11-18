@@ -1,7 +1,8 @@
 USE BD_Sistema
 
 CREATE TABLE adjudicaciones(
-	cod_adjudicacion INT IDENTITY(0,1) PRIMARY KEY
+	cod_adjudicacion INT IDENTITY PRIMARY KEY,
+	institucion VARCHAR(100) NOT NULL,
 	dias_entrega TINYINT NOT NULL,
 	modalidad_dias BIT NOT NULL,
 	empresa BIT NOT NULL,

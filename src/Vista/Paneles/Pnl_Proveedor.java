@@ -144,27 +144,27 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         jPanel3.add(spnArticulos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 250, 46));
 
         cmbOrdenProv.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
-        jPanel3.add(cmbOrdenProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 450, 250, -1));
+        jPanel3.add(cmbOrdenProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 420, 250, -1));
 
         btnInsertarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnInsertarProv.setText("Agregar");
-        jPanel3.add(btnInsertarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, -1, -1));
+        jPanel3.add(btnInsertarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, -1, -1));
 
         btnModificarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
         btnModificarProv.setText("Modificar");
-        jPanel3.add(btnModificarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 440, -1, -1));
+        jPanel3.add(btnModificarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 410, -1, -1));
 
         btnBuscarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
         btnBuscarProv.setText("Buscar");
-        jPanel3.add(btnBuscarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 440, -1, -1));
+        jPanel3.add(btnBuscarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, -1, -1));
 
         btnLimpiarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarProv.setText("Limpiar");
-        jPanel3.add(btnLimpiarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 440, -1, -1));
+        jPanel3.add(btnLimpiarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, -1, -1));
 
         btnEliminarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
         btnEliminarProv.setText("Eliminar");
-        jPanel3.add(btnEliminarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, -1, 33));
+        jPanel3.add(btnEliminarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 410, -1, 33));
 
         jLabel8.setText("Celular");
         jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
@@ -212,7 +212,7 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 240, -1, -1));
 
         jLabel35.setText("Ordenar por:");
-        jPanel3.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 450, -1, -1));
+        jPanel3.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 420, -1, -1));
 
         jLabel17.setText("Teléfono");
         jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
@@ -224,7 +224,7 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         });
         jPanel3.add(txtCedProv1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 250, -1));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 970, 490));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 970, 460));
 
         tblProv.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -239,7 +239,7 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         ));
         spnProveedor.setViewportView(tblProv);
 
-        jPanel2.add(spnProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 494, 967, 210));
+        jPanel2.add(spnProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 474, 967, 150));
 
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 720));
     }// </editor-fold>//GEN-END:initComponents
