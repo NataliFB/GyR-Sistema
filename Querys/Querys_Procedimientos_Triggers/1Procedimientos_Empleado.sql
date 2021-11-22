@@ -48,7 +48,7 @@ AS
 	DECLARE @PassDecode VARCHAR(50)
 BEGIN
 	SET @PassEncode = (SELECT contraseña FROM userEmpleado WHERE usuario = @usuario)
-	Set @PassDecode = DECRYPTBYPASSPHRASE('password', @PassEncode)
+	SET @PassDecode = DECRYPTBYPASSPHRASE('password', @PassEncode)
 END
 BEGIN
 	IF @PassDecode = @contraseña
@@ -76,6 +76,30 @@ AS BEGIN
 	cod_rol AS 'Nivel'
 	FROM empleado INNER JOIN userEmpleado ON empleado.cod_empleado = userEmpleado.cod_empleado
 	ORDER BY cod_Empleado
+END
+
+------------------------------------------------------------------------------------------------------------------------
+-- Procedimiento para eliminar un empleado
+GO
+CREATE PROCEDURE borrar_empleado 
+	@cod_empleado SMALLINT
+AS BEGIN
+	DELETE userEmpleado WHERE cod_empleado = @cod_empleado
+	DELETE empleado WHERE cod_empleado = @cod_empleado
+END
+
+------------------------------------------------------------------------------------------------------------------------
+-- Procedimiento para actualizar datos de un empleado
+GO
+CREATE PROCEDURE actualizar_empleado 
+	@cod_empleado SMALLINT, @nombre VARCHAR(50), @apellido1 VARCHAR(50), @apellido2 VARCHAR(50), @cod_rol SMALLINT, @cod_color VARCHAR(7)
+AS
+	DECLARE @user VARCHAR(50)
+	SET @user = CONCAT(@nombre, @cod_empleado)
+BEGIN
+	UPDATE empleado SET nombre_empleado = @nombre, appelido1_empleado = @apellido1, appelido2_empleado = @apellido2,
+	cod_rol = @cod_rol, cod_color = @cod_color WHERE cod_empleado = @cod_empleado
+	UPDATE userEmpleado SET usuario = @user WHERE cod_empleado = @cod_empleado
 END
 
 ------------------------------------------------------------------------------------------------------------------------
