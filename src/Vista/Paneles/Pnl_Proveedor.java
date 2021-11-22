@@ -144,7 +144,7 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         jPanel3.add(spnArticulos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 250, 46));
 
         cmbOrdenProv.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
-        jPanel3.add(cmbOrdenProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 420, 250, -1));
+        jPanel3.add(cmbOrdenProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 410, 250, -1));
 
         btnInsertarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnInsertarProv.setText("Agregar");
