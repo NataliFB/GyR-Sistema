@@ -12,24 +12,13 @@ CREATE TABLE garantias(
 	objeto VARCHAR(50) NOT NULL,
 	observaciones VARCHAR(100) DEFAULT('Ninguna observación'),
 	monto MONEY NOT NULL,
-	tipo_garantia VARCHAR(15) NOT NULL,
+	tipo_garantia VARCHAR(50) NOT NULL,
 
 	encargado_envio SMALLINT NOT NULL,
 	cod_empleado SMALLINT NOT NULL,
-	cod_Contratacion VARCHAR(50) NOT NULL,
+	cod_contratacion VARCHAR(50) NOT NULL,
 
-	FOREIGN KEY (encargado_envio) REFERENCES empleado (cod_Empleado),
-	FOREIGN KEY (cod_Empleado) REFERENCES empleado (cod_Empleado),
-	FOREIGN KEY (cod_Contratacion) REFERENCES contrataciones (cod_Contratacion)
-)
-
-
-CREATE TABLE tipo_garantia(
-	cod_tipogarantia TINYINT IDENTITY PRIMARY KEY,
-	tipo_garantia VARCHAR(50) NOT NULL	
-)
-
-CREATE TABLE tipogarantias_garantias(
-	cod_tipogarantia INT NOT NULL,
-	cod_garantia INT NOT NULL
+	FOREIGN KEY (encargado_envio) REFERENCES empleado (cod_empleado),
+	FOREIGN KEY (cod_empleado) REFERENCES empleado (cod_empleado),
+	FOREIGN KEY (cod_contratacion) REFERENCES contrataciones (cod_contratacion)
 )
