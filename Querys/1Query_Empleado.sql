@@ -20,13 +20,15 @@ CREATE TABLE empleado(
 	nombre_empleado VARCHAR(50) NOT NULL,
 	appelido1_empleado VARCHAR(50) NOT NULL,
 	appelido2_empleado VARCHAR(50) NOT NULL,
-	cod_rol SMALLINT,
+	cod_rol SMALLINT NOT NULL,
+	cod_color VARCHAR(7) UNIQUE NOT NULL,
+
 	FOREIGN KEY (cod_rol) REFERENCES roles(cod_rol)
 )
 
-CREATE TABLE colores(
-	cod_color VARCHAR(7) PRIMARY KEY,
-
+CREATE TABLE userEmpleado(
+	usuario VARCHAR(50) PRIMARY KEY,
+	contraseña VARCHAR(MAX) NOT NULL,
 	cod_empleado SMALLINT NOT NULL,
 	FOREIGN KEY (cod_empleado) REFERENCES empleado(cod_empleado)
 )
