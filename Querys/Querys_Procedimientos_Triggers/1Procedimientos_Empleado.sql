@@ -16,7 +16,6 @@ AS
 BEGIN	
 	EXEC ingresar_usuario @user, '1234', @cod_empleado
 END
-DROP TRIGGER TR_EMPLEADO_AFTER
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para ingresar los registros en la tabla de empleado
@@ -72,10 +71,12 @@ END
 GO
 CREATE PROCEDURE mostrar_empleados
 AS BEGIN
-	SELECT empleado.cod_empleado, usuario,CONCAT(nombre_empleado, ' ', appelido1_empleado, ' ', appelido2_empleado) AS 'Nombre de empleado',
-	cod_rol AS 'Nivel'
-	FROM empleado INNER JOIN userEmpleado ON empleado.cod_empleado = userEmpleado.cod_empleado
-	ORDER BY cod_Empleado
+	SELECT empleado.cod_empleado AS 'Código del empleado', usuario AS 'Nombre de Usuario',
+	CONCAT(nombre_empleado, ' ', appelido1_empleado, ' ', appelido2_empleado) AS 'Nombre de empleado',
+	nombre_rol AS 'Nivel'
+	FROM ((empleado INNER JOIN userEmpleado ON empleado.cod_empleado = userEmpleado.cod_empleado)
+	INNER JOIN roles ON roles.cod_rol = empleado.cod_rol)
+	ORDER BY empleado.cod_Empleado
 END
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -92,7 +93,8 @@ END
 -- Procedimiento para actualizar datos de un empleado
 GO
 CREATE PROCEDURE actualizar_empleado 
-	@cod_empleado SMALLINT, @nombre VARCHAR(50), @apellido1 VARCHAR(50), @apellido2 VARCHAR(50), @cod_rol SMALLINT, @cod_color VARCHAR(7)
+	@cod_empleado SMALLINT, @nombre VARCHAR(50), @apellido1 VARCHAR(50), 
+	@apellido2 VARCHAR(50), @cod_rol SMALLINT, @cod_color VARCHAR(7)
 AS
 	DECLARE @user VARCHAR(50)
 	SET @user = CONCAT(@nombre, @cod_empleado)

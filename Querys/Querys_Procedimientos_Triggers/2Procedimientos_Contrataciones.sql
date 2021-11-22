@@ -50,3 +50,9 @@ AS BEGIN
 	DELETE responsable WHERE cod_contratacion = @cod_contratacion
 	DELETE contrataciones WHERE cod_contratacion = @cod_contratacion
 END 
+
+EXEC insertar_contratacion '2021CD-000322-0002400001', 'MUNICIPALIDAD DE SANTA ANA', '[CD] Compra de luces para decoración de espacios
+Encargado de publicación, gestión de objeciones y apertura : Maricruz Traña Castro', '2021-11-19 11:26', '2021-11-22 11:35'
+EXEC insertar_estado_contratacion 1, '2021CD-000322-0002400001'
+EXEC insertar_responsable 4, '2021CD-000322-0002400001'
+EXEC mostrar_contratacion
