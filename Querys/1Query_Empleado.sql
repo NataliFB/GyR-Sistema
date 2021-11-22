@@ -13,7 +13,7 @@ INSERT INTO roles values (1,'Administrador')
 INSERT INTO roles values (2,'Nivel Básico')
 INSERT INTO roles values (3,'Contador')
 
--- Tabla de Empleado --
+-- Tabla de Empleado que guarda los datos necesarios del empleado
 
 CREATE TABLE empleado(
 	cod_empleado SMALLINT IDENTITY PRIMARY KEY,
@@ -25,6 +25,8 @@ CREATE TABLE empleado(
 
 	FOREIGN KEY (cod_rol) REFERENCES roles(cod_rol)
 )
+
+-- Tabla para guardar los datos para el inicio de sesión del usuario
 
 CREATE TABLE userEmpleado(
 	usuario VARCHAR(50) PRIMARY KEY,

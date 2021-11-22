@@ -1,7 +1,8 @@
 USE BD_Sistema
 
 ------------------------------------------------------------------------------------------------------------------------
-
+-- Trigger o Disparador para que despues de que se haga una insercion en la tabla de empleado se ejecute
+-- Este ejecuta el procedimiento ingresar_usuario con valores ya declarados
 GO
 CREATE TRIGGER TR_EMPLEADO_AFTER ON empleado
 AFTER INSERT
@@ -13,12 +14,12 @@ AS
 	SET @cod_empleado = (SELECT cod_empleado FROM inserted)
 	SET @user = CONCAT(@nombre, @cod_empleado)
 BEGIN	
-	EXEC ingresar_usuario @user, @nombre, @cod_empleado
+	EXEC ingresar_usuario @user, '1234', @cod_empleado
 END
 DROP TRIGGER TR_EMPLEADO_AFTER
 
 ------------------------------------------------------------------------------------------------------------------------
-
+-- Procedimiento para ingresar los registros en la tabla de empleado
 GO
 CREATE PROCEDURE insertar_empleados 
 	@nombre_empleado VARCHAR(50), @appelido1_empleado VARCHAR(50), @appelido2_empleado VARCHAR(50), @cod_rol SMALLINT,
@@ -29,7 +30,7 @@ BEGIN
 END
 
 ------------------------------------------------------------------------------------------------------------------------
-
+-- Procedimiento para guardar los usuarios en la tabla userEmpleado
 GO
 CREATE PROCEDURE insertar_usuario
 	@usuario VARCHAR(50), @contraseña VARCHAR(MAX), @cod_empleado SMALLINT
@@ -38,7 +39,7 @@ AS BEGIN
 END
 
 ------------------------------------------------------------------------------------------------------------------------
-
+-- Procedimiento que recibe valores para comprobar el inicio de sesión, este al final retorna un booleano que indica si es verdadero o falso
 GO
 CREATE PROCEDURE loguear_user 
 	@usuario VARCHAR(50), @contraseña VARCHAR(50), @result BIT OUTPUT
@@ -54,13 +55,11 @@ BEGIN
 		SET @result = 1
 	ELSE
 		SET @result = 0
-	PRINT @PassEncode
-	Print @PassDecode
 	RETURN @result
 END
 
 ------------------------------------------------------------------------------------------------------------------------
-
+-- Procedimiento para reestablecer la contraseña, ya que por defecto se le asigna una básica
 GO
 CREATE PROCEDURE actualizar_contraseña 
 	@contraseña VARCHAR(50), @usuario VARCHAR(50)
@@ -69,7 +68,7 @@ AS BEGIN
 END
 
 ------------------------------------------------------------------------------------------------------------------------
-
+-- Procedimiento que muestra los registros que tienen que ver con el empleado
 GO
 CREATE PROCEDURE mostrar_empleados
 AS BEGIN
