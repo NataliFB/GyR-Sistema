@@ -49,15 +49,11 @@ AS BEGIN
 	SELECT cod_timbre AS 'Código de timbre', cod_contratacion AS 'Contratación', institucion AS 'Institución', monto AS 'Monto', estado AS 'Estado',
 	producto AS 'Producto', observaciones AS 'Observaciones',
 	CONCAT(EMP1.nombre_Empleado, ' ', EMP1.appelido1_Empleado) AS 'Encargado de Envio',
-	CONCAT(EMP2.nombre_Empleado, ' ', EMP2.appelido1_Empleado) AS 'Encargado de Contratacion'
+	CONCAT(EMP2.nombre_Empleado, ' ', EMP2.appelido1_Empleado) AS 'Encargado de Contratacion',
+	EMP2.cod_color AS 'Color del Empleado'
 	FROM (timbres INNER JOIN empleado EMP1 ON timbres.encargado_envio = EMP1.cod_empleado)
 	INNER JOIN empleado EMP2 ON EMP2.cod_empleado = timbres.cod_empleado
 	ORDER BY cod_timbre
 END
 
 -------------------------------------------------------------------------------------------------------------------------------------------
-EXEC mostrar_timbres
-EXEC mostrar_contratacion_ganadas
-EXEC mostrar_empleados
-EXEC mostrar_garantia
-SELECT * FROM timbres

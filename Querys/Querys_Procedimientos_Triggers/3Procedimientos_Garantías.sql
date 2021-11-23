@@ -52,7 +52,8 @@ AS BEGIN
 	CONVERT(VARCHAR,tiempo,100) AS 'Tiempo de devolucion', estado AS 'Estado', objeto AS 'Objeto', observaciones AS 'Observaciones', monto AS 'Monto',
 	tipo_garantia AS 'Tipo de Garantia',
 	CONCAT(EMP1.nombre_Empleado, ' ', EMP1.appelido1_Empleado) AS 'Encargado de Envio',
-	CONCAT(EMP2.nombre_Empleado, ' ', EMP2.appelido1_Empleado) AS 'Encargado de Contratacion'
+	CONCAT(EMP2.nombre_Empleado, ' ', EMP2.appelido1_Empleado) AS 'Encargado de Contratacion',
+	EMP2.cod_color AS 'Color del Empleado'
 	FROM (garantias INNER JOIN empleado EMP1 ON garantias.encargado_envio = EMP1.cod_empleado)
 	INNER JOIN empleado EMP2 ON EMP2.cod_empleado = garantias.cod_empleado
 	ORDER BY cod_garantia
