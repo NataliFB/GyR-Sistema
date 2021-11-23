@@ -21,4 +21,5 @@ CREATE TABLE garantias(
 	FOREIGN KEY (encargado_envio) REFERENCES empleado (cod_empleado),
 	FOREIGN KEY (cod_empleado) REFERENCES empleado (cod_empleado),
 	FOREIGN KEY (cod_contratacion) REFERENCES contrataciones (cod_contratacion)
+
 )

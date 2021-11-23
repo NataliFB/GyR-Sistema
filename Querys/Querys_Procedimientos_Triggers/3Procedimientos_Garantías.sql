@@ -31,8 +31,32 @@ AS BEGIN
 END
 
 ---------------------------------------------------------------------------------------------------------------------------------
+-- Procedimiento para actualizar una garantia
+GO
+CREATE PROCEDURE actualizar_garantia 
+	@cod_garantia INT,@institucion VARCHAR(100), @fecha_pago DATE, @fecha_devolucion DATE, @tiempo DATE, @estado VARCHAR(30), 
+	@objeto VARCHAR(50), @observaciones VARCHAR(100), @monto MONEY, @tipo_garantia VARCHAR(50), @encargado_envio SMALLINT
+AS BEGIN
+	UPDATE garantias SET institucion = @institucion, fecha_pago = @fecha_pago, fecha_devolucion = @fecha_devolucion, tiempo = @tiempo,
+	estado = @estado, objeto = @objeto, observaciones = @observaciones, monto = @monto, tipo_garantia = @tipo_garantia, encargado_envio = @encargado_envio
+	WHERE cod_garantia = @cod_garantia
+END
 
-SELECT * FROM garantias
+---------------------------------------------------------------------------------------------------------------------------------
+-- Procedimiento para mostrar las garantias
+GO
+CREATE PROCEDURE mostrar_garantia
+AS BEGIN
+	SELECT cod_garantia AS 'Código de garantia', cod_contratacion AS 'Contratacion',institucion AS 'Institución', 
+	CONVERT(VARCHAR,fecha_pago,100) AS 'Fecha de pago', CONVERT(VARCHAR,fecha_devolucion,100) AS 'Fecha de devolución',
+	CONVERT(VARCHAR,tiempo,100) AS 'Tiempo de devolucion', estado AS 'Estado', objeto AS 'Objeto', observaciones AS 'Observaciones', monto AS 'Monto',
+	tipo_garantia AS 'Tipo de Garantia',
+	CONCAT(EMP1.nombre_Empleado, ' ', EMP1.appelido1_Empleado) AS 'Encargado de Envio',
+	CONCAT(EMP2.nombre_Empleado, ' ', EMP2.appelido1_Empleado) AS 'Encargado de Contratacion',
+	EMP2.cod_color AS 'Color del Empleado'
+	FROM (garantias INNER JOIN empleado EMP1 ON garantias.encargado_envio = EMP1.cod_empleado)
+	INNER JOIN empleado EMP2 ON EMP2.cod_empleado = garantias.cod_empleado
+	ORDER BY cod_garantia
+END
 
-EXEC insertar_garantia 'MUNICIPALIDAD DE SANTA ANA', '2021-11-22', NULL, '2021-12-22', '', 'Decoración de espacios', '', 15000, 'De Cumplimiento', 7, '2021CD-000322-0002400001'
-EXEC insertar_garantia 'MUNICIPALIDAD DE SANTA ANA', '2021-11-30', NULL, '2021-12-30', '', 'Decoración de espacios', '', 10000, 'De Participacion', 7, '2021CD-000322-0002400001'
+---------------------------------------------------------------------------------------------------------------------------------

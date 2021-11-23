@@ -11,8 +11,8 @@ CREATE TABLE muestras(
 	observaciones VARCHAR(100) DEFAULT('Ninguna observación'),
 
 	cod_empleado SMALLINT NOT NULL,
-	cod_Contratacion VARCHAR(50) NOT NULL,
+	cod_contratacion VARCHAR(50) NOT NULL,
 
-	FOREIGN KEY (cod_Empleado) REFERENCES empleado(cod_Empleado),
-	FOREIGN KEY (cod_Contratacion) REFERENCES contrataciones(cod_Contratacion)
+	FOREIGN KEY (cod_empleado) REFERENCES empleado(cod_empleado),
+	FOREIGN KEY (cod_contratacion) REFERENCES contrataciones(cod_contratacion)
 )
