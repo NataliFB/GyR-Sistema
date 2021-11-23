@@ -29,7 +29,7 @@ END
 ---------------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento que muestra todo sobre una contratación
 GO
-CREATE PROCEDURE mostrar_contratacion_ganadas
+CREATE PROCEDURE mostrar_contratacion_completas
 AS BEGIN 
 	SELECT contrataciones.cod_Contratacion AS 'Contratación',institucion AS 'Institución',descripcion AS 'Descripcion',CONVERT(varchar,fecha_publicacion,100) AS 'Fecha Publicación', 
 	CONVERT(varchar,fecha_apertura,100) AS 'Fecha Apertura', CONCAT(nombre_Empleado, ' ', appelido1_Empleado) AS 'Encargado', empleado.cod_color AS 'Color del empleado', 
@@ -41,7 +41,7 @@ AS BEGIN
 END 
 
 ---------------------------------------------------------------------------------------------------------------------------------
--- Procedimiento para mostrar las contrataciones ingresadas (sin ganar)
+-- Procedimiento para mostrar las contrataciones ingresadas
 GO
 CREATE PROCEDURE mostrar_contratacion
 AS BEGIN
