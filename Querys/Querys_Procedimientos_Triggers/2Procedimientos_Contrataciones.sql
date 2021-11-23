@@ -29,15 +29,25 @@ END
 ---------------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento que muestra todo sobre una contratación
 GO
-CREATE PROCEDURE mostrar_contratacion
+CREATE PROCEDURE mostrar_contratacion_ganadas
 AS BEGIN 
-	SELECT contrataciones.cod_Contratacion,institucion,descripcion,CONVERT(varchar,fecha_publicacion,100) as 'Fecha Publicación' , CONVERT(varchar,fecha_apertura,100) as 'Fecha Apertura',
-	CONCAT(nombre_Empleado, ' ', appelido1_Empleado) AS 'Encargado', empleado.cod_color, 
+	SELECT contrataciones.cod_Contratacion AS 'Contratación',institucion AS 'Institución',descripcion AS 'Descripcion',CONVERT(varchar,fecha_publicacion,100) AS 'Fecha Publicación', 
+	CONVERT(varchar,fecha_apertura,100) AS 'Fecha Apertura', CONCAT(nombre_Empleado, ' ', appelido1_Empleado) AS 'Encargado', empleado.cod_color AS 'Color del empleado', 
 	CAST(CASE WHEN estado = 1 THEN 'Enviada' ELSE 'Descartada' END AS VARCHAR(50)) AS 'Estado' 
 	FROM (((contrataciones 
 	INNER JOIN responsable ON responsable.cod_Contratacion = contrataciones.cod_Contratacion) 
 	INNER JOIN estado_contratacion ON estado_contratacion.cod_Contratacion = contrataciones.cod_Contratacion)
 	INNER JOIN empleado ON empleado.cod_Empleado = responsable.cod_Empleado) ORDER BY fecha_apertura
+END 
+
+---------------------------------------------------------------------------------------------------------------------------------
+-- Procedimiento para mostrar las contrataciones ingresadas (sin ganar)
+GO
+CREATE PROCEDURE mostrar_contratacion
+AS BEGIN
+	SELECT cod_contratacion AS 'Contratacion', institucion AS 'Institución', descripcion AS 'Descripción', 
+	CONVERT(varchar,fecha_publicacion,100) AS 'Fecha Publicación', 
+	CONVERT(varchar,fecha_apertura,100) AS 'Fecha Apertura' FROM contrataciones ORDER BY fecha_apertura
 END
 
 ---------------------------------------------------------------------------------------------------------------------------------
@@ -50,9 +60,4 @@ AS BEGIN
 	DELETE responsable WHERE cod_contratacion = @cod_contratacion
 	DELETE contrataciones WHERE cod_contratacion = @cod_contratacion
 END 
-
-EXEC insertar_contratacion '2021CD-000322-0002400001', 'MUNICIPALIDAD DE SANTA ANA', '[CD] Compra de luces para decoración de espacios
-Encargado de publicación, gestión de objeciones y apertura : Maricruz Traña Castro', '2021-11-19 11:26', '2021-11-22 11:35'
-EXEC insertar_estado_contratacion 1, '2021CD-000322-0002400001'
-EXEC insertar_responsable 4, '2021CD-000322-0002400001'
-EXEC mostrar_contratacion
+----------------------------------------------------------------------------------------------------------------------------------
