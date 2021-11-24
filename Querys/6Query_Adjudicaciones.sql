@@ -6,7 +6,7 @@ CREATE TABLE adjudicaciones(
 	dias_entrega TINYINT NOT NULL,
 	modalidad_dias BIT NOT NULL,
 	empresa BIT NOT NULL,
-	modalida_entrega VARCHAR(30) NOT NULL,
+	modalidad_entrega VARCHAR(30) NOT NULL,
 	descripcion VARCHAR(100) NOT NULL,
 	estado BIT NOT NULL,
 	observaciones VARCHAR(100) DEFAULT ('Ninguna observación'),

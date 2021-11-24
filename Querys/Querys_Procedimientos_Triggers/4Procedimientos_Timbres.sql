@@ -45,6 +45,7 @@ END
 -- Procedimiento para mostrar todos los timbres guardados
 GO
 CREATE PROCEDURE mostrar_timbres
+	@filtro VARCHAR(100)
 AS BEGIN
 	SELECT cod_timbre AS 'Código de timbre', cod_contratacion AS 'Contratación', institucion AS 'Institución', monto AS 'Monto', estado AS 'Estado',
 	producto AS 'Producto', observaciones AS 'Observaciones',
@@ -53,7 +54,30 @@ AS BEGIN
 	EMP2.cod_color AS 'Color del Empleado'
 	FROM (timbres INNER JOIN empleado EMP1 ON timbres.encargado_envio = EMP1.cod_empleado)
 	INNER JOIN empleado EMP2 ON EMP2.cod_empleado = timbres.cod_empleado
-	ORDER BY cod_timbre
+	ORDER BY
+	
+		CASE @filtro
+			WHEN 'cod_timbre' THEN cod_timbre
+		END,
+
+		CASE @filtro
+			WHEN 'cod_contratacion' THEN cod_contratacion
+			WHEN 'institución' THEN institucion
+			WHEN 'producto' THEN producto
+			WHEN 'estado' THEN estado
+			WHEN 'observaciones' THEN observaciones
+		END,
+
+		CASE @filtro
+			WHEN 'monto' THEN monto
+		END,
+
+		CASE @filtro
+			WHEN 'encargado_envio' 
+				THEN CONCAT(EMP1.nombre_Empleado, ' ', EMP1.appelido1_Empleado)
+			WHEN 'cod_empleado' 
+				THEN CONCAT(EMP2.nombre_Empleado, ' ', EMP2.appelido1_Empleado)
+		END
 END
 
 -------------------------------------------------------------------------------------------------------------------------------------------
