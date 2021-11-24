@@ -45,7 +45,7 @@ AS BEGIN
 END
 
 -------------------------------------------------------------------------------------------------------------------------------------------
--- Procedimiento para mostrar la tabla de registros
+-- Procedimiento para mostrar la tabla de muestras
 GO
 CREATE PROCEDURE mostrar_muestras
 	@filtros VARCHAR(100)

@@ -45,7 +45,7 @@ END
 ---------------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para mostrar las garantias
 GO
-CREATE PROCEDURE mostrar_garantia
+CREATE PROCEDURE mostrar_garantias
 	@filtro VARCHAR(100)
 AS BEGIN
 	SELECT cod_garantia AS 'Código de garantia', cod_contratacion AS 'Contratacion',institucion AS 'Institución', 
@@ -87,33 +87,5 @@ AS BEGIN
 			WHEN 'monto' THEN monto
 		END
 END
-EXEC mostrar_garantia 'tiempo'
-DROP PROC mostrar_garantia
----------------------------------------------------------------------------------------------------------------------------------
 
-			WHEN 'cod_garantia'
-				THEN cod_garantia
-			WHEN 'cod_contratacion'
-				THEN cod_contratacion
-			WHEN 'institucion'
-				THEN institucion
-			WHEN 'fecha_pago'
-				THEN CONVERT(VARCHAR,fecha_pago,100)
-			WHEN 'fecha_devolucion'
-				THEN CONVERT(VARCHAR,fecha_devolucion,100)
-			WHEN 'tiempo'
-				THEN CONVERT(VARCHAR,tiempo,100)
-			WHEN 'estado'
-				THEN estado
-			WHEN 'objeto'
-				THEN objeto
-			WHEN 'observaciones'
-				THEN observaciones
-			WHEN 'monto'
-				THEN monto
-			WHEN 'tipo_garantia'
-				THEN tipo_garantia
-			WHEN 'encargado_envio'
-				THEN CONCAT(EMP1.nombre_Empleado, ' ', EMP1.appelido1_Empleado)
-			WHEN 'cod_empleado'
-				THEN CONCAT(EMP2.nombre_Empleado, ' ', EMP2.appelido1_Empleado)
+---------------------------------------------------------------------------------------------------------------------------------
