@@ -43,11 +43,25 @@ END
 ---------------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para mostrar las contrataciones ingresadas
 GO
-CREATE PROCEDURE mostrar_contratacion
+CREATE PROCEDURE mostrar_contratacion 
+	@orden VARCHAR(100)
 AS BEGIN
 	SELECT cod_contratacion AS 'Contratacion', institucion AS 'Institución', descripcion AS 'Descripción', 
 	CONVERT(varchar,fecha_publicacion,100) AS 'Fecha Publicación', 
-	CONVERT(varchar,fecha_apertura,100) AS 'Fecha Apertura' FROM contrataciones ORDER BY fecha_apertura
+	CONVERT(varchar,fecha_apertura,100) AS 'Fecha Apertura' FROM contrataciones
+	ORDER BY 
+		CASE @orden
+			WHEN 'fecha_apertura'
+				THEN CONVERT(varchar,fecha_apertura,100)
+			WHEN 'fecha_publicacion' 
+				THEN CONVERT(varchar,fecha_publicacion,100)
+			WHEN 'cod_contratacion'
+				THEN cod_contratacion
+			WHEN 'institucion'
+				THEN institucion
+			WHEN 'descripcion'
+				THEN descripcion
+		END
 END
 
 ---------------------------------------------------------------------------------------------------------------------------------

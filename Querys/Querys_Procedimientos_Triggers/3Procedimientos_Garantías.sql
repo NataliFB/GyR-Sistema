@@ -46,6 +46,7 @@ END
 -- Procedimiento para mostrar las garantias
 GO
 CREATE PROCEDURE mostrar_garantia
+	@filtro VARCHAR(100)
 AS BEGIN
 	SELECT cod_garantia AS 'Código de garantia', cod_contratacion AS 'Contratacion',institucion AS 'Institución', 
 	CONVERT(VARCHAR,fecha_pago,100) AS 'Fecha de pago', CONVERT(VARCHAR,fecha_devolucion,100) AS 'Fecha de devolución',
@@ -56,7 +57,63 @@ AS BEGIN
 	EMP2.cod_color AS 'Color del Empleado'
 	FROM (garantias INNER JOIN empleado EMP1 ON garantias.encargado_envio = EMP1.cod_empleado)
 	INNER JOIN empleado EMP2 ON EMP2.cod_empleado = garantias.cod_empleado
-	ORDER BY cod_garantia
-END
+	ORDER BY 
+		
+		CASE @filtro
+			WHEN 'cod_garantia' THEN cod_garantia
+		END,
+		
+		CASE @filtro
+			WHEN 'cod_contratacion' THEN cod_contratacion
+			WHEN 'institucion' THEN institucion
+			WHEN 'estado' THEN estado
+			WHEN 'objeto' THEN objeto
+			WHEN 'observaciones' THEN observaciones
+			WHEN 'tipo_garantia' THEN tipo_garantia
+		END,
 
+		CASE @filtro
+			WHEN 'fecha_pago' THEN CONVERT(VARCHAR,fecha_pago,100)
+			WHEN 'fecha_devolucion' THEN CONVERT(VARCHAR,fecha_devolucion,100)
+			WHEN 'tiempo' THEN CONVERT(VARCHAR,tiempo,100)
+		END,
+
+		CASE @filtro
+			WHEN 'encargado_envio' THEN CONCAT(EMP1.nombre_Empleado, ' ', EMP1.appelido1_Empleado)
+			WHEN 'cod_empleado' THEN CONCAT(EMP2.nombre_Empleado, ' ', EMP2.appelido1_Empleado)
+		END,
+
+		CASE @filtro
+			WHEN 'monto' THEN monto
+		END
+END
+EXEC mostrar_garantia 'tiempo'
+DROP PROC mostrar_garantia
 ---------------------------------------------------------------------------------------------------------------------------------
+
+			WHEN 'cod_garantia'
+				THEN cod_garantia
+			WHEN 'cod_contratacion'
+				THEN cod_contratacion
+			WHEN 'institucion'
+				THEN institucion
+			WHEN 'fecha_pago'
+				THEN CONVERT(VARCHAR,fecha_pago,100)
+			WHEN 'fecha_devolucion'
+				THEN CONVERT(VARCHAR,fecha_devolucion,100)
+			WHEN 'tiempo'
+				THEN CONVERT(VARCHAR,tiempo,100)
+			WHEN 'estado'
+				THEN estado
+			WHEN 'objeto'
+				THEN objeto
+			WHEN 'observaciones'
+				THEN observaciones
+			WHEN 'monto'
+				THEN monto
+			WHEN 'tipo_garantia'
+				THEN tipo_garantia
+			WHEN 'encargado_envio'
+				THEN CONCAT(EMP1.nombre_Empleado, ' ', EMP1.appelido1_Empleado)
+			WHEN 'cod_empleado'
+				THEN CONCAT(EMP2.nombre_Empleado, ' ', EMP2.appelido1_Empleado)
