@@ -180,23 +180,9 @@ public class Pnl_3 extends javax.swing.JPanel {
     }//GEN-LAST:event_txtProveedorRealActionPerformed
 
     private void txtProveedorFanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProveedorFanActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_txtProveedorFanActionPerformed
 
-    private void btnLimpiarDemandaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarDemandaActionPerformed
-        txaObservacionesDemanda.setText("");
-        txtCedula.setText("");
-        txtCosto.setText("");
-        txtMontoOfertado.setText("");
-        txtNumeroContrato.setText("");
-        txtObjeto.setText("");
-        txtProveedorFan.setText("");
-        txtProveedorReal.setText("");
-        cmbOrdenDemanda.setSelectedIndex(0);
-        limpiartabla();
-        
-
-    }//GEN-LAST:event_btnLimpiarDemandaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

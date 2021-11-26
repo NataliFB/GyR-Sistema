@@ -9,12 +9,12 @@ CREATE TABLE renta(
 	fecha_renta DATE NOT NULL,
 	nacionalidad VARCHAR(100) NOT NULL,
 	moneda BIT NOT NULL,
-	subtotal MONEY NOT NULL,
+	subtotal MONEY NOT NULL, -- Puede ser que se cambie a 'total'
 	tipo_renta BIT	NOT NULL,
 		
 	cod_contratacion VARCHAR(50) NOT NULL,
 	cod_proveedor INT NOT NULL,
 
 	FOREIGN KEY (cod_contratacion) REFERENCES contrataciones(cod_Contratacion),
-	FOREIGN KEY (cod_proveedor) REFERENCES proveedor(cod_proveedor)
+	FOREIGN KEY (cod_proveedor) REFERENCES proveedores(cod_proveedor)
 )
