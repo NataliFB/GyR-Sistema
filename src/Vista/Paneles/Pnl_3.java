@@ -164,6 +164,7 @@ public class Pnl_3 extends javax.swing.JPanel {
     }//GEN-LAST:event_txtProveedorRealActionPerformed
 
     private void txtProveedorFanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProveedorFanActionPerformed
+<<<<<<< HEAD
 
     }//GEN-LAST:event_txtProveedorFanActionPerformed
 
@@ -178,6 +179,10 @@ public class Pnl_3 extends javax.swing.JPanel {
     private void txtBanco2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBanco2ActionPerformed
 
     }//GEN-LAST:event_txtBanco2ActionPerformed
+=======
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtProveedorFanActionPerformed
+>>>>>>> 2e51482bb7d8159698e86e250b6dc7e4150ae4ff
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
