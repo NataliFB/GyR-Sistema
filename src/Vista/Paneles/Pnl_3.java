@@ -196,21 +196,21 @@ public class Pnl_3 extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtProveedorRealActionPerformed
 
-    private void txtBanco1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBanco1ActionPerformed
+    private void txtProveedorFanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProveedorFanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtBanco1ActionPerformed
+    }//GEN-LAST:event_txtProveedorFanActionPerformed
 
     private void txtBanco3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBanco3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBanco3ActionPerformed
 
+    private void txtBanco1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBanco1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtBanco1ActionPerformed
+
     private void txtBanco2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBanco2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBanco2ActionPerformed
-
-    private void txtProveedorFanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProveedorFanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtProveedorFanActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
