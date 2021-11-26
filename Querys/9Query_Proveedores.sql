@@ -10,22 +10,16 @@ CREATE TABLE proveedores(
 	cedula INT NOT NULL,
 	contacto VARCHAR(50) NOT NULL,
 	ubicacion VARCHAR(100) NOT NULL,
-	articulos VARCHAR(100),
 	observaciones VARCHAR(100) DEFAULT ('Ninguna observación')
 )
 
 CREATE TABLE bancos_cuentas(
-	cod_bancos_cuentas INT IDENTITY(0,1) PRIMARY KEY,
 	cuenta VARCHAR(100) NOT NULL,
 	banco VARCHAR(100) NOT NULL,
-)
 
-CREATE TABLE cuentas_bancos_proveedores(
 	cod_proveedor INT NOT NULL,
-	cod_bancos_cuentas INT NOT NULL,
 
-	FOREIGN KEY (cod_proveedor) REFERENCES proveedores(cod_proveedor),
-	FOREIGN KEY (cod_bancos_cuentas) REFERENCES bancos_cuentas(cod_bancos_cuentas)
+	FOREIGN KEY (cod_proveedor) REFERENCES proveedores(cod_proveedor)
 )
 
 CREATE TABLE articulos(

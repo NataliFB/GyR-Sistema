@@ -88,7 +88,7 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
                 btnAgregarCuentaBancoActionPerformed(evt);
             }
         });
-        jPanel3.add(btnAgregarCuentaBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, -1, 40));
+        jPanel3.add(btnAgregarCuentaBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, -1, 40));
 
         btnModificarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
         btnModificarProv.setText("Modificar");
@@ -154,7 +154,7 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         jPanel3.add(btnInsertarProv1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
 
         btnAgregarArt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/add.png"))); // NOI18N
-        btnAgregarArt.setText("Agreagar Artículo");
+        btnAgregarArt.setText("Ver Artículos");
         btnAgregarArt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregarArtActionPerformed(evt);
