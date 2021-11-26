@@ -8,18 +8,55 @@ public class Pnl_2 extends javax.swing.JPanel {
         setSize(getPreferredSize());
     }
 
+    public void Limpiar(){
+        btgEmpresa.clearSelection();
+        btgEmpresaEnt.clearSelection();
+        btgEstado.clearSelection();
+        btgTipo.clearSelection();
+        jdcFechaEntregada.setCalendar(null);
+        jdcLimiteOrden.setCalendar(null);
+        txaObservacionAdjudicada.setText("");
+        txaObservacionesEntregada.setText("");
+        txaObservacionesOrden.setText("");
+        txtContratacionAdjudicada.setText("");
+        txtContratacionEntregada.setText("");
+        txtContratacionOrden.setText("");
+        txtDescripcionAdjudicada.setText("");
+        txtDescripcionEntregada.setText("");
+        txtDescripcionOrden.setText("");
+        txtEncargadoAdjudicada.setText("");
+        txtEncargadoEntregada.setText("");
+        txtEncargadoOrden.setText("");
+        txtEntregaEntregada.setText("");
+        txtEntregaOrden.setText("");
+        txtEntregaAdjudicada.setText("");
+        txtLugarEntOrden.setText("");
+        txtLugarEntregada.setText("");
+        txtLugar.setText("");
+        txtNumeroOrden.setText("");
+        txtVigenciaContrato.setText("");
+        cmbModalidadAdjudicada.setSelectedIndex(0);
+        cmbModalidadAdjudicada1.setSelectedIndex(0);
+        cmbModalidadEntregada.setSelectedIndex(0);
+        cmbOrdenEntregada.setSelectedIndex(0);
+        cmbOrden_Orden.setSelectedIndex(0);
+        cmbOrdenarAdjudicaciones.setSelectedIndex(0);
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         btgTipo = new javax.swing.ButtonGroup();
+        btgEstado = new javax.swing.ButtonGroup();
+        btgEmpresa = new javax.swing.ButtonGroup();
+        btgEmpresaEnt = new javax.swing.ButtonGroup();
         tbpContenedor = new javax.swing.JTabbedPane();
         pnlAdjudicada = new javax.swing.JPanel();
         txtContratacionAdjudicada = new javax.swing.JTextField();
-        txtEntregaaAdjudicada = new javax.swing.JTextField();
+        txtEntregaAdjudicada = new javax.swing.JTextField();
         txtDescripcionAdjudicada = new javax.swing.JTextField();
-        txtInstitucionAdjudicada = new javax.swing.JTextField();
+        txtLugar = new javax.swing.JTextField();
         txtEncargadoAdjudicada = new javax.swing.JTextField();
         rbtHabilesAdjudicada = new javax.swing.JRadioButton();
         rbtNaturalesAdjudicada = new javax.swing.JRadioButton();
@@ -41,7 +78,7 @@ public class Pnl_2 extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        txtLugar = new javax.swing.JLabel();
+        lblLugarr = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -112,26 +149,32 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         pnlAdjudicada.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         pnlAdjudicada.add(txtContratacionAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 250, -1));
-        pnlAdjudicada.add(txtEntregaaAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 250, -1));
+        pnlAdjudicada.add(txtEntregaAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 250, -1));
         pnlAdjudicada.add(txtDescripcionAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, 250, -1));
-        pnlAdjudicada.add(txtInstitucionAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 60, 250, -1));
+        pnlAdjudicada.add(txtLugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 60, 250, -1));
         pnlAdjudicada.add(txtEncargadoAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 90, 250, -1));
 
+        btgTipo.add(rbtHabilesAdjudicada);
         rbtHabilesAdjudicada.setText("Hábiles");
         pnlAdjudicada.add(rbtHabilesAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
 
+        btgTipo.add(rbtNaturalesAdjudicada);
         rbtNaturalesAdjudicada.setText("Naturales");
         pnlAdjudicada.add(rbtNaturalesAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
 
+        btgEmpresa.add(rbtGyRAdjudicada);
         rbtGyRAdjudicada.setText("GyR Grupo Asesor");
         pnlAdjudicada.add(rbtGyRAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
 
+        btgEmpresa.add(rbtPBAdjudicada);
         rbtPBAdjudicada.setText("Principal Brands");
         pnlAdjudicada.add(rbtPBAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
 
+        btgEstado.add(rbtFirmeAdjudicada);
         rbtFirmeAdjudicada.setText("En firme");
         pnlAdjudicada.add(rbtFirmeAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, -1, -1));
 
+        btgEstado.add(rbtDudaAdjudicada);
         rbtDudaAdjudicada.setText("En duda");
         pnlAdjudicada.add(rbtDudaAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 160, -1, -1));
 
@@ -155,6 +198,11 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         btnLimpiarAdjudicada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarAdjudicada.setText("Limpiar");
+        btnLimpiarAdjudicada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarAdjudicadaActionPerformed(evt);
+            }
+        });
         pnlAdjudicada.add(btnLimpiarAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
 
         btnBorrarAdjudicada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -192,8 +240,8 @@ public class Pnl_2 extends javax.swing.JPanel {
         jLabel7.setText("Días de entrega");
         pnlAdjudicada.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
-        txtLugar.setText("Lugar/Institución");
-        pnlAdjudicada.add(txtLugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 60, -1, -1));
+        lblLugarr.setText("Lugar/Institución");
+        pnlAdjudicada.add(lblLugarr, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 60, -1, -1));
 
         jLabel9.setText("Empresa");
         pnlAdjudicada.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
@@ -260,6 +308,11 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         btnLimpiarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarOrden.setText("Limpiar");
+        btnLimpiarOrden.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarOrdenActionPerformed(evt);
+            }
+        });
         pnlOrden.add(btnLimpiarOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
 
         btnEliminarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -308,10 +361,10 @@ public class Pnl_2 extends javax.swing.JPanel {
         tbpContenedor.addTab("Orden", pnlOrden);
 
         pnlEntregada.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnlEntregada.add(txtContratacionEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 250, -1));
-        pnlEntregada.add(txtEntregaEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 62, 250, -1));
+        pnlEntregada.add(txtContratacionEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 250, -1));
+        pnlEntregada.add(txtEntregaEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 250, -1));
         pnlEntregada.add(txtDescripcionEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 20, 250, -1));
-        pnlEntregada.add(txtLugarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 104, 250, -1));
+        pnlEntregada.add(txtLugarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 250, -1));
         pnlEntregada.add(txtEncargadoEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, 250, -1));
         pnlEntregada.add(jdcFechaEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 60, 250, -1));
 
@@ -321,9 +374,11 @@ public class Pnl_2 extends javax.swing.JPanel {
         cmbOrdenEntregada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
         pnlEntregada.add(cmbOrdenEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 277, 250, -1));
 
+        btgEmpresaEnt.add(rbtGyREntregada);
         rbtGyREntregada.setText("GyR Grupo Asesor");
         pnlEntregada.add(rbtGyREntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 190, 250, -1));
 
+        btgEmpresaEnt.add(rbtPBEntregada);
         rbtPBEntregada.setText("Principal Brands");
         pnlEntregada.add(rbtPBEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 250, -1));
 
@@ -331,7 +386,7 @@ public class Pnl_2 extends javax.swing.JPanel {
         txaObservacionesEntregada.setRows(5);
         scpObservacionesEntregada.setViewportView(txaObservacionesEntregada);
 
-        pnlEntregada.add(scpObservacionesEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, 250, -1));
+        pnlEntregada.add(scpObservacionesEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 250, -1));
 
         tblEntregada.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -362,6 +417,11 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         btnLimpiarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarEntregada.setText("Limpiar");
+        btnLimpiarEntregada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarEntregadaActionPerformed(evt);
+            }
+        });
         pnlEntregada.add(btnLimpiarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, -1, -1));
 
         btnEliminarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -408,12 +468,27 @@ public class Pnl_2 extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tbpContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
+            .addComponent(tbpContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 630, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnLimpiarAdjudicadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarAdjudicadaActionPerformed
+            Limpiar();
+    }//GEN-LAST:event_btnLimpiarAdjudicadaActionPerformed
+
+    private void btnLimpiarOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarOrdenActionPerformed
+            Limpiar();
+    }//GEN-LAST:event_btnLimpiarOrdenActionPerformed
+
+    private void btnLimpiarEntregadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarEntregadaActionPerformed
+        Limpiar();
+    }//GEN-LAST:event_btnLimpiarEntregadaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup btgEmpresa;
+    private javax.swing.ButtonGroup btgEmpresaEnt;
+    private javax.swing.ButtonGroup btgEstado;
     private javax.swing.ButtonGroup btgTipo;
     private javax.swing.JButton btnBorrarAdjudicada;
     private javax.swing.JButton btnBuscarAdjudicada;
@@ -468,6 +543,7 @@ public class Pnl_2 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel9;
     private com.toedter.calendar.JDateChooser jdcFechaEntregada;
     private com.toedter.calendar.JDateChooser jdcLimiteOrden;
+    private javax.swing.JLabel lblLugarr;
     private javax.swing.JPanel pnlAdjudicada;
     private javax.swing.JPanel pnlEntregada;
     private javax.swing.JPanel pnlOrden;
@@ -501,11 +577,10 @@ public class Pnl_2 extends javax.swing.JPanel {
     private javax.swing.JTextField txtEncargadoAdjudicada;
     private javax.swing.JTextField txtEncargadoEntregada;
     private javax.swing.JTextField txtEncargadoOrden;
+    private javax.swing.JTextField txtEntregaAdjudicada;
     private javax.swing.JTextField txtEntregaEntregada;
     private javax.swing.JTextField txtEntregaOrden;
-    private javax.swing.JTextField txtEntregaaAdjudicada;
-    private javax.swing.JTextField txtInstitucionAdjudicada;
-    private javax.swing.JLabel txtLugar;
+    private javax.swing.JTextField txtLugar;
     private javax.swing.JTextField txtLugarEntOrden;
     private javax.swing.JTextField txtLugarEntregada;
     private javax.swing.JTextField txtNumeroOrden;

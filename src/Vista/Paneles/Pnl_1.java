@@ -7,8 +7,40 @@ public class Pnl_1 extends javax.swing.JPanel {
         initComponents();
         setSize(getPreferredSize());
     }
-
-
+    public void Limpiar(){
+        jdcPagoGarantias.setCalendar(null);
+        jdcDevolucionGarantias.setCalendar(null);
+        jdcEntregaMuestras.setCalendar(null);
+        jdcRetiroMuestras.setCalendar(null);
+        txaObservacionesGarantias.setText("");
+        txaObservacionesMuestras.setText("");
+        txaObservacionesTimbres.setText("");
+        txtCantidadMuestras.setText("");
+        txtContratacionGarantias.setText("");
+        txtContratacionMuestras.setText("");
+        txtContratacionTimbres.setText("");
+        txtEncargadoMuestras.setText("");
+        txtEncargadoTimbres.setText("");
+        txtEntregaGarantias.setText("");
+        txtEnvioGarantias.setText("");
+        txtEstadoGarantias.setText("");
+        txtEstadoMuestras.setText("");
+        txtEstadoTimbres.setText("");
+        txtInstitucionGarantias.setText("");
+        txtInstitucionMuestras.setText("");
+        txtInstitucionTimbres.setText("");
+        txtMontoGarantias.setText("");
+        txtMontoTimbres.setText("");
+        txtObjetoGarantias.setText("");
+        txtObjetoMuestras.setText("");
+        txtProductoTimbres.setText("");
+        txtTiempoGarantias.setText("");
+        txtEnvioTimbres.setText("");
+        cmbOrdenMuestras.setSelectedIndex(0);
+        cmbOrdenarGarantias.setSelectedIndex(0);
+        cmbOrdenarTimbres.setSelectedIndex(0);
+        cmbTipoGarantias.setSelectedIndex(0);
+}
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -49,7 +81,7 @@ public class Pnl_1 extends javax.swing.JPanel {
         jLabel42 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
-        cmbTipoGarantías = new javax.swing.JComboBox<>();
+        cmbTipoGarantias = new javax.swing.JComboBox<>();
         pnlTimbres = new javax.swing.JPanel();
         txtContratacionTimbres = new javax.swing.JTextField();
         txtMontoTimbres = new javax.swing.JTextField();
@@ -110,16 +142,16 @@ public class Pnl_1 extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(979, 618));
 
         pnlGarantias.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnlGarantias.add(txtContratacionGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 23, 250, -1));
-        pnlGarantias.add(txtInstitucionGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 65, 250, -1));
-        pnlGarantias.add(txtEstadoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 146, 250, -1));
-        pnlGarantias.add(txtTiempoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 188, 250, -1));
-        pnlGarantias.add(txtObjetoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(618, 62, 250, -1));
-        pnlGarantias.add(txtMontoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(618, 104, 250, -1));
-        pnlGarantias.add(txtEntregaGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(618, 146, 250, -1));
-        pnlGarantias.add(txtEnvioGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(618, 188, 250, -1));
-        pnlGarantias.add(jdcPagoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 107, 250, -1));
-        pnlGarantias.add(jdcDevolucionGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(618, 23, 250, -1));
+        pnlGarantias.add(txtContratacionGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 250, -1));
+        pnlGarantias.add(txtInstitucionGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 250, -1));
+        pnlGarantias.add(txtEstadoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 250, -1));
+        pnlGarantias.add(txtTiempoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 250, -1));
+        pnlGarantias.add(txtObjetoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 60, 250, -1));
+        pnlGarantias.add(txtMontoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 250, -1));
+        pnlGarantias.add(txtEntregaGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 150, 250, -1));
+        pnlGarantias.add(txtEnvioGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 250, -1));
+        pnlGarantias.add(jdcPagoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 250, -1));
+        pnlGarantias.add(jdcDevolucionGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, 250, -1));
 
         btnIngresarGarantias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnIngresarGarantias.setText("Ingresar");
@@ -135,6 +167,11 @@ public class Pnl_1 extends javax.swing.JPanel {
 
         btnLimpiarGarantias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarGarantias.setText("Limpiar");
+        btnLimpiarGarantias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarGarantiasActionPerformed(evt);
+            }
+        });
         pnlGarantias.add(btnLimpiarGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(387, 337, -1, -1));
 
         btnBorrarGarantias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -148,7 +185,7 @@ public class Pnl_1 extends javax.swing.JPanel {
         txaObservacionesGarantias.setRows(5);
         spnObservacionesGarantias.setViewportView(txaObservacionesGarantias);
 
-        pnlGarantias.add(spnObservacionesGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 230, 250, -1));
+        pnlGarantias.add(spnObservacionesGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, 250, -1));
 
         tblGarantias.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -201,25 +238,25 @@ public class Pnl_1 extends javax.swing.JPanel {
         jLabel43.setText("Encargo de envio");
         pnlGarantias.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 191, -1, -1));
 
-        cmbTipoGarantías.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Seleccione>", "De Cumplimiento", "De Participación" }));
-        pnlGarantias.add(cmbTipoGarantías, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 230, 250, -1));
+        cmbTipoGarantias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Seleccione>", "De Cumplimiento", "De Participación" }));
+        pnlGarantias.add(cmbTipoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 230, 250, -1));
 
         jTabbedPane1.addTab("Garantías", pnlGarantias);
 
         pnlTimbres.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnlTimbres.add(txtContratacionTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 20, 250, -1));
-        pnlTimbres.add(txtMontoTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 62, 250, -1));
-        pnlTimbres.add(txtInstitucionTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 104, 250, -1));
-        pnlTimbres.add(txtEstadoTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 151, 250, -1));
-        pnlTimbres.add(txtProductoTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(636, 20, 250, -1));
-        pnlTimbres.add(txtEncargadoTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(636, 62, 250, -1));
-        pnlTimbres.add(txtEnvioTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(636, 104, 250, -1));
+        pnlTimbres.add(txtContratacionTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 250, -1));
+        pnlTimbres.add(txtMontoTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 250, -1));
+        pnlTimbres.add(txtInstitucionTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 250, -1));
+        pnlTimbres.add(txtEstadoTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 250, -1));
+        pnlTimbres.add(txtProductoTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, 250, -1));
+        pnlTimbres.add(txtEncargadoTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 60, 250, -1));
+        pnlTimbres.add(txtEnvioTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 250, -1));
 
         txaObservacionesTimbres.setColumns(20);
         txaObservacionesTimbres.setRows(5);
         spnObservaionesTimbres.setViewportView(txaObservacionesTimbres);
 
-        pnlTimbres.add(spnObservaionesTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 193, 250, -1));
+        pnlTimbres.add(spnObservaionesTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 250, -1));
 
         tblTimbres.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -243,6 +280,11 @@ public class Pnl_1 extends javax.swing.JPanel {
 
         btnLimpiarTimbres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarTimbres.setText("Limpiar");
+        btnLimpiarTimbres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarTimbresActionPerformed(evt);
+            }
+        });
         pnlTimbres.add(btnLimpiarTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(401, 300, -1, -1));
 
         btnBorrarTimbres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -254,7 +296,7 @@ public class Pnl_1 extends javax.swing.JPanel {
         pnlTimbres.add(btnBuscarTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 299, -1, -1));
 
         cmbOrdenarTimbres.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Contratación", "Monto", "Estado", "Producto", "Encargado" }));
-        pnlTimbres.add(cmbOrdenarTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(704, 305, 182, -1));
+        pnlTimbres.add(cmbOrdenarTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 300, 182, -1));
 
         jLabel1.setText("Número de Contratación");
         pnlTimbres.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 23, -1, -1));
@@ -286,20 +328,20 @@ public class Pnl_1 extends javax.swing.JPanel {
         jTabbedPane1.addTab("Timbres", pnlTimbres);
 
         pnlMuestras.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnlMuestras.add(txtContratacionMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 20, 250, -1));
-        pnlMuestras.add(txtObjetoMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 62, 250, -1));
-        pnlMuestras.add(txtInstitucionMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 104, 250, -1));
-        pnlMuestras.add(txtCantidadMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 20, 250, -1));
-        pnlMuestras.add(txtEncargadoMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 62, 250, -1));
-        pnlMuestras.add(txtEstadoMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 144, 250, -1));
-        pnlMuestras.add(jdcEntregaMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 146, 250, -1));
-        pnlMuestras.add(jdcRetiroMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 104, 250, -1));
+        pnlMuestras.add(txtContratacionMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 250, -1));
+        pnlMuestras.add(txtObjetoMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 250, -1));
+        pnlMuestras.add(txtInstitucionMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 250, -1));
+        pnlMuestras.add(txtCantidadMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, 250, -1));
+        pnlMuestras.add(txtEncargadoMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 60, 250, -1));
+        pnlMuestras.add(txtEstadoMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 250, -1));
+        pnlMuestras.add(jdcEntregaMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 250, -1));
+        pnlMuestras.add(jdcRetiroMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 100, 250, -1));
 
         txaObservacionesMuestras.setColumns(20);
         txaObservacionesMuestras.setRows(5);
         spnObservacionesMuestras.setViewportView(txaObservacionesMuestras);
 
-        pnlMuestras.add(spnObservacionesMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 185, 250, -1));
+        pnlMuestras.add(spnObservacionesMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 250, -1));
 
         tblMuestras.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -314,7 +356,7 @@ public class Pnl_1 extends javax.swing.JPanel {
         pnlMuestras.add(spnMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 346, 970, 243));
 
         cmbOrdenMuestras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Contratación", "Objeto", "Fecha entrega", "Fecha retiro", "Estado" }));
-        pnlMuestras.add(cmbOrdenMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(687, 297, -1, -1));
+        pnlMuestras.add(cmbOrdenMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, -1, -1));
 
         btnIngresarMuestras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnIngresarMuestras.setText("Ingresar");
@@ -330,6 +372,11 @@ public class Pnl_1 extends javax.swing.JPanel {
 
         btnLimpiarMuestras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarMuestras.setText("Limpiar");
+        btnLimpiarMuestras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarMuestrasActionPerformed(evt);
+            }
+        });
         pnlMuestras.add(btnLimpiarMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(383, 292, -1, -1));
 
         btnBorrarMuestras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -380,6 +427,18 @@ public class Pnl_1 extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnLimpiarGarantiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarGarantiasActionPerformed
+        Limpiar();
+
+    }//GEN-LAST:event_btnLimpiarGarantiasActionPerformed
+
+    private void btnLimpiarTimbresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarTimbresActionPerformed
+        Limpiar();
+    }//GEN-LAST:event_btnLimpiarTimbresActionPerformed
+
+    private void btnLimpiarMuestrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarMuestrasActionPerformed
+        Limpiar();
+    }//GEN-LAST:event_btnLimpiarMuestrasActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBorrarGarantias;
@@ -400,7 +459,7 @@ public class Pnl_1 extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> cmbOrdenMuestras;
     private javax.swing.JComboBox<String> cmbOrdenarGarantias;
     private javax.swing.JComboBox<String> cmbOrdenarTimbres;
-    private javax.swing.JComboBox<String> cmbTipoGarantías;
+    private javax.swing.JComboBox<String> cmbTipoGarantias;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

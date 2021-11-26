@@ -4,6 +4,12 @@
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="btgTipo">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="btgEstado">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="btgEmpresa">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="btgEmpresaEnt">
+    </Component>
   </NonVisualComponents>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -54,7 +60,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtEntregaaAdjudicada">
+            <Component class="javax.swing.JTextField" name="txtEntregaAdjudicada">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="130" y="60" width="250" height="-1"/>
@@ -68,7 +74,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtInstitucionAdjudicada">
+            <Component class="javax.swing.JTextField" name="txtLugar">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="640" y="60" width="250" height="-1"/>
@@ -84,6 +90,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="rbtHabilesAdjudicada">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="btgTipo"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="H&#xe1;biles"/>
               </Properties>
               <Constraints>
@@ -94,6 +103,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="rbtNaturalesAdjudicada">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="btgTipo"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Naturales"/>
               </Properties>
               <Constraints>
@@ -104,6 +116,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="rbtGyRAdjudicada">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="btgEmpresa"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="GyR Grupo Asesor"/>
               </Properties>
               <Constraints>
@@ -114,6 +129,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="rbtPBAdjudicada">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="btgEmpresa"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Principal Brands"/>
               </Properties>
               <Constraints>
@@ -124,6 +142,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="rbtFirmeAdjudicada">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="btgEstado"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="En firme"/>
               </Properties>
               <Constraints>
@@ -134,6 +155,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="rbtDudaAdjudicada">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="btgEstado"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="En duda"/>
               </Properties>
               <Constraints>
@@ -231,6 +255,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Limpiar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarAdjudicadaActionPerformed"/>
+              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="380" y="300" width="-1" height="-1"/>
@@ -383,7 +410,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="txtLugar">
+            <Component class="javax.swing.JLabel" name="lblLugarr">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Lugar/Instituci&#xf3;n"/>
               </Properties>
@@ -673,6 +700,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Limpiar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarOrdenActionPerformed"/>
+              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="380" y="300" width="-1" height="-1"/>
@@ -863,14 +893,14 @@
             <Component class="javax.swing.JTextField" name="txtContratacionEntregada">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="110" y="20" width="250" height="-1"/>
+                  <AbsoluteConstraints x="120" y="20" width="250" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JTextField" name="txtEntregaEntregada">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="110" y="62" width="250" height="-1"/>
+                  <AbsoluteConstraints x="120" y="60" width="250" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -884,7 +914,7 @@
             <Component class="javax.swing.JTextField" name="txtLugarEntregada">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="110" y="104" width="250" height="-1"/>
+                  <AbsoluteConstraints x="120" y="100" width="250" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -946,6 +976,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="rbtGyREntregada">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="btgEmpresaEnt"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="GyR Grupo Asesor"/>
               </Properties>
               <Constraints>
@@ -956,6 +989,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="rbtPBEntregada">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="btgEmpresaEnt"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Principal Brands"/>
               </Properties>
               <Constraints>
@@ -970,7 +1006,7 @@
               </AuxValues>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="110" y="150" width="250" height="-1"/>
+                  <AbsoluteConstraints x="120" y="150" width="250" height="-1"/>
                 </Constraint>
               </Constraints>
 
@@ -1113,6 +1149,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Limpiar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarEntregadaActionPerformed"/>
+              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="380" y="270" width="-1" height="-1"/>

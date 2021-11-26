@@ -33,7 +33,7 @@ public class Pnl_5 extends javax.swing.JPanel {
         btnLimpiarRenta = new javax.swing.JButton();
         btnEliminarRenta = new javax.swing.JButton();
         cmbOrdenRenta = new javax.swing.JComboBox<>();
-        cbxModalidadRenta = new javax.swing.JComboBox<>();
+        cbmModalidadRenta = new javax.swing.JComboBox<>();
         rbtColonesRenta = new javax.swing.JRadioButton();
         rbtDolares = new javax.swing.JRadioButton();
         rbtGastoRenta = new javax.swing.JRadioButton();
@@ -61,16 +61,16 @@ public class Pnl_5 extends javax.swing.JPanel {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Renta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 18))); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(txtContratacionRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 46, 190, -1));
+        jPanel1.add(txtContratacionRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 190, -1));
         jPanel1.add(txtSubtotalRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(581, 172, 220, -1));
         jPanel1.add(txtTotalRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 290, 220, -1));
         jPanel1.add(txtIVARenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(581, 214, 220, -1));
-        jPanel1.add(txtProveedorRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 130, 190, -1));
-        jPanel1.add(txtCedulaRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 172, 190, -1));
-        jPanel1.add(txtTelefonoRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 298, 190, -1));
+        jPanel1.add(txtProveedorRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 190, -1));
+        jPanel1.add(txtCedulaRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 190, -1));
+        jPanel1.add(txtTelefonoRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 190, -1));
         jPanel1.add(txtNacionalidadRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(581, 88, 220, -1));
-        jPanel1.add(txtFacturaRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 88, 190, -1));
-        jPanel1.add(txtDescripcionRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 214, 190, -1));
+        jPanel1.add(txtFacturaRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 190, -1));
+        jPanel1.add(txtDescripcionRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 190, -1));
         jPanel1.add(txtrenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 250, 220, -1));
         jPanel1.add(jdcFechaRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(581, 46, 220, -1));
 
@@ -88,6 +88,11 @@ public class Pnl_5 extends javax.swing.JPanel {
 
         btnLimpiarRenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarRenta.setText("Limpiar");
+        btnLimpiarRenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarRentaActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnLimpiarRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, -1, -1));
 
         btnEliminarRenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -97,8 +102,8 @@ public class Pnl_5 extends javax.swing.JPanel {
         cmbOrdenRenta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
         jPanel1.add(cmbOrdenRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 390, 250, -1));
 
-        cbxModalidadRenta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Según Demanda", "Cantidad Definida", "Del 50%", "Parcial" }));
-        jPanel1.add(cbxModalidadRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 256, 190, -1));
+        cbmModalidadRenta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Según Demanda", "Cantidad Definida", "Del 50%", "Parcial" }));
+        jPanel1.add(cbmModalidadRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 190, -1));
 
         btgMoneda.add(rbtColonesRenta);
         rbtColonesRenta.setText("Colones");
@@ -182,6 +187,25 @@ public class Pnl_5 extends javax.swing.JPanel {
         add(spnRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 444, 967, 180));
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnLimpiarRentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarRentaActionPerformed
+        jdcFechaRenta.setCalendar(null);
+        txtCedulaRenta.setText("");
+        txtContratacionRenta.setText("");
+        txtDescripcionRenta.setText("");
+        txtFacturaRenta.setText("");
+        txtIVARenta.setText("");
+        txtNacionalidadRenta.setText("");
+        txtProveedorRenta.setText("");
+        txtSubtotalRenta.setText("");
+        txtTelefonoRenta.setText("");
+        txtTotalRenta.setText("");
+        txtrenta.setText("");
+        cmbOrdenRenta.setSelectedIndex(0);
+        cbmModalidadRenta.setSelectedIndex(0);
+        btgMoneda.clearSelection();        
+        btgTipo.clearSelection();
+    }//GEN-LAST:event_btnLimpiarRentaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgMoneda;
@@ -191,7 +215,7 @@ public class Pnl_5 extends javax.swing.JPanel {
     private javax.swing.JButton btnInsertarRenta;
     private javax.swing.JButton btnLimpiarRenta;
     private javax.swing.JButton btnModificarRenta;
-    private javax.swing.JComboBox<String> cbxModalidadRenta;
+    private javax.swing.JComboBox<String> cbmModalidadRenta;
     private javax.swing.JComboBox<String> cmbOrdenRenta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;

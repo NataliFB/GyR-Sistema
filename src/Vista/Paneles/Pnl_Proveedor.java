@@ -58,17 +58,17 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Proveedores", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 18))); // NOI18N
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel3.add(txtTelProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 250, -1));
+        jPanel3.add(txtTelProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 250, -1));
         jPanel3.add(txtContProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 250, -1));
-        jPanel3.add(txtCorreoProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 250, -1));
-        jPanel3.add(txtProvReal, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 250, -1));
+        jPanel3.add(txtCorreoProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 250, -1));
+        jPanel3.add(txtProvReal, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 250, -1));
 
         txtCelProv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCelProvActionPerformed(evt);
             }
         });
-        jPanel3.add(txtCelProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 250, -1));
+        jPanel3.add(txtCelProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 250, -1));
         jPanel3.add(txtUbicacionProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 80, 250, -1));
 
         txtProvFantasia.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +76,7 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
                 txtProvFantasiaActionPerformed(evt);
             }
         });
-        jPanel3.add(txtProvFantasia, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, 250, -1));
+        jPanel3.add(txtProvFantasia, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 250, -1));
 
         cmbOrdenProv.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
         jPanel3.add(cmbOrdenProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 357, 250, -1));
@@ -100,6 +100,11 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
 
         btnLimpiarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarProv.setText("Limpiar");
+        btnLimpiarProv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarProvActionPerformed(evt);
+            }
+        });
         jPanel3.add(btnLimpiarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, -1, -1));
 
         btnEliminarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -141,7 +146,7 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
                 txtCedProv1ActionPerformed(evt);
             }
         });
-        jPanel3.add(txtCedProv1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 250, -1));
+        jPanel3.add(txtCedProv1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 250, -1));
 
         txaObservacionProv.setColumns(20);
         txaObservacionProv.setRows(5);
@@ -207,6 +212,19 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         addCB.setLocationRelativeTo(mp);
         addCB.setVisible(true);
     }//GEN-LAST:event_btnAgregarCuentaBancoActionPerformed
+
+    private void btnLimpiarProvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarProvActionPerformed
+        txaObservacionProv.setText("");
+        txtCedProv1.setText("");
+        txtCelProv.setText("");
+        txtContProv.setText("");
+        txtCorreoProv.setText("");
+        txtProvFantasia.setText("");
+        txtProvReal.setText("");
+        txtTelProv.setText("");
+        txtUbicacionProv.setText("");
+        cmbOrdenProv.setSelectedIndex(0);
+    }//GEN-LAST:event_btnLimpiarProvActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

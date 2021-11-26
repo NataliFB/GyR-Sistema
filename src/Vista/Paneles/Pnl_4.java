@@ -57,31 +57,31 @@ public class Pnl_4 extends javax.swing.JPanel {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Facturas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 18))); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(txtContratacionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 46, 190, -1));
-        jPanel1.add(txtDescripcionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 130, 190, -1));
-        jPanel1.add(txtTransferenciaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 172, 190, -1));
-        jPanel1.add(txtEstadoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 214, 190, -1));
-        jPanel1.add(txtEfectivoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 298, 190, -1));
+        jPanel1.add(txtContratacionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 190, -1));
+        jPanel1.add(txtDescripcionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 190, -1));
+        jPanel1.add(txtTransferenciaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 190, -1));
+        jPanel1.add(txtEstadoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 190, -1));
+        jPanel1.add(txtEfectivoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 190, -1));
 
         txtInstitucionFacturas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtInstitucionFacturasActionPerformed(evt);
             }
         });
-        jPanel1.add(txtInstitucionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 46, 190, -1));
+        jPanel1.add(txtInstitucionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 190, -1));
 
         txtMontoFacturas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMontoFacturasActionPerformed(evt);
             }
         });
-        jPanel1.add(txtMontoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 88, 190, -1));
-        jPanel1.add(txtRentaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 130, 190, -1));
-        jPanel1.add(txtInstCedidaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 214, 190, -1));
-        jPanel1.add(txtBancoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 256, 190, -1));
-        jPanel1.add(txtObservacionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 298, 190, -1));
-        jPanel1.add(jdcFechaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 88, 190, -1));
-        jPanel1.add(jdcCanceladoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 256, 190, -1));
+        jPanel1.add(txtMontoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, 190, -1));
+        jPanel1.add(txtRentaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 130, 190, -1));
+        jPanel1.add(txtInstCedidaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, 190, -1));
+        jPanel1.add(txtBancoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 250, 190, -1));
+        jPanel1.add(txtObservacionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 290, 190, -1));
+        jPanel1.add(jdcFechaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 190, -1));
+        jPanel1.add(jdcCanceladoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 190, -1));
 
         btgMoneda.add(rdbColones);
         rdbColones.setText("Colones");
@@ -105,6 +105,11 @@ public class Pnl_4 extends javax.swing.JPanel {
 
         btnLimpiarFacturas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarFacturas.setText("Limpiar");
+        btnLimpiarFacturas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarFacturasActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnLimpiarFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, -1, -1));
 
         btnEliminarFacturas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -184,6 +189,25 @@ public class Pnl_4 extends javax.swing.JPanel {
     private void txtInstitucionFacturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInstitucionFacturasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtInstitucionFacturasActionPerformed
+
+    private void btnLimpiarFacturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarFacturasActionPerformed
+        // TODO add your handling code here:
+        jdcCanceladoFacturas.setCalendar(null);
+        jdcFechaFacturas.setCalendar(null);
+        txtBancoFacturas.setText("");
+        txtContratacionFacturas.setText("");
+        txtDescripcionFacturas.setText("");
+        txtEfectivoFacturas.setText("");
+        txtEstadoFacturas.setText("");
+        txtInstCedidaFacturas.setText("");
+        txtInstitucionFacturas.setText("");
+        txtMontoFacturas.setText("");
+        txtObservacionFacturas.setText("");
+        txtRentaFacturas.setText("");
+        txtTransferenciaFacturas.setText("");
+        cmbOrdenFacturas.setSelectedIndex(0);
+        btgMoneda.clearSelection();
+    }//GEN-LAST:event_btnLimpiarFacturasActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
