@@ -43,7 +43,6 @@ public class Pnl_3 extends javax.swing.JPanel {
         btnInsertarDemanda = new javax.swing.JButton();
         btnModificarDemanda = new javax.swing.JButton();
         btnBuscarDemanda = new javax.swing.JButton();
-        btnLimpiarDemanda = new javax.swing.JButton();
         btnEliminarDemanda = new javax.swing.JButton();
         jLabel35 = new javax.swing.JLabel();
         cmbOrdenDemanda = new javax.swing.JComboBox<>();
@@ -53,6 +52,7 @@ public class Pnl_3 extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
+        btnLimpiar = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -126,15 +126,6 @@ public class Pnl_3 extends javax.swing.JPanel {
         btnBuscarDemanda.setText("Buscar");
         jPanel1.add(btnBuscarDemanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, -1, -1));
 
-        btnLimpiarDemanda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
-        btnLimpiarDemanda.setText("Limpiar");
-        btnLimpiarDemanda.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarDemandaActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnLimpiarDemanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, -1, -1));
-
         btnEliminarDemanda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
         btnEliminarDemanda.setText("Eliminar");
         jPanel1.add(btnEliminarDemanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, -1, 33));
@@ -172,6 +163,15 @@ public class Pnl_3 extends javax.swing.JPanel {
         jLabel7.setText("Número contratación");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 39, -1, -1));
 
+        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 369, -1, 40));
+
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 967, 415));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -183,13 +183,24 @@ public class Pnl_3 extends javax.swing.JPanel {
 
     }//GEN-LAST:event_txtProveedorFanActionPerformed
 
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        txaObservacionesDemanda.setText("");
+        txtCedula.setText("");
+        txtCosto.setText("");
+        txtMontoOfertado.setText("");
+        txtNumeroContrato.setText("");
+        txtObjeto.setText("");
+        txtProveedorFan.setText("");
+        txtProveedorReal.setText("");
+        cmbOrdenDemanda.setSelectedIndex(0);
+    }//GEN-LAST:event_btnLimpiarActionPerformed
 
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBuscarDemanda;
     private javax.swing.JButton btnEliminarDemanda;
     private javax.swing.JButton btnInsertarDemanda;
-    private javax.swing.JButton btnLimpiarDemanda;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnModificarDemanda;
     private javax.swing.JComboBox<String> cmbOrdenDemanda;
     private javax.swing.JLabel jLabel1;
