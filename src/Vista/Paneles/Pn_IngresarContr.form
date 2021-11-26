@@ -48,7 +48,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="150" y="40" width="280" height="100"/>
+              <AbsoluteConstraints x="170" y="40" width="280" height="100"/>
             </Constraint>
           </Constraints>
 
@@ -94,7 +94,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="150" y="150" width="280" height="-1"/>
+              <AbsoluteConstraints x="160" y="150" width="280" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -104,7 +104,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="150" y="200" width="280" height="-1"/>
+              <AbsoluteConstraints x="160" y="200" width="280" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -199,6 +199,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Limpiar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarContratacionActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
@@ -338,14 +341,13 @@
         <Component class="javax.swing.JTable" name="tblContrataciones">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="7" rowCount="0">
+              <Table columnCount="6" rowCount="0">
                 <Column editable="true" title="N&#xb0; de Contrataci&#xf3;n" type="java.lang.Object"/>
                 <Column editable="true" title="Descripci&#xf3;n" type="java.lang.Object"/>
                 <Column editable="true" title="Fecha de Publicaci&#xf3;n" type="java.lang.Object"/>
                 <Column editable="true" title="Fecha de Apertura" type="java.lang.Object"/>
                 <Column editable="true" title="Estado del Concurso" type="java.lang.Object"/>
                 <Column editable="true" title="Responsable" type="java.lang.Object"/>
-                <Column editable="true" title="Estado" type="java.lang.Object"/>
               </Table>
             </Property>
           </Properties>

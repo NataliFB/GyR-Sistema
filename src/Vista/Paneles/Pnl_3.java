@@ -1,12 +1,23 @@
 
 package Vista.Paneles;
 
+import javax.swing.table.DefaultTableModel;
+
 public class Pnl_3 extends javax.swing.JPanel {
 
     public Pnl_3() {
         initComponents();
         setSize(getPreferredSize());
     }
+    
+    public void limpiartabla(){
+    DefaultTableModel temp = (DefaultTableModel) jTable2.getModel();
+    int filas = jTable2.getRowCount();
+
+    for (int a = 0; filas > a; a++) {
+        temp.removeRow(0);
+    }
+}
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -71,27 +82,27 @@ public class Pnl_3 extends javax.swing.JPanel {
                 txtProveedorRealActionPerformed(evt);
             }
         });
-        jPanel1.add(txtProveedorReal, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 246, 190, -1));
+        jPanel1.add(txtProveedorReal, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 190, -1));
 
         jLabel1.setText("Bancos y cuentas");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, -1, -1));
-        jPanel1.add(txtCosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 204, 190, -1));
-        jPanel1.add(txtMontoOfertado, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 120, 190, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, -1, -1));
+        jPanel1.add(txtCosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 190, -1));
+        jPanel1.add(txtMontoOfertado, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 190, -1));
 
         jLabel2.setText("Monto ofertado");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 120, -1, -1));
-        jPanel1.add(txtNumeroContrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 36, 190, -1));
+        jPanel1.add(txtNumeroContrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 190, -1));
 
         jLabel3.setText("Objeto");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 81, -1, -1));
-        jPanel1.add(txtObjeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 78, 190, -1));
+        jPanel1.add(txtObjeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 190, -1));
 
         jLabel4.setText("Costo");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 207, -1, -1));
 
         jLabel10.setText("Cedula juridica");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 160, -1, -1));
-        jPanel1.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 162, 190, -1));
+        jPanel1.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 190, -1));
 
         jLabel15.setText("Prov. Fantasía");
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 292, -1, 14));
@@ -101,7 +112,7 @@ public class Pnl_3 extends javax.swing.JPanel {
                 txtProveedorFanActionPerformed(evt);
             }
         });
-        jPanel1.add(txtProveedorFan, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 288, 190, -1));
+        jPanel1.add(txtProveedorFan, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 190, -1));
 
         btnInsertarDemanda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnInsertarDemanda.setText("Agregar");
@@ -117,6 +128,11 @@ public class Pnl_3 extends javax.swing.JPanel {
 
         btnLimpiarDemanda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarDemanda.setText("Limpiar");
+        btnLimpiarDemanda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarDemandaActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnLimpiarDemanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, -1, -1));
 
         btnEliminarDemanda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -166,6 +182,21 @@ public class Pnl_3 extends javax.swing.JPanel {
     private void txtProveedorFanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProveedorFanActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtProveedorFanActionPerformed
+
+    private void btnLimpiarDemandaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarDemandaActionPerformed
+        txaObservacionesDemanda.setText("");
+        txtCedula.setText("");
+        txtCosto.setText("");
+        txtMontoOfertado.setText("");
+        txtNumeroContrato.setText("");
+        txtObjeto.setText("");
+        txtProveedorFan.setText("");
+        txtProveedorReal.setText("");
+        cmbOrdenDemanda.setSelectedIndex(0);
+        limpiartabla();
+        
+
+    }//GEN-LAST:event_btnLimpiarDemandaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

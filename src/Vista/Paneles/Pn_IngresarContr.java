@@ -49,15 +49,15 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         txaContratacion.setRows(5);
         spnContratacion.setViewportView(txaContratacion);
 
-        jPanel1.add(spnContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 280, 100));
+        jPanel1.add(spnContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 280, 100));
 
         txaDescripcion.setColumns(20);
         txaDescripcion.setRows(5);
         spnDescripcion.setViewportView(txaDescripcion);
 
         jPanel1.add(spnDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 40, 280, 100));
-        jPanel1.add(txtFechaPublicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 280, -1));
-        jPanel1.add(txtFechaApertura, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 280, -1));
+        jPanel1.add(txtFechaPublicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 280, -1));
+        jPanel1.add(txtFechaApertura, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 280, -1));
         jPanel1.add(txtResponsable, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 280, -1));
 
         btgEstado.add(rbtEnviada);
@@ -87,6 +87,11 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
 
         btnLimpiarContratacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarContratacion.setText("Limpiar");
+        btnLimpiarContratacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarContratacionActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnLimpiarContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
 
         btnEliminarContratacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -129,7 +134,7 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
 
             },
             new String [] {
-                "N° de Contratación", "Descripción", "Fecha de Publicación", "Fecha de Apertura", "Estado del Concurso", "Responsable", "Estado"
+                "N° de Contratación", "Descripción", "Fecha de Publicación", "Fecha de Apertura", "Estado del Concurso", "Responsable"
             }
         ));
         spnContrataciones.setViewportView(tblContrataciones);
@@ -144,6 +149,16 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
     private void cmbOrdenContratacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbOrdenContratacionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbOrdenContratacionActionPerformed
+
+    private void btnLimpiarContratacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarContratacionActionPerformed
+        txaContratacion.setText("");
+        txaDescripcion.setText("");
+        txtFechaApertura.setText("");
+        txtFechaPublicacion.setText("");
+        txtResponsable.setText("");
+        cmbOrdenContratacion.setSelectedIndex(0);
+        btgEstado.clearSelection();
+    }//GEN-LAST:event_btnLimpiarContratacionActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
