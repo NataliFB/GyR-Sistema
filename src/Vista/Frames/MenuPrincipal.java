@@ -48,7 +48,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        rSButtonMetro1.setBackground(javax.swing.UIManager.getDefaults().getColor("Panel.background"));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
         rSButtonMetro1.setText("Usuario");
         rSButtonMetro1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
