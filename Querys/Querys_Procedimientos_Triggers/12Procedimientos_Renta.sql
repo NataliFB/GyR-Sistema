@@ -5,10 +5,11 @@ USE BD_Sistema
 GO
 CREATE PROCEDURE insertar_renta
 	@num_factura INT, @descripcion VARCHAR(100), @modalidad VARCHAR(100), @telefono INT, @fecha_renta DATE, @nacionalidad VARCHAR(100),
-	@moneda BIT, @subtotal MONEY, @tipo_renta BIT, @cod_contratacion VARCHAR(100), @cod_proveedor INT
+	@moneda BIT, @subtotal MONEY, @impuesto MONEY, @renta MONEY, @total MONEY, @tipo_renta BIT, @cod_contratacion VARCHAR(100), 
+	@cod_proveedor INT
 AS BEGIN
-	INSERT INTO renta VALUES (@num_factura, @descripcion, @modalidad, @telefono, @fecha_renta, @nacionalidad, @moneda, @subtotal, @tipo_renta,
-	@cod_contratacion, @cod_proveedor)
+	INSERT INTO renta VALUES (@num_factura, @descripcion, @modalidad, @telefono, @fecha_renta, @nacionalidad, @moneda, @subtotal, @impuesto,
+	@total, @renta, @tipo_renta, @cod_contratacion, @cod_proveedor)
 END
 
 -------------------------------------------------------------------------------------------------------------------------------------------
@@ -25,11 +26,11 @@ END
 GO
 CREATE PROC actualizar_renta
 	@cod_renta INT, @num_factura INT, @descripcion VARCHAR(100), @modalidad VARCHAR(100), @telefono INT, @fecha_renta DATE, @nacionalidad VARCHAR(100),
-	@moneda BIT, @subtotal MONEY, @tipo_renta BIT, @cod_contratacion VARCHAR(100), @cod_proveedor INT
+	@moneda BIT, @subtotal MONEY, @impuesto MONEY, @renta MONEY, @total MONEY, @tipo_renta BIT, @cod_contratacion VARCHAR(100), @cod_proveedor INT
 AS BEGIN
 	UPDATE renta SET num_facura = @num_factura, descripcion = @descripcion, modalidad = @modalidad, telefono = @telefono, fecha_renta = @fecha_renta,
 	nacionalidad = @nacionalidad, moneda = @moneda, subtotal = @subtotal, tipo_renta = @tipo_renta, cod_contratacion = @cod_contratacion,
-	cod_proveedor = @cod_proveedor WHERE cod_renta = @cod_renta
+	cod_proveedor = @cod_proveedor, renta = @renta, impuesto = @impuesto, total = @total WHERE cod_renta = @cod_renta
 END
 -------------------------------------------------------------------------------------------------------------------------------------------
 -- Mostrar renta
@@ -45,7 +46,7 @@ AS BEGIN
 			WHEN moneda = 0 THEN 'Colón' 
 			ELSE 'Dolar' 
 		END AS VARCHAR) AS 'Moneda',
-	subtotal AS 'Subtotal',
+	subtotal AS 'Subtotal', impuesto AS 'Impuesto', total AS 'Total', Renta AS 'Renta',
 	CAST(
 		CASE
 			WHEN tipo_renta = 0 THEN 'Gasto'
@@ -73,6 +74,9 @@ AS BEGIN
 
 		CASE @filtro
 			WHEN 'subtotal' THEN subtotal
+			WHEN 'impuesto' THEN impuesto
+			WHEN 'renta' THEN renta
+			WHEN 'total' THEN total
 		END
 END
 -------------------------------------------------------------------------------------------------------------------------------------------

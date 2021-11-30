@@ -7,6 +7,7 @@ public class Pnl_1 extends javax.swing.JPanel {
         initComponents();
         setSize(getPreferredSize());
     }
+    
     public void Limpiar(){
         jdcPagoGarantias.setCalendar(null);
         jdcDevolucionGarantias.setCalendar(null);
@@ -419,7 +420,7 @@ public class Pnl_1 extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 979, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 979, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

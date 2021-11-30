@@ -9,7 +9,10 @@ CREATE TABLE renta(
 	fecha_renta DATE NOT NULL,
 	nacionalidad VARCHAR(100) NOT NULL,
 	moneda BIT NOT NULL,
-	subtotal MONEY NOT NULL, -- Puede ser que se cambie a 'total'
+	subtotal MONEY NOT NULL,
+	impuesto MONEY NOT NULL,
+	total MONEY NOT NULL,
+	renta MONEY NOT NULL,
 	tipo_renta BIT	NOT NULL,
 		
 	cod_contratacion VARCHAR(50) NOT NULL,

@@ -85,7 +85,17 @@ AS BEGIN
 		INNER JOIN articulos_proveedores AP ON AR.cod_articulo = AP.cod_articulo
 		WHERE proveedores.cod_proveedor = AP.cod_proveedor
 		FOR XML PATH('')),
-		1, 2, '') AS 'Artículos'
+		1, 2, '') AS 'Artículos',
+	STUFF(
+		(SELECT ', ' + bancos_cuentas.banco FROM bancos_cuentas 
+		INNER JOIN proveedores ON bancos_cuentas.cod_proveedor = proveedores.cod_proveedor
+		FOR XML PATH('')),
+		1, 2, '') AS 'Bancos',
+	STUFF(
+		(SELECT ', ' + bancos_cuentas.cuenta FROM bancos_cuentas 
+		INNER JOIN proveedores ON bancos_cuentas.cod_proveedor = proveedores.cod_proveedor
+		FOR XML PATH('')),
+		1, 2, '') AS 'Cuentas'
 	FROM proveedores
 	ORDER BY
 		CASE @filtro
@@ -104,5 +114,3 @@ AS BEGIN
 		END
 END
 -------------------------------------------------------------------------------------------------------------------------------------------
-SELECT * FROM bancos_cuentas
-SELECT nombre_prov

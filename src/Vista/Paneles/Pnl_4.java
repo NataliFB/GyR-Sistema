@@ -13,12 +13,12 @@ public class Pnl_4 extends javax.swing.JPanel {
     private void initComponents() {
 
         btgMoneda = new javax.swing.ButtonGroup();
+        btgMetodo = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         txtContratacionFacturas = new javax.swing.JTextField();
         txtDescripcionFacturas = new javax.swing.JTextField();
         txtTransferenciaFacturas = new javax.swing.JTextField();
         txtEstadoFacturas = new javax.swing.JTextField();
-        txtEfectivoFacturas = new javax.swing.JTextField();
         txtInstitucionFacturas = new javax.swing.JTextField();
         txtMontoFacturas = new javax.swing.JTextField();
         txtRentaFacturas = new javax.swing.JTextField();
@@ -27,8 +27,10 @@ public class Pnl_4 extends javax.swing.JPanel {
         txtObservacionFacturas = new javax.swing.JTextField();
         jdcFechaFacturas = new com.toedter.calendar.JDateChooser();
         jdcCanceladoFacturas = new com.toedter.calendar.JDateChooser();
-        rdbColones = new javax.swing.JRadioButton();
+        rbtColones = new javax.swing.JRadioButton();
         rbtDolares = new javax.swing.JRadioButton();
+        rbtTarjeta = new javax.swing.JRadioButton();
+        rbtEfectivo = new javax.swing.JRadioButton();
         btnInsertarFacturas = new javax.swing.JButton();
         btnModificarFacturas = new javax.swing.JButton();
         btnBuscarFacturas = new javax.swing.JButton();
@@ -45,11 +47,11 @@ public class Pnl_4 extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         spnFacturas = new javax.swing.JScrollPane();
         tblFacturas = new javax.swing.JTable();
 
@@ -58,17 +60,16 @@ public class Pnl_4 extends javax.swing.JPanel {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Facturas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 18))); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(txtContratacionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 190, -1));
-        jPanel1.add(txtDescripcionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 190, -1));
-        jPanel1.add(txtTransferenciaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 190, -1));
-        jPanel1.add(txtEstadoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 190, -1));
-        jPanel1.add(txtEfectivoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 190, -1));
+        jPanel1.add(txtDescripcionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 190, -1));
+        jPanel1.add(txtTransferenciaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 190, -1));
+        jPanel1.add(txtEstadoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 190, -1));
 
         txtInstitucionFacturas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtInstitucionFacturasActionPerformed(evt);
             }
         });
-        jPanel1.add(txtInstitucionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 190, -1));
+        jPanel1.add(txtInstitucionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 190, -1));
 
         txtMontoFacturas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,19 +78,27 @@ public class Pnl_4 extends javax.swing.JPanel {
         });
         jPanel1.add(txtMontoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, 190, -1));
         jPanel1.add(txtRentaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 130, 190, -1));
-        jPanel1.add(txtInstCedidaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, 190, -1));
-        jPanel1.add(txtBancoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 250, 190, -1));
-        jPanel1.add(txtObservacionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 290, 190, -1));
-        jPanel1.add(jdcFechaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 190, -1));
-        jPanel1.add(jdcCanceladoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 190, -1));
+        jPanel1.add(txtInstCedidaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, 190, -1));
+        jPanel1.add(txtBancoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 190, -1));
+        jPanel1.add(txtObservacionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 300, 190, -1));
+        jPanel1.add(jdcFechaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 190, -1));
+        jPanel1.add(jdcCanceladoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 190, -1));
 
-        btgMoneda.add(rdbColones);
-        rdbColones.setText("Colones");
-        jPanel1.add(rdbColones, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 173, -1, -1));
+        btgMoneda.add(rbtColones);
+        rbtColones.setText("Colones");
+        jPanel1.add(rbtColones, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, -1, -1));
 
         btgMoneda.add(rbtDolares);
         rbtDolares.setText("Dolares");
-        jPanel1.add(rbtDolares, new org.netbeans.lib.awtextra.AbsoluteConstraints(679, 173, -1, -1));
+        jPanel1.add(rbtDolares, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 50, -1, -1));
+
+        btgMetodo.add(rbtTarjeta);
+        rbtTarjeta.setText("Tarjeta");
+        jPanel1.add(rbtTarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 180, -1, -1));
+
+        btgMetodo.add(rbtEfectivo);
+        rbtEfectivo.setText("Efectivo");
+        jPanel1.add(rbtEfectivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 180, -1, -1));
 
         btnInsertarFacturas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnInsertarFacturas.setText("Agregar");
@@ -120,10 +129,10 @@ public class Pnl_4 extends javax.swing.JPanel {
         jPanel1.add(cmbOrdenFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 360, 250, -1));
 
         jLabel2.setText("Fecha de Factura");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 94, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 130, -1, -1));
 
         jLabel3.setText("Institución");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(449, 49, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 90, -1, -1));
 
         jLabel4.setText("Número de Contratación");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 49, -1, -1));
@@ -135,34 +144,34 @@ public class Pnl_4 extends javax.swing.JPanel {
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 133, -1, -1));
 
         jLabel9.setText("Descripción");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 133, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 170, -1, -1));
 
         jLabel11.setText("Institución cedida");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 217, -1, -1));
 
         jLabel12.setText("Transferencia");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 175, -1, -1));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 210, -1, -1));
 
         jLabel13.setText("Banco");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 259, -1, -1));
 
         jLabel14.setText("Fecha cancelado");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 259, -1, -1));
-
-        jLabel15.setText("Efectivo");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 298, -1, -1));
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 300, -1, -1));
 
         jLabel1.setText("Moneda:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 175, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 50, -1, -1));
 
         jLabel6.setText("Estado");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 217, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 260, -1, -1));
 
         jLabel8.setText("Observacion");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 301, -1, -1));
 
         jLabel35.setText("Ordenar por:");
         jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 360, -1, -1));
+
+        jLabel10.setText("Metodo de pago");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, -1, -1));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 967, 399));
 
@@ -197,7 +206,6 @@ public class Pnl_4 extends javax.swing.JPanel {
         txtBancoFacturas.setText("");
         txtContratacionFacturas.setText("");
         txtDescripcionFacturas.setText("");
-        txtEfectivoFacturas.setText("");
         txtEstadoFacturas.setText("");
         txtInstCedidaFacturas.setText("");
         txtInstitucionFacturas.setText("");
@@ -206,11 +214,13 @@ public class Pnl_4 extends javax.swing.JPanel {
         txtRentaFacturas.setText("");
         txtTransferenciaFacturas.setText("");
         cmbOrdenFacturas.setSelectedIndex(0);
+        btgMetodo.clearSelection();
         btgMoneda.clearSelection();
     }//GEN-LAST:event_btnLimpiarFacturasActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup btgMetodo;
     private javax.swing.ButtonGroup btgMoneda;
     private javax.swing.JButton btnBuscarFacturas;
     private javax.swing.JButton btnEliminarFacturas;
@@ -219,11 +229,11 @@ public class Pnl_4 extends javax.swing.JPanel {
     private javax.swing.JButton btnModificarFacturas;
     private javax.swing.JComboBox<String> cmbOrdenFacturas;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel35;
@@ -236,14 +246,15 @@ public class Pnl_4 extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private com.toedter.calendar.JDateChooser jdcCanceladoFacturas;
     private com.toedter.calendar.JDateChooser jdcFechaFacturas;
+    private javax.swing.JRadioButton rbtColones;
     private javax.swing.JRadioButton rbtDolares;
-    private javax.swing.JRadioButton rdbColones;
+    private javax.swing.JRadioButton rbtEfectivo;
+    private javax.swing.JRadioButton rbtTarjeta;
     private javax.swing.JScrollPane spnFacturas;
     private javax.swing.JTable tblFacturas;
     private javax.swing.JTextField txtBancoFacturas;
     private javax.swing.JTextField txtContratacionFacturas;
     private javax.swing.JTextField txtDescripcionFacturas;
-    private javax.swing.JTextField txtEfectivoFacturas;
     private javax.swing.JTextField txtEstadoFacturas;
     private javax.swing.JTextField txtInstCedidaFacturas;
     private javax.swing.JTextField txtInstitucionFacturas;
