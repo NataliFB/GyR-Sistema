@@ -5,7 +5,6 @@ public class Pnl_4 extends javax.swing.JPanel {
 
     public Pnl_4() {
         initComponents();
-        setSize(getPreferredSize());
     }
 
     @SuppressWarnings("unchecked")
@@ -63,19 +62,7 @@ public class Pnl_4 extends javax.swing.JPanel {
         jPanel1.add(txtDescripcionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 190, -1));
         jPanel1.add(txtTransferenciaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 190, -1));
         jPanel1.add(txtEstadoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 190, -1));
-
-        txtInstitucionFacturas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtInstitucionFacturasActionPerformed(evt);
-            }
-        });
         jPanel1.add(txtInstitucionFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 190, -1));
-
-        txtMontoFacturas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtMontoFacturasActionPerformed(evt);
-            }
-        });
         jPanel1.add(txtMontoFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, 190, -1));
         jPanel1.add(txtRentaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 130, 190, -1));
         jPanel1.add(txtInstCedidaFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, 190, -1));
@@ -114,11 +101,6 @@ public class Pnl_4 extends javax.swing.JPanel {
 
         btnLimpiarFacturas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarFacturas.setText("Limpiar");
-        btnLimpiarFacturas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarFacturasActionPerformed(evt);
-            }
-        });
         jPanel1.add(btnLimpiarFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, -1, -1));
 
         btnEliminarFacturas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -191,43 +173,16 @@ public class Pnl_4 extends javax.swing.JPanel {
         add(spnFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 960, 210));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtMontoFacturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoFacturasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMontoFacturasActionPerformed
-
-    private void txtInstitucionFacturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInstitucionFacturasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtInstitucionFacturasActionPerformed
-
-    private void btnLimpiarFacturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarFacturasActionPerformed
-        // TODO add your handling code here:
-        jdcCanceladoFacturas.setCalendar(null);
-        jdcFechaFacturas.setCalendar(null);
-        txtBancoFacturas.setText("");
-        txtContratacionFacturas.setText("");
-        txtDescripcionFacturas.setText("");
-        txtEstadoFacturas.setText("");
-        txtInstCedidaFacturas.setText("");
-        txtInstitucionFacturas.setText("");
-        txtMontoFacturas.setText("");
-        txtObservacionFacturas.setText("");
-        txtRentaFacturas.setText("");
-        txtTransferenciaFacturas.setText("");
-        cmbOrdenFacturas.setSelectedIndex(0);
-        btgMetodo.clearSelection();
-        btgMoneda.clearSelection();
-    }//GEN-LAST:event_btnLimpiarFacturasActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup btgMetodo;
-    private javax.swing.ButtonGroup btgMoneda;
-    private javax.swing.JButton btnBuscarFacturas;
-    private javax.swing.JButton btnEliminarFacturas;
-    private javax.swing.JButton btnInsertarFacturas;
-    private javax.swing.JButton btnLimpiarFacturas;
-    private javax.swing.JButton btnModificarFacturas;
-    private javax.swing.JComboBox<String> cmbOrdenFacturas;
+    public javax.swing.ButtonGroup btgMetodo;
+    public javax.swing.ButtonGroup btgMoneda;
+    public javax.swing.JButton btnBuscarFacturas;
+    public javax.swing.JButton btnEliminarFacturas;
+    public javax.swing.JButton btnInsertarFacturas;
+    public javax.swing.JButton btnLimpiarFacturas;
+    public javax.swing.JButton btnModificarFacturas;
+    public javax.swing.JComboBox<String> cmbOrdenFacturas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -244,23 +199,23 @@ public class Pnl_4 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private com.toedter.calendar.JDateChooser jdcCanceladoFacturas;
-    private com.toedter.calendar.JDateChooser jdcFechaFacturas;
-    private javax.swing.JRadioButton rbtColones;
-    private javax.swing.JRadioButton rbtDolares;
-    private javax.swing.JRadioButton rbtEfectivo;
-    private javax.swing.JRadioButton rbtTarjeta;
+    public com.toedter.calendar.JDateChooser jdcCanceladoFacturas;
+    public com.toedter.calendar.JDateChooser jdcFechaFacturas;
+    public javax.swing.JRadioButton rbtColones;
+    public javax.swing.JRadioButton rbtDolares;
+    public javax.swing.JRadioButton rbtEfectivo;
+    public javax.swing.JRadioButton rbtTarjeta;
     private javax.swing.JScrollPane spnFacturas;
-    private javax.swing.JTable tblFacturas;
-    private javax.swing.JTextField txtBancoFacturas;
-    private javax.swing.JTextField txtContratacionFacturas;
-    private javax.swing.JTextField txtDescripcionFacturas;
-    private javax.swing.JTextField txtEstadoFacturas;
-    private javax.swing.JTextField txtInstCedidaFacturas;
-    private javax.swing.JTextField txtInstitucionFacturas;
-    private javax.swing.JTextField txtMontoFacturas;
-    private javax.swing.JTextField txtObservacionFacturas;
-    private javax.swing.JTextField txtRentaFacturas;
-    private javax.swing.JTextField txtTransferenciaFacturas;
+    public javax.swing.JTable tblFacturas;
+    public javax.swing.JTextField txtBancoFacturas;
+    public javax.swing.JTextField txtContratacionFacturas;
+    public javax.swing.JTextField txtDescripcionFacturas;
+    public javax.swing.JTextField txtEstadoFacturas;
+    public javax.swing.JTextField txtInstCedidaFacturas;
+    public javax.swing.JTextField txtInstitucionFacturas;
+    public javax.swing.JTextField txtMontoFacturas;
+    public javax.swing.JTextField txtObservacionFacturas;
+    public javax.swing.JTextField txtRentaFacturas;
+    public javax.swing.JTextField txtTransferenciaFacturas;
     // End of variables declaration//GEN-END:variables
 }

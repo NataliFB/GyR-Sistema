@@ -5,48 +5,12 @@ public class Pnl_1 extends javax.swing.JPanel {
 
     public Pnl_1() {
         initComponents();
-        setSize(getPreferredSize());
     }
     
-    public void Limpiar(){
-        jdcPagoGarantias.setCalendar(null);
-        jdcDevolucionGarantias.setCalendar(null);
-        jdcEntregaMuestras.setCalendar(null);
-        jdcRetiroMuestras.setCalendar(null);
-        txaObservacionesGarantias.setText("");
-        txaObservacionesMuestras.setText("");
-        txaObservacionesTimbres.setText("");
-        txtCantidadMuestras.setText("");
-        txtContratacionGarantias.setText("");
-        txtContratacionMuestras.setText("");
-        txtContratacionTimbres.setText("");
-        txtEncargadoMuestras.setText("");
-        txtEncargadoTimbres.setText("");
-        txtEntregaGarantias.setText("");
-        txtEnvioGarantias.setText("");
-        txtEstadoGarantias.setText("");
-        txtEstadoMuestras.setText("");
-        txtEstadoTimbres.setText("");
-        txtInstitucionGarantias.setText("");
-        txtInstitucionMuestras.setText("");
-        txtInstitucionTimbres.setText("");
-        txtMontoGarantias.setText("");
-        txtMontoTimbres.setText("");
-        txtObjetoGarantias.setText("");
-        txtObjetoMuestras.setText("");
-        txtProductoTimbres.setText("");
-        txtTiempoGarantias.setText("");
-        txtEnvioTimbres.setText("");
-        cmbOrdenMuestras.setSelectedIndex(0);
-        cmbOrdenarGarantias.setSelectedIndex(0);
-        cmbOrdenarTimbres.setSelectedIndex(0);
-        cmbTipoGarantias.setSelectedIndex(0);
-}
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSlider1 = new javax.swing.JSlider();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         pnlGarantias = new javax.swing.JPanel();
         txtContratacionGarantias = new javax.swing.JTextField();
@@ -168,11 +132,6 @@ public class Pnl_1 extends javax.swing.JPanel {
 
         btnLimpiarGarantias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarGarantias.setText("Limpiar");
-        btnLimpiarGarantias.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarGarantiasActionPerformed(evt);
-            }
-        });
         pnlGarantias.add(btnLimpiarGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(387, 337, -1, -1));
 
         btnBorrarGarantias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -281,11 +240,6 @@ public class Pnl_1 extends javax.swing.JPanel {
 
         btnLimpiarTimbres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarTimbres.setText("Limpiar");
-        btnLimpiarTimbres.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarTimbresActionPerformed(evt);
-            }
-        });
         pnlTimbres.add(btnLimpiarTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(401, 300, -1, -1));
 
         btnBorrarTimbres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -373,11 +327,6 @@ public class Pnl_1 extends javax.swing.JPanel {
 
         btnLimpiarMuestras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarMuestras.setText("Limpiar");
-        btnLimpiarMuestras.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarMuestrasActionPerformed(evt);
-            }
-        });
         pnlMuestras.add(btnLimpiarMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(383, 292, -1, -1));
 
         btnBorrarMuestras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -428,39 +377,26 @@ public class Pnl_1 extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnLimpiarGarantiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarGarantiasActionPerformed
-        Limpiar();
-
-    }//GEN-LAST:event_btnLimpiarGarantiasActionPerformed
-
-    private void btnLimpiarTimbresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarTimbresActionPerformed
-        Limpiar();
-    }//GEN-LAST:event_btnLimpiarTimbresActionPerformed
-
-    private void btnLimpiarMuestrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarMuestrasActionPerformed
-        Limpiar();
-    }//GEN-LAST:event_btnLimpiarMuestrasActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBorrarGarantias;
-    private javax.swing.JButton btnBorrarMuestras;
-    private javax.swing.JButton btnBorrarTimbres;
-    private javax.swing.JButton btnBuscarGarantias;
-    private javax.swing.JButton btnBuscarMuestras;
-    private javax.swing.JButton btnBuscarTimbres;
-    private javax.swing.JButton btnIngresarGarantias;
-    private javax.swing.JButton btnIngresarMuestras;
-    private javax.swing.JButton btnIngresarTimbres;
-    private javax.swing.JButton btnLimpiarGarantias;
-    private javax.swing.JButton btnLimpiarMuestras;
-    private javax.swing.JButton btnLimpiarTimbres;
-    private javax.swing.JButton btnModificarGarantias;
-    private javax.swing.JButton btnModificarMuestras;
-    private javax.swing.JButton btnModificarTimbres;
-    private javax.swing.JComboBox<String> cmbOrdenMuestras;
-    private javax.swing.JComboBox<String> cmbOrdenarGarantias;
-    private javax.swing.JComboBox<String> cmbOrdenarTimbres;
-    private javax.swing.JComboBox<String> cmbTipoGarantias;
+    public javax.swing.JButton btnBorrarGarantias;
+    public javax.swing.JButton btnBorrarMuestras;
+    public javax.swing.JButton btnBorrarTimbres;
+    public javax.swing.JButton btnBuscarGarantias;
+    public javax.swing.JButton btnBuscarMuestras;
+    public javax.swing.JButton btnBuscarTimbres;
+    public javax.swing.JButton btnIngresarGarantias;
+    public javax.swing.JButton btnIngresarMuestras;
+    public javax.swing.JButton btnIngresarTimbres;
+    public javax.swing.JButton btnLimpiarGarantias;
+    public javax.swing.JButton btnLimpiarMuestras;
+    public javax.swing.JButton btnLimpiarTimbres;
+    public javax.swing.JButton btnModificarGarantias;
+    public javax.swing.JButton btnModificarMuestras;
+    public javax.swing.JButton btnModificarTimbres;
+    public javax.swing.JComboBox<String> cmbOrdenMuestras;
+    public javax.swing.JComboBox<String> cmbOrdenarGarantias;
+    public javax.swing.JComboBox<String> cmbOrdenarTimbres;
+    public javax.swing.JComboBox<String> cmbTipoGarantias;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -493,47 +429,46 @@ public class Pnl_1 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private com.toedter.calendar.JDateChooser jdcDevolucionGarantias;
-    private com.toedter.calendar.JDateChooser jdcEntregaMuestras;
-    private com.toedter.calendar.JDateChooser jdcPagoGarantias;
-    private com.toedter.calendar.JDateChooser jdcRetiroMuestras;
-    private javax.swing.JPanel pnlGarantias;
-    private javax.swing.JPanel pnlMuestras;
-    private javax.swing.JPanel pnlTimbres;
-    private javax.swing.JScrollPane spnGarantias;
+    public javax.swing.JTabbedPane jTabbedPane1;
+    public com.toedter.calendar.JDateChooser jdcDevolucionGarantias;
+    public com.toedter.calendar.JDateChooser jdcEntregaMuestras;
+    public com.toedter.calendar.JDateChooser jdcPagoGarantias;
+    public com.toedter.calendar.JDateChooser jdcRetiroMuestras;
+    public javax.swing.JPanel pnlGarantias;
+    public javax.swing.JPanel pnlMuestras;
+    public javax.swing.JPanel pnlTimbres;
+    public javax.swing.JScrollPane spnGarantias;
     private javax.swing.JScrollPane spnMuestras;
     private javax.swing.JScrollPane spnObservacionesGarantias;
     private javax.swing.JScrollPane spnObservacionesMuestras;
     private javax.swing.JScrollPane spnObservaionesTimbres;
     private javax.swing.JScrollPane spnTimbres;
     private javax.swing.JTable tblGarantias;
-    private javax.swing.JTable tblMuestras;
-    private javax.swing.JTable tblTimbres;
-    private javax.swing.JTextArea txaObservacionesGarantias;
-    private javax.swing.JTextArea txaObservacionesMuestras;
-    private javax.swing.JTextArea txaObservacionesTimbres;
-    private javax.swing.JTextField txtCantidadMuestras;
-    private javax.swing.JTextField txtContratacionGarantias;
-    private javax.swing.JTextField txtContratacionMuestras;
-    private javax.swing.JTextField txtContratacionTimbres;
-    private javax.swing.JTextField txtEncargadoMuestras;
-    private javax.swing.JTextField txtEncargadoTimbres;
-    private javax.swing.JTextField txtEntregaGarantias;
-    private javax.swing.JTextField txtEnvioGarantias;
-    private javax.swing.JTextField txtEnvioTimbres;
-    private javax.swing.JTextField txtEstadoGarantias;
-    private javax.swing.JTextField txtEstadoMuestras;
-    private javax.swing.JTextField txtEstadoTimbres;
-    private javax.swing.JTextField txtInstitucionGarantias;
-    private javax.swing.JTextField txtInstitucionMuestras;
-    private javax.swing.JTextField txtInstitucionTimbres;
-    private javax.swing.JTextField txtMontoGarantias;
-    private javax.swing.JTextField txtMontoTimbres;
-    private javax.swing.JTextField txtObjetoGarantias;
-    private javax.swing.JTextField txtObjetoMuestras;
-    private javax.swing.JTextField txtProductoTimbres;
-    private javax.swing.JTextField txtTiempoGarantias;
+    public javax.swing.JTable tblMuestras;
+    public javax.swing.JTable tblTimbres;
+    public javax.swing.JTextArea txaObservacionesGarantias;
+    public javax.swing.JTextArea txaObservacionesMuestras;
+    public javax.swing.JTextArea txaObservacionesTimbres;
+    public javax.swing.JTextField txtCantidadMuestras;
+    public javax.swing.JTextField txtContratacionGarantias;
+    public javax.swing.JTextField txtContratacionMuestras;
+    public javax.swing.JTextField txtContratacionTimbres;
+    public javax.swing.JTextField txtEncargadoMuestras;
+    public javax.swing.JTextField txtEncargadoTimbres;
+    public javax.swing.JTextField txtEntregaGarantias;
+    public javax.swing.JTextField txtEnvioGarantias;
+    public javax.swing.JTextField txtEnvioTimbres;
+    public javax.swing.JTextField txtEstadoGarantias;
+    public javax.swing.JTextField txtEstadoMuestras;
+    public javax.swing.JTextField txtEstadoTimbres;
+    public javax.swing.JTextField txtInstitucionGarantias;
+    public javax.swing.JTextField txtInstitucionMuestras;
+    public javax.swing.JTextField txtInstitucionTimbres;
+    public javax.swing.JTextField txtMontoGarantias;
+    public javax.swing.JTextField txtMontoTimbres;
+    public javax.swing.JTextField txtObjetoGarantias;
+    public javax.swing.JTextField txtObjetoMuestras;
+    public javax.swing.JTextField txtProductoTimbres;
+    public javax.swing.JTextField txtTiempoGarantias;
     // End of variables declaration//GEN-END:variables
 }

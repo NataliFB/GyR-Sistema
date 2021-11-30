@@ -1,23 +1,11 @@
 
 package Vista.Paneles;
 
-import javax.swing.table.DefaultTableModel;
-
 public class Pnl_3 extends javax.swing.JPanel {
 
     public Pnl_3() {
         initComponents();
-        setSize(getPreferredSize());
     }
-    
-    public void limpiartabla(){
-    DefaultTableModel temp = (DefaultTableModel) jTable2.getModel();
-    int filas = jTable2.getRowCount();
-
-    for (int a = 0; filas > a; a++) {
-        temp.removeRow(0);
-    }
-}
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -50,7 +38,7 @@ public class Pnl_3 extends javax.swing.JPanel {
         txaObservacionesDemanda = new javax.swing.JTextArea();
         jLabel43 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tblBancosCuentas = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
         btnLimpiar = new javax.swing.JButton();
 
@@ -76,12 +64,6 @@ public class Pnl_3 extends javax.swing.JPanel {
 
         jLabel5.setText("Prov. Real");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 250, -1, 14));
-
-        txtProveedorReal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtProveedorRealActionPerformed(evt);
-            }
-        });
         jPanel1.add(txtProveedorReal, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 190, -1));
 
         jLabel1.setText("Bancos y cuentas");
@@ -106,12 +88,6 @@ public class Pnl_3 extends javax.swing.JPanel {
 
         jLabel15.setText("Prov. Fantasía");
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 292, -1, 14));
-
-        txtProveedorFan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtProveedorFanActionPerformed(evt);
-            }
-        });
         jPanel1.add(txtProveedorFan, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 190, -1));
 
         btnInsertarDemanda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
@@ -140,12 +116,12 @@ public class Pnl_3 extends javax.swing.JPanel {
         txaObservacionesDemanda.setRows(5);
         scpObservacionesDemanda.setViewportView(txaObservacionesDemanda);
 
-        jPanel1.add(scpObservacionesDemanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, 230, -1));
+        jPanel1.add(scpObservacionesDemanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, 450, 100));
 
         jLabel43.setText("Observación");
         jPanel1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, -1, -1));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tblBancosCuentas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -156,7 +132,7 @@ public class Pnl_3 extends javax.swing.JPanel {
                 "Banco", "Cuenta"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(tblBancosCuentas);
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, 450, 170));
 
@@ -165,44 +141,19 @@ public class Pnl_3 extends javax.swing.JPanel {
 
         btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiar.setText("Limpiar");
-        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 369, -1, 40));
+        jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 370, 110, -1));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 967, 415));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtProveedorRealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProveedorRealActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtProveedorRealActionPerformed
-
-    private void txtProveedorFanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProveedorFanActionPerformed
-
-    }//GEN-LAST:event_txtProveedorFanActionPerformed
-
-    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-        txaObservacionesDemanda.setText("");
-        txtCedula.setText("");
-        txtCosto.setText("");
-        txtMontoOfertado.setText("");
-        txtNumeroContrato.setText("");
-        txtObjeto.setText("");
-        txtProveedorFan.setText("");
-        txtProveedorReal.setText("");
-        cmbOrdenDemanda.setSelectedIndex(0);
-    }//GEN-LAST:event_btnLimpiarActionPerformed
-
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBuscarDemanda;
-    private javax.swing.JButton btnEliminarDemanda;
-    private javax.swing.JButton btnInsertarDemanda;
-    private javax.swing.JButton btnLimpiar;
-    private javax.swing.JButton btnModificarDemanda;
-    private javax.swing.JComboBox<String> cmbOrdenDemanda;
+    public javax.swing.JButton btnBuscarDemanda;
+    public javax.swing.JButton btnEliminarDemanda;
+    public javax.swing.JButton btnInsertarDemanda;
+    public javax.swing.JButton btnLimpiar;
+    public javax.swing.JButton btnModificarDemanda;
+    public javax.swing.JComboBox<String> cmbOrdenDemanda;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel15;
@@ -217,15 +168,15 @@ public class Pnl_3 extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JScrollPane scpObservacionesDemanda;
-    private javax.swing.JTextArea txaObservacionesDemanda;
-    private javax.swing.JTextField txtCedula;
-    private javax.swing.JTextField txtCosto;
-    private javax.swing.JTextField txtMontoOfertado;
-    private javax.swing.JTextField txtNumeroContrato;
-    private javax.swing.JTextField txtObjeto;
-    private javax.swing.JTextField txtProveedorFan;
-    private javax.swing.JTextField txtProveedorReal;
+    public javax.swing.JTable tblBancosCuentas;
+    public javax.swing.JTextArea txaObservacionesDemanda;
+    public javax.swing.JTextField txtCedula;
+    public javax.swing.JTextField txtCosto;
+    public javax.swing.JTextField txtMontoOfertado;
+    public javax.swing.JTextField txtNumeroContrato;
+    public javax.swing.JTextField txtObjeto;
+    public javax.swing.JTextField txtProveedorFan;
+    public javax.swing.JTextField txtProveedorReal;
     // End of variables declaration//GEN-END:variables
 }

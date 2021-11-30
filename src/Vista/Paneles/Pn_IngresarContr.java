@@ -3,10 +3,8 @@ package Vista.Paneles;
 
 public class Pn_IngresarContr extends javax.swing.JPanel {
 
-
     public Pn_IngresarContr() {
         initComponents();
-        setSize(getPreferredSize());
     }
 
     @SuppressWarnings("unchecked")
@@ -49,7 +47,7 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         txaContratacion.setRows(5);
         spnContratacion.setViewportView(txaContratacion);
 
-        jPanel1.add(spnContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 280, 100));
+        jPanel1.add(spnContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 280, 100));
 
         txaDescripcion.setColumns(20);
         txaDescripcion.setRows(5);
@@ -70,11 +68,6 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
 
         btnInsertarContratacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnInsertarContratacion.setText("Agregar");
-        btnInsertarContratacion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInsertarContratacionActionPerformed(evt);
-            }
-        });
         jPanel1.add(btnInsertarContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
 
         btnModificarContratacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
@@ -87,11 +80,6 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
 
         btnLimpiarContratacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarContratacion.setText("Limpiar");
-        btnLimpiarContratacion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarContratacionActionPerformed(evt);
-            }
-        });
         jPanel1.add(btnLimpiarContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
 
         btnEliminarContratacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -99,11 +87,6 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         jPanel1.add(btnEliminarContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, -1, 33));
 
         cmbOrdenContratacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Seleccione>", "Fecha y hora de apertura", "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
-        cmbOrdenContratacion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbOrdenContratacionActionPerformed(evt);
-            }
-        });
         jPanel1.add(cmbOrdenContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 307, 250, -1));
 
         jLabel1.setText("Número de Contratación");
@@ -141,24 +124,6 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
 
         add(spnContrataciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 364, 967, 260));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnInsertarContratacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarContratacionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnInsertarContratacionActionPerformed
-
-    private void cmbOrdenContratacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbOrdenContratacionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbOrdenContratacionActionPerformed
-
-    private void btnLimpiarContratacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarContratacionActionPerformed
-        txaContratacion.setText("");
-        txaDescripcion.setText("");
-        txtFechaApertura.setText("");
-        txtFechaPublicacion.setText("");
-        txtResponsable.setText("");
-        cmbOrdenContratacion.setSelectedIndex(0);
-        btgEstado.clearSelection();
-    }//GEN-LAST:event_btnLimpiarContratacionActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

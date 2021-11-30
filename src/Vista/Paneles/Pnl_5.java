@@ -5,7 +5,6 @@ public class Pnl_5 extends javax.swing.JPanel {
 
     public Pnl_5() {
         initComponents();
-        setSize(getPreferredSize());
     }
 
     @SuppressWarnings("unchecked")
@@ -88,11 +87,6 @@ public class Pnl_5 extends javax.swing.JPanel {
 
         btnLimpiarRenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarRenta.setText("Limpiar");
-        btnLimpiarRenta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarRentaActionPerformed(evt);
-            }
-        });
         jPanel1.add(btnLimpiarRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, -1, -1));
 
         btnEliminarRenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -187,36 +181,16 @@ public class Pnl_5 extends javax.swing.JPanel {
         add(spnRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 444, 967, 180));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnLimpiarRentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarRentaActionPerformed
-        jdcFechaRenta.setCalendar(null);
-        txtCedulaRenta.setText("");
-        txtContratacionRenta.setText("");
-        txtDescripcionRenta.setText("");
-        txtFacturaRenta.setText("");
-        txtIVARenta.setText("");
-        txtNacionalidadRenta.setText("");
-        txtProveedorRenta.setText("");
-        txtSubtotalRenta.setText("");
-        txtTelefonoRenta.setText("");
-        txtTotalRenta.setText("");
-        txtrenta.setText("");
-        cmbOrdenRenta.setSelectedIndex(0);
-        cbmModalidadRenta.setSelectedIndex(0);
-        btgMoneda.clearSelection();        
-        btgTipo.clearSelection();
-    }//GEN-LAST:event_btnLimpiarRentaActionPerformed
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup btgMoneda;
-    private javax.swing.ButtonGroup btgTipo;
-    private javax.swing.JButton btnBuscarRenta;
-    private javax.swing.JButton btnEliminarRenta;
-    private javax.swing.JButton btnInsertarRenta;
-    private javax.swing.JButton btnLimpiarRenta;
-    private javax.swing.JButton btnModificarRenta;
-    private javax.swing.JComboBox<String> cbmModalidadRenta;
-    private javax.swing.JComboBox<String> cmbOrdenRenta;
+    public javax.swing.ButtonGroup btgMoneda;
+    public javax.swing.ButtonGroup btgTipo;
+    public javax.swing.JButton btnBuscarRenta;
+    public javax.swing.JButton btnEliminarRenta;
+    public javax.swing.JButton btnInsertarRenta;
+    public javax.swing.JButton btnLimpiarRenta;
+    public javax.swing.JButton btnModificarRenta;
+    public javax.swing.JComboBox<String> cbmModalidadRenta;
+    public javax.swing.JComboBox<String> cmbOrdenRenta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -234,23 +208,23 @@ public class Pnl_5 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private com.toedter.calendar.JDateChooser jdcFechaRenta;
-    private javax.swing.JRadioButton rbtColonesRenta;
-    private javax.swing.JRadioButton rbtDolares;
-    private javax.swing.JRadioButton rbtGastoRenta;
-    private javax.swing.JRadioButton rbtVentaRenta;
+    public com.toedter.calendar.JDateChooser jdcFechaRenta;
+    public javax.swing.JRadioButton rbtColonesRenta;
+    public javax.swing.JRadioButton rbtDolares;
+    public javax.swing.JRadioButton rbtGastoRenta;
+    public javax.swing.JRadioButton rbtVentaRenta;
     private javax.swing.JScrollPane spnRenta;
-    private javax.swing.JTable tblRenta;
-    private javax.swing.JTextField txtCedulaRenta;
-    private javax.swing.JTextField txtContratacionRenta;
-    private javax.swing.JTextField txtDescripcionRenta;
-    private javax.swing.JTextField txtFacturaRenta;
-    private javax.swing.JTextField txtIVARenta;
-    private javax.swing.JTextField txtNacionalidadRenta;
-    private javax.swing.JTextField txtProveedorRenta;
-    private javax.swing.JTextField txtSubtotalRenta;
-    private javax.swing.JTextField txtTelefonoRenta;
-    private javax.swing.JTextField txtTotalRenta;
-    private javax.swing.JTextField txtrenta;
+    public javax.swing.JTable tblRenta;
+    public javax.swing.JTextField txtCedulaRenta;
+    public javax.swing.JTextField txtContratacionRenta;
+    public javax.swing.JTextField txtDescripcionRenta;
+    public javax.swing.JTextField txtFacturaRenta;
+    public javax.swing.JTextField txtIVARenta;
+    public javax.swing.JTextField txtNacionalidadRenta;
+    public javax.swing.JTextField txtProveedorRenta;
+    public javax.swing.JTextField txtSubtotalRenta;
+    public javax.swing.JTextField txtTelefonoRenta;
+    public javax.swing.JTextField txtTotalRenta;
+    public javax.swing.JTextField txtrenta;
     // End of variables declaration//GEN-END:variables
 }

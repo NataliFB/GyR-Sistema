@@ -1,24 +1,16 @@
 
 package Vista.Paneles;
-import Vista.JDialogs.*;
-import Vista.Frames.*;
 
-/**
- *
- * @author Aaron
- */
 public class Pnl_Proveedor extends javax.swing.JPanel {
 
     public Pnl_Proveedor() {
         initComponents();
-        setSize(getPreferredSize());
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         txtTelProv = new javax.swing.JTextField();
@@ -62,20 +54,8 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         jPanel3.add(txtContProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 250, -1));
         jPanel3.add(txtCorreoProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 250, -1));
         jPanel3.add(txtProvReal, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 250, -1));
-
-        txtCelProv.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCelProvActionPerformed(evt);
-            }
-        });
         jPanel3.add(txtCelProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 250, -1));
         jPanel3.add(txtUbicacionProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 80, 250, -1));
-
-        txtProvFantasia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtProvFantasiaActionPerformed(evt);
-            }
-        });
         jPanel3.add(txtProvFantasia, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 250, -1));
 
         cmbOrdenProv.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
@@ -83,11 +63,6 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
 
         btnAgregarCuentaBanco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/add.png"))); // NOI18N
         btnAgregarCuentaBanco.setText("Agregar Cuentas y Bancos");
-        btnAgregarCuentaBanco.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarCuentaBancoActionPerformed(evt);
-            }
-        });
         jPanel3.add(btnAgregarCuentaBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, -1, 40));
 
         btnModificarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
@@ -100,11 +75,6 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
 
         btnLimpiarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarProv.setText("Limpiar");
-        btnLimpiarProv.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarProvActionPerformed(evt);
-            }
-        });
         jPanel3.add(btnLimpiarProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, -1, -1));
 
         btnEliminarProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -140,12 +110,6 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
 
         jLabel17.setText("Teléfono");
         jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
-
-        txtCedProv1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCedProv1ActionPerformed(evt);
-            }
-        });
         jPanel3.add(txtCedProv1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 250, -1));
 
         txaObservacionProv.setColumns(20);
@@ -160,11 +124,6 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
 
         btnAgregarArt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/add.png"))); // NOI18N
         btnAgregarArt.setText("Ver Artículos");
-        btnAgregarArt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarArtActionPerformed(evt);
-            }
-        });
         jPanel3.add(btnAgregarArt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, 40));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 970, 400));
@@ -187,56 +146,15 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 720));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtProvFantasiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProvFantasiaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtProvFantasiaActionPerformed
-
-    private void txtCelProvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCelProvActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCelProvActionPerformed
-
-    private void txtCedProv1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedProv1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCedProv1ActionPerformed
-
-    private void btnAgregarArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarArtActionPerformed
-        MenuPrincipal mp = new MenuPrincipal();
-        AgregarArticulo addArt = new AgregarArticulo(mp, true);
-        addArt.setLocationRelativeTo(mp);
-        addArt.setVisible(true);
-    }//GEN-LAST:event_btnAgregarArtActionPerformed
-
-    private void btnAgregarCuentaBancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarCuentaBancoActionPerformed
-        MenuPrincipal mp = new MenuPrincipal();
-        AgregarCuentaBanco addCB = new AgregarCuentaBanco(mp, true);
-        addCB.setLocationRelativeTo(mp);
-        addCB.setVisible(true);
-    }//GEN-LAST:event_btnAgregarCuentaBancoActionPerformed
-
-    private void btnLimpiarProvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarProvActionPerformed
-        txaObservacionProv.setText("");
-        txtCedProv1.setText("");
-        txtCelProv.setText("");
-        txtContProv.setText("");
-        txtCorreoProv.setText("");
-        txtProvFantasia.setText("");
-        txtProvReal.setText("");
-        txtTelProv.setText("");
-        txtUbicacionProv.setText("");
-        cmbOrdenProv.setSelectedIndex(0);
-    }//GEN-LAST:event_btnLimpiarProvActionPerformed
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAgregarArt;
-    private javax.swing.JButton btnAgregarCuentaBanco;
-    private javax.swing.JButton btnBuscarProv;
-    private javax.swing.JButton btnEliminarProv;
-    private javax.swing.JButton btnInsertarProv1;
-    private javax.swing.JButton btnLimpiarProv;
-    private javax.swing.JButton btnModificarProv;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JComboBox<String> cmbOrdenProv;
+    public javax.swing.JButton btnAgregarArt;
+    public javax.swing.JButton btnAgregarCuentaBanco;
+    public javax.swing.JButton btnBuscarProv;
+    public javax.swing.JButton btnEliminarProv;
+    public javax.swing.JButton btnInsertarProv1;
+    public javax.swing.JButton btnLimpiarProv;
+    public javax.swing.JButton btnModificarProv;
+    public javax.swing.JComboBox<String> cmbOrdenProv;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel24;
@@ -251,15 +169,15 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane scpObservacionesProv;
     private javax.swing.JScrollPane spnProveedor;
-    private javax.swing.JTable tblProv;
-    private javax.swing.JTextArea txaObservacionProv;
-    private javax.swing.JTextField txtCedProv1;
-    private javax.swing.JTextField txtCelProv;
-    private javax.swing.JTextField txtContProv;
-    private javax.swing.JTextField txtCorreoProv;
-    private javax.swing.JTextField txtProvFantasia;
-    private javax.swing.JTextField txtProvReal;
-    private javax.swing.JTextField txtTelProv;
-    private javax.swing.JTextField txtUbicacionProv;
+    public javax.swing.JTable tblProv;
+    public javax.swing.JTextArea txaObservacionProv;
+    public javax.swing.JTextField txtCedProv1;
+    public javax.swing.JTextField txtCelProv;
+    public javax.swing.JTextField txtContProv;
+    public javax.swing.JTextField txtCorreoProv;
+    public javax.swing.JTextField txtProvFantasia;
+    public javax.swing.JTextField txtProvReal;
+    public javax.swing.JTextField txtTelProv;
+    public javax.swing.JTextField txtUbicacionProv;
     // End of variables declaration//GEN-END:variables
 }
