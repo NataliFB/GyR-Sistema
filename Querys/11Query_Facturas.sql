@@ -10,7 +10,6 @@ CREATE TABLE facturas(
 	efectivo BIT NOT NULL,
 	moneda BIT NOT NULL,
 	monto MONEY NOT NULL,
-	total MONEY NOT NULL, -- Posiblemente se cambie
 	institucion_cedida VARCHAR(100) NOT NULL,
 	banco VARCHAR(100) NOT NULL,
 	observaciones VARCHAR(100) NOT NULL,

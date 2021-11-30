@@ -43,6 +43,11 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -61,7 +66,7 @@
                       <Component id="btn_IngresarContr" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
                       <Component id="btn_ren1" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -96,9 +101,6 @@
       <SubComponents>
         <Component class="rsbuttom.RSButtonMetro" name="rSButtonMetro1">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="41" green="3f" id="Panel.background" palette="3" red="3c" type="palette"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Usuario"/>
           </Properties>
           <Events>

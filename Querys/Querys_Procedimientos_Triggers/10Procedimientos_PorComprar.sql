@@ -67,15 +67,5 @@ AS BEGIN
 		END
 
 END
--- Este procedimiento es posible que se vaya a ejecutar de otra forma a como está
+
 -------------------------------------------------------------------------------------------------------------------------------------------
-
--- Ignorar esto
-
---SELECT cod_porcomprar AS 'Código de compra', cod_contratacion AS 'Contratación', objeto AS 'Objeto', monto_ofertado AS 'Monto ofertado', 
---	costo AS 'Costo', P.proveedor_real AS 'Proveedor Real', P.proveedor_fantasia AS 'Proveedor Fantasía', P.cedula AS 'Cédula Jurídica',
---	BC.banco AS 'Bancos', BC.cuenta AS 'Cuentas'
---	FROM ((por_comprar INNER JOIN proveedores P ON por_comprar.cod_proveedor = P.cod_proveedor)
---	INNER JOIN bancos_cuentas BC ON BC.cod_proveedor = P.cod_proveedor)
-
---	SELECT * FROM bancos_cuentas
