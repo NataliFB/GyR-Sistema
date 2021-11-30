@@ -26,6 +26,7 @@ public class Ctrl_IngresarContr implements ActionListener {
     private void Iniciar() {
         // Se inicializa estados para la ventana
         pnlC.setSize(pnlC.getPreferredSize());
+        pnlC.setVisible(true);
     }
 
     @Override

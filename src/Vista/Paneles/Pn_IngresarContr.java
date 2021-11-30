@@ -3,7 +3,6 @@ package Vista.Paneles;
 
 public class Pn_IngresarContr extends javax.swing.JPanel {
 
-
     public Pn_IngresarContr() {
         initComponents();
     }

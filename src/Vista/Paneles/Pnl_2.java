@@ -5,42 +5,6 @@ public class Pnl_2 extends javax.swing.JPanel {
 
     public Pnl_2() {
         initComponents();
-        setSize(getPreferredSize());
-    }
-
-    public void Limpiar(){
-        btgEmpresa.clearSelection();
-        btgEmpresaEnt.clearSelection();
-        btgEstado.clearSelection();
-        btgTipo.clearSelection();
-        jdcFechaEntregada.setCalendar(null);
-        jdcLimiteOrden.setCalendar(null);
-        txaObservacionAdjudicada.setText("");
-        txaObservacionesEntregada.setText("");
-        txaObservacionesOrden.setText("");
-        txtContratacionAdjudicada.setText("");
-        txtContratacionEntregada.setText("");
-        txtContratacionOrden.setText("");
-        txtDescripcionAdjudicada.setText("");
-        txtDescripcionEntregada.setText("");
-        txtDescripcionOrden.setText("");
-        txtEncargadoAdjudicada.setText("");
-        txtEncargadoEntregada.setText("");
-        txtEncargadoOrden.setText("");
-        txtEntregaEntregada.setText("");
-        txtEntregaOrden.setText("");
-        txtEntregaAdjudicada.setText("");
-        txtLugarEntOrden.setText("");
-        txtLugarEntregada.setText("");
-        txtLugar.setText("");
-        txtNumeroOrden.setText("");
-        txtVigenciaContrato.setText("");
-        cmbModalidadAdjudicada.setSelectedIndex(0);
-        cmbModalidadAdjudicada1.setSelectedIndex(0);
-        cmbModalidadEntregada.setSelectedIndex(0);
-        cmbOrdenEntregada.setSelectedIndex(0);
-        cmbOrden_Orden.setSelectedIndex(0);
-        cmbOrdenarAdjudicaciones.setSelectedIndex(0);
     }
 
     @SuppressWarnings("unchecked")
@@ -198,11 +162,6 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         btnLimpiarAdjudicada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarAdjudicada.setText("Limpiar");
-        btnLimpiarAdjudicada.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarAdjudicadaActionPerformed(evt);
-            }
-        });
         pnlAdjudicada.add(btnLimpiarAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
 
         btnBorrarAdjudicada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -308,11 +267,6 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         btnLimpiarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarOrden.setText("Limpiar");
-        btnLimpiarOrden.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarOrdenActionPerformed(evt);
-            }
-        });
         pnlOrden.add(btnLimpiarOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
 
         btnEliminarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -417,11 +371,6 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         btnLimpiarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarEntregada.setText("Limpiar");
-        btnLimpiarEntregada.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarEntregadaActionPerformed(evt);
-            }
-        });
         pnlEntregada.add(btnLimpiarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, -1, -1));
 
         btnEliminarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
@@ -468,49 +417,37 @@ public class Pnl_2 extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tbpContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 630, Short.MAX_VALUE)
+            .addComponent(tbpContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnLimpiarAdjudicadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarAdjudicadaActionPerformed
-            Limpiar();
-    }//GEN-LAST:event_btnLimpiarAdjudicadaActionPerformed
-
-    private void btnLimpiarOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarOrdenActionPerformed
-            Limpiar();
-    }//GEN-LAST:event_btnLimpiarOrdenActionPerformed
-
-    private void btnLimpiarEntregadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarEntregadaActionPerformed
-        Limpiar();
-    }//GEN-LAST:event_btnLimpiarEntregadaActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup btgEmpresa;
-    private javax.swing.ButtonGroup btgEmpresaEnt;
-    private javax.swing.ButtonGroup btgEstado;
-    private javax.swing.ButtonGroup btgTipo;
-    private javax.swing.JButton btnBorrarAdjudicada;
-    private javax.swing.JButton btnBuscarAdjudicada;
-    private javax.swing.JButton btnBuscarEntregada;
-    private javax.swing.JButton btnBuscarOrden;
-    private javax.swing.JButton btnEliminarEntregada;
-    private javax.swing.JButton btnEliminarOrden;
-    private javax.swing.JButton btnInsertarAdjudicada;
-    private javax.swing.JButton btnInsertarEntregada;
-    private javax.swing.JButton btnInsertarOrden;
-    private javax.swing.JButton btnLimpiarAdjudicada;
-    private javax.swing.JButton btnLimpiarEntregada;
-    private javax.swing.JButton btnLimpiarOrden;
-    private javax.swing.JButton btnModificarAdjudicada;
-    private javax.swing.JButton btnModificarEntrega;
-    private javax.swing.JButton btnModificarOrden;
-    private javax.swing.JComboBox<String> cmbModalidadAdjudicada;
-    private javax.swing.JComboBox<String> cmbModalidadAdjudicada1;
-    private javax.swing.JComboBox<String> cmbModalidadEntregada;
-    private javax.swing.JComboBox<String> cmbOrdenEntregada;
-    private javax.swing.JComboBox<String> cmbOrden_Orden;
-    private javax.swing.JComboBox<String> cmbOrdenarAdjudicaciones;
+    public javax.swing.ButtonGroup btgEmpresa;
+    public javax.swing.ButtonGroup btgEmpresaEnt;
+    public javax.swing.ButtonGroup btgEstado;
+    public javax.swing.ButtonGroup btgTipo;
+    public javax.swing.JButton btnBorrarAdjudicada;
+    public javax.swing.JButton btnBuscarAdjudicada;
+    public javax.swing.JButton btnBuscarEntregada;
+    public javax.swing.JButton btnBuscarOrden;
+    public javax.swing.JButton btnEliminarEntregada;
+    public javax.swing.JButton btnEliminarOrden;
+    public javax.swing.JButton btnInsertarAdjudicada;
+    public javax.swing.JButton btnInsertarEntregada;
+    public javax.swing.JButton btnInsertarOrden;
+    public javax.swing.JButton btnLimpiarAdjudicada;
+    public javax.swing.JButton btnLimpiarEntregada;
+    public javax.swing.JButton btnLimpiarOrden;
+    public javax.swing.JButton btnModificarAdjudicada;
+    public javax.swing.JButton btnModificarEntrega;
+    public javax.swing.JButton btnModificarOrden;
+    public javax.swing.JComboBox<String> cmbModalidadAdjudicada;
+    public javax.swing.JComboBox<String> cmbModalidadAdjudicada1;
+    public javax.swing.JComboBox<String> cmbModalidadEntregada;
+    public javax.swing.JComboBox<String> cmbOrdenEntregada;
+    public javax.swing.JComboBox<String> cmbOrden_Orden;
+    public javax.swing.JComboBox<String> cmbOrdenarAdjudicaciones;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -541,49 +478,49 @@ public class Pnl_2 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
-    private com.toedter.calendar.JDateChooser jdcFechaEntregada;
-    private com.toedter.calendar.JDateChooser jdcLimiteOrden;
+    public com.toedter.calendar.JDateChooser jdcFechaEntregada;
+    public com.toedter.calendar.JDateChooser jdcLimiteOrden;
     private javax.swing.JLabel lblLugarr;
     private javax.swing.JPanel pnlAdjudicada;
     private javax.swing.JPanel pnlEntregada;
     private javax.swing.JPanel pnlOrden;
-    private javax.swing.JRadioButton rbtDudaAdjudicada;
-    private javax.swing.JRadioButton rbtFirmeAdjudicada;
-    private javax.swing.JRadioButton rbtGyRAdjudicada;
-    private javax.swing.JRadioButton rbtGyREntregada;
-    private javax.swing.JRadioButton rbtHabilesAdjudicada;
-    private javax.swing.JRadioButton rbtNaturalesAdjudicada;
-    private javax.swing.JRadioButton rbtPBAdjudicada;
-    private javax.swing.JRadioButton rbtPBEntregada;
-    private javax.swing.JScrollPane scpAdjudicada;
+    public javax.swing.JRadioButton rbtDudaAdjudicada;
+    public javax.swing.JRadioButton rbtFirmeAdjudicada;
+    public javax.swing.JRadioButton rbtGyRAdjudicada;
+    public javax.swing.JRadioButton rbtGyREntregada;
+    public javax.swing.JRadioButton rbtHabilesAdjudicada;
+    public javax.swing.JRadioButton rbtNaturalesAdjudicada;
+    public javax.swing.JRadioButton rbtPBAdjudicada;
+    public javax.swing.JRadioButton rbtPBEntregada;
+    public javax.swing.JScrollPane scpAdjudicada;
     private javax.swing.JScrollPane scpObservacionesAdjudicada;
     private javax.swing.JScrollPane scpObservacionesEntregada;
     private javax.swing.JScrollPane scpObservacionesOrden;
     private javax.swing.JScrollPane scpOrden;
     private javax.swing.JScrollPane spnEntregada;
     private javax.swing.JTable tblAdjudicada;
-    private javax.swing.JTable tblEntregada;
-    private javax.swing.JTable tblOrden;
-    private javax.swing.JTabbedPane tbpContenedor;
-    private javax.swing.JTextArea txaObservacionAdjudicada;
-    private javax.swing.JTextArea txaObservacionesEntregada;
-    private javax.swing.JTextArea txaObservacionesOrden;
-    private javax.swing.JTextField txtContratacionAdjudicada;
-    private javax.swing.JTextField txtContratacionEntregada;
-    private javax.swing.JTextField txtContratacionOrden;
-    private javax.swing.JTextField txtDescripcionAdjudicada;
-    private javax.swing.JTextField txtDescripcionEntregada;
-    private javax.swing.JTextField txtDescripcionOrden;
-    private javax.swing.JTextField txtEncargadoAdjudicada;
-    private javax.swing.JTextField txtEncargadoEntregada;
-    private javax.swing.JTextField txtEncargadoOrden;
-    private javax.swing.JTextField txtEntregaAdjudicada;
-    private javax.swing.JTextField txtEntregaEntregada;
-    private javax.swing.JTextField txtEntregaOrden;
-    private javax.swing.JTextField txtLugar;
-    private javax.swing.JTextField txtLugarEntOrden;
-    private javax.swing.JTextField txtLugarEntregada;
-    private javax.swing.JTextField txtNumeroOrden;
-    private javax.swing.JTextField txtVigenciaContrato;
+    public javax.swing.JTable tblEntregada;
+    public javax.swing.JTable tblOrden;
+    public javax.swing.JTabbedPane tbpContenedor;
+    public javax.swing.JTextArea txaObservacionAdjudicada;
+    public javax.swing.JTextArea txaObservacionesEntregada;
+    public javax.swing.JTextArea txaObservacionesOrden;
+    public javax.swing.JTextField txtContratacionAdjudicada;
+    public javax.swing.JTextField txtContratacionEntregada;
+    public javax.swing.JTextField txtContratacionOrden;
+    public javax.swing.JTextField txtDescripcionAdjudicada;
+    public javax.swing.JTextField txtDescripcionEntregada;
+    public javax.swing.JTextField txtDescripcionOrden;
+    public javax.swing.JTextField txtEncargadoAdjudicada;
+    public javax.swing.JTextField txtEncargadoEntregada;
+    public javax.swing.JTextField txtEncargadoOrden;
+    public javax.swing.JTextField txtEntregaAdjudicada;
+    public javax.swing.JTextField txtEntregaEntregada;
+    public javax.swing.JTextField txtEntregaOrden;
+    public javax.swing.JTextField txtLugar;
+    public javax.swing.JTextField txtLugarEntOrden;
+    public javax.swing.JTextField txtLugarEntregada;
+    public javax.swing.JTextField txtNumeroOrden;
+    public javax.swing.JTextField txtVigenciaContrato;
     // End of variables declaration//GEN-END:variables
 }
