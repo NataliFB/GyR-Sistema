@@ -12,16 +12,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     public MenuPrincipal() {
         initComponents();
-        this.setExtendedState(MAXIMIZED_BOTH);
-        setLocationRelativeTo(null);
+        
         VentanaContratacion();
     }
     
     public void VentanaContratacion(){
-        ModIngresarContr model = new ModIngresarContr();
+        Mod_IngresarContr model = new Mod_IngresarContr();
         Pn_IngresarContr view = new Pn_IngresarContr();
         
-        CtrlIngresarContr controlador = new CtrlIngresarContr(view, model);
+        Ctrl_IngresarContr controlador = new Ctrl_IngresarContr(view, model);
         view.setVisible(true);
         
         pnl_prin.removeAll();
