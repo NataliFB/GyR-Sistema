@@ -1,18 +1,19 @@
 
 package main;
 import Vista.Frames.Login;
-import Vista.Frames.MenuPrincipal;
-import Modelo.Mod_Login;
+import Modelo.Mod_Usuario;
 import Controlador.Ctrl_Login;
+import Consultas.Consultas_Usuario;
 
 public class main {
     
     public static void main(String[] args) {
         
         Login view = new Login();
-        Mod_Login mod = new Mod_Login();
+        Mod_Usuario mod = new Mod_Usuario();
+        Consultas_Usuario consultas = new Consultas_Usuario();
         
-        Ctrl_Login Login = new Ctrl_Login(view, mod);
+        Ctrl_Login Login = new Ctrl_Login(view, mod, consultas);
         
     }
     

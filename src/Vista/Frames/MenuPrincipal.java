@@ -1,5 +1,7 @@
 package Vista.Frames;
 
+import Modelo.Mod_Usuario;
+
 public class MenuPrincipal extends javax.swing.JFrame {
 
     public MenuPrincipal() {
@@ -26,11 +28,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnUsuario.setText("Usuario");
-        btnUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUsuarioActionPerformed(evt);
-            }
-        });
 
         btnTimbre.setText("Timbres, Muestras y Garantías");
 
@@ -130,10 +127,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuarioActionPerformed
-        new Usuario().setVisible(true);
-    }//GEN-LAST:event_btnUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
