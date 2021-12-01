@@ -54,6 +54,7 @@ BEGIN
 		SET @result = 1
 	ELSE
 		SET @result = 0
+	
 	RETURN @result
 END
 
@@ -103,5 +104,18 @@ BEGIN
 	cod_rol = @cod_rol, cod_color = @cod_color WHERE cod_empleado = @cod_empleado
 	UPDATE userEmpleado SET usuario = @user WHERE cod_empleado = @cod_empleado
 END
-
+EXEC mostrar_empleados
+------------------------------------------------------------------------------------------------------------------------
+-- Procedimiento para obtener datos de un empleado
+GO
+CREATE PROC mostrar_empleado_inicio
+	@usuario VARCHAR(50)
+AS BEGIN
+	SELECT empleado.cod_empleado AS 'Código del empleado',
+	CONCAT(nombre_empleado, ' ', appelido1_empleado, ' ', appelido2_empleado) AS 'Nombre de empleado',
+	nombre_rol AS 'Nivel'
+	FROM ((empleado INNER JOIN userEmpleado ON empleado.cod_empleado = userEmpleado.cod_empleado)
+	INNER JOIN roles ON roles.cod_rol = empleado.cod_rol)
+	WHERE usuario = @usuario
+END DROP PROC mostrar_empleado_inicio
 ------------------------------------------------------------------------------------------------------------------------
