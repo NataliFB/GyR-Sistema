@@ -1,7 +1,5 @@
 package Vista.Frames;
 
-import Modelo.Mod_Usuario;
-
 public class MenuPrincipal extends javax.swing.JFrame {
 
     public MenuPrincipal() {
@@ -13,83 +11,110 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         PanelMenu = new javax.swing.JPanel();
+        PanelBtn = new javax.swing.JPanel();
+        Usuario = new javax.swing.JPanel();
         btnUsuario = new rsbuttom.RSButtonMetro();
-        btnTimbre = new rsbuttom.RSButtonMetro();
-        btnAdjudicaciones = new rsbuttom.RSButtonMetro();
-        btnPorComprar = new rsbuttom.RSButtonMetro();
-        btnFacturas = new rsbuttom.RSButtonMetro();
-        btnRenta = new rsbuttom.RSButtonMetro();
-        btnSalir = new javax.swing.JButton();
+        jSeparator2 = new javax.swing.JSeparator();
+        IngrsarContr = new javax.swing.JPanel();
         btnIngresarContr = new rsbuttom.RSButtonMetro();
+        Adjudicaciones = new javax.swing.JPanel();
+        btnAdjudicaciones = new rsbuttom.RSButtonMetro();
+        Timbres = new javax.swing.JPanel();
+        btnTimbre = new rsbuttom.RSButtonMetro();
+        PorComprar = new javax.swing.JPanel();
+        btnPorComprar = new rsbuttom.RSButtonMetro();
+        Facturas = new javax.swing.JPanel();
+        btnFacturas = new rsbuttom.RSButtonMetro();
+        Renta = new javax.swing.JPanel();
+        btnRenta = new rsbuttom.RSButtonMetro();
+        Proveedores = new javax.swing.JPanel();
         btnProveedores = new rsbuttom.RSButtonMetro();
-        jSeparator1 = new javax.swing.JSeparator();
+        Salir = new javax.swing.JPanel();
+        btnSalir = new javax.swing.JButton();
         pnl_prin = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        PanelBtn.setLayout(new javax.swing.BoxLayout(PanelBtn, javax.swing.BoxLayout.PAGE_AXIS));
+
+        Usuario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         btnUsuario.setText("Usuario");
+        Usuario.add(btnUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 8, 254, -1));
 
-        btnTimbre.setText("Timbres, Muestras y Garantías");
+        jSeparator2.setBackground(new java.awt.Color(102, 153, 255));
+        jSeparator2.setForeground(new java.awt.Color(102, 153, 255));
+        Usuario.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 49, 254, -1));
 
-        btnAdjudicaciones.setText("Adjudicaciones");
+        PanelBtn.add(Usuario);
 
-        btnPorComprar.setText("Por Comprar");
-
-        btnFacturas.setText("Facturas");
-
-        btnRenta.setText("Renta");
-
-        btnSalir.setText("Salir");
+        IngrsarContr.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnIngresarContr.setText("Ingresar Contratación");
+        IngrsarContr.add(btnIngresarContr, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 254, -1));
+
+        PanelBtn.add(IngrsarContr);
+
+        Adjudicaciones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnAdjudicaciones.setText("Adjudicaciones");
+        Adjudicaciones.add(btnAdjudicaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 254, -1));
+
+        PanelBtn.add(Adjudicaciones);
+
+        Timbres.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnTimbre.setText("Timbres, Muestras y Garantías");
+        Timbres.add(btnTimbre, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 254, -1));
+
+        PanelBtn.add(Timbres);
+
+        PorComprar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnPorComprar.setText("Por Comprar");
+        PorComprar.add(btnPorComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 254, -1));
+
+        PanelBtn.add(PorComprar);
+
+        Facturas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnFacturas.setText("Facturas");
+        Facturas.add(btnFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 254, -1));
+
+        PanelBtn.add(Facturas);
+
+        Renta.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnRenta.setText("Renta");
+        Renta.add(btnRenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 254, -1));
+
+        PanelBtn.add(Renta);
+
+        Proveedores.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnProveedores.setText("Proveedores");
+        Proveedores.add(btnProveedores, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 254, 29));
 
-        jSeparator1.setBackground(new java.awt.Color(102, 153, 255));
-        jSeparator1.setForeground(new java.awt.Color(102, 153, 255));
+        PanelBtn.add(Proveedores);
+
+        Salir.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnSalir.setText("Salir");
+        Salir.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 254, 28));
 
         javax.swing.GroupLayout PanelMenuLayout = new javax.swing.GroupLayout(PanelMenu);
         PanelMenu.setLayout(PanelMenuLayout);
         PanelMenuLayout.setHorizontalGroup(
             PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelMenuLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAdjudicaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnFacturas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRenta, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnTimbre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnIngresarContr, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnProveedores, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+            .addComponent(PanelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         PanelMenuLayout.setVerticalGroup(
             PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelMenuLayout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(btnUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(btnIngresarContr, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(btnTimbre, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(btnAdjudicaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(btnPorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(btnFacturas, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(btnRenta, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(btnProveedores, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 219, Short.MAX_VALUE)
-                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PanelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 205, Short.MAX_VALUE)
+                .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -100,7 +125,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pnl_prin.setLayout(pnl_prinLayout);
         pnl_prinLayout.setHorizontalGroup(
             pnl_prinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1022, Short.MAX_VALUE)
+            .addGap(0, 1016, Short.MAX_VALUE)
         );
         pnl_prinLayout.setVerticalGroup(
             pnl_prinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,7 +139,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(PanelMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnl_prin, javax.swing.GroupLayout.DEFAULT_SIZE, 1022, Short.MAX_VALUE)
+                .addComponent(pnl_prin, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -165,7 +190,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Adjudicaciones;
+    private javax.swing.JPanel Facturas;
+    private javax.swing.JPanel IngrsarContr;
+    private javax.swing.JPanel PanelBtn;
     private javax.swing.JPanel PanelMenu;
+    private javax.swing.JPanel PorComprar;
+    private javax.swing.JPanel Proveedores;
+    private javax.swing.JPanel Renta;
+    private javax.swing.JPanel Salir;
+    private javax.swing.JPanel Timbres;
+    private javax.swing.JPanel Usuario;
     public rsbuttom.RSButtonMetro btnAdjudicaciones;
     public rsbuttom.RSButtonMetro btnFacturas;
     public rsbuttom.RSButtonMetro btnIngresarContr;
@@ -175,7 +210,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton btnSalir;
     public rsbuttom.RSButtonMetro btnTimbre;
     public rsbuttom.RSButtonMetro btnUsuario;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     public javax.swing.JPanel pnl_prin;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,16 +1,9 @@
 package Controlador;
 
-import Modelo.Mod_IngresarContr;
-import Modelo.Mod_Usuario;
-import Vista.Frames.MenuPrincipal;
-import Vista.Frames.Usuario;
-import Vista.Paneles.Pn_IngresarContr;
-import Vista.Paneles.Pnl_1;
-import Vista.Paneles.Pnl_2;
-import Vista.Paneles.Pnl_3;
-import Vista.Paneles.Pnl_4;
-import Vista.Paneles.Pnl_5;
-import Vista.Paneles.Pnl_Proveedor;
+import Consultas.*;
+import Modelo.*;
+import Vista.Frames.*;
+import Vista.Paneles.*;
 import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -65,8 +58,9 @@ public class Ctrl_MenuPrincipal implements ActionListener {
         if (e.getSource() == frameMenu.btnUsuario) {
             Usuario us = new Usuario();
             Mod_Usuario modUs = new Mod_Usuario();
+            Consultas_Usuario consultas = new Consultas_Usuario();
 
-            Ctrl_Usuario CtrlUs = new Ctrl_Usuario(modUs, us);
+            Ctrl_Usuario CtrlUs = new Ctrl_Usuario(modUs, us, consultas);
         }
 
         if (e.getSource() == frameMenu.btnIngresarContr) {

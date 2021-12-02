@@ -7,6 +7,15 @@ public class Mod_Usuario {
     private static String contrasena;
     private static String nombreEmpleado;
     private static String nivelAdm;
+    private static String color;
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        Mod_Usuario.color = color;
+    }
     private static int codEmpleado;
 
     public String getNombreEmpleado() {

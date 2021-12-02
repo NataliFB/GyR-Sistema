@@ -54,9 +54,31 @@ public class Consultas_Usuario extends Conexion_A{
             
             while(rs.next()){
                 us.setCodEmpleado(rs.getInt(1));
-                us.setNombreEmpleado(rs.getString(2));
-                us.setNivelAdm(rs.getString(3));
+                us.setColor(rs.getString(2));
+                us.setNombreEmpleado(rs.getString(3));
+                us.setNivelAdm(rs.getString(4));
             }
+            
+        }catch(SQLException e){
+            System.err.println(e);
+        }finally{
+            try{
+                getConnection().close();
+            }catch(SQLException ex){
+                System.err.println(ex);
+            }
+        }
+    }
+    
+    public void ActualizarContrasena(Mod_Usuario us){
+        CallableStatement cs;
+        
+        try{
+            cs = getConnection().prepareCall("{call actualizar_contraseña(?,?)}");
+            cs.setString(1, us.getContrasena());
+            cs.setString(2, us.getUsuario());
+            
+            cs.execute();
             
         }catch(SQLException e){
             System.err.println(e);
