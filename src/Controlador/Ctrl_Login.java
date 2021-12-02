@@ -66,7 +66,6 @@ public class Ctrl_Login implements ActionListener{
                 
                 Ctrl_MenuPrincipal Ctrl_mp = new Ctrl_MenuPrincipal(mp);
                 frameLogin.dispose();
-                JOptionPane.showMessageDialog(null, "Inicio de sesión exitoso!");
             }else{
                 JOptionPane.showMessageDialog(null, "Nombre de Usuario o Contraseña incorrectos");
             }
