@@ -30,7 +30,7 @@ public class Ctrl_MenuPrincipal implements ActionListener {
 
     private void Iniciar() {
         frameMenu.setTitle("GyR Sistema Menú");
-        frameMenu.setExtendedState(MAXIMIZED_BOTH);
+        //frameMenu.setExtendedState(MAXIMIZED_BOTH);
         frameMenu.setLocationRelativeTo(null);
         VentanaContratacion();
 
