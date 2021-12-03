@@ -46,13 +46,49 @@ public class Consultas_Usuario extends Conexion_A {
         return inicioS;
     }
 
+    public Object[] BuscarEmpleado(String cod){
+        Object[] datos = null;
+        
+        PreparedStatement ps;
+        ResultSet rs;
+        ResultSetMetaData rsmd;
+        
+        try{
+            ps = getConnection().prepareCall("SELECT nombre_empleado, appelido1_empleado, appelido2_empleado, cod_rol, cod_color "
+                    + "FROM empleado WHERE cod_empleado = ?");
+            ps.setInt(1, Integer.parseInt(cod));
+            rs = ps.executeQuery();
+            rsmd = rs.getMetaData();
+            
+            int columnas = rsmd.getColumnCount();
+            
+            while(rs.next()){
+                datos = new Object[columnas];
+                for(int i = 0; i < columnas; i++){
+                    datos[i] = rs.getObject(i + 1);
+                }
+            }
+            
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
+        }finally{
+            try{
+                getConnection().close();
+            }catch(SQLException ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        
+        return datos;
+    }
+    
     public void DatosUsuario(Mod_Usuario us) {
 
         CallableStatement cs;
         ResultSet rs;
 
         try {
-            cs = getConnection().prepareCall("{call mostrar_empleado_inicio(?)}");
+            cs = getConnection().prepareCall("{call buscar_empleado(?)}");
             cs.setString(1, us.getUsuario());
             rs = cs.executeQuery();
 
@@ -214,5 +250,56 @@ public class Consultas_Usuario extends Conexion_A {
         }
         
         return true;
+    }
+    
+    public boolean BorrarEmpleado(int cod_empleado){
+        CallableStatement cs;
+        
+        try{
+            cs = getConnection().prepareCall("{call borrar_empleado(?)}");
+            cs.setInt(1, cod_empleado);
+            
+            cs.execute();
+            
+            return true;
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
+            return false;
+        }finally{
+            try{
+                getConnection().close();
+            }catch(SQLException ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+    }
+    
+    public boolean ModificarEmpleado(String nombre, String app1, String app2, int rol, String color, int cod_empleado){
+        
+        CallableStatement cs;
+        
+        try{
+            cs = getConnection().prepareCall("{call actualizar_empleado(?,?,?,?,?,?)}");
+            
+            cs.setInt(1, cod_empleado);
+            cs.setString(2, nombre);
+            cs.setString(3, app1);
+            cs.setString(4, app2);
+            cs.setInt(5, rol);
+            cs.setString(6, color);
+            
+            cs.execute();
+            
+            return true;
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
+            return false;
+        }finally{
+            try{
+                getConnection().close();
+            }catch(SQLException ex){
+                System.out.println(ex.getMessage());
+            }
+        }
     }
 }

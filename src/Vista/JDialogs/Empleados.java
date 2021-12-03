@@ -37,6 +37,8 @@ public class Empleados extends javax.swing.JDialog {
         btnAgregar = new javax.swing.JButton();
         btnModificar = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
+        txtCodigoEmpleado = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -105,6 +107,8 @@ public class Empleados extends javax.swing.JDialog {
         btnBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
         btnBorrar.setText("Borrar");
 
+        jLabel7.setText("Código:");
+
         javax.swing.GroupLayout panelAñadirLayout = new javax.swing.GroupLayout(panelAñadir);
         panelAñadir.setLayout(panelAñadirLayout);
         panelAñadirLayout.setHorizontalGroup(
@@ -122,27 +126,33 @@ public class Empleados extends javax.swing.JDialog {
                     .addGroup(panelAñadirLayout.createSequentialGroup()
                         .addGroup(panelAñadirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
+                            .addComponent(jLabel4)
                             .addGroup(panelAñadirLayout.createSequentialGroup()
                                 .addGroup(panelAñadirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3)
                                     .addComponent(jLabel6)
-                                    .addComponent(jLabel5))
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel7))
                                 .addGap(15, 15, 15)
                                 .addGroup(panelAñadirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtCodigoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(cbxRol, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(txtApp2)
                                     .addGroup(panelAñadirLayout.createSequentialGroup()
                                         .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE))
                                     .addComponent(cbxColor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(txtApp1)))
-                            .addComponent(jLabel4))
+                                    .addComponent(txtApp1))))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         panelAñadirLayout.setVerticalGroup(
             panelAñadirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelAñadirLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(17, 17, 17)
+                .addGroup(panelAñadirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(txtCodigoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
                 .addGroup(panelAñadirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -162,7 +172,7 @@ public class Empleados extends javax.swing.JDialog {
                 .addGroup(panelAñadirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
                     .addComponent(cbxColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
                 .addGroup(panelAñadirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgregar)
                     .addComponent(btnModificar)
@@ -250,6 +260,7 @@ public class Empleados extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel panelAñadir;
     private javax.swing.JPanel panelEmpleados;
@@ -257,6 +268,7 @@ public class Empleados extends javax.swing.JDialog {
     public javax.swing.JTextField txtApp1;
     public javax.swing.JTextField txtApp2;
     public javax.swing.JTextField txtBuscar;
+    public javax.swing.JTextField txtCodigoEmpleado;
     public javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }
