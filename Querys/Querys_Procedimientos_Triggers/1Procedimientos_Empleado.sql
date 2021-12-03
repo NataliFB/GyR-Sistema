@@ -104,7 +104,7 @@ BEGIN
 	cod_rol = @cod_rol, cod_color = @cod_color WHERE cod_empleado = @cod_empleado
 	UPDATE userEmpleado SET usuario = @user WHERE cod_empleado = @cod_empleado
 END
-EXEC mostrar_empleados
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para obtener datos de un empleado
 GO
@@ -117,5 +117,5 @@ AS BEGIN
 	FROM ((empleado INNER JOIN userEmpleado ON empleado.cod_empleado = userEmpleado.cod_empleado)
 	INNER JOIN roles ON roles.cod_rol = empleado.cod_rol)
 	WHERE usuario = @usuario
-END
+END EXEC mostrar_empleados
 ------------------------------------------------------------------------------------------------------------------------

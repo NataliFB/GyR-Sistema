@@ -60,7 +60,7 @@ public class Ctrl_Login implements ActionListener{
             
             if(consultasUs.InicioSesion(modEmpleado)){
                 
-                consultasUs.DatosEmpleado(modEmpleado);
+                consultasUs.DatosUsuario(modEmpleado);
                 
                 mp = new MenuPrincipal();
                 

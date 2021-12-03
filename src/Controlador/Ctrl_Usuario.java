@@ -60,7 +60,7 @@ public class Ctrl_Usuario implements ActionListener{
         }
         
         if(e.getSource() == frameUsuario.btnEmpleados){
-            Empleados emp = new Empleados(frameUsuario, false);
+            Empleados emp = new Empleados(frameUsuario, true);
             emp.setLocationRelativeTo(null);
             
             Ctrl_Empleados ctrl_Emp = new Ctrl_Empleados(modEmpleado, emp, consultas);
