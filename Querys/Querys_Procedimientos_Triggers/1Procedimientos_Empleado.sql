@@ -31,7 +31,7 @@ END
 ------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para guardar los usuarios en la tabla userEmpleado
 GO
-CREATE PROCEDURE insertar_usuario
+CREATE PROCEDURE ingresar_usuario
 	@usuario VARCHAR(50), @contraseña VARCHAR(MAX), @cod_empleado SMALLINT
 AS BEGIN
 	INSERT INTO userEmpleado VALUES(@usuario, ENCRYPTBYPASSPHRASE('password', @contraseña), @cod_empleado)
@@ -108,7 +108,7 @@ END
 ------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para obtener datos de un empleado
 GO
-CREATE PROC mostrar_empleado_inicio
+CREATE PROC buscar_empleado
 	@usuario VARCHAR(50)
 AS BEGIN
 	SELECT empleado.cod_empleado, empleado.cod_color,
@@ -117,5 +117,5 @@ AS BEGIN
 	FROM ((empleado INNER JOIN userEmpleado ON empleado.cod_empleado = userEmpleado.cod_empleado)
 	INNER JOIN roles ON roles.cod_rol = empleado.cod_rol)
 	WHERE usuario = @usuario
-END EXEC mostrar_empleados
+END
 ------------------------------------------------------------------------------------------------------------------------

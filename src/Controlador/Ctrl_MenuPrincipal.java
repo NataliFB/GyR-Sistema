@@ -11,10 +11,12 @@ import java.awt.event.ActionListener;
 public class Ctrl_MenuPrincipal implements ActionListener {
 
     private MenuPrincipal frameMenu;
+    private Mod_Usuario modEmpleado;
 
-    public Ctrl_MenuPrincipal(MenuPrincipal viewMenu) {
+    public Ctrl_MenuPrincipal(MenuPrincipal viewMenu, Mod_Usuario modEmp) {
         this.frameMenu = viewMenu;
-
+        this.modEmpleado = modEmp;
+        
         Iniciar();
 
         frameMenu.btnUsuario.addActionListener(this);
@@ -29,8 +31,16 @@ public class Ctrl_MenuPrincipal implements ActionListener {
     }
 
     private void Iniciar() {
+        if(modEmpleado.getNivelAdm().equals("Contador")){
+            frameMenu.Adjudicaciones.setVisible(false);
+            frameMenu.IngrsarContr.setVisible(false);
+            frameMenu.PorComprar.setVisible(false);
+            frameMenu.Timbres.setVisible(false);
+            frameMenu.Proveedores.setVisible(false);
+        }
+        
         frameMenu.setTitle("GyR Sistema Menú");
-        //frameMenu.setExtendedState(MAXIMIZED_BOTH);
+        frameMenu.setExtendedState(MAXIMIZED_BOTH);
         frameMenu.setLocationRelativeTo(null);
         VentanaContratacion();
 

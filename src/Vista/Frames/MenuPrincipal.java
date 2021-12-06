@@ -190,17 +190,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Adjudicaciones;
-    private javax.swing.JPanel Facturas;
-    private javax.swing.JPanel IngrsarContr;
+    public javax.swing.JPanel Adjudicaciones;
+    public javax.swing.JPanel Facturas;
+    public javax.swing.JPanel IngrsarContr;
     private javax.swing.JPanel PanelBtn;
     private javax.swing.JPanel PanelMenu;
-    private javax.swing.JPanel PorComprar;
-    private javax.swing.JPanel Proveedores;
-    private javax.swing.JPanel Renta;
+    public javax.swing.JPanel PorComprar;
+    public javax.swing.JPanel Proveedores;
+    public javax.swing.JPanel Renta;
     private javax.swing.JPanel Salir;
-    private javax.swing.JPanel Timbres;
-    private javax.swing.JPanel Usuario;
+    public javax.swing.JPanel Timbres;
+    public javax.swing.JPanel Usuario;
     public rsbuttom.RSButtonMetro btnAdjudicaciones;
     public rsbuttom.RSButtonMetro btnFacturas;
     public rsbuttom.RSButtonMetro btnIngresarContr;

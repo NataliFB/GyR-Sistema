@@ -64,7 +64,7 @@ public class Ctrl_Login implements ActionListener{
                 
                 mp = new MenuPrincipal();
                 
-                Ctrl_MenuPrincipal Ctrl_mp = new Ctrl_MenuPrincipal(mp);
+                Ctrl_MenuPrincipal Ctrl_mp = new Ctrl_MenuPrincipal(mp, modEmpleado);
                 frameLogin.dispose();
             }else{
                 JOptionPane.showMessageDialog(null, "Nombre de Usuario o Contraseña incorrectos");
