@@ -60,7 +60,7 @@ public class Usuario extends javax.swing.JFrame {
                         .addGroup(PanelDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtColor, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(251, 251, 251))
         );
         PanelDatosLayout.setVerticalGroup(
             PanelDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -274,7 +274,7 @@ public class Usuario extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     public javax.swing.JLabel lblNombre;
     private javax.swing.JTable tblEnProceso;
-    private javax.swing.JTable tblGanadas;
+    public javax.swing.JTable tblGanadas;
     public javax.swing.JTextField txtColor;
     public javax.swing.JTextField txtNivelAdmin;
     public javax.swing.JTextField txtUsuario;

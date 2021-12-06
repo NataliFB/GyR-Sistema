@@ -42,9 +42,10 @@ public class Ctrl_MenuPrincipal implements ActionListener {
         frameMenu.setTitle("GyR Sistema Menú");
         frameMenu.setExtendedState(MAXIMIZED_BOTH);
         frameMenu.setLocationRelativeTo(null);
-        VentanaContratacion();
 
         frameMenu.setVisible(true);
+        
+        VentanaContratacion();
     }
 
     private void ResetearPanel() {
@@ -56,9 +57,12 @@ public class Ctrl_MenuPrincipal implements ActionListener {
     public void VentanaContratacion() {
         Mod_IngresarContr model = new Mod_IngresarContr();
         Pn_IngresarContr view = new Pn_IngresarContr();
+        Consultas_Contrataciones consultas = new Consultas_Contrataciones();
 
         ResetearPanel();
-        Ctrl_IngresarContr controlador = new Ctrl_IngresarContr(view, model);
+        view.setSize(frameMenu.getSize());
+        System.out.println(frameMenu.getSize());
+        Ctrl_IngresarContr controlador = new Ctrl_IngresarContr(view, model, consultas);
 
         frameMenu.pnl_prin.add(view);
     }

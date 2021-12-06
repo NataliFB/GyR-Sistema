@@ -11,10 +11,6 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import java.sql.PreparedStatement;
 
-/**
- *
- * @author Aaron
- */
 public class Consultas_Usuario extends Conexion_A {
 
     public boolean InicioSesion(Mod_Usuario us) {
@@ -82,7 +78,7 @@ public class Consultas_Usuario extends Conexion_A {
         return datos;
     }
     
-    public void DatosUsuario(Mod_Usuario us) {
+    public boolean DatosUsuario(Mod_Usuario us) {
 
         CallableStatement cs;
         ResultSet rs;
@@ -98,9 +94,10 @@ public class Consultas_Usuario extends Conexion_A {
                 us.setNombreEmpleado(rs.getString(3));
                 us.setNivelAdm(rs.getString(4));
             }
-
+            return true;
         } catch (SQLException e) {
             System.err.println(e);
+            return false;
         } finally {
             try {
                 getConnection().close();
@@ -110,7 +107,7 @@ public class Consultas_Usuario extends Conexion_A {
         }
     }
 
-    public void ActualizarContrasena(Mod_Usuario us) {
+    public boolean ActualizarContrasena(Mod_Usuario us) {
         CallableStatement cs;
 
         try {
@@ -119,9 +116,10 @@ public class Consultas_Usuario extends Conexion_A {
             cs.setString(2, us.getUsuario());
 
             cs.execute();
-
+            return true;
         } catch (SQLException e) {
             System.err.println(e);
+            return false;
         } finally {
             try {
                 getConnection().close();

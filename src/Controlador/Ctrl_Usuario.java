@@ -62,8 +62,11 @@ public class Ctrl_Usuario implements ActionListener{
             int a = JOptionPane.showConfirmDialog(null, pf , "Nueva contraseña" , JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
             if(a == JOptionPane.OK_OPTION){
                 modEmpleado.setContrasena(new String(pf.getPassword()));
-                consultas.ActualizarContrasena(modEmpleado);
-                JOptionPane.showMessageDialog(null, "Contraseña actualizada con exito!");
+                if(consultas.ActualizarContrasena(modEmpleado)){
+                    JOptionPane.showMessageDialog(null, "Contraseña actualizada con exito!");
+                }else{
+                    JOptionPane.showMessageDialog(null, "Hubo un error al actualizar la contraseña");
+                }
             }
         }
         

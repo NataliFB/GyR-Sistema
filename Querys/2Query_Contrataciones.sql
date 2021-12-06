@@ -13,7 +13,7 @@ CREATE TABLE contrataciones(
 -- Tabla para guardar el estado de cada contratacion una vez ya se sepa
 
 CREATE TABLE estado_contratacion(
-	estado BIT NOT NULL,
+	estado VARCHAR(50) NOT NULL,
 	cod_contratacion VARCHAR(50),
 	FOREIGN KEY (cod_Contratacion) REFERENCES contrataciones(cod_Contratacion) 
 )
