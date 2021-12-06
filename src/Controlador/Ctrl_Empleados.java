@@ -26,7 +26,7 @@ public class Ctrl_Empleados implements ActionListener {
 
         FrameEmpleados.btnAgregar.addActionListener(this);
         FrameEmpleados.btnRefresh.addActionListener(this);
-        FrameEmpleados.cbxBusqueda.addActionListener(this);
+        FrameEmpleados.cmbBusqueda.addActionListener(this);
         FrameEmpleados.btnBorrar.addActionListener(this);
         FrameEmpleados.btnModificar.addActionListener(this);
 
@@ -86,7 +86,7 @@ public class Ctrl_Empleados implements ActionListener {
         TableRowSorter modeloOrdenado = new TableRowSorter<TableModel>(FrameEmpleados.tblEmpleados.getModel());
         FrameEmpleados.tblEmpleados.setRowSorter(modeloOrdenado);
         modeloOrdenado.setRowFilter(RowFilter.regexFilter("(?i)" + FrameEmpleados.txtBuscar.getText(),
-                FrameEmpleados.cbxBusqueda.getSelectedIndex()));
+                FrameEmpleados.cmbBusqueda.getSelectedIndex()));
     }
 
     private void TomarDatosEmpleado() {
@@ -173,7 +173,7 @@ public class Ctrl_Empleados implements ActionListener {
             CargarTabla();
         }
 
-        if (e.getSource() == FrameEmpleados.cbxBusqueda) {
+        if (e.getSource() == FrameEmpleados.cmbBusqueda) {
             Buscar();
         }
 

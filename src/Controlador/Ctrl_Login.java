@@ -60,7 +60,8 @@ public class Ctrl_Login implements ActionListener{
             
             if(consultasUs.InicioSesion(modEmpleado)){
                 
-                consultasUs.DatosUsuario(modEmpleado);
+                if(!consultasUs.DatosUsuario(modEmpleado))
+                    JOptionPane.showMessageDialog(null, "Hubo un error al traer los datos del sistema.\nPorfavor de reiniciar el sistema");
                 
                 mp = new MenuPrincipal();
                 

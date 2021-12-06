@@ -30,60 +30,27 @@ END
 -- Procedimiento que muestra todo sobre una contratación
 GO
 CREATE PROCEDURE mostrar_contrataciones_completas
-	@filtro VARCHAR(100)
 AS BEGIN 
 	SELECT contrataciones.cod_Contratacion AS 'Contratación',institucion AS 'Institución',descripcion AS 'Descripcion',CONVERT(varchar,fecha_publicacion,100) AS 'Fecha Publicación', 
 	CONVERT(varchar,fecha_apertura,100) AS 'Fecha Apertura', CONCAT(nombre_Empleado, ' ', appelido1_Empleado) AS 'Encargado', empleado.cod_color AS 'Color del empleado', 
-	CAST(CASE WHEN estado = 1 THEN 'Enviada' ELSE 'Descartada' END AS VARCHAR(50)) AS 'Estado' 
+	estado AS 'Estado' 
 	FROM (((contrataciones 
 	INNER JOIN responsable ON responsable.cod_Contratacion = contrataciones.cod_Contratacion) 
 	INNER JOIN estado_contratacion ON estado_contratacion.cod_Contratacion = contrataciones.cod_Contratacion)
 	INNER JOIN empleado ON empleado.cod_Empleado = responsable.cod_Empleado) 
-	ORDER BY 
-		CASE @filtro
-			WHEN 'fecha_apertura'
-				THEN CONVERT(varchar,fecha_apertura,100)
-			WHEN 'fecha_publicacion' 
-				THEN CONVERT(varchar,fecha_publicacion,100)
-			WHEN 'cod_contratacion'
-				THEN contrataciones.cod_contratacion
-			WHEN 'institucion'
-				THEN institucion
-			WHEN 'descripcion'
-				THEN descripcion
-		END,
-
-		CASE @filtro
-			WHEN 'estado' THEN CAST(CASE WHEN estado = 1 THEN 'Enviada' ELSE 'Descartada' END AS VARCHAR(50))
-		END,
-
-		CASE @filtro
-			WHEN 'cod_empleado' THEN CONCAT(nombre_Empleado, ' ', appelido1_Empleado)
-		END
 END
 
 ---------------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para mostrar las contrataciones ingresadas
 GO
 CREATE PROCEDURE mostrar_contrataciones
-	@orden VARCHAR(100)
 AS BEGIN
-	SELECT cod_contratacion AS 'Contratacion', institucion AS 'Institución', descripcion AS 'Descripción', 
+	SELECT C.cod_contratacion AS 'Contratacion', institucion AS 'Institución', descripcion AS 'Descripción', 
 	CONVERT(varchar,fecha_publicacion,100) AS 'Fecha Publicación', 
-	CONVERT(varchar,fecha_apertura,100) AS 'Fecha Apertura' FROM contrataciones
-	ORDER BY 
-		CASE @orden
-			WHEN 'fecha_apertura'
-				THEN CONVERT(varchar,fecha_apertura,100)
-			WHEN 'fecha_publicacion' 
-				THEN CONVERT(varchar,fecha_publicacion,100)
-			WHEN 'cod_contratacion'
-				THEN cod_contratacion
-			WHEN 'institucion'
-				THEN institucion
-			WHEN 'descripcion'
-				THEN descripcion
-		END
+	CONVERT(varchar,fecha_apertura,100) AS 'Fecha Apertura', estado AS 'Estado' 
+	FROM contrataciones C
+	INNER JOIN estado_contratacion EC ON C.cod_contratacion = EC.cod_contratacion
+	ORDER BY CONVERT(varchar,fecha_apertura,100)
 END
 
 ---------------------------------------------------------------------------------------------------------------------------------
@@ -96,4 +63,15 @@ AS BEGIN
 	DELETE responsable WHERE cod_contratacion = @cod_contratacion
 	DELETE contrataciones WHERE cod_contratacion = @cod_contratacion
 END 
+----------------------------------------------------------------------------------------------------------------------------------
+-- Trigger para guardar estado en contratación una vez se agregue
+GO
+CREATE TRIGGER TR_CONTRATACIONES_AFTER ON contrataciones 
+AFTER INSERT
+AS 
+	DECLARE @contratacion VARCHAR(50)
+	SET @contratacion = (SELECT cod_contratacion FROM INSERTED)
+BEGIN
+	INSERT INTO estado_contratacion VALUES ('Desconocido', @contratacion)
+END
 ----------------------------------------------------------------------------------------------------------------------------------

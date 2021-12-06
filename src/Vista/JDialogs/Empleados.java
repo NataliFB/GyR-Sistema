@@ -18,7 +18,7 @@ public class Empleados extends javax.swing.JDialog {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblEmpleados = new javax.swing.JTable();
         btnRefresh = new javax.swing.JButton();
-        cbxBusqueda = new javax.swing.JComboBox<>();
+        cmbBusqueda = new javax.swing.JComboBox<>();
         panelAñadir = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -50,7 +50,7 @@ public class Empleados extends javax.swing.JDialog {
 
         btnRefresh.setText("Refrescar Datos");
 
-        cbxBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Código de Empleado", "Usuario", "Nombre", "Nivel" }));
+        cmbBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Código de Empleado", "Usuario", "Nombre", "Nivel" }));
 
         javax.swing.GroupLayout panelEmpleadosLayout = new javax.swing.GroupLayout(panelEmpleados);
         panelEmpleados.setLayout(panelEmpleadosLayout);
@@ -65,7 +65,7 @@ public class Empleados extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(cbxBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cmbBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnRefresh)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -78,7 +78,7 @@ public class Empleados extends javax.swing.JDialog {
                     .addComponent(jLabel1)
                     .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRefresh)
-                    .addComponent(cbxBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
@@ -134,15 +134,16 @@ public class Empleados extends javax.swing.JDialog {
                                     .addComponent(jLabel5)
                                     .addComponent(jLabel7))
                                 .addGap(15, 15, 15)
-                                .addGroup(panelAñadirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtCodigoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(panelAñadirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(cbxRol, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(txtApp2)
-                                    .addGroup(panelAñadirLayout.createSequentialGroup()
-                                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))
                                     .addComponent(cbxColor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(txtApp1))))
+                                    .addComponent(txtApp1)
+                                    .addGroup(panelAñadirLayout.createSequentialGroup()
+                                        .addGroup(panelAñadirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtCodigoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(0, 0, Short.MAX_VALUE)))))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         panelAñadirLayout.setVerticalGroup(
@@ -251,9 +252,9 @@ public class Empleados extends javax.swing.JDialog {
     public javax.swing.JButton btnBorrar;
     public javax.swing.JButton btnModificar;
     public javax.swing.JButton btnRefresh;
-    public javax.swing.JComboBox<String> cbxBusqueda;
     public org.jdesktop.jdnc.incubator.jxcombobox.colorcombo.ColorComboBox cbxColor;
     public javax.swing.JComboBox<String> cbxRol;
+    public javax.swing.JComboBox<String> cmbBusqueda;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

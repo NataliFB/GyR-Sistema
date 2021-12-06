@@ -7,6 +7,15 @@ public class Mod_IngresarContr {
     private String descripcion = "";
     private String fechaPublicacion = "";
     private String fechaApertura = "";
+    private String Institución = "";
+
+    public String getInstitución() {
+        return Institución;
+    }
+
+    public void setInstitución(String Institución) {
+        this.Institución = Institución;
+    }
 
     public String getNumContratacion() {
         return numContratacion;
