@@ -32,6 +32,10 @@ public class Ctrl_Usuario implements ActionListener{
         if(!modEmpleado.getNivelAdm().equals("Administrador")){
             frameUsuario.btnEmpleados.setVisible(false);
         }
+        if(modEmpleado.getNivelAdm().equals("Contador")){
+            frameUsuario.PanelTablas.setVisible(false);
+            frameUsuario.setSize(667, 300);
+        }
         
         frameUsuario.setTitle("Perfil del Usuario: " + modEmpleado.getNombreEmpleado());
         frameUsuario.setLocationRelativeTo(null);
