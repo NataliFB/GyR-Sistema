@@ -7,10 +7,8 @@ import Vista.Paneles.Pn_IngresarContr;
 import java.awt.*;
 import java.awt.datatransfer.*;
 import java.awt.event.*;
-import Vista.Frames.MenuPrincipal;
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
-import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 

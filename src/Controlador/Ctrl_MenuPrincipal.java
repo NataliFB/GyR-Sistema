@@ -62,7 +62,6 @@ public class Ctrl_MenuPrincipal implements ActionListener {
 
         ResetearPanel();
         view.setSize(frameMenu.getSize());
-        System.out.println(frameMenu.getSize());
         Ctrl_IngresarContr controlador = new Ctrl_IngresarContr(view, model, consultas);
 
         frameMenu.pnl_prin.add(view);
@@ -102,7 +101,8 @@ public class Ctrl_MenuPrincipal implements ActionListener {
 
         if (e.getSource() == frameMenu.btnAdjudicaciones) {
             Pnl_2 panel2 = new Pnl_2();
-
+            
+            panel2.setSize(frameMenu.getSize());
             ResetearPanel();
             Ctrl_Adjudicaciones adjudicaciones = new Ctrl_Adjudicaciones(panel2);
 
