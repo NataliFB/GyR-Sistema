@@ -11,14 +11,6 @@ AS BEGIN
 END
 
 ---------------------------------------------------------------------------------------------------------------------------------
--- Procedimiento para guardar registros en la tabla estado_contratacion
-GO
-CREATE PROCEDURE insertar_estado_contratacion @estado BIT, @cod_contratacion VARCHAR(50)
-AS BEGIN
-	INSERT INTO estado_contratacion VALUES (@estado, @cod_contratacion)
-END
-
----------------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para guardar registros en la tabla de responsables
 GO
 CREATE PROCEDURE insertar_responsable @cod_empleado SMALLINT, @cod_contratacion VARCHAR(50)
@@ -32,12 +24,12 @@ GO
 CREATE PROCEDURE mostrar_contrataciones_completas
 AS BEGIN 
 	SELECT contrataciones.cod_Contratacion AS 'Contratación',institucion AS 'Institución',descripcion AS 'Descripcion',CONVERT(varchar,fecha_publicacion,100) AS 'Fecha Publicación', 
-	CONVERT(varchar,fecha_apertura,100) AS 'Fecha Apertura', CONCAT(nombre_Empleado, ' ', appelido1_Empleado) AS 'Encargado', empleado.cod_color AS 'Color del empleado', 
-	estado AS 'Estado' 
+	CONVERT(varchar,fecha_apertura,100) AS 'Fecha Apertura', estado AS 'Estado',
+	CONCAT(nombre_Empleado, ' ', appelido1_Empleado) AS 'Encargado', empleado.cod_color AS 'Color del empleado'
 	FROM (((contrataciones 
 	INNER JOIN responsable ON responsable.cod_Contratacion = contrataciones.cod_Contratacion) 
 	INNER JOIN estado_contratacion ON estado_contratacion.cod_Contratacion = contrataciones.cod_Contratacion)
-	INNER JOIN empleado ON empleado.cod_Empleado = responsable.cod_Empleado) 
+	INNER JOIN empleado ON empleado.cod_Empleado = responsable.cod_Empleado) ORDER BY CONVERT(varchar,fecha_apertura,100)
 END
 
 ---------------------------------------------------------------------------------------------------------------------------------
@@ -48,10 +40,10 @@ AS BEGIN
 	SELECT C.cod_contratacion AS 'Contratacion', institucion AS 'Institución', descripcion AS 'Descripción', 
 	CONVERT(varchar,fecha_publicacion,100) AS 'Fecha Publicación', 
 	CONVERT(varchar,fecha_apertura,100) AS 'Fecha Apertura', estado AS 'Estado' 
-	FROM contrataciones C
+	FROM contrataciones C	
 	INNER JOIN estado_contratacion EC ON C.cod_contratacion = EC.cod_contratacion
 	ORDER BY CONVERT(varchar,fecha_apertura,100)
-END
+END DROP PROC mostrar_contrataciones
 
 ---------------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para borrar todo lo relacionado a una contratación
@@ -60,9 +52,13 @@ CREATE PROCEDURE borrar_contratacion
 	@cod_contratacion VARCHAR(50)
 AS BEGIN
 	DELETE estado_contratacion WHERE cod_contratacion = @cod_contratacion
-	DELETE responsable WHERE cod_contratacion = @cod_contratacion
-	DELETE contrataciones WHERE cod_contratacion = @cod_contratacion
 END 
+BEGIN
+	DELETE responsable WHERE cod_contratacion = @cod_contratacion
+END
+BEGIN
+	DELETE contrataciones WHERE cod_contratacion = @cod_contratacion
+END
 ----------------------------------------------------------------------------------------------------------------------------------
 -- Trigger para guardar estado en contratación una vez se agregue
 GO

@@ -94,7 +94,7 @@ public class Consultas_Usuario extends Conexion_A {
                 us.setNombreEmpleado(rs.getString(3));
                 us.setNivelAdm(rs.getString(4));
             }
-            return true;
+            
         } catch (SQLException e) {
             System.err.println(e);
             return false;
@@ -105,6 +105,7 @@ public class Consultas_Usuario extends Conexion_A {
                 System.err.println(ex);
             }
         }
+        return true;
     }
 
     public boolean ActualizarContrasena(Mod_Usuario us) {
@@ -116,7 +117,7 @@ public class Consultas_Usuario extends Conexion_A {
             cs.setString(2, us.getUsuario());
 
             cs.execute();
-            return true;
+            
         } catch (SQLException e) {
             System.err.println(e);
             return false;
@@ -127,6 +128,7 @@ public class Consultas_Usuario extends Conexion_A {
                 System.err.println(ex);
             }
         }
+        return true;
     }
 
     public boolean AgregarEmpleado(String nombre, String app1, String app2, int rol, String color) {
@@ -147,8 +149,7 @@ public class Consultas_Usuario extends Conexion_A {
             cs.setString(5, color);
 
             cs.execute();
-
-            return true;
+    
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             return false;
@@ -159,7 +160,7 @@ public class Consultas_Usuario extends Conexion_A {
                 System.err.println(ex);
             }
         }
-
+        return true;
     }
 
     public DefaultTableModel CargarEmpleados() {
@@ -239,6 +240,7 @@ public class Consultas_Usuario extends Conexion_A {
             
         }catch(SQLException e){
             System.out.println(e.getMessage());
+            return false;
         }finally{
             try{
                 getConnection().close();
@@ -259,7 +261,6 @@ public class Consultas_Usuario extends Conexion_A {
             
             cs.execute();
             
-            return true;
         }catch(SQLException e){
             System.out.println(e.getMessage());
             return false;
@@ -270,6 +271,7 @@ public class Consultas_Usuario extends Conexion_A {
                 System.out.println(ex.getMessage());
             }
         }
+        return true;
     }
     
     public boolean ModificarEmpleado(String nombre, String app1, String app2, int rol, String color, int cod_empleado){
@@ -288,7 +290,6 @@ public class Consultas_Usuario extends Conexion_A {
             
             cs.execute();
             
-            return true;
         }catch(SQLException e){
             System.out.println(e.getMessage());
             return false;
@@ -299,5 +300,6 @@ public class Consultas_Usuario extends Conexion_A {
                 System.out.println(ex.getMessage());
             }
         }
+        return true;
     }
 }

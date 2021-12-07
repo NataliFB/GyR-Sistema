@@ -16,7 +16,7 @@ public class Ctrl_MenuPrincipal implements ActionListener {
     public Ctrl_MenuPrincipal(MenuPrincipal viewMenu, Mod_Usuario modEmp) {
         this.frameMenu = viewMenu;
         this.modEmpleado = modEmp;
-        
+
         Iniciar();
 
         frameMenu.btnUsuario.addActionListener(this);
@@ -31,21 +31,22 @@ public class Ctrl_MenuPrincipal implements ActionListener {
     }
 
     private void Iniciar() {
-        if(modEmpleado.getNivelAdm().equals("Contador")){
-            frameMenu.Adjudicaciones.setVisible(false);
-            frameMenu.IngrsarContr.setVisible(false);
-            frameMenu.PorComprar.setVisible(false);
-            frameMenu.Timbres.setVisible(false);
-            frameMenu.Proveedores.setVisible(false);
-        }
-        
         frameMenu.setTitle("GyR Sistema Menú");
         frameMenu.setExtendedState(MAXIMIZED_BOTH);
         frameMenu.setLocationRelativeTo(null);
 
         frameMenu.setVisible(true);
         
-        VentanaContratacion();
+        if (modEmpleado.getNivelAdm().equals("Contador")) {
+            frameMenu.Adjudicaciones.setVisible(false);
+            frameMenu.IngrsarContr.setVisible(false);
+            frameMenu.PorComprar.setVisible(false);
+            frameMenu.Timbres.setVisible(false);
+            frameMenu.Proveedores.setVisible(false);
+            VentanaFacturas();
+        } else {
+            VentanaContratacion();
+        }
     }
 
     private void ResetearPanel() {
@@ -54,7 +55,7 @@ public class Ctrl_MenuPrincipal implements ActionListener {
         frameMenu.pnl_prin.revalidate();
     }
 
-    public void VentanaContratacion() {
+    private void VentanaContratacion() {
         Mod_IngresarContr model = new Mod_IngresarContr();
         Pn_IngresarContr view = new Pn_IngresarContr();
         Consultas_Contrataciones consultas = new Consultas_Contrataciones();
@@ -65,6 +66,15 @@ public class Ctrl_MenuPrincipal implements ActionListener {
         Ctrl_IngresarContr controlador = new Ctrl_IngresarContr(view, model, consultas);
 
         frameMenu.pnl_prin.add(view);
+    }
+
+    private void VentanaFacturas() {
+        Pnl_4 panel4 = new Pnl_4();
+
+        ResetearPanel();
+        Ctrl_Facturas facturas = new Ctrl_Facturas(panel4);
+
+        frameMenu.pnl_prin.add(panel4);
     }
 
     @Override
@@ -109,12 +119,13 @@ public class Ctrl_MenuPrincipal implements ActionListener {
         }
 
         if (e.getSource() == frameMenu.btnFacturas) {
-            Pnl_4 panel4 = new Pnl_4();
-
-            ResetearPanel();
-            Ctrl_Facturas facturas = new Ctrl_Facturas(panel4);
-
-            frameMenu.pnl_prin.add(panel4);
+            VentanaFacturas();
+//            Pnl_4 panel4 = new Pnl_4();
+//
+//            ResetearPanel();
+//            Ctrl_Facturas facturas = new Ctrl_Facturas(panel4);
+//
+//            frameMenu.pnl_prin.add(panel4);
         }
 
         if (e.getSource() == frameMenu.btnRenta) {
