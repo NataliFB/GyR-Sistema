@@ -26,6 +26,44 @@ public class Pnl_2 extends javax.swing.JPanel {
         btgEmpresa = new javax.swing.ButtonGroup();
         btgEmpresaEnt = new javax.swing.ButtonGroup();
         tbpContenedor = new javax.swing.JTabbedPane();
+        pnlAdjudicada = new javax.swing.JPanel();
+        scpAdjudicada = new javax.swing.JScrollPane();
+        tblAdjudicada = new javax.swing.JTable();
+        PanelControlAdj = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        txtBuscar = new javax.swing.JTextField();
+        cmbBusqueda = new javax.swing.JComboBox<>();
+        btnRefrescar = new javax.swing.JButton();
+        PanelBaseAdj = new javax.swing.JPanel();
+        PanelOpcionesAdj = new javax.swing.JPanel();
+        btnInsertarContratacion5 = new javax.swing.JButton();
+        btnModificarContratacion5 = new javax.swing.JButton();
+        btnLimpiarAdjudicada = new javax.swing.JButton();
+        btnEliminarContratacion5 = new javax.swing.JButton();
+        PanelObjetosAdj = new javax.swing.JPanel();
+        jLabel87 = new javax.swing.JLabel();
+        cmbModalidadAdjudicada9 = new javax.swing.JComboBox<>();
+        rbtPBAdjudicada8 = new javax.swing.JRadioButton();
+        rbtGyRAdjudicada8 = new javax.swing.JRadioButton();
+        jLabel88 = new javax.swing.JLabel();
+        jLabel89 = new javax.swing.JLabel();
+        rbtHabilesAdjudicada8 = new javax.swing.JRadioButton();
+        txtEntregaAdjudicada8 = new javax.swing.JTextField();
+        rbtNaturalesAdjudicada8 = new javax.swing.JRadioButton();
+        txtContratacionAdjudicada = new javax.swing.JTextField();
+        jLabel90 = new javax.swing.JLabel();
+        jLabel91 = new javax.swing.JLabel();
+        lblLugarr8 = new javax.swing.JLabel();
+        jLabel92 = new javax.swing.JLabel();
+        jLabel93 = new javax.swing.JLabel();
+        jLabel94 = new javax.swing.JLabel();
+        scpObservacionesAdjudicada8 = new javax.swing.JScrollPane();
+        txaObservacionAdjudicada8 = new javax.swing.JTextArea();
+        rbtDudaAdjudicada8 = new javax.swing.JRadioButton();
+        rbtFirmeAdjudicada8 = new javax.swing.JRadioButton();
+        txtEncargadoAdjudicada8 = new javax.swing.JTextField();
+        txtInstitución8 = new javax.swing.JTextField();
+        txtDescripcionAdjudicada8 = new javax.swing.JTextField();
         pnlOrden = new javax.swing.JPanel();
         txtContratacionOrden = new javax.swing.JTextField();
         txtEntregaOrden = new javax.swing.JTextField();
@@ -87,45 +125,210 @@ public class Pnl_2 extends javax.swing.JPanel {
         jLabel38 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
-        pnlAdjudicada = new javax.swing.JPanel();
-        scpAdjudicada = new javax.swing.JScrollPane();
-        tblAdjudicada = new javax.swing.JTable();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        txtBuscar = new javax.swing.JTextField();
-        cmbBusqueda = new javax.swing.JComboBox<>();
-        btnRefrescar = new javax.swing.JButton();
-        jPanel15 = new javax.swing.JPanel();
-        jPanel16 = new javax.swing.JPanel();
-        btnInsertarContratacion5 = new javax.swing.JButton();
-        btnModificarContratacion5 = new javax.swing.JButton();
-        btnLimpiarAdjudicada = new javax.swing.JButton();
-        btnEliminarContratacion5 = new javax.swing.JButton();
-        btnTomarContratacion5 = new javax.swing.JButton();
-        jPanel17 = new javax.swing.JPanel();
-        jLabel87 = new javax.swing.JLabel();
-        cmbModalidadAdjudicada9 = new javax.swing.JComboBox<>();
-        rbtPBAdjudicada8 = new javax.swing.JRadioButton();
-        rbtGyRAdjudicada8 = new javax.swing.JRadioButton();
-        jLabel88 = new javax.swing.JLabel();
-        jLabel89 = new javax.swing.JLabel();
-        rbtHabilesAdjudicada8 = new javax.swing.JRadioButton();
-        txtEntregaAdjudicada8 = new javax.swing.JTextField();
-        rbtNaturalesAdjudicada8 = new javax.swing.JRadioButton();
-        txtContratacionAdjudicada = new javax.swing.JTextField();
-        jLabel90 = new javax.swing.JLabel();
-        jLabel91 = new javax.swing.JLabel();
-        lblLugarr8 = new javax.swing.JLabel();
-        jLabel92 = new javax.swing.JLabel();
-        jLabel93 = new javax.swing.JLabel();
-        jLabel94 = new javax.swing.JLabel();
-        scpObservacionesAdjudicada8 = new javax.swing.JScrollPane();
-        txaObservacionAdjudicada8 = new javax.swing.JTextArea();
-        rbtDudaAdjudicada8 = new javax.swing.JRadioButton();
-        rbtFirmeAdjudicada8 = new javax.swing.JRadioButton();
-        txtEncargadoAdjudicada8 = new javax.swing.JTextField();
-        txtInstitución8 = new javax.swing.JTextField();
-        txtDescripcionAdjudicada8 = new javax.swing.JTextField();
+
+        scpAdjudicada.setViewportView(tblAdjudicada);
+
+        PanelControlAdj.setBorder(javax.swing.BorderFactory.createTitledBorder("Control Tabla"));
+
+        jLabel8.setText("Buscar");
+
+        cmbBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Contratación", "Institución", "Descripción", "Fecha de Publicación", "Fecha de Apertura", "Estado", "Encargado" }));
+
+        btnRefrescar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/refresh.png"))); // NOI18N
+        btnRefrescar.setText("Refrescar");
+
+        javax.swing.GroupLayout PanelControlAdjLayout = new javax.swing.GroupLayout(PanelControlAdj);
+        PanelControlAdj.setLayout(PanelControlAdjLayout);
+        PanelControlAdjLayout.setHorizontalGroup(
+            PanelControlAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelControlAdjLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cmbBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRefrescar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        PanelControlAdjLayout.setVerticalGroup(
+            PanelControlAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlAdjLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelControlAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRefrescar))
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+
+        PanelOpcionesAdj.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Opciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
+
+        btnInsertarContratacion5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
+        btnInsertarContratacion5.setText("Agregar");
+
+        btnModificarContratacion5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
+        btnModificarContratacion5.setText("Modificar");
+
+        btnLimpiarAdjudicada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
+        btnLimpiarAdjudicada.setText("Limpiar");
+
+        btnEliminarContratacion5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
+        btnEliminarContratacion5.setText("Eliminar");
+
+        javax.swing.GroupLayout PanelOpcionesAdjLayout = new javax.swing.GroupLayout(PanelOpcionesAdj);
+        PanelOpcionesAdj.setLayout(PanelOpcionesAdjLayout);
+        PanelOpcionesAdjLayout.setHorizontalGroup(
+            PanelOpcionesAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesAdjLayout.createSequentialGroup()
+                .addGroup(PanelOpcionesAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelOpcionesAdjLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnEliminarContratacion5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesAdjLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnLimpiarAdjudicada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesAdjLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnModificarContratacion5, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesAdjLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(btnInsertarContratacion5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        PanelOpcionesAdjLayout.setVerticalGroup(
+            PanelOpcionesAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesAdjLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(btnInsertarContratacion5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnModificarContratacion5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnLimpiarAdjudicada)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnEliminarContratacion5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+
+        PanelObjetosAdj.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
+        PanelObjetosAdj.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel87.setText("Modalidad entrega");
+        PanelObjetosAdj.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 205, -1, -1));
+
+        cmbModalidadAdjudicada9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elegir", "Según demanda", "Cantidad definida", "Del 50%", "Parcial" }));
+        PanelObjetosAdj.add(cmbModalidadAdjudicada9, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 202, 250, -1));
+
+        btgEmpresa.add(rbtPBAdjudicada8);
+        rbtPBAdjudicada8.setText("Principal Brands");
+        PanelObjetosAdj.add(rbtPBAdjudicada8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, -1, -1));
+
+        btgEmpresa.add(rbtGyRAdjudicada8);
+        rbtGyRAdjudicada8.setText("GyR Grupo Asesor");
+        PanelObjetosAdj.add(rbtGyRAdjudicada8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
+
+        jLabel88.setText("Empresa");
+        PanelObjetosAdj.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, -1));
+
+        jLabel89.setText("Días de entrega");
+        PanelObjetosAdj.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 132, -1, -1));
+
+        btgTipo.add(rbtHabilesAdjudicada8);
+        rbtHabilesAdjudicada8.setText("Hábiles");
+        PanelObjetosAdj.add(rbtHabilesAdjudicada8, new org.netbeans.lib.awtextra.AbsoluteConstraints(337, 157, -1, -1));
+        PanelObjetosAdj.add(txtEntregaAdjudicada8, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 129, 250, -1));
+
+        btgTipo.add(rbtNaturalesAdjudicada8);
+        rbtNaturalesAdjudicada8.setText("Naturales");
+        PanelObjetosAdj.add(rbtNaturalesAdjudicada8, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 157, -1, -1));
+        PanelObjetosAdj.add(txtContratacionAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 35, 250, -1));
+
+        jLabel90.setText("Número de Contratación");
+        PanelObjetosAdj.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 38, -1, -1));
+
+        jLabel91.setText("Descripción");
+        PanelObjetosAdj.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 38, -1, -1));
+
+        lblLugarr8.setText("Institución");
+        PanelObjetosAdj.add(lblLugarr8, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 85, -1, -1));
+
+        jLabel92.setText("Encargado");
+        PanelObjetosAdj.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 132, -1, -1));
+
+        jLabel93.setText("Estado");
+        PanelObjetosAdj.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 85, -1, -1));
+
+        jLabel94.setText("Observación");
+        PanelObjetosAdj.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 205, -1, -1));
+
+        txaObservacionAdjudicada8.setColumns(20);
+        txaObservacionAdjudicada8.setRows(5);
+        scpObservacionesAdjudicada8.setViewportView(txaObservacionAdjudicada8);
+
+        PanelObjetosAdj.add(scpObservacionesAdjudicada8, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 202, 252, -1));
+
+        btgEstado.add(rbtDudaAdjudicada8);
+        rbtDudaAdjudicada8.setText("En duda");
+        PanelObjetosAdj.add(rbtDudaAdjudicada8, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 83, -1, -1));
+
+        btgEstado.add(rbtFirmeAdjudicada8);
+        rbtFirmeAdjudicada8.setText("En firme");
+        PanelObjetosAdj.add(rbtFirmeAdjudicada8, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 83, -1, -1));
+        PanelObjetosAdj.add(txtEncargadoAdjudicada8, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 129, 252, -1));
+        PanelObjetosAdj.add(txtInstitución8, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 82, 250, -1));
+        PanelObjetosAdj.add(txtDescripcionAdjudicada8, new org.netbeans.lib.awtextra.AbsoluteConstraints(537, 35, 250, -1));
+
+        javax.swing.GroupLayout PanelBaseAdjLayout = new javax.swing.GroupLayout(PanelBaseAdj);
+        PanelBaseAdj.setLayout(PanelBaseAdjLayout);
+        PanelBaseAdjLayout.setHorizontalGroup(
+            PanelBaseAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBaseAdjLayout.createSequentialGroup()
+                .addComponent(PanelObjetosAdj, javax.swing.GroupLayout.PREFERRED_SIZE, 846, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addComponent(PanelOpcionesAdj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        PanelBaseAdjLayout.setVerticalGroup(
+            PanelBaseAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBaseAdjLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(PanelBaseAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(PanelOpcionesAdj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelObjetosAdj, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0))
+        );
+
+        javax.swing.GroupLayout pnlAdjudicadaLayout = new javax.swing.GroupLayout(pnlAdjudicada);
+        pnlAdjudicada.setLayout(pnlAdjudicadaLayout);
+        pnlAdjudicadaLayout.setHorizontalGroup(
+            pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlAdjudicadaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlAdjudicadaLayout.createSequentialGroup()
+                        .addGroup(pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(scpAdjudicada)
+                            .addComponent(PanelBaseAdj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(20, 20, 20))
+                    .addGroup(pnlAdjudicadaLayout.createSequentialGroup()
+                        .addComponent(PanelControlAdj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        pnlAdjudicadaLayout.setVerticalGroup(
+            pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlAdjudicadaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(PanelBaseAdj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelControlAdj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(scpAdjudicada, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        tbpContenedor.addTab("Adjudicada", pnlAdjudicada);
 
         pnlOrden.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         pnlOrden.add(txtContratacionOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 250, -1));
@@ -292,291 +495,6 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         tbpContenedor.addTab("Entregada", pnlEntregada);
 
-        scpAdjudicada.setViewportView(tblAdjudicada);
-
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Control Tabla"));
-
-        jLabel8.setText("Buscar");
-
-        cmbBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Contratación", "Institución", "Descripción", "Fecha de Publicación", "Fecha de Apertura", "Estado", "Encargado" }));
-
-        btnRefrescar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/refresh.png"))); // NOI18N
-        btnRefrescar.setText("Refrescar");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cmbBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnRefrescar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRefrescar))
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
-
-        jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Opciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
-
-        btnInsertarContratacion5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
-        btnInsertarContratacion5.setText("Agregar");
-
-        btnModificarContratacion5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
-        btnModificarContratacion5.setText("Modificar");
-
-        btnLimpiarAdjudicada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
-        btnLimpiarAdjudicada.setText("Limpiar");
-
-        btnEliminarContratacion5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
-        btnEliminarContratacion5.setText("Eliminar");
-
-        btnTomarContratacion5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cargo.png"))); // NOI18N
-        btnTomarContratacion5.setText("Tomar Contratación");
-
-        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
-        jPanel16.setLayout(jPanel16Layout);
-        jPanel16Layout.setHorizontalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnInsertarContratacion5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnModificarContratacion5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnLimpiarAdjudicada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnEliminarContratacion5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnTomarContratacion5, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE))
-                .addGap(23, 23, 23))
-        );
-        jPanel16Layout.setVerticalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(btnInsertarContratacion5)
-                .addGap(15, 15, 15)
-                .addComponent(btnModificarContratacion5)
-                .addGap(15, 15, 15)
-                .addComponent(btnLimpiarAdjudicada)
-                .addGap(17, 17, 17)
-                .addComponent(btnEliminarContratacion5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(btnTomarContratacion5)
-                .addContainerGap(17, Short.MAX_VALUE))
-        );
-
-        jLabel87.setText("Modalidad entrega");
-
-        cmbModalidadAdjudicada9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elegir", "Según demanda", "Cantidad definida", "Del 50%", "Parcial" }));
-
-        btgEmpresa.add(rbtPBAdjudicada8);
-        rbtPBAdjudicada8.setText("Principal Brands");
-
-        btgEmpresa.add(rbtGyRAdjudicada8);
-        rbtGyRAdjudicada8.setText("GyR Grupo Asesor");
-
-        jLabel88.setText("Empresa");
-
-        jLabel89.setText("Días de entrega");
-
-        btgTipo.add(rbtHabilesAdjudicada8);
-        rbtHabilesAdjudicada8.setText("Hábiles");
-
-        btgTipo.add(rbtNaturalesAdjudicada8);
-        rbtNaturalesAdjudicada8.setText("Naturales");
-
-        jLabel90.setText("Número de Contratación");
-
-        jLabel91.setText("Descripción");
-
-        lblLugarr8.setText("Institución");
-
-        jLabel92.setText("Encargado");
-
-        jLabel93.setText("Estado");
-
-        jLabel94.setText("Observación");
-
-        txaObservacionAdjudicada8.setColumns(20);
-        txaObservacionAdjudicada8.setRows(5);
-        scpObservacionesAdjudicada8.setViewportView(txaObservacionAdjudicada8);
-
-        btgEstado.add(rbtDudaAdjudicada8);
-        rbtDudaAdjudicada8.setText("En duda");
-
-        btgEstado.add(rbtFirmeAdjudicada8);
-        rbtFirmeAdjudicada8.setText("En firme");
-
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGap(530, 530, 530)
-                        .addComponent(rbtFirmeAdjudicada8)
-                        .addGap(18, 18, 18)
-                        .addComponent(rbtDudaAdjudicada8))
-                    .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel17Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(jPanel17Layout.createSequentialGroup()
-                                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel90)
-                                            .addComponent(lblLugarr8))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtContratacionAdjudicada, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                                            .addComponent(txtInstitución8)))
-                                    .addGroup(jPanel17Layout.createSequentialGroup()
-                                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel89)
-                                            .addComponent(jLabel88))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
-                                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtEntregaAdjudicada8, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(jPanel17Layout.createSequentialGroup()
-                                                .addComponent(rbtNaturalesAdjudicada8)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(rbtHabilesAdjudicada8))
-                                            .addComponent(cmbModalidadAdjudicada9, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(rbtPBAdjudicada8)
-                                            .addComponent(rbtGyRAdjudicada8))))
-                                .addComponent(jLabel87))
-                            .addGap(58, 58, 58)
-                            .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel94)
-                                .addComponent(jLabel93)
-                                .addComponent(jLabel92))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtEncargadoAdjudicada8)
-                                .addComponent(scpObservacionesAdjudicada8)))
-                        .addGroup(jPanel17Layout.createSequentialGroup()
-                            .addGap(452, 452, 452)
-                            .addComponent(jLabel91)
-                            .addGap(18, 18, 18)
-                            .addComponent(txtDescripcionAdjudicada8, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel90)
-                    .addComponent(txtContratacionAdjudicada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel91)
-                    .addComponent(txtDescripcionAdjudicada8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblLugarr8)
-                    .addComponent(txtInstitución8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel93)
-                    .addComponent(rbtFirmeAdjudicada8)
-                    .addComponent(rbtDudaAdjudicada8))
-                .addGap(25, 25, 25)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel89)
-                    .addComponent(txtEntregaAdjudicada8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel92)
-                    .addComponent(txtEncargadoAdjudicada8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel17Layout.createSequentialGroup()
-                                .addComponent(rbtNaturalesAdjudicada8)
-                                .addGap(25, 25, 25)
-                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel87)
-                                    .addComponent(cmbModalidadAdjudicada9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel94)))
-                            .addComponent(rbtHabilesAdjudicada8))
-                        .addGap(25, 25, 25)
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rbtGyRAdjudicada8)
-                            .addComponent(jLabel88))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rbtPBAdjudicada8))
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(scpObservacionesAdjudicada8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(17, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1138, Short.MAX_VALUE)
-            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(18, 18, 18)
-                    .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap()))
-        );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 302, Short.MAX_VALUE)
-            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel15Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-
-        javax.swing.GroupLayout pnlAdjudicadaLayout = new javax.swing.GroupLayout(pnlAdjudicada);
-        pnlAdjudicada.setLayout(pnlAdjudicadaLayout);
-        pnlAdjudicadaLayout.setHorizontalGroup(
-            pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlAdjudicadaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scpAdjudicada, javax.swing.GroupLayout.PREFERRED_SIZE, 1188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pnlAdjudicadaLayout.createSequentialGroup()
-                        .addGap(0, 9, Short.MAX_VALUE)
-                        .addGroup(pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlAdjudicadaLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 46, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        pnlAdjudicadaLayout.setVerticalGroup(
-            pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlAdjudicadaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(scpAdjudicada, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        tbpContenedor.addTab("Adjudicada", pnlAdjudicada);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -591,6 +509,10 @@ public class Pnl_2 extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PanelBaseAdj;
+    private javax.swing.JPanel PanelControlAdj;
+    private javax.swing.JPanel PanelObjetosAdj;
+    private javax.swing.JPanel PanelOpcionesAdj;
     public javax.swing.ButtonGroup btgEmpresa;
     public javax.swing.ButtonGroup btgEmpresaEnt;
     public javax.swing.ButtonGroup btgEstado;
@@ -610,7 +532,6 @@ public class Pnl_2 extends javax.swing.JPanel {
     public javax.swing.JButton btnModificarEntrega;
     public javax.swing.JButton btnModificarOrden;
     public javax.swing.JButton btnRefrescar;
-    public javax.swing.JButton btnTomarContratacion5;
     public javax.swing.JComboBox<String> cmbBusqueda;
     public javax.swing.JComboBox<String> cmbModalidadAdjudicada1;
     public javax.swing.JComboBox<String> cmbModalidadAdjudicada9;
@@ -647,10 +568,6 @@ public class Pnl_2 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel92;
     private javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel6;
     public com.toedter.calendar.JDateChooser jdcFechaEntregada;
     public com.toedter.calendar.JDateChooser jdcLimiteOrden;
     private javax.swing.JLabel lblLugarr8;

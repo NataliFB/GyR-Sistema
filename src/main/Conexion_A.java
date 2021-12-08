@@ -25,7 +25,7 @@ public class Conexion_A {
             sqlds.setPassword("123");
             sqlds.setServerName("localhost");
             sqlds.setPortNumber(1433);
-            sqlds.setDatabaseName("prueba");
+            sqlds.setDatabaseName("pruebas");
             con = sqlds.getConnection();
 
             return con;
