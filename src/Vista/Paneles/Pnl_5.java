@@ -1,8 +1,17 @@
-
 package Vista.Paneles;
 
+/**
+ * Clase para el panel de Renta
+ *
+ * @author Aaron
+ */
 public class Pnl_5 extends javax.swing.JPanel {
 
+    /**
+     * Constructor de la clase Pnl_5.<br>
+     * Inicializa los objetos que hay dentro del panel.<br>
+     * No recibe ningún parametro.
+     */
     public Pnl_5() {
         initComponents();
     }

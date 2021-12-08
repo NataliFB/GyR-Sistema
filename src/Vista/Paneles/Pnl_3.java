@@ -1,8 +1,17 @@
-
 package Vista.Paneles;
 
+/**
+ * Clase para el panel de por comprar
+ *
+ * @author
+ */
 public class Pnl_3 extends javax.swing.JPanel {
 
+    /**
+     * Constructor de la clase Pnl_3.<br>
+     * Inicializa los objetos que hay dentro del panel.<br>
+     * No recibe ningún parametro.
+     */
     public Pnl_3() {
         initComponents();
     }
@@ -146,7 +155,7 @@ public class Pnl_3 extends javax.swing.JPanel {
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 967, 415));
     }// </editor-fold>//GEN-END:initComponents
 
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnBuscarDemanda;
     public javax.swing.JButton btnEliminarDemanda;

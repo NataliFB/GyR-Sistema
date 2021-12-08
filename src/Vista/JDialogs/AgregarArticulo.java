@@ -1,8 +1,18 @@
-
 package Vista.JDialogs;
 
+/**
+ * Clase de la ventana para agregar articulos
+ *
+ * @author
+ */
 public class AgregarArticulo extends javax.swing.JDialog {
 
+    /**
+     * Constructor para el JDialog AgregarArticulo
+     *
+     * @param parent Define el JFrame al que va a estar enlazado
+     * @param modal Define el modo que va a actuar el JDialog en el JFrame
+     */
     public AgregarArticulo(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();

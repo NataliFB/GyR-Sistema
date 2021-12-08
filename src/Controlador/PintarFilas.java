@@ -5,8 +5,26 @@ import java.awt.Component;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 
+/**
+ * Clase para pintar las filas de las tablas en las ventanas con tablas
+ *
+ * @author
+ */
 public class PintarFilas extends DefaultTableCellRenderer {
 
+    /**
+     * Metodo abstracto proveniente de la clase DefaultTableCellRender para
+     * poder modificar las celas de las tablas
+     *
+     * @param table Recibe la tabla a la cual se va a aplicar
+     * @param value Recibe el valor que contenga alguna celda en especifico
+     * @param isSelected Recibe si la celda está seleccionada
+     * @param hasFocus Recibe si la celda está enfocada
+     * @param row Recibe la fila seleccionada
+     * @param column Recibe la columna selecciona
+     * @return Devuelve el mismpo metodo para aplicarle el diseño o cambios
+     * correspondientes
+     */
     @Override
     public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
 
@@ -32,20 +50,21 @@ public class PintarFilas extends DefaultTableCellRenderer {
         }
         if (esOscuro(color)) {
             setForeground(Color.WHITE);
-        }else{
+        } else {
             setForeground(Color.BLACK);
         }
-        
+
         setBackground(color);
 
         return this;
     }
 
-    public boolean esOscuro(Color color) {
-        double tonoColor = 1 - (0.299 * color.getRed() + 0.587 * color.getGreen()+ 0.114 * color.getBlue()) / 255;
+    //Este es un metodo para saber si un color es oscuro o claro
+    private boolean esOscuro(Color color) {
+        double tonoColor = 1 - (0.299 * color.getRed() + 0.587 * color.getGreen() + 0.114 * color.getBlue()) / 255;
         if (tonoColor < 0.5) {
             return false;
-        }else {
+        } else {
             return true;
         }
     }

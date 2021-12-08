@@ -1,12 +1,22 @@
-
 package Vista.Paneles;
 
+/**
+ * Clase para el panel que contiene Timbres, Garantias y Muestras
+ *
+ * @author
+ */
 public class Pnl_1 extends javax.swing.JPanel {
 
+    /**
+     * Constructor de la clase Pnl_1.<br>
+     * Inicializa los objetos que hay dentro del panel. Como los 3 paneles de
+     * timbres, garantias y muestras<br>
+     * No recibe ningún parametro.
+     */
     public Pnl_1() {
         initComponents();
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

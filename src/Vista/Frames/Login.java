@@ -1,10 +1,18 @@
-
 package Vista.Frames;
 
+/**
+ * Clase para la ventana del login
+ *
+ * @author
+ */
 public class Login extends javax.swing.JFrame {
 
+    /**
+     * Constructor para el JFrame Login<br> 
+     * Inicializa los objectos que contiene el JFrame
+     */
     public Login() {
-        initComponents();   
+        initComponents();
     }
 
     @SuppressWarnings("unchecked")

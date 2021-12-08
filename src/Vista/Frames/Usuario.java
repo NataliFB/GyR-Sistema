@@ -1,8 +1,16 @@
-
 package Vista.Frames;
 
+/**
+ * Clase para el JFrame Usuario
+ *
+ * @author
+ */
 public class Usuario extends javax.swing.JFrame {
 
+    /**
+     * Constructor para el JFrame Usuario<br>
+     * Inicializa los objetos que contiene
+     */
     public Usuario() {
         initComponents();
     }
