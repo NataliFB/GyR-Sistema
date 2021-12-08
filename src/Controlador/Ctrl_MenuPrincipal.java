@@ -151,6 +151,10 @@ public class Ctrl_MenuPrincipal implements ActionListener {
             frameMenu.pnl_prin.add(panel3);
         }
 
+        if(e.getSource() == frameMenu.btnFacturas){
+            VentanaFacturas();
+        }
+        
         if (e.getSource() == frameMenu.btnRenta) {
             Pnl_5 panel5 = new Pnl_5();
 
