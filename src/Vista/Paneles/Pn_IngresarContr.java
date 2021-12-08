@@ -1,8 +1,17 @@
-
 package Vista.Paneles;
 
+/**
+ * Clase para el panel de Ingresar Contrataciones
+ *
+ * @author
+ */
 public class Pn_IngresarContr extends javax.swing.JPanel {
 
+    /**
+     * Constructor de la clase Ingresar Contrataciones.<br> 
+     * Inicializa los objetos que hay dentro del panel.<br>
+     * No recibe ningún parametro.
+     */
     public Pn_IngresarContr() {
         initComponents();
     }

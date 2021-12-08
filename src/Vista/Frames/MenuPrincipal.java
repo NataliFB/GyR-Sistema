@@ -1,7 +1,16 @@
 package Vista.Frames;
 
+/**
+ * Clase para la ventana del Menu Principal
+ *
+ * @author
+ */
 public class MenuPrincipal extends javax.swing.JFrame {
 
+    /**
+     * Constructor para el JFrame MenuPrincipal<br>
+     * Inicializa los objetos que tiene
+     */
     public MenuPrincipal() {
         initComponents();
     }

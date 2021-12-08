@@ -1,8 +1,17 @@
 
 package Vista.Paneles;
 
+/**
+ * Clase para el panel de facturas
+ * @author
+ */
 public class Pnl_Proveedor extends javax.swing.JPanel {
 
+    /**
+     * Constructor de la clase Pnl_Facturas.<br>
+     * Inicializa los objetos que hay dentro del panel.<br>
+     * No recibe ningún parametro.
+     */
     public Pnl_Proveedor() {
         initComponents();
     }

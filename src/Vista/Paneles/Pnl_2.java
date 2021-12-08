@@ -1,8 +1,18 @@
-
 package Vista.Paneles;
 
+/**
+ * Clase para el panel que contiene Orden, Entrega y Adjudicada
+ *
+ * @author
+ */
 public class Pnl_2 extends javax.swing.JPanel {
 
+    /**
+     * Constructor de la clase Pnl_2.<br>
+     * Inicializa los objetos que hay dentro del panel. Como los 3 paneles de
+     * orden, entrega y adjudicada<br>
+     * No recibe ningún parametro.
+     */
     public Pnl_2() {
         initComponents();
     }

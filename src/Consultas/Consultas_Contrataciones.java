@@ -11,8 +11,24 @@ import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
+/**
+ * Clase para realizar las consultas que tengan relación con la ventana de
+ * ingresar contrataciones
+ *
+ * @author
+ */
 public class Consultas_Contrataciones extends Conexion_A {
 
+    /**
+     * Metodo para ingresar los datos de una contratación a la base de datos
+     *
+     * @param ic Recibe un objeto de tipo Mod_IngrsarContr para poder obtener el
+     * valor de las variables
+     * @return Devuelve un booleano que significa si se pudo insertar los datos
+     * en la base de datos<br>
+     * true: se insertó<br>
+     * false: no se insertó
+     */
     public boolean IngresarContratacion(Mod_IngresarContr ic) {
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
@@ -52,6 +68,17 @@ public class Consultas_Contrataciones extends Conexion_A {
         return true;
     }
 
+    /**
+     * Metodo para ingresar el estado de una contratación en la base de datos
+     *
+     * @param contratacion Recibe un String que es el número de la contratación
+     * a la cual se le asigna el estado
+     * @param estado Recibe el estado que se le asigna a la contratación
+     * @return Devuelve un booleano que significa si se pudo insertar los datos
+     * en la base de datos<br>
+     * true: se insertó<br>
+     * false: no se insertó
+     */
     public boolean IngresarEstado(String contratacion, String estado) {
         PreparedStatement ps;
 
@@ -75,6 +102,13 @@ public class Consultas_Contrataciones extends Conexion_A {
         return true;
     }
 
+    /**
+     * Metodo para poder cargar todas las contrataciones incompletas (que no
+     * tienen encargado aún) de la base de datos
+     *
+     * @return Devuelve un model para la tabla que contiene ya todos los datos
+     * que hay de la base de datos
+     */
     public DefaultTableModel CargarContratacionesIncompletas() {
         DefaultTableModel modelo = new DefaultTableModel() {
 
@@ -127,6 +161,13 @@ public class Consultas_Contrataciones extends Conexion_A {
         return modelo;
     }
 
+    /**
+     * Metodo para poder cargar todas las contrataciones completas (que ya
+     * tienen encargado) de la base de datos
+     *
+     * @return Devuelve un model para la tabla que contiene ya todos los datos
+     * que hay de la base de datos
+     */
     public DefaultTableModel CargarContratacionesCompletas() {
         DefaultTableModel modelo = new DefaultTableModel() {
 
@@ -179,6 +220,15 @@ public class Consultas_Contrataciones extends Conexion_A {
         return modelo;
     }
 
+    /**
+     * Metodo para traer de la base de datos, los datos de una contratación en
+     * especifico
+     *
+     * @param contratacion Recibe el número de contratación de la contratación
+     * por consultar
+     * @return Devuelve un arreglo de tipo Object con todos los datos que haya
+     * con respecto a esa contratación
+     */
     public Object[] BuscarContratacion(String contratacion) {
         Object[] datos = null;
 
@@ -217,6 +267,16 @@ public class Consultas_Contrataciones extends Conexion_A {
         return datos;
     }
 
+    /**
+     * Metodo para borrar los datos de una contratación
+     *
+     * @param contratacion Recibe el número de contratación de los datos por
+     * borrar
+     * @return Devuelve un booleano que significa si se pudo insertar los datos
+     * en la base de datos<br>
+     * true: se insertó<br>
+     * false: no se insertó
+     */
     public boolean BorrarContratacion(String contratacion) {
         CallableStatement cs;
         PreparedStatement ps;
@@ -226,7 +286,7 @@ public class Consultas_Contrataciones extends Conexion_A {
             Mod_Usuario modUs = new Mod_Usuario();
             ps = getConnection().prepareStatement("SELECT cod_empleado FROM responsable WHERE cod_contratacion = ?");
             ps.setString(1, contratacion);
-            
+
             rs = ps.executeQuery();
 
             if (rs.next()) {
@@ -265,11 +325,47 @@ public class Consultas_Contrataciones extends Conexion_A {
         return true;
     }
 
+    /**
+     * Metodo para poder hacer que un usuario se haga a cargo de una
+     * contratación
+     *
+     * @param codEmpleado Recibe el código del empleado en sesión que se va a
+     * hacer cargo
+     * @param contratacion Número de contratación que el usuario se va a hacer
+     * cargo
+     * @return Devuelve un booleano que significa si se pudo insertar los datos
+     * en la base de datos<br>
+     * true: se insertó<br>
+     * false: no se insertó
+     */
     public boolean TomarContratacion(int codEmpleado, String contratacion) {
         CallableStatement cs;
         PreparedStatement ps;
         ResultSet rs;
 
+        try {
+            ps = getConnection().prepareStatement("SELECT estado FROM estado_contratacion WHERE cod_contratacion = ?");
+            ps.setString(1, contratacion);
+
+            rs = ps.executeQuery();
+
+            while(rs.next()){
+                if(!(rs.getString(1).equals("Enviada"))){
+                    JOptionPane.showMessageDialog(null, "El estado de la contratación debe de ser enviado");
+                    return false;
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return false;
+        } finally {
+            try {
+                getConnection().close();
+            } catch (SQLException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        
         try {
             ps = getConnection().prepareStatement("SELECT R.cod_contratacion FROM responsable R INNER JOIN contrataciones C ON "
                     + "R.cod_contratacion = C.cod_contratacion WHERE R.cod_contratacion = ?");

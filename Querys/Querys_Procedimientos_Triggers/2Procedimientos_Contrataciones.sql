@@ -43,7 +43,7 @@ AS BEGIN
 	FROM contrataciones C	
 	INNER JOIN estado_contratacion EC ON C.cod_contratacion = EC.cod_contratacion
 	ORDER BY CONVERT(varchar,fecha_apertura,100)
-END DROP PROC mostrar_contrataciones
+END
 
 ---------------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para borrar todo lo relacionado a una contratación

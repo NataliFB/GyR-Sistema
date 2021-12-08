@@ -8,11 +8,24 @@ import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Clase para las acciones que ejecutan los botones en la ventana del Menu
+ * Principal
+ *
+ * @author
+ */
 public class Ctrl_MenuPrincipal implements ActionListener {
 
     private MenuPrincipal frameMenu;
     private Mod_Usuario modEmpleado;
 
+    /**
+     * Constructor de la clase Ctrl_MenuPrincipal. Le asgina valores a variables
+     * privadas, inicializa objetos y le añade eventos a los botones
+     *
+     * @param viewMenu
+     * @param modEmp
+     */
     public Ctrl_MenuPrincipal(MenuPrincipal viewMenu, Mod_Usuario modEmp) {
         this.frameMenu = viewMenu;
         this.modEmpleado = modEmp;
@@ -30,13 +43,16 @@ public class Ctrl_MenuPrincipal implements ActionListener {
         frameMenu.btnSalir.addActionListener(this);
     }
 
+    /**
+     * Inicializa estados para la venta además de cargar los paneles al JFrame
+     */
     private void Iniciar() {
         frameMenu.setTitle("GyR Sistema Menú");
         frameMenu.setExtendedState(MAXIMIZED_BOTH);
         frameMenu.setLocationRelativeTo(null);
 
         frameMenu.setVisible(true);
-        
+
         if (modEmpleado.getNivelAdm().equals("Contador")) {
             frameMenu.Adjudicaciones.setVisible(false);
             frameMenu.IngrsarContr.setVisible(false);
@@ -49,12 +65,18 @@ public class Ctrl_MenuPrincipal implements ActionListener {
         }
     }
 
+    /**
+     * Metodo que elimina todo del panel base para poder cargar otro panel
+     */
     private void ResetearPanel() {
         frameMenu.pnl_prin.removeAll();
         frameMenu.pnl_prin.repaint();
         frameMenu.pnl_prin.revalidate();
     }
 
+    /**
+     * Metodo que carga la venta principal que es la de ingresar contrataciones
+     */
     private void VentanaContratacion() {
         Mod_IngresarContr model = new Mod_IngresarContr();
         Pn_IngresarContr view = new Pn_IngresarContr();
@@ -67,6 +89,9 @@ public class Ctrl_MenuPrincipal implements ActionListener {
         frameMenu.pnl_prin.add(view);
     }
 
+    /**
+     * Metodo que carga la ventana facturas al inicio si el usuario es contador
+     */
     private void VentanaFacturas() {
         Pnl_4 panel4 = new Pnl_4();
 
@@ -76,6 +101,12 @@ public class Ctrl_MenuPrincipal implements ActionListener {
         frameMenu.pnl_prin.add(panel4);
     }
 
+    /**
+     * Metodo abstracto de la clase ActionListener, le aplica los eventos a los
+     * botones
+     *
+     * @param e Evento por ser procesado
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == frameMenu.btnUsuario) {
@@ -101,7 +132,7 @@ public class Ctrl_MenuPrincipal implements ActionListener {
 
         if (e.getSource() == frameMenu.btnAdjudicaciones) {
             Pnl_2 panel2 = new Pnl_2();
-            
+
             panel2.setSize(frameMenu.getSize());
             ResetearPanel();
             Ctrl_Adjudicaciones adjudicaciones = new Ctrl_Adjudicaciones(panel2);
@@ -116,16 +147,6 @@ public class Ctrl_MenuPrincipal implements ActionListener {
             Ctrl_PorComprar porComprar = new Ctrl_PorComprar(panel3);
 
             frameMenu.pnl_prin.add(panel3);
-        }
-
-        if (e.getSource() == frameMenu.btnFacturas) {
-            VentanaFacturas();
-//            Pnl_4 panel4 = new Pnl_4();
-//
-//            ResetearPanel();
-//            Ctrl_Facturas facturas = new Ctrl_Facturas(panel4);
-//
-//            frameMenu.pnl_prin.add(panel4);
         }
 
         if (e.getSource() == frameMenu.btnRenta) {
