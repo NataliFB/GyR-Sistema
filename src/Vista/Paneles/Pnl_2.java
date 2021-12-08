@@ -100,36 +100,6 @@ public class Pnl_2 extends javax.swing.JPanel {
         cmbBusquedaOrden = new javax.swing.JComboBox<>();
         btnRefrescarOrden = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        pnlEntregada = new javax.swing.JPanel();
-        txtContratacionEntregada = new javax.swing.JTextField();
-        txtEntregaEntregada = new javax.swing.JTextField();
-        txtDescripcionEntregada = new javax.swing.JTextField();
-        txtLugarEntregada = new javax.swing.JTextField();
-        txtEncargadoEntregada = new javax.swing.JTextField();
-        jdcFechaEntregada = new com.toedter.calendar.JDateChooser();
-        cmbModalidadEntregada = new javax.swing.JComboBox<>();
-        cmbOrdenEntregada = new javax.swing.JComboBox<>();
-        rbtGyREntregada = new javax.swing.JRadioButton();
-        rbtPBEntregada = new javax.swing.JRadioButton();
-        scpObservacionesEntregada = new javax.swing.JScrollPane();
-        txaObservacionesEntregada = new javax.swing.JTextArea();
-        spnEntregada = new javax.swing.JScrollPane();
-        tblEntregada = new javax.swing.JTable();
-        btnInsertarEntregada = new javax.swing.JButton();
-        btnModificarEntrega = new javax.swing.JButton();
-        btnBuscarEntregada = new javax.swing.JButton();
-        btnLimpiarEntregada = new javax.swing.JButton();
-        btnEliminarEntregada = new javax.swing.JButton();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
 
         scpAdjudicada.setViewportView(tblAdjudicada);
 
@@ -521,90 +491,6 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         tbpContenedor.addTab("Orden", pnlOrden);
 
-        pnlEntregada.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnlEntregada.add(txtContratacionEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 250, -1));
-        pnlEntregada.add(txtEntregaEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 250, -1));
-        pnlEntregada.add(txtDescripcionEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 20, 250, -1));
-        pnlEntregada.add(txtLugarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 250, -1));
-        pnlEntregada.add(txtEncargadoEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, 250, -1));
-        pnlEntregada.add(jdcFechaEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 60, 250, -1));
-
-        cmbModalidadEntregada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elegir", "Encomienda", "Proveedor", "Encargado" }));
-        pnlEntregada.add(cmbModalidadEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 250, -1));
-
-        cmbOrdenEntregada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
-        pnlEntregada.add(cmbOrdenEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 277, 250, -1));
-
-        btgEmpresaEnt.add(rbtGyREntregada);
-        rbtGyREntregada.setText("GyR Grupo Asesor");
-        pnlEntregada.add(rbtGyREntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 190, 250, -1));
-
-        btgEmpresaEnt.add(rbtPBEntregada);
-        rbtPBEntregada.setText("Principal Brands");
-        pnlEntregada.add(rbtPBEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 250, -1));
-
-        txaObservacionesEntregada.setColumns(20);
-        txaObservacionesEntregada.setRows(5);
-        scpObservacionesEntregada.setViewportView(txaObservacionesEntregada);
-
-        pnlEntregada.add(scpObservacionesEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 250, -1));
-
-        spnEntregada.setViewportView(tblEntregada);
-
-        pnlEntregada.add(spnEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 960, 270));
-
-        btnInsertarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
-        btnInsertarEntregada.setText("Agregar");
-        pnlEntregada.add(btnInsertarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
-
-        btnModificarEntrega.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
-        btnModificarEntrega.setText("Modificar");
-        pnlEntregada.add(btnModificarEntrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
-
-        btnBuscarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
-        btnBuscarEntregada.setText("Buscar");
-        pnlEntregada.add(btnBuscarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, -1, -1));
-
-        btnLimpiarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
-        btnLimpiarEntregada.setText("Limpiar");
-        pnlEntregada.add(btnLimpiarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, -1, -1));
-
-        btnEliminarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
-        btnEliminarEntregada.setText("Eliminar");
-        pnlEntregada.add(btnEliminarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, -1, 33));
-
-        jLabel22.setText("N° Contratación");
-        pnlEntregada.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 23, -1, -1));
-
-        jLabel23.setText("Descripción");
-        pnlEntregada.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 20, -1, -1));
-
-        jLabel24.setText("Días de entrega");
-        pnlEntregada.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, -1, -1));
-
-        jLabel25.setText("Medio de entrega");
-        pnlEntregada.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, -1, -1));
-
-        jLabel26.setText("Lugar de entrega");
-        pnlEntregada.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
-
-        jLabel27.setText("Fecha de entrega");
-        pnlEntregada.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, -1, -1));
-
-        jLabel28.setText("Empresa");
-        pnlEntregada.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, -1, -1));
-
-        jLabel38.setText("Encargado");
-        pnlEntregada.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, -1, -1));
-
-        jLabel42.setText("Observación");
-        pnlEntregada.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
-
-        jLabel34.setText("Ordenar por:");
-        pnlEntregada.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 280, -1, -1));
-
-        tbpContenedor.addTab("Entregada", pnlEntregada);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -621,52 +507,41 @@ public class Pnl_2 extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelBaseAdj;
     private javax.swing.JPanel PanelBaseOrden;
+    private javax.swing.JPanel PanelBaseOrden1;
     private javax.swing.JPanel PanelControlAdj;
     private javax.swing.JPanel PanelControlOrden;
     private javax.swing.JPanel PanelObjetosAdj;
     private javax.swing.JPanel PanelObjetosOrden;
     private javax.swing.JPanel PanelOpcionesAdj;
     private javax.swing.JPanel PanelOpcionesOrden;
+    private javax.swing.JPanel PanelOpcionesOrden1;
     public javax.swing.ButtonGroup btgEmpresa;
     public javax.swing.ButtonGroup btgEmpresaEnt;
     public javax.swing.ButtonGroup btgEstado;
     public javax.swing.ButtonGroup btgTipo;
-    public javax.swing.JButton btnBuscarEntregada;
     public javax.swing.JButton btnEliminarAdjudicada;
-    public javax.swing.JButton btnEliminarEntregada;
     public javax.swing.JButton btnEliminarOrden;
+    public javax.swing.JButton btnEliminarOrden1;
     public javax.swing.JButton btnInsertarAdjudicada;
-    public javax.swing.JButton btnInsertarEntregada;
     public javax.swing.JButton btnInsertarOrden;
+    public javax.swing.JButton btnInsertarOrden1;
     public javax.swing.JButton btnLimpiarAdjudicada;
-    public javax.swing.JButton btnLimpiarEntregada;
     public javax.swing.JButton btnLimpiarOrden;
+    public javax.swing.JButton btnLimpiarOrden1;
     public javax.swing.JButton btnModificarAdjudicada;
-    public javax.swing.JButton btnModificarEntrega;
     public javax.swing.JButton btnModificarOrden;
+    public javax.swing.JButton btnModificarOrden1;
     public javax.swing.JButton btnRefrescarAdjudicada;
     public javax.swing.JButton btnRefrescarOrden;
     public javax.swing.JComboBox<String> cmbBusquedaAdjudicada;
     public javax.swing.JComboBox<String> cmbBusquedaOrden;
     public javax.swing.JComboBox<String> cmbModalidadAdjudicada;
-    public javax.swing.JComboBox<String> cmbModalidadEntregada;
     public javax.swing.JComboBox<String> cmbModalidadOrden;
-    public javax.swing.JComboBox<String> cmbOrdenEntregada;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
@@ -681,51 +556,38 @@ public class Pnl_2 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
-    public com.toedter.calendar.JDateChooser jdcFechaEntregada;
     private com.toedter.calendar.JDateChooser jdcFechaLimiteOrden;
     private javax.swing.JLabel lblLugarr8;
     private javax.swing.JLabel lblLugarr9;
     private javax.swing.JPanel pnlAdjudicada;
-    private javax.swing.JPanel pnlEntregada;
     private javax.swing.JPanel pnlOrden;
     public javax.swing.JRadioButton rbtDudaAdjudicada;
     public javax.swing.JRadioButton rbtFirmeAdjudicada;
     public javax.swing.JRadioButton rbtGyRAdjudicada;
-    public javax.swing.JRadioButton rbtGyREntregada;
     public javax.swing.JRadioButton rbtHabilesAdjudicada;
     public javax.swing.JRadioButton rbtNaturalesAdjudicada;
     public javax.swing.JRadioButton rbtPBAdjudicada;
-    public javax.swing.JRadioButton rbtPBEntregada;
     public javax.swing.JScrollPane scpAdjudicada;
     private javax.swing.JScrollPane scpObservacionesAdjudicada;
-    private javax.swing.JScrollPane scpObservacionesEntregada;
     private javax.swing.JScrollPane scpObservacionesOrden;
     public javax.swing.JScrollPane scpOrden;
-    private javax.swing.JScrollPane spnEntregada;
     private javax.swing.JTable tblAdjudicada;
-    public javax.swing.JTable tblEntregada;
     private javax.swing.JTable tblOrden;
     public javax.swing.JTabbedPane tbpContenedor;
     public javax.swing.JTextArea txaObservacionAdjudicada;
     public javax.swing.JTextArea txaObservacionOrden;
-    public javax.swing.JTextArea txaObservacionesEntregada;
     public javax.swing.JTextField txtBuscarAdjudicada;
     public javax.swing.JTextField txtBuscarOrden;
     public javax.swing.JTextField txtContratacionAdjudicada;
-    public javax.swing.JTextField txtContratacionEntregada;
     public javax.swing.JTextField txtContratacionOrden;
     public javax.swing.JTextField txtDescripcionAdjudicada;
-    public javax.swing.JTextField txtDescripcionEntregada;
     public javax.swing.JTextField txtDescripcionOrden;
     public javax.swing.JTextField txtDiasEntregaOrden;
     public javax.swing.JTextField txtEncargadoAdjudicada;
-    public javax.swing.JTextField txtEncargadoEntregada;
     public javax.swing.JTextField txtEncargadoOrden;
     public javax.swing.JTextField txtEntregaAdjudicada;
-    public javax.swing.JTextField txtEntregaEntregada;
     public javax.swing.JTextField txtInstituciónAdjudicada;
     public javax.swing.JTextField txtLugarEntregaOrden;
-    public javax.swing.JTextField txtLugarEntregada;
     private javax.swing.JTextField txtNumOrden;
     public javax.swing.JTextField txtVigenciaContratoOrden;
     // End of variables declaration//GEN-END:variables
