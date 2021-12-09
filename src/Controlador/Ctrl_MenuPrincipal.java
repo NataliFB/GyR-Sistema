@@ -23,8 +23,10 @@ public class Ctrl_MenuPrincipal implements ActionListener {
      * Constructor de la clase Ctrl_MenuPrincipal. Le asgina valores a variables
      * privadas, inicializa objetos y le añade eventos a los botones
      *
-     * @param viewMenu
-     * @param modEmp
+     * @param viewMenu Recibe un objeto de tipo MenuPrincipal que es el JFrame
+     * del menu
+     * @param modEmp Recibe un objeto de tipo mod_Usuario donde están las
+     * variables del usuario
      */
     public Ctrl_MenuPrincipal(MenuPrincipal viewMenu, Mod_Usuario modEmp) {
         this.frameMenu = viewMenu;
@@ -132,10 +134,11 @@ public class Ctrl_MenuPrincipal implements ActionListener {
 
         if (e.getSource() == frameMenu.btnAdjudicaciones) {
             Pnl_2 panel2 = new Pnl_2();
-
-            panel2.setSize(frameMenu.getSize());
+            Consultas_Adjudicaciones consultas = new Consultas_Adjudicaciones();
+            
             ResetearPanel();
-            Ctrl_Adjudicaciones adjudicaciones = new Ctrl_Adjudicaciones(panel2);
+            panel2.setSize(frameMenu.pnl_prin.getSize());
+            Ctrl_Adjudicaciones adjudicaciones = new Ctrl_Adjudicaciones(panel2, consultas);
 
             frameMenu.pnl_prin.add(panel2);
         }
@@ -149,6 +152,10 @@ public class Ctrl_MenuPrincipal implements ActionListener {
             frameMenu.pnl_prin.add(panel3);
         }
 
+        if(e.getSource() == frameMenu.btnFacturas){
+            VentanaFacturas();
+        }
+        
         if (e.getSource() == frameMenu.btnRenta) {
             Pnl_5 panel5 = new Pnl_5();
 

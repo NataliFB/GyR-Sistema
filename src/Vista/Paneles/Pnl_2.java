@@ -21,528 +21,293 @@ public class Pnl_2 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btgTipo = new javax.swing.ButtonGroup();
-        btgEstado = new javax.swing.ButtonGroup();
-        btgEmpresa = new javax.swing.ButtonGroup();
-        btgEmpresaEnt = new javax.swing.ButtonGroup();
+        btgDiasEntregaAdjudicada = new javax.swing.ButtonGroup();
+        btgEstadoAdjudicada = new javax.swing.ButtonGroup();
+        btgEmpresaAdjudicada = new javax.swing.ButtonGroup();
+        btgEmpresaEntregada = new javax.swing.ButtonGroup();
         tbpContenedor = new javax.swing.JTabbedPane();
-        pnlOrden = new javax.swing.JPanel();
-        txtContratacionOrden = new javax.swing.JTextField();
-        txtEntregaOrden = new javax.swing.JTextField();
-        txtVigenciaContrato = new javax.swing.JTextField();
-        txtDescripcionOrden = new javax.swing.JTextField();
-        txtNumeroOrden = new javax.swing.JTextField();
-        txtLugarEntOrden = new javax.swing.JTextField();
-        txtEncargadoOrden = new javax.swing.JTextField();
-        jdcLimiteOrden = new com.toedter.calendar.JDateChooser();
-        scpOrden = new javax.swing.JScrollPane();
-        tblOrden = new javax.swing.JTable();
-        scpObservacionesOrden = new javax.swing.JScrollPane();
-        txaObservacionesOrden = new javax.swing.JTextArea();
-        btnInsertarOrden = new javax.swing.JButton();
-        btnModificarOrden = new javax.swing.JButton();
-        btnBuscarOrden = new javax.swing.JButton();
-        btnLimpiarOrden = new javax.swing.JButton();
-        btnEliminarOrden = new javax.swing.JButton();
-        cmbOrden_Orden = new javax.swing.JComboBox<>();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        cmbModalidadAdjudicada1 = new javax.swing.JComboBox<>();
-        jLabel36 = new javax.swing.JLabel();
-        pnlEntregada = new javax.swing.JPanel();
-        txtContratacionEntregada = new javax.swing.JTextField();
-        txtEntregaEntregada = new javax.swing.JTextField();
-        txtDescripcionEntregada = new javax.swing.JTextField();
-        txtLugarEntregada = new javax.swing.JTextField();
-        txtEncargadoEntregada = new javax.swing.JTextField();
-        jdcFechaEntregada = new com.toedter.calendar.JDateChooser();
-        cmbModalidadEntregada = new javax.swing.JComboBox<>();
-        cmbOrdenEntregada = new javax.swing.JComboBox<>();
-        rbtGyREntregada = new javax.swing.JRadioButton();
-        rbtPBEntregada = new javax.swing.JRadioButton();
-        scpObservacionesEntregada = new javax.swing.JScrollPane();
-        txaObservacionesEntregada = new javax.swing.JTextArea();
-        spnEntregada = new javax.swing.JScrollPane();
-        tblEntregada = new javax.swing.JTable();
-        btnInsertarEntregada = new javax.swing.JButton();
-        btnModificarEntrega = new javax.swing.JButton();
-        btnBuscarEntregada = new javax.swing.JButton();
-        btnLimpiarEntregada = new javax.swing.JButton();
-        btnEliminarEntregada = new javax.swing.JButton();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
         pnlAdjudicada = new javax.swing.JPanel();
         scpAdjudicada = new javax.swing.JScrollPane();
         tblAdjudicada = new javax.swing.JTable();
-        jPanel6 = new javax.swing.JPanel();
+        PanelControlAdj = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        txtBuscar = new javax.swing.JTextField();
-        cmbBusqueda = new javax.swing.JComboBox<>();
-        btnRefrescar = new javax.swing.JButton();
-        jPanel15 = new javax.swing.JPanel();
-        jPanel16 = new javax.swing.JPanel();
-        btnInsertarContratacion5 = new javax.swing.JButton();
-        btnModificarContratacion5 = new javax.swing.JButton();
+        txtBuscarAdjudicada = new javax.swing.JTextField();
+        cmbBusquedaAdjudicada = new javax.swing.JComboBox<>();
+        btnRefrescarAdjudicada = new javax.swing.JButton();
+        PanelBaseAdj = new javax.swing.JPanel();
+        PanelOpcionesAdj = new javax.swing.JPanel();
+        btnInsertarAdjudicada = new javax.swing.JButton();
+        btnModificarAdjudicada = new javax.swing.JButton();
         btnLimpiarAdjudicada = new javax.swing.JButton();
-        btnEliminarContratacion5 = new javax.swing.JButton();
-        btnTomarContratacion5 = new javax.swing.JButton();
-        jPanel17 = new javax.swing.JPanel();
+        btnEliminarAdjudicada = new javax.swing.JButton();
+        PanelObjetosAdj = new javax.swing.JPanel();
+        txtContratacionAdjudicada = new javax.swing.JTextField();
+        txtEncargadoAdjudicada = new javax.swing.JTextField();
+        txtInstituciónAdjudicada = new javax.swing.JTextField();
+        txtDescripcionAdjudicada = new javax.swing.JTextField();
+        cmbModalidadAdjudicada = new javax.swing.JComboBox<>();
+        scpObservacionesAdjudicada = new javax.swing.JScrollPane();
+        txaObservacionAdjudicada = new javax.swing.JTextArea();
+        rbtPBAdjudicada = new javax.swing.JRadioButton();
+        rbtGyRAdjudicada = new javax.swing.JRadioButton();
+        rbtHabilesAdjudicada = new javax.swing.JRadioButton();
+        rbtNaturalesAdjudicada = new javax.swing.JRadioButton();
+        rbtDudaAdjudicada = new javax.swing.JRadioButton();
+        rbtFirmeAdjudicada = new javax.swing.JRadioButton();
         jLabel87 = new javax.swing.JLabel();
-        cmbModalidadAdjudicada9 = new javax.swing.JComboBox<>();
-        rbtPBAdjudicada8 = new javax.swing.JRadioButton();
-        rbtGyRAdjudicada8 = new javax.swing.JRadioButton();
         jLabel88 = new javax.swing.JLabel();
         jLabel89 = new javax.swing.JLabel();
-        rbtHabilesAdjudicada8 = new javax.swing.JRadioButton();
-        txtEntregaAdjudicada8 = new javax.swing.JTextField();
-        rbtNaturalesAdjudicada8 = new javax.swing.JRadioButton();
-        txtContratacionAdjudicada = new javax.swing.JTextField();
         jLabel90 = new javax.swing.JLabel();
         jLabel91 = new javax.swing.JLabel();
         lblLugarr8 = new javax.swing.JLabel();
         jLabel92 = new javax.swing.JLabel();
         jLabel93 = new javax.swing.JLabel();
         jLabel94 = new javax.swing.JLabel();
-        scpObservacionesAdjudicada8 = new javax.swing.JScrollPane();
-        txaObservacionAdjudicada8 = new javax.swing.JTextArea();
-        rbtDudaAdjudicada8 = new javax.swing.JRadioButton();
-        rbtFirmeAdjudicada8 = new javax.swing.JRadioButton();
-        txtEncargadoAdjudicada8 = new javax.swing.JTextField();
-        txtInstitución8 = new javax.swing.JTextField();
-        txtDescripcionAdjudicada8 = new javax.swing.JTextField();
-
-        pnlOrden.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnlOrden.add(txtContratacionOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 250, -1));
-        pnlOrden.add(txtEntregaOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 250, -1));
-        pnlOrden.add(txtVigenciaContrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 250, -1));
-        pnlOrden.add(txtDescripcionOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 250, -1));
-        pnlOrden.add(txtNumeroOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 60, 250, -1));
-        pnlOrden.add(txtLugarEntOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 100, 250, -1));
-        pnlOrden.add(txtEncargadoOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 140, 250, -1));
-        pnlOrden.add(jdcLimiteOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 240, -1));
-
-        scpOrden.setViewportView(tblOrden);
-
-        pnlOrden.add(scpOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 963, 242));
-
-        txaObservacionesOrden.setColumns(20);
-        txaObservacionesOrden.setRows(5);
-        scpObservacionesOrden.setViewportView(txaObservacionesOrden);
-
-        pnlOrden.add(scpObservacionesOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 180, 250, -1));
-
-        btnInsertarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
-        btnInsertarOrden.setText("Agregar");
-        pnlOrden.add(btnInsertarOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
-
-        btnModificarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
-        btnModificarOrden.setText("Modificar");
-        pnlOrden.add(btnModificarOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, -1, -1));
-
-        btnBuscarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
-        btnBuscarOrden.setText("Buscar");
-        pnlOrden.add(btnBuscarOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, -1, -1));
-
-        btnLimpiarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
-        btnLimpiarOrden.setText("Limpiar");
-        pnlOrden.add(btnLimpiarOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
-
-        btnEliminarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
-        btnEliminarOrden.setText("Borrar");
-        pnlOrden.add(btnEliminarOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, -1, 33));
-
-        cmbOrden_Orden.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
-        pnlOrden.add(cmbOrden_Orden, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 307, 250, -1));
-
-        jLabel1.setText("N° Contratación");
-        pnlOrden.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 23, -1, -1));
-
-        jLabel2.setText("Descripción");
-        pnlOrden.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 20, -1, -1));
-
-        jLabel3.setText("Días de entrega");
-        pnlOrden.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, -1, -1));
-
-        jLabel4.setText("N° Orden");
-        pnlOrden.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 60, -1, -1));
-
-        jLabel11.setText("Vigencia contrato");
-        pnlOrden.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 107, 130, -1));
-
-        jLabel12.setText("Lugar de entrega");
-        pnlOrden.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 100, -1, -1));
-
-        jLabel17.setText("Ordenar por:");
-        pnlOrden.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 310, -1, -1));
-
-        jLabel31.setText("Fecha límite entrega");
-        pnlOrden.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 154, -1, -1));
-
-        jLabel33.setText("Encargado");
-        pnlOrden.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, -1, -1));
-
-        jLabel41.setText("Observación");
-        pnlOrden.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, -1, 10));
-
-        cmbModalidadAdjudicada1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elegir", "Según demanda", "Cantidad definida", "Del 50%", "Parcial" }));
-        pnlOrden.add(cmbModalidadAdjudicada1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 250, -1));
-
-        jLabel36.setText("Modalidad entrega");
-        pnlOrden.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
-
-        tbpContenedor.addTab("Orden", pnlOrden);
-
-        pnlEntregada.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnlEntregada.add(txtContratacionEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 250, -1));
-        pnlEntregada.add(txtEntregaEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 250, -1));
-        pnlEntregada.add(txtDescripcionEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 20, 250, -1));
-        pnlEntregada.add(txtLugarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 250, -1));
-        pnlEntregada.add(txtEncargadoEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, 250, -1));
-        pnlEntregada.add(jdcFechaEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 60, 250, -1));
-
-        cmbModalidadEntregada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elegir", "Encomienda", "Proveedor", "Encargado" }));
-        pnlEntregada.add(cmbModalidadEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 250, -1));
-
-        cmbOrdenEntregada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
-        pnlEntregada.add(cmbOrdenEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 277, 250, -1));
-
-        btgEmpresaEnt.add(rbtGyREntregada);
-        rbtGyREntregada.setText("GyR Grupo Asesor");
-        pnlEntregada.add(rbtGyREntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 190, 250, -1));
-
-        btgEmpresaEnt.add(rbtPBEntregada);
-        rbtPBEntregada.setText("Principal Brands");
-        pnlEntregada.add(rbtPBEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 250, -1));
-
-        txaObservacionesEntregada.setColumns(20);
-        txaObservacionesEntregada.setRows(5);
-        scpObservacionesEntregada.setViewportView(txaObservacionesEntregada);
-
-        pnlEntregada.add(scpObservacionesEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 250, -1));
-
-        spnEntregada.setViewportView(tblEntregada);
-
-        pnlEntregada.add(spnEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 960, 270));
-
-        btnInsertarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
-        btnInsertarEntregada.setText("Agregar");
-        pnlEntregada.add(btnInsertarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
-
-        btnModificarEntrega.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
-        btnModificarEntrega.setText("Modificar");
-        pnlEntregada.add(btnModificarEntrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
-
-        btnBuscarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
-        btnBuscarEntregada.setText("Buscar");
-        pnlEntregada.add(btnBuscarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, -1, -1));
-
-        btnLimpiarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
-        btnLimpiarEntregada.setText("Limpiar");
-        pnlEntregada.add(btnLimpiarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, -1, -1));
-
-        btnEliminarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
-        btnEliminarEntregada.setText("Eliminar");
-        pnlEntregada.add(btnEliminarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, -1, 33));
-
-        jLabel22.setText("N° Contratación");
-        pnlEntregada.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 23, -1, -1));
-
-        jLabel23.setText("Descripción");
-        pnlEntregada.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 20, -1, -1));
-
-        jLabel24.setText("Días de entrega");
-        pnlEntregada.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, -1, -1));
-
-        jLabel25.setText("Medio de entrega");
-        pnlEntregada.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, -1, -1));
-
-        jLabel26.setText("Lugar de entrega");
-        pnlEntregada.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
-
-        jLabel27.setText("Fecha de entrega");
-        pnlEntregada.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, -1, -1));
-
-        jLabel28.setText("Empresa");
-        pnlEntregada.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, -1, -1));
-
-        jLabel38.setText("Encargado");
-        pnlEntregada.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, -1, -1));
-
-        jLabel42.setText("Observación");
-        pnlEntregada.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
-
-        jLabel34.setText("Ordenar por:");
-        pnlEntregada.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 280, -1, -1));
-
-        tbpContenedor.addTab("Entregada", pnlEntregada);
+        spnDiasEntregaAdjudicaciones = new javax.swing.JSpinner();
+        pnlOrden = new javax.swing.JPanel();
+        scpOrden = new javax.swing.JScrollPane();
+        tblOrden = new javax.swing.JTable();
+        PanelBaseOrden = new javax.swing.JPanel();
+        PanelOpcionesOrden = new javax.swing.JPanel();
+        btnInsertarOrden = new javax.swing.JButton();
+        btnModificarOrden = new javax.swing.JButton();
+        btnLimpiarOrden = new javax.swing.JButton();
+        btnEliminarOrden = new javax.swing.JButton();
+        PanelObjetosOrden = new javax.swing.JPanel();
+        cmbModalidadOrden = new javax.swing.JComboBox<>();
+        txtVigenciaContratoOrden = new javax.swing.JTextField();
+        txtContratacionOrden = new javax.swing.JTextField();
+        txtEncargadoOrden = new javax.swing.JTextField();
+        txtDiasEntregaOrden = new javax.swing.JTextField();
+        txtDescripcionOrden = new javax.swing.JTextField();
+        txtLugarEntregaOrden = new javax.swing.JTextField();
+        txtNumOrden = new javax.swing.JTextField();
+        scpObservacionesOrden = new javax.swing.JScrollPane();
+        txaObservacionOrden = new javax.swing.JTextArea();
+        jdcFechaLimiteOrden = new com.toedter.calendar.JDateChooser();
+        jLabel95 = new javax.swing.JLabel();
+        jLabel97 = new javax.swing.JLabel();
+        jLabel98 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
+        lblLugarr9 = new javax.swing.JLabel();
+        jLabel100 = new javax.swing.JLabel();
+        jLabel101 = new javax.swing.JLabel();
+        jLabel102 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        PanelControlOrden = new javax.swing.JPanel();
+        txtBuscarOrden = new javax.swing.JTextField();
+        cmbBusquedaOrden = new javax.swing.JComboBox<>();
+        btnRefrescarOrden = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        pnlEntregada = new javax.swing.JPanel();
+        scpEntregada = new javax.swing.JScrollPane();
+        tblEntregada = new javax.swing.JTable();
+        PanelBaseEntregada = new javax.swing.JPanel();
+        PanelOpcionesEntregada = new javax.swing.JPanel();
+        btnInsertarEntregada = new javax.swing.JButton();
+        btnModificarEntregada = new javax.swing.JButton();
+        btnLimpiarEntregada = new javax.swing.JButton();
+        btnEliminarEntregada = new javax.swing.JButton();
+        PanelObjetosEntregada = new javax.swing.JPanel();
+        cmbMedioEntregada = new javax.swing.JComboBox<>();
+        txtContratacionEntregada = new javax.swing.JTextField();
+        txtEncargadoEntregada = new javax.swing.JTextField();
+        txtDiasEntregada = new javax.swing.JTextField();
+        txtDescripcionEntregada = new javax.swing.JTextField();
+        txtLugarEntregada = new javax.swing.JTextField();
+        rbtGyREntregada = new javax.swing.JRadioButton();
+        rbtPBEntregada = new javax.swing.JRadioButton();
+        scpObservacionesEntregada = new javax.swing.JScrollPane();
+        txaObservacionEntregada = new javax.swing.JTextArea();
+        jdcFechaEntregada = new com.toedter.calendar.JDateChooser();
+        jLabel96 = new javax.swing.JLabel();
+        jLabel104 = new javax.swing.JLabel();
+        jLabel105 = new javax.swing.JLabel();
+        lblLugarr10 = new javax.swing.JLabel();
+        jLabel106 = new javax.swing.JLabel();
+        jLabel107 = new javax.swing.JLabel();
+        jLabel108 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel103 = new javax.swing.JLabel();
+        PanelControlEntregada = new javax.swing.JPanel();
+        txtBuscarEntregada = new javax.swing.JTextField();
+        cmbBusquedaEntregada = new javax.swing.JComboBox<>();
+        btnRefrescarEntregada = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
 
         scpAdjudicada.setViewportView(tblAdjudicada);
 
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Control Tabla"));
+        PanelControlAdj.setBorder(javax.swing.BorderFactory.createTitledBorder("Control Tabla"));
 
         jLabel8.setText("Buscar");
 
-        cmbBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Contratación", "Institución", "Descripción", "Fecha de Publicación", "Fecha de Apertura", "Estado", "Encargado" }));
+        btnRefrescarAdjudicada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/refresh.png"))); // NOI18N
+        btnRefrescarAdjudicada.setText("Refrescar");
 
-        btnRefrescar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/refresh.png"))); // NOI18N
-        btnRefrescar.setText("Refrescar");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+        javax.swing.GroupLayout PanelControlAdjLayout = new javax.swing.GroupLayout(PanelControlAdj);
+        PanelControlAdj.setLayout(PanelControlAdjLayout);
+        PanelControlAdjLayout.setHorizontalGroup(
+            PanelControlAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelControlAdjLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtBuscarAdjudicada, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cmbBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cmbBusquedaAdjudicada, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnRefrescar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnRefrescarAdjudicada, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        PanelControlAdjLayout.setVerticalGroup(
+            PanelControlAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlAdjLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PanelControlAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRefrescar))
+                    .addComponent(txtBuscarAdjudicada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbBusquedaAdjudicada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRefrescarAdjudicada))
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Opciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
+        PanelOpcionesAdj.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Opciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
 
-        btnInsertarContratacion5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
-        btnInsertarContratacion5.setText("Agregar");
+        btnInsertarAdjudicada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
+        btnInsertarAdjudicada.setText("Agregar");
 
-        btnModificarContratacion5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
-        btnModificarContratacion5.setText("Modificar");
+        btnModificarAdjudicada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
+        btnModificarAdjudicada.setText("Modificar");
 
         btnLimpiarAdjudicada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarAdjudicada.setText("Limpiar");
 
-        btnEliminarContratacion5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
-        btnEliminarContratacion5.setText("Eliminar");
+        btnEliminarAdjudicada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
+        btnEliminarAdjudicada.setText("Eliminar");
 
-        btnTomarContratacion5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cargo.png"))); // NOI18N
-        btnTomarContratacion5.setText("Tomar Contratación");
-
-        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
-        jPanel16.setLayout(jPanel16Layout);
-        jPanel16Layout.setHorizontalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnInsertarContratacion5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnModificarContratacion5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnLimpiarAdjudicada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnEliminarContratacion5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnTomarContratacion5, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE))
-                .addGap(23, 23, 23))
+        javax.swing.GroupLayout PanelOpcionesAdjLayout = new javax.swing.GroupLayout(PanelOpcionesAdj);
+        PanelOpcionesAdj.setLayout(PanelOpcionesAdjLayout);
+        PanelOpcionesAdjLayout.setHorizontalGroup(
+            PanelOpcionesAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesAdjLayout.createSequentialGroup()
+                .addGroup(PanelOpcionesAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelOpcionesAdjLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnEliminarAdjudicada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesAdjLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnLimpiarAdjudicada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesAdjLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnModificarAdjudicada, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesAdjLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(btnInsertarAdjudicada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
-        jPanel16Layout.setVerticalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel16Layout.createSequentialGroup()
+        PanelOpcionesAdjLayout.setVerticalGroup(
+            PanelOpcionesAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesAdjLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(btnInsertarContratacion5)
-                .addGap(15, 15, 15)
-                .addComponent(btnModificarContratacion5)
-                .addGap(15, 15, 15)
+                .addComponent(btnInsertarAdjudicada)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnModificarAdjudicada)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addComponent(btnLimpiarAdjudicada)
-                .addGap(17, 17, 17)
-                .addComponent(btnEliminarContratacion5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(btnTomarContratacion5)
-                .addContainerGap(17, Short.MAX_VALUE))
-        );
-
-        jLabel87.setText("Modalidad entrega");
-
-        cmbModalidadAdjudicada9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elegir", "Según demanda", "Cantidad definida", "Del 50%", "Parcial" }));
-
-        btgEmpresa.add(rbtPBAdjudicada8);
-        rbtPBAdjudicada8.setText("Principal Brands");
-
-        btgEmpresa.add(rbtGyRAdjudicada8);
-        rbtGyRAdjudicada8.setText("GyR Grupo Asesor");
-
-        jLabel88.setText("Empresa");
-
-        jLabel89.setText("Días de entrega");
-
-        btgTipo.add(rbtHabilesAdjudicada8);
-        rbtHabilesAdjudicada8.setText("Hábiles");
-
-        btgTipo.add(rbtNaturalesAdjudicada8);
-        rbtNaturalesAdjudicada8.setText("Naturales");
-
-        jLabel90.setText("Número de Contratación");
-
-        jLabel91.setText("Descripción");
-
-        lblLugarr8.setText("Institución");
-
-        jLabel92.setText("Encargado");
-
-        jLabel93.setText("Estado");
-
-        jLabel94.setText("Observación");
-
-        txaObservacionAdjudicada8.setColumns(20);
-        txaObservacionAdjudicada8.setRows(5);
-        scpObservacionesAdjudicada8.setViewportView(txaObservacionAdjudicada8);
-
-        btgEstado.add(rbtDudaAdjudicada8);
-        rbtDudaAdjudicada8.setText("En duda");
-
-        btgEstado.add(rbtFirmeAdjudicada8);
-        rbtFirmeAdjudicada8.setText("En firme");
-
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGap(530, 530, 530)
-                        .addComponent(rbtFirmeAdjudicada8)
-                        .addGap(18, 18, 18)
-                        .addComponent(rbtDudaAdjudicada8))
-                    .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel17Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(jPanel17Layout.createSequentialGroup()
-                                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel90)
-                                            .addComponent(lblLugarr8))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtContratacionAdjudicada, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                                            .addComponent(txtInstitución8)))
-                                    .addGroup(jPanel17Layout.createSequentialGroup()
-                                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel89)
-                                            .addComponent(jLabel88))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
-                                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtEntregaAdjudicada8, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(jPanel17Layout.createSequentialGroup()
-                                                .addComponent(rbtNaturalesAdjudicada8)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(rbtHabilesAdjudicada8))
-                                            .addComponent(cmbModalidadAdjudicada9, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(rbtPBAdjudicada8)
-                                            .addComponent(rbtGyRAdjudicada8))))
-                                .addComponent(jLabel87))
-                            .addGap(58, 58, 58)
-                            .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel94)
-                                .addComponent(jLabel93)
-                                .addComponent(jLabel92))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtEncargadoAdjudicada8)
-                                .addComponent(scpObservacionesAdjudicada8)))
-                        .addGroup(jPanel17Layout.createSequentialGroup()
-                            .addGap(452, 452, 452)
-                            .addComponent(jLabel91)
-                            .addGap(18, 18, 18)
-                            .addComponent(txtDescripcionAdjudicada8, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnEliminarAdjudicada, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(38, Short.MAX_VALUE))
         );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel90)
-                    .addComponent(txtContratacionAdjudicada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel91)
-                    .addComponent(txtDescripcionAdjudicada8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblLugarr8)
-                    .addComponent(txtInstitución8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel93)
-                    .addComponent(rbtFirmeAdjudicada8)
-                    .addComponent(rbtDudaAdjudicada8))
-                .addGap(25, 25, 25)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel89)
-                    .addComponent(txtEntregaAdjudicada8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel92)
-                    .addComponent(txtEncargadoAdjudicada8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel17Layout.createSequentialGroup()
-                                .addComponent(rbtNaturalesAdjudicada8)
-                                .addGap(25, 25, 25)
-                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel87)
-                                    .addComponent(cmbModalidadAdjudicada9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel94)))
-                            .addComponent(rbtHabilesAdjudicada8))
-                        .addGap(25, 25, 25)
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rbtGyRAdjudicada8)
-                            .addComponent(jLabel88))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rbtPBAdjudicada8))
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(scpObservacionesAdjudicada8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(17, Short.MAX_VALUE))
-        );
 
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1138, Short.MAX_VALUE)
-            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(18, 18, 18)
-                    .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap()))
+        PanelObjetosAdj.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ingresar Adjudicada", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
+        PanelObjetosAdj.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelObjetosAdj.add(txtContratacionAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 35, 250, -1));
+        PanelObjetosAdj.add(txtEncargadoAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 129, 252, -1));
+        PanelObjetosAdj.add(txtInstituciónAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 85, 250, -1));
+        PanelObjetosAdj.add(txtDescripcionAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(537, 35, 250, -1));
+
+        cmbModalidadAdjudicada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cantidad definida", "Según demanda", "Del 50%", "Parcial" }));
+        PanelObjetosAdj.add(cmbModalidadAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 205, 250, -1));
+
+        txaObservacionAdjudicada.setColumns(20);
+        txaObservacionAdjudicada.setRows(5);
+        scpObservacionesAdjudicada.setViewportView(txaObservacionAdjudicada);
+
+        PanelObjetosAdj.add(scpObservacionesAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 202, 252, -1));
+
+        btgEmpresaAdjudicada.add(rbtPBAdjudicada);
+        rbtPBAdjudicada.setText("Principal Brands");
+        PanelObjetosAdj.add(rbtPBAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 275, -1, -1));
+
+        btgEmpresaAdjudicada.add(rbtGyRAdjudicada);
+        rbtGyRAdjudicada.setText("GyR Grupo Asesor");
+        PanelObjetosAdj.add(rbtGyRAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, -1));
+
+        btgDiasEntregaAdjudicada.add(rbtHabilesAdjudicada);
+        rbtHabilesAdjudicada.setText("Hábiles");
+        PanelObjetosAdj.add(rbtHabilesAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(337, 157, -1, -1));
+
+        btgDiasEntregaAdjudicada.add(rbtNaturalesAdjudicada);
+        rbtNaturalesAdjudicada.setText("Naturales");
+        PanelObjetosAdj.add(rbtNaturalesAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 157, -1, -1));
+
+        btgEstadoAdjudicada.add(rbtDudaAdjudicada);
+        rbtDudaAdjudicada.setText("En duda");
+        PanelObjetosAdj.add(rbtDudaAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 83, -1, -1));
+
+        btgEstadoAdjudicada.add(rbtFirmeAdjudicada);
+        rbtFirmeAdjudicada.setText("En firme");
+        PanelObjetosAdj.add(rbtFirmeAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 83, -1, -1));
+
+        jLabel87.setText("Modalidad entrega");
+        PanelObjetosAdj.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 205, -1, -1));
+
+        jLabel88.setText("Empresa");
+        PanelObjetosAdj.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+
+        jLabel89.setText("Días de entrega");
+        PanelObjetosAdj.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 130, -1, -1));
+
+        jLabel90.setText("Número de Contratación");
+        PanelObjetosAdj.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 38, -1, -1));
+
+        jLabel91.setText("Descripción");
+        PanelObjetosAdj.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 38, -1, -1));
+
+        lblLugarr8.setText("Institución");
+        PanelObjetosAdj.add(lblLugarr8, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 85, -1, -1));
+
+        jLabel92.setText("Encargado");
+        PanelObjetosAdj.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 132, -1, -1));
+
+        jLabel93.setText("Estado");
+        PanelObjetosAdj.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 85, -1, -1));
+
+        jLabel94.setText("Observación");
+        PanelObjetosAdj.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 205, -1, -1));
+
+        spnDiasEntregaAdjudicaciones.setModel(new javax.swing.SpinnerNumberModel(1, 0, null, 1));
+        PanelObjetosAdj.add(spnDiasEntregaAdjudicaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 250, -1));
+
+        javax.swing.GroupLayout PanelBaseAdjLayout = new javax.swing.GroupLayout(PanelBaseAdj);
+        PanelBaseAdj.setLayout(PanelBaseAdjLayout);
+        PanelBaseAdjLayout.setHorizontalGroup(
+            PanelBaseAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBaseAdjLayout.createSequentialGroup()
+                .addComponent(PanelObjetosAdj, javax.swing.GroupLayout.PREFERRED_SIZE, 846, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addComponent(PanelOpcionesAdj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 302, Short.MAX_VALUE)
-            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel15Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        PanelBaseAdjLayout.setVerticalGroup(
+            PanelBaseAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBaseAdjLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(PanelBaseAdjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(PanelOpcionesAdj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelObjetosAdj, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0))
         );
 
         javax.swing.GroupLayout pnlAdjudicadaLayout = new javax.swing.GroupLayout(pnlAdjudicada);
@@ -552,30 +317,399 @@ public class Pnl_2 extends javax.swing.JPanel {
             .addGroup(pnlAdjudicadaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scpAdjudicada, javax.swing.GroupLayout.PREFERRED_SIZE, 1188, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnlAdjudicadaLayout.createSequentialGroup()
-                        .addGap(0, 9, Short.MAX_VALUE)
-                        .addGroup(pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlAdjudicadaLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 46, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGroup(pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(scpAdjudicada)
+                            .addComponent(PanelBaseAdj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(20, 20, 20))
+                    .addGroup(pnlAdjudicadaLayout.createSequentialGroup()
+                        .addComponent(PanelControlAdj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         pnlAdjudicadaLayout.setVerticalGroup(
             pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlAdjudicadaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PanelBaseAdj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PanelControlAdj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(scpAdjudicada, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(scpAdjudicada, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         tbpContenedor.addTab("Adjudicada", pnlAdjudicada);
+
+        scpOrden.setViewportView(tblOrden);
+
+        PanelOpcionesOrden.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Opciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
+
+        btnInsertarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
+        btnInsertarOrden.setText("Agregar");
+
+        btnModificarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
+        btnModificarOrden.setText("Modificar");
+
+        btnLimpiarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
+        btnLimpiarOrden.setText("Limpiar");
+
+        btnEliminarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
+        btnEliminarOrden.setText("Eliminar");
+
+        javax.swing.GroupLayout PanelOpcionesOrdenLayout = new javax.swing.GroupLayout(PanelOpcionesOrden);
+        PanelOpcionesOrden.setLayout(PanelOpcionesOrdenLayout);
+        PanelOpcionesOrdenLayout.setHorizontalGroup(
+            PanelOpcionesOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesOrdenLayout.createSequentialGroup()
+                .addGroup(PanelOpcionesOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelOpcionesOrdenLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnEliminarOrden, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesOrdenLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnLimpiarOrden, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesOrdenLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnModificarOrden, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesOrdenLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(btnInsertarOrden, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        PanelOpcionesOrdenLayout.setVerticalGroup(
+            PanelOpcionesOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesOrdenLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(btnInsertarOrden)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnModificarOrden)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnLimpiarOrden)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnEliminarOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+
+        PanelObjetosOrden.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ingresar Orden", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
+        PanelObjetosOrden.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cmbModalidadOrden.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elegir", "Según demanda", "Cantidad definida", "Del 50%", "Parcial" }));
+        PanelObjetosOrden.add(cmbModalidadOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 250, -1));
+        PanelObjetosOrden.add(txtVigenciaContratoOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 129, 250, -1));
+        PanelObjetosOrden.add(txtContratacionOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 35, 250, -1));
+        PanelObjetosOrden.add(txtEncargadoOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 132, 252, -1));
+        PanelObjetosOrden.add(txtDiasEntregaOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 82, 250, -1));
+        PanelObjetosOrden.add(txtDescripcionOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 85, 250, -1));
+        PanelObjetosOrden.add(txtLugarEntregaOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 38, 250, -1));
+        PanelObjetosOrden.add(txtNumOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 250, -1));
+
+        txaObservacionOrden.setColumns(20);
+        txaObservacionOrden.setRows(5);
+        scpObservacionesOrden.setViewportView(txaObservacionOrden);
+
+        PanelObjetosOrden.add(scpObservacionesOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 180, 252, -1));
+        PanelObjetosOrden.add(jdcFechaLimiteOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 250, -1));
+
+        jLabel95.setText("Fecha límite");
+        PanelObjetosOrden.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+
+        jLabel97.setText("Vigencia de Contrato");
+        PanelObjetosOrden.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 132, -1, -1));
+
+        jLabel98.setText("Número de Contratación");
+        PanelObjetosOrden.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 38, -1, -1));
+
+        jLabel99.setText("Descripción");
+        PanelObjetosOrden.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 85, -1, -1));
+
+        lblLugarr9.setText("Días de Entrega");
+        PanelObjetosOrden.add(lblLugarr9, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 85, -1, -1));
+
+        jLabel100.setText("Encargado");
+        PanelObjetosOrden.add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 132, -1, -1));
+
+        jLabel101.setText("Lugar de Entrega");
+        PanelObjetosOrden.add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 38, -1, -1));
+
+        jLabel102.setText("Observación");
+        PanelObjetosOrden.add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, -1, -1));
+
+        jLabel1.setText("Número de Orden");
+        PanelObjetosOrden.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
+
+        jLabel2.setText("Modalidad de Entrega");
+        PanelObjetosOrden.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
+
+        javax.swing.GroupLayout PanelBaseOrdenLayout = new javax.swing.GroupLayout(PanelBaseOrden);
+        PanelBaseOrden.setLayout(PanelBaseOrdenLayout);
+        PanelBaseOrdenLayout.setHorizontalGroup(
+            PanelBaseOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBaseOrdenLayout.createSequentialGroup()
+                .addComponent(PanelObjetosOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 846, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addComponent(PanelOpcionesOrden, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        PanelBaseOrdenLayout.setVerticalGroup(
+            PanelBaseOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBaseOrdenLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(PanelBaseOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(PanelOpcionesOrden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelObjetosOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0))
+        );
+
+        PanelControlOrden.setBorder(javax.swing.BorderFactory.createTitledBorder("Control Tabla"));
+
+        btnRefrescarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/refresh.png"))); // NOI18N
+        btnRefrescarOrden.setText("Refrescar");
+
+        jLabel9.setText("Buscar");
+
+        javax.swing.GroupLayout PanelControlOrdenLayout = new javax.swing.GroupLayout(PanelControlOrden);
+        PanelControlOrden.setLayout(PanelControlOrdenLayout);
+        PanelControlOrdenLayout.setHorizontalGroup(
+            PanelControlOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelControlOrdenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtBuscarOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cmbBusquedaOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRefrescarOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        PanelControlOrdenLayout.setVerticalGroup(
+            PanelControlOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlOrdenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelControlOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(txtBuscarOrden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbBusquedaOrden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRefrescarOrden))
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pnlOrdenLayout = new javax.swing.GroupLayout(pnlOrden);
+        pnlOrden.setLayout(pnlOrdenLayout);
+        pnlOrdenLayout.setHorizontalGroup(
+            pnlOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlOrdenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlOrdenLayout.createSequentialGroup()
+                        .addGroup(pnlOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(scpOrden)
+                            .addComponent(PanelBaseOrden, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(20, 20, 20))
+                    .addGroup(pnlOrdenLayout.createSequentialGroup()
+                        .addComponent(PanelControlOrden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        pnlOrdenLayout.setVerticalGroup(
+            pnlOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlOrdenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(PanelBaseOrden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelControlOrden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(scpOrden, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        tbpContenedor.addTab("Orden", pnlOrden);
+
+        scpEntregada.setViewportView(tblEntregada);
+
+        PanelOpcionesEntregada.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Opciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
+
+        btnInsertarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
+        btnInsertarEntregada.setText("Agregar");
+
+        btnModificarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
+        btnModificarEntregada.setText("Modificar");
+
+        btnLimpiarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
+        btnLimpiarEntregada.setText("Limpiar");
+
+        btnEliminarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
+        btnEliminarEntregada.setText("Eliminar");
+
+        javax.swing.GroupLayout PanelOpcionesEntregadaLayout = new javax.swing.GroupLayout(PanelOpcionesEntregada);
+        PanelOpcionesEntregada.setLayout(PanelOpcionesEntregadaLayout);
+        PanelOpcionesEntregadaLayout.setHorizontalGroup(
+            PanelOpcionesEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesEntregadaLayout.createSequentialGroup()
+                .addGroup(PanelOpcionesEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelOpcionesEntregadaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnEliminarEntregada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesEntregadaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnLimpiarEntregada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesEntregadaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnModificarEntregada, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesEntregadaLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(btnInsertarEntregada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        PanelOpcionesEntregadaLayout.setVerticalGroup(
+            PanelOpcionesEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesEntregadaLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(btnInsertarEntregada)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnModificarEntregada)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnLimpiarEntregada)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnEliminarEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+
+        PanelObjetosEntregada.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ingresar Orden", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
+        PanelObjetosEntregada.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cmbMedioEntregada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elegir", "Encomienda", "Proveedor", "Encargado" }));
+        PanelObjetosEntregada.add(cmbMedioEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 250, -1));
+        PanelObjetosEntregada.add(txtContratacionEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 35, 250, -1));
+        PanelObjetosEntregada.add(txtEncargadoEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 132, 252, -1));
+        PanelObjetosEntregada.add(txtDiasEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 82, 250, -1));
+        PanelObjetosEntregada.add(txtDescripcionEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 85, 250, -1));
+        PanelObjetosEntregada.add(txtLugarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 38, 250, -1));
+
+        btgEmpresaAdjudicada.add(rbtGyREntregada);
+        rbtGyREntregada.setText("GyR Grupo Asesor");
+        PanelObjetosEntregada.add(rbtGyREntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, -1, -1));
+
+        btgEmpresaAdjudicada.add(rbtPBEntregada);
+        rbtPBEntregada.setText("Principal Brands");
+        PanelObjetosEntregada.add(rbtPBEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, -1, -1));
+
+        txaObservacionEntregada.setColumns(20);
+        txaObservacionEntregada.setRows(5);
+        scpObservacionesEntregada.setViewportView(txaObservacionEntregada);
+
+        PanelObjetosEntregada.add(scpObservacionesEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 180, 252, -1));
+        PanelObjetosEntregada.add(jdcFechaEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 132, 250, -1));
+
+        jLabel96.setText("Fecha de Entrega");
+        PanelObjetosEntregada.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 132, -1, -1));
+
+        jLabel104.setText("Número de Contratación");
+        PanelObjetosEntregada.add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 38, -1, -1));
+
+        jLabel105.setText("Descripción");
+        PanelObjetosEntregada.add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 85, -1, -1));
+
+        lblLugarr10.setText("Días de Entrega");
+        PanelObjetosEntregada.add(lblLugarr10, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 85, -1, -1));
+
+        jLabel106.setText("Encargado");
+        PanelObjetosEntregada.add(jLabel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 132, -1, -1));
+
+        jLabel107.setText("Lugar de Entrega");
+        PanelObjetosEntregada.add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 38, -1, -1));
+
+        jLabel108.setText("Observación");
+        PanelObjetosEntregada.add(jLabel108, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, -1, -1));
+
+        jLabel4.setText("Medio de Entrega");
+        PanelObjetosEntregada.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
+
+        jLabel103.setText("Empresa");
+        PanelObjetosEntregada.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+
+        javax.swing.GroupLayout PanelBaseEntregadaLayout = new javax.swing.GroupLayout(PanelBaseEntregada);
+        PanelBaseEntregada.setLayout(PanelBaseEntregadaLayout);
+        PanelBaseEntregadaLayout.setHorizontalGroup(
+            PanelBaseEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBaseEntregadaLayout.createSequentialGroup()
+                .addComponent(PanelObjetosEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, 846, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addComponent(PanelOpcionesEntregada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        PanelBaseEntregadaLayout.setVerticalGroup(
+            PanelBaseEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBaseEntregadaLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(PanelBaseEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(PanelOpcionesEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelObjetosEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0))
+        );
+
+        PanelControlEntregada.setBorder(javax.swing.BorderFactory.createTitledBorder("Control Tabla"));
+
+        btnRefrescarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/refresh.png"))); // NOI18N
+        btnRefrescarEntregada.setText("Refrescar");
+
+        jLabel10.setText("Buscar");
+
+        javax.swing.GroupLayout PanelControlEntregadaLayout = new javax.swing.GroupLayout(PanelControlEntregada);
+        PanelControlEntregada.setLayout(PanelControlEntregadaLayout);
+        PanelControlEntregadaLayout.setHorizontalGroup(
+            PanelControlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelControlEntregadaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtBuscarEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cmbBusquedaEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRefrescarEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        PanelControlEntregadaLayout.setVerticalGroup(
+            PanelControlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlEntregadaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelControlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(txtBuscarEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbBusquedaEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRefrescarEntregada))
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pnlEntregadaLayout = new javax.swing.GroupLayout(pnlEntregada);
+        pnlEntregada.setLayout(pnlEntregadaLayout);
+        pnlEntregadaLayout.setHorizontalGroup(
+            pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlEntregadaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlEntregadaLayout.createSequentialGroup()
+                        .addGroup(pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(scpEntregada)
+                            .addComponent(PanelBaseEntregada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(20, 20, 20))
+                    .addGroup(pnlEntregadaLayout.createSequentialGroup()
+                        .addComponent(PanelControlEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        pnlEntregadaLayout.setVerticalGroup(
+            pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlEntregadaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(PanelBaseEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelControlEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(scpEntregada, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        tbpContenedor.addTab("Entregada", pnlEntregada);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -591,110 +725,119 @@ public class Pnl_2 extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.ButtonGroup btgEmpresa;
-    public javax.swing.ButtonGroup btgEmpresaEnt;
-    public javax.swing.ButtonGroup btgEstado;
-    public javax.swing.ButtonGroup btgTipo;
-    public javax.swing.JButton btnBuscarEntregada;
-    public javax.swing.JButton btnBuscarOrden;
-    public javax.swing.JButton btnEliminarContratacion5;
+    private javax.swing.JPanel PanelBaseAdj;
+    private javax.swing.JPanel PanelBaseEntregada;
+    private javax.swing.JPanel PanelBaseOrden;
+    private javax.swing.JPanel PanelControlAdj;
+    private javax.swing.JPanel PanelControlEntregada;
+    private javax.swing.JPanel PanelControlOrden;
+    private javax.swing.JPanel PanelObjetosAdj;
+    private javax.swing.JPanel PanelObjetosEntregada;
+    private javax.swing.JPanel PanelObjetosOrden;
+    private javax.swing.JPanel PanelOpcionesAdj;
+    private javax.swing.JPanel PanelOpcionesEntregada;
+    private javax.swing.JPanel PanelOpcionesOrden;
+    public javax.swing.ButtonGroup btgDiasEntregaAdjudicada;
+    public javax.swing.ButtonGroup btgEmpresaAdjudicada;
+    public javax.swing.ButtonGroup btgEmpresaEntregada;
+    public javax.swing.ButtonGroup btgEstadoAdjudicada;
+    public javax.swing.JButton btnEliminarAdjudicada;
     public javax.swing.JButton btnEliminarEntregada;
     public javax.swing.JButton btnEliminarOrden;
-    public javax.swing.JButton btnInsertarContratacion5;
+    public javax.swing.JButton btnInsertarAdjudicada;
     public javax.swing.JButton btnInsertarEntregada;
     public javax.swing.JButton btnInsertarOrden;
     public javax.swing.JButton btnLimpiarAdjudicada;
     public javax.swing.JButton btnLimpiarEntregada;
     public javax.swing.JButton btnLimpiarOrden;
-    public javax.swing.JButton btnModificarContratacion5;
-    public javax.swing.JButton btnModificarEntrega;
+    public javax.swing.JButton btnModificarAdjudicada;
+    public javax.swing.JButton btnModificarEntregada;
     public javax.swing.JButton btnModificarOrden;
-    public javax.swing.JButton btnRefrescar;
-    public javax.swing.JButton btnTomarContratacion5;
-    public javax.swing.JComboBox<String> cmbBusqueda;
-    public javax.swing.JComboBox<String> cmbModalidadAdjudicada1;
-    public javax.swing.JComboBox<String> cmbModalidadAdjudicada9;
-    public javax.swing.JComboBox<String> cmbModalidadEntregada;
-    public javax.swing.JComboBox<String> cmbOrdenEntregada;
-    public javax.swing.JComboBox<String> cmbOrden_Orden;
+    public javax.swing.JButton btnRefrescarAdjudicada;
+    public javax.swing.JButton btnRefrescarEntregada;
+    public javax.swing.JButton btnRefrescarOrden;
+    public javax.swing.JComboBox<String> cmbBusquedaAdjudicada;
+    public javax.swing.JComboBox<String> cmbBusquedaEntregada;
+    public javax.swing.JComboBox<String> cmbBusquedaOrden;
+    public javax.swing.JComboBox<String> cmbMedioEntregada;
+    public javax.swing.JComboBox<String> cmbModalidadAdjudicada;
+    public javax.swing.JComboBox<String> cmbModalidadOrden;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel100;
+    private javax.swing.JLabel jLabel101;
+    private javax.swing.JLabel jLabel102;
+    private javax.swing.JLabel jLabel103;
+    private javax.swing.JLabel jLabel104;
+    private javax.swing.JLabel jLabel105;
+    private javax.swing.JLabel jLabel106;
+    private javax.swing.JLabel jLabel107;
+    private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel89;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
     private javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel6;
+    private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
     public com.toedter.calendar.JDateChooser jdcFechaEntregada;
-    public com.toedter.calendar.JDateChooser jdcLimiteOrden;
+    public com.toedter.calendar.JDateChooser jdcFechaLimiteOrden;
+    private javax.swing.JLabel lblLugarr10;
     private javax.swing.JLabel lblLugarr8;
+    private javax.swing.JLabel lblLugarr9;
     private javax.swing.JPanel pnlAdjudicada;
     private javax.swing.JPanel pnlEntregada;
     private javax.swing.JPanel pnlOrden;
-    public javax.swing.JRadioButton rbtDudaAdjudicada8;
-    public javax.swing.JRadioButton rbtFirmeAdjudicada8;
-    public javax.swing.JRadioButton rbtGyRAdjudicada8;
+    public javax.swing.JRadioButton rbtDudaAdjudicada;
+    public javax.swing.JRadioButton rbtFirmeAdjudicada;
+    public javax.swing.JRadioButton rbtGyRAdjudicada;
     public javax.swing.JRadioButton rbtGyREntregada;
-    public javax.swing.JRadioButton rbtHabilesAdjudicada8;
-    public javax.swing.JRadioButton rbtNaturalesAdjudicada8;
-    public javax.swing.JRadioButton rbtPBAdjudicada8;
+    public javax.swing.JRadioButton rbtHabilesAdjudicada;
+    public javax.swing.JRadioButton rbtNaturalesAdjudicada;
+    public javax.swing.JRadioButton rbtPBAdjudicada;
     public javax.swing.JRadioButton rbtPBEntregada;
     public javax.swing.JScrollPane scpAdjudicada;
-    private javax.swing.JScrollPane scpObservacionesAdjudicada8;
+    public javax.swing.JScrollPane scpEntregada;
+    private javax.swing.JScrollPane scpObservacionesAdjudicada;
     private javax.swing.JScrollPane scpObservacionesEntregada;
     private javax.swing.JScrollPane scpObservacionesOrden;
-    private javax.swing.JScrollPane scpOrden;
-    private javax.swing.JScrollPane spnEntregada;
-    private javax.swing.JTable tblAdjudicada;
+    public javax.swing.JScrollPane scpOrden;
+    public javax.swing.JSpinner spnDiasEntregaAdjudicaciones;
+    public javax.swing.JTable tblAdjudicada;
     public javax.swing.JTable tblEntregada;
     public javax.swing.JTable tblOrden;
     public javax.swing.JTabbedPane tbpContenedor;
-    public javax.swing.JTextArea txaObservacionAdjudicada8;
-    public javax.swing.JTextArea txaObservacionesEntregada;
-    public javax.swing.JTextArea txaObservacionesOrden;
-    public javax.swing.JTextField txtBuscar;
+    public javax.swing.JTextArea txaObservacionAdjudicada;
+    public javax.swing.JTextArea txaObservacionEntregada;
+    public javax.swing.JTextArea txaObservacionOrden;
+    public javax.swing.JTextField txtBuscarAdjudicada;
+    public javax.swing.JTextField txtBuscarEntregada;
+    public javax.swing.JTextField txtBuscarOrden;
     public javax.swing.JTextField txtContratacionAdjudicada;
     public javax.swing.JTextField txtContratacionEntregada;
     public javax.swing.JTextField txtContratacionOrden;
-    public javax.swing.JTextField txtDescripcionAdjudicada8;
+    public javax.swing.JTextField txtDescripcionAdjudicada;
     public javax.swing.JTextField txtDescripcionEntregada;
     public javax.swing.JTextField txtDescripcionOrden;
-    public javax.swing.JTextField txtEncargadoAdjudicada8;
+    public javax.swing.JTextField txtDiasEntregaOrden;
+    public javax.swing.JTextField txtDiasEntregada;
+    public javax.swing.JTextField txtEncargadoAdjudicada;
     public javax.swing.JTextField txtEncargadoEntregada;
     public javax.swing.JTextField txtEncargadoOrden;
-    public javax.swing.JTextField txtEntregaAdjudicada8;
-    public javax.swing.JTextField txtEntregaEntregada;
-    public javax.swing.JTextField txtEntregaOrden;
-    public javax.swing.JTextField txtInstitución8;
-    public javax.swing.JTextField txtLugarEntOrden;
+    public javax.swing.JTextField txtInstituciónAdjudicada;
+    public javax.swing.JTextField txtLugarEntregaOrden;
     public javax.swing.JTextField txtLugarEntregada;
-    public javax.swing.JTextField txtNumeroOrden;
-    public javax.swing.JTextField txtVigenciaContrato;
+    public javax.swing.JTextField txtNumOrden;
+    public javax.swing.JTextField txtVigenciaContratoOrden;
     // End of variables declaration//GEN-END:variables
 }
