@@ -2,22 +2,22 @@
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <NonVisualComponents>
-    <Component class="javax.swing.ButtonGroup" name="btgTipo">
+    <Component class="javax.swing.ButtonGroup" name="btgDiasEntregaAdjudicada">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="btgEstado">
+    <Component class="javax.swing.ButtonGroup" name="btgEstadoAdjudicada">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="btgEmpresa">
+    <Component class="javax.swing.ButtonGroup" name="btgEmpresaAdjudicada">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="btgEmpresaEnt">
+    <Component class="javax.swing.ButtonGroup" name="btgEmpresaEntregada">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
@@ -162,6 +162,9 @@
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
@@ -219,15 +222,7 @@
                 <Component class="javax.swing.JComboBox" name="cmbBusquedaAdjudicada">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="7">
-                        <StringItem index="0" value="Contrataci&#xf3;n"/>
-                        <StringItem index="1" value="Instituci&#xf3;n"/>
-                        <StringItem index="2" value="Descripci&#xf3;n"/>
-                        <StringItem index="3" value="Fecha de Publicaci&#xf3;n"/>
-                        <StringItem index="4" value="Fecha de Apertura"/>
-                        <StringItem index="5" value="Estado"/>
-                        <StringItem index="6" value="Encargado"/>
-                      </StringArray>
+                      <StringArray count="0"/>
                     </Property>
                   </Properties>
                   <AuxValues>
@@ -390,16 +385,6 @@
                     <Property name="useNullLayout" type="boolean" value="false"/>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JTextField" name="txtEntregaAdjudicada">
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-                      </AuxValues>
-                      <Constraints>
-                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="150" y="129" width="250" height="-1"/>
-                        </Constraint>
-                      </Constraints>
-                    </Component>
                     <Component class="javax.swing.JTextField" name="txtContratacionAdjudicada">
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -426,7 +411,7 @@
                       </AuxValues>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="150" y="82" width="250" height="-1"/>
+                          <AbsoluteConstraints x="150" y="85" width="250" height="-1"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -443,12 +428,11 @@
                     <Component class="javax.swing.JComboBox" name="cmbModalidadAdjudicada">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="5">
-                            <StringItem index="0" value="Elegir"/>
+                          <StringArray count="4">
+                            <StringItem index="0" value="Cantidad definida"/>
                             <StringItem index="1" value="Seg&#xfa;n demanda"/>
-                            <StringItem index="2" value="Cantidad definida"/>
-                            <StringItem index="3" value="Del 50%"/>
-                            <StringItem index="4" value="Parcial"/>
+                            <StringItem index="2" value="Del 50%"/>
+                            <StringItem index="3" value="Parcial"/>
                           </StringArray>
                         </Property>
                       </Properties>
@@ -488,7 +472,7 @@
                     <Component class="javax.swing.JRadioButton" name="rbtPBAdjudicada">
                       <Properties>
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="btgEmpresa"/>
+                          <ComponentRef name="btgEmpresaAdjudicada"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Principal Brands"/>
                       </Properties>
@@ -504,7 +488,7 @@
                     <Component class="javax.swing.JRadioButton" name="rbtGyRAdjudicada">
                       <Properties>
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="btgEmpresa"/>
+                          <ComponentRef name="btgEmpresaAdjudicada"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="GyR Grupo Asesor"/>
                       </Properties>
@@ -520,7 +504,7 @@
                     <Component class="javax.swing.JRadioButton" name="rbtHabilesAdjudicada">
                       <Properties>
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="btgTipo"/>
+                          <ComponentRef name="btgDiasEntregaAdjudicada"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="H&#xe1;biles"/>
                       </Properties>
@@ -536,7 +520,7 @@
                     <Component class="javax.swing.JRadioButton" name="rbtNaturalesAdjudicada">
                       <Properties>
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="btgTipo"/>
+                          <ComponentRef name="btgDiasEntregaAdjudicada"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Naturales"/>
                       </Properties>
@@ -552,7 +536,7 @@
                     <Component class="javax.swing.JRadioButton" name="rbtDudaAdjudicada">
                       <Properties>
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="btgEstado"/>
+                          <ComponentRef name="btgEstadoAdjudicada"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="En duda"/>
                       </Properties>
@@ -568,7 +552,7 @@
                     <Component class="javax.swing.JRadioButton" name="rbtFirmeAdjudicada">
                       <Properties>
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="btgEstado"/>
+                          <ComponentRef name="btgEstadoAdjudicada"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="En firme"/>
                       </Properties>
@@ -607,7 +591,7 @@
                       </Properties>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="11" y="132" width="-1" height="-1"/>
+                          <AbsoluteConstraints x="11" y="130" width="-1" height="-1"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -668,6 +652,22 @@
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                           <AbsoluteConstraints x="457" y="205" width="-1" height="-1"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JSpinner" name="spnDiasEntregaAdjudicaciones">
+                      <Properties>
+                        <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                          <SpinnerModel initial="1" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="150" y="130" width="250" height="-1"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -784,6 +784,9 @@
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
@@ -1012,6 +1015,9 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtNumOrden">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                           <AbsoluteConstraints x="150" y="180" width="250" height="-1"/>
@@ -1042,6 +1048,9 @@
                       </SubComponents>
                     </Container>
                     <Component class="com.toedter.calendar.JDateChooser" name="jdcFechaLimiteOrden">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                           <AbsoluteConstraints x="150" y="230" width="250" height="-1"/>
@@ -1201,15 +1210,7 @@
                 <Component class="javax.swing.JComboBox" name="cmbBusquedaOrden">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="7">
-                        <StringItem index="0" value="Contrataci&#xf3;n"/>
-                        <StringItem index="1" value="Instituci&#xf3;n"/>
-                        <StringItem index="2" value="Descripci&#xf3;n"/>
-                        <StringItem index="3" value="Fecha de Publicaci&#xf3;n"/>
-                        <StringItem index="4" value="Fecha de Apertura"/>
-                        <StringItem index="5" value="Estado"/>
-                        <StringItem index="6" value="Encargado"/>
-                      </StringArray>
+                      <StringArray count="0"/>
                     </Property>
                   </Properties>
                   <AuxValues>
@@ -1344,6 +1345,9 @@
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
@@ -1530,7 +1534,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txtDiasEntregaEntregada">
+                    <Component class="javax.swing.JTextField" name="txtDiasEntregada">
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
@@ -1563,7 +1567,7 @@
                     <Component class="javax.swing.JRadioButton" name="rbtGyREntregada">
                       <Properties>
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="btgEmpresa"/>
+                          <ComponentRef name="btgEmpresaAdjudicada"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="GyR Grupo Asesor"/>
                       </Properties>
@@ -1579,7 +1583,7 @@
                     <Component class="javax.swing.JRadioButton" name="rbtPBEntregada">
                       <Properties>
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="btgEmpresa"/>
+                          <ComponentRef name="btgEmpresaAdjudicada"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Principal Brands"/>
                       </Properties>
@@ -1616,6 +1620,9 @@
                       </SubComponents>
                     </Container>
                     <Component class="com.toedter.calendar.JDateChooser" name="jdcFechaEntregada">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                           <AbsoluteConstraints x="150" y="132" width="250" height="-1"/>
@@ -1765,15 +1772,7 @@
                 <Component class="javax.swing.JComboBox" name="cmbBusquedaEntregada">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="7">
-                        <StringItem index="0" value="Contrataci&#xf3;n"/>
-                        <StringItem index="1" value="Instituci&#xf3;n"/>
-                        <StringItem index="2" value="Descripci&#xf3;n"/>
-                        <StringItem index="3" value="Fecha de Publicaci&#xf3;n"/>
-                        <StringItem index="4" value="Fecha de Apertura"/>
-                        <StringItem index="5" value="Estado"/>
-                        <StringItem index="6" value="Encargado"/>
-                      </StringArray>
+                      <StringArray count="0"/>
                     </Property>
                   </Properties>
                   <AuxValues>

@@ -21,10 +21,10 @@ public class Pnl_2 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btgTipo = new javax.swing.ButtonGroup();
-        btgEstado = new javax.swing.ButtonGroup();
-        btgEmpresa = new javax.swing.ButtonGroup();
-        btgEmpresaEnt = new javax.swing.ButtonGroup();
+        btgDiasEntregaAdjudicada = new javax.swing.ButtonGroup();
+        btgEstadoAdjudicada = new javax.swing.ButtonGroup();
+        btgEmpresaAdjudicada = new javax.swing.ButtonGroup();
+        btgEmpresaEntregada = new javax.swing.ButtonGroup();
         tbpContenedor = new javax.swing.JTabbedPane();
         pnlAdjudicada = new javax.swing.JPanel();
         scpAdjudicada = new javax.swing.JScrollPane();
@@ -41,7 +41,6 @@ public class Pnl_2 extends javax.swing.JPanel {
         btnLimpiarAdjudicada = new javax.swing.JButton();
         btnEliminarAdjudicada = new javax.swing.JButton();
         PanelObjetosAdj = new javax.swing.JPanel();
-        txtEntregaAdjudicada = new javax.swing.JTextField();
         txtContratacionAdjudicada = new javax.swing.JTextField();
         txtEncargadoAdjudicada = new javax.swing.JTextField();
         txtInstituciónAdjudicada = new javax.swing.JTextField();
@@ -64,6 +63,7 @@ public class Pnl_2 extends javax.swing.JPanel {
         jLabel92 = new javax.swing.JLabel();
         jLabel93 = new javax.swing.JLabel();
         jLabel94 = new javax.swing.JLabel();
+        spnDiasEntregaAdjudicaciones = new javax.swing.JSpinner();
         pnlOrden = new javax.swing.JPanel();
         scpOrden = new javax.swing.JScrollPane();
         tblOrden = new javax.swing.JTable();
@@ -113,7 +113,7 @@ public class Pnl_2 extends javax.swing.JPanel {
         cmbMedioEntregada = new javax.swing.JComboBox<>();
         txtContratacionEntregada = new javax.swing.JTextField();
         txtEncargadoEntregada = new javax.swing.JTextField();
-        txtDiasEntregaEntregada = new javax.swing.JTextField();
+        txtDiasEntregada = new javax.swing.JTextField();
         txtDescripcionEntregada = new javax.swing.JTextField();
         txtLugarEntregada = new javax.swing.JTextField();
         rbtGyREntregada = new javax.swing.JRadioButton();
@@ -141,8 +141,6 @@ public class Pnl_2 extends javax.swing.JPanel {
         PanelControlAdj.setBorder(javax.swing.BorderFactory.createTitledBorder("Control Tabla"));
 
         jLabel8.setText("Buscar");
-
-        cmbBusquedaAdjudicada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Contratación", "Institución", "Descripción", "Fecha de Publicación", "Fecha de Apertura", "Estado", "Encargado" }));
 
         btnRefrescarAdjudicada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/refresh.png"))); // NOI18N
         btnRefrescarAdjudicada.setText("Refrescar");
@@ -224,13 +222,12 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         PanelObjetosAdj.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ingresar Adjudicada", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
         PanelObjetosAdj.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        PanelObjetosAdj.add(txtEntregaAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 129, 250, -1));
         PanelObjetosAdj.add(txtContratacionAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 35, 250, -1));
         PanelObjetosAdj.add(txtEncargadoAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 129, 252, -1));
-        PanelObjetosAdj.add(txtInstituciónAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 82, 250, -1));
+        PanelObjetosAdj.add(txtInstituciónAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 85, 250, -1));
         PanelObjetosAdj.add(txtDescripcionAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(537, 35, 250, -1));
 
-        cmbModalidadAdjudicada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elegir", "Según demanda", "Cantidad definida", "Del 50%", "Parcial" }));
+        cmbModalidadAdjudicada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cantidad definida", "Según demanda", "Del 50%", "Parcial" }));
         PanelObjetosAdj.add(cmbModalidadAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 205, 250, -1));
 
         txaObservacionAdjudicada.setColumns(20);
@@ -239,27 +236,27 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         PanelObjetosAdj.add(scpObservacionesAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 202, 252, -1));
 
-        btgEmpresa.add(rbtPBAdjudicada);
+        btgEmpresaAdjudicada.add(rbtPBAdjudicada);
         rbtPBAdjudicada.setText("Principal Brands");
         PanelObjetosAdj.add(rbtPBAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 275, -1, -1));
 
-        btgEmpresa.add(rbtGyRAdjudicada);
+        btgEmpresaAdjudicada.add(rbtGyRAdjudicada);
         rbtGyRAdjudicada.setText("GyR Grupo Asesor");
         PanelObjetosAdj.add(rbtGyRAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, -1));
 
-        btgTipo.add(rbtHabilesAdjudicada);
+        btgDiasEntregaAdjudicada.add(rbtHabilesAdjudicada);
         rbtHabilesAdjudicada.setText("Hábiles");
         PanelObjetosAdj.add(rbtHabilesAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(337, 157, -1, -1));
 
-        btgTipo.add(rbtNaturalesAdjudicada);
+        btgDiasEntregaAdjudicada.add(rbtNaturalesAdjudicada);
         rbtNaturalesAdjudicada.setText("Naturales");
         PanelObjetosAdj.add(rbtNaturalesAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 157, -1, -1));
 
-        btgEstado.add(rbtDudaAdjudicada);
+        btgEstadoAdjudicada.add(rbtDudaAdjudicada);
         rbtDudaAdjudicada.setText("En duda");
         PanelObjetosAdj.add(rbtDudaAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 83, -1, -1));
 
-        btgEstado.add(rbtFirmeAdjudicada);
+        btgEstadoAdjudicada.add(rbtFirmeAdjudicada);
         rbtFirmeAdjudicada.setText("En firme");
         PanelObjetosAdj.add(rbtFirmeAdjudicada, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 83, -1, -1));
 
@@ -270,7 +267,7 @@ public class Pnl_2 extends javax.swing.JPanel {
         PanelObjetosAdj.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
 
         jLabel89.setText("Días de entrega");
-        PanelObjetosAdj.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 132, -1, -1));
+        PanelObjetosAdj.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 130, -1, -1));
 
         jLabel90.setText("Número de Contratación");
         PanelObjetosAdj.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 38, -1, -1));
@@ -289,6 +286,9 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         jLabel94.setText("Observación");
         PanelObjetosAdj.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 205, -1, -1));
+
+        spnDiasEntregaAdjudicaciones.setModel(new javax.swing.SpinnerNumberModel(1, 0, null, 1));
+        PanelObjetosAdj.add(spnDiasEntregaAdjudicaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 250, -1));
 
         javax.swing.GroupLayout PanelBaseAdjLayout = new javax.swing.GroupLayout(PanelBaseAdj);
         PanelBaseAdj.setLayout(PanelBaseAdjLayout);
@@ -462,8 +462,6 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         PanelControlOrden.setBorder(javax.swing.BorderFactory.createTitledBorder("Control Tabla"));
 
-        cmbBusquedaOrden.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Contratación", "Institución", "Descripción", "Fecha de Publicación", "Fecha de Apertura", "Estado", "Encargado" }));
-
         btnRefrescarOrden.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/refresh.png"))); // NOI18N
         btnRefrescarOrden.setText("Refrescar");
 
@@ -583,15 +581,15 @@ public class Pnl_2 extends javax.swing.JPanel {
         PanelObjetosEntregada.add(cmbMedioEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 250, -1));
         PanelObjetosEntregada.add(txtContratacionEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 35, 250, -1));
         PanelObjetosEntregada.add(txtEncargadoEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 132, 252, -1));
-        PanelObjetosEntregada.add(txtDiasEntregaEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 82, 250, -1));
+        PanelObjetosEntregada.add(txtDiasEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 82, 250, -1));
         PanelObjetosEntregada.add(txtDescripcionEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 85, 250, -1));
         PanelObjetosEntregada.add(txtLugarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 38, 250, -1));
 
-        btgEmpresa.add(rbtGyREntregada);
+        btgEmpresaAdjudicada.add(rbtGyREntregada);
         rbtGyREntregada.setText("GyR Grupo Asesor");
         PanelObjetosEntregada.add(rbtGyREntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, -1, -1));
 
-        btgEmpresa.add(rbtPBEntregada);
+        btgEmpresaAdjudicada.add(rbtPBEntregada);
         rbtPBEntregada.setText("Principal Brands");
         PanelObjetosEntregada.add(rbtPBEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, -1, -1));
 
@@ -650,8 +648,6 @@ public class Pnl_2 extends javax.swing.JPanel {
         );
 
         PanelControlEntregada.setBorder(javax.swing.BorderFactory.createTitledBorder("Control Tabla"));
-
-        cmbBusquedaEntregada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Contratación", "Institución", "Descripción", "Fecha de Publicación", "Fecha de Apertura", "Estado", "Encargado" }));
 
         btnRefrescarEntregada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/refresh.png"))); // NOI18N
         btnRefrescarEntregada.setText("Refrescar");
@@ -741,10 +737,10 @@ public class Pnl_2 extends javax.swing.JPanel {
     private javax.swing.JPanel PanelOpcionesAdj;
     private javax.swing.JPanel PanelOpcionesEntregada;
     private javax.swing.JPanel PanelOpcionesOrden;
-    public javax.swing.ButtonGroup btgEmpresa;
-    public javax.swing.ButtonGroup btgEmpresaEnt;
-    public javax.swing.ButtonGroup btgEstado;
-    public javax.swing.ButtonGroup btgTipo;
+    public javax.swing.ButtonGroup btgDiasEntregaAdjudicada;
+    public javax.swing.ButtonGroup btgEmpresaAdjudicada;
+    public javax.swing.ButtonGroup btgEmpresaEntregada;
+    public javax.swing.ButtonGroup btgEstadoAdjudicada;
     public javax.swing.JButton btnEliminarAdjudicada;
     public javax.swing.JButton btnEliminarEntregada;
     public javax.swing.JButton btnEliminarOrden;
@@ -794,8 +790,8 @@ public class Pnl_2 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
-    private com.toedter.calendar.JDateChooser jdcFechaEntregada;
-    private com.toedter.calendar.JDateChooser jdcFechaLimiteOrden;
+    public com.toedter.calendar.JDateChooser jdcFechaEntregada;
+    public com.toedter.calendar.JDateChooser jdcFechaLimiteOrden;
     private javax.swing.JLabel lblLugarr10;
     private javax.swing.JLabel lblLugarr8;
     private javax.swing.JLabel lblLugarr9;
@@ -816,9 +812,10 @@ public class Pnl_2 extends javax.swing.JPanel {
     private javax.swing.JScrollPane scpObservacionesEntregada;
     private javax.swing.JScrollPane scpObservacionesOrden;
     public javax.swing.JScrollPane scpOrden;
-    private javax.swing.JTable tblAdjudicada;
-    private javax.swing.JTable tblEntregada;
-    private javax.swing.JTable tblOrden;
+    public javax.swing.JSpinner spnDiasEntregaAdjudicaciones;
+    public javax.swing.JTable tblAdjudicada;
+    public javax.swing.JTable tblEntregada;
+    public javax.swing.JTable tblOrden;
     public javax.swing.JTabbedPane tbpContenedor;
     public javax.swing.JTextArea txaObservacionAdjudicada;
     public javax.swing.JTextArea txaObservacionEntregada;
@@ -832,16 +829,15 @@ public class Pnl_2 extends javax.swing.JPanel {
     public javax.swing.JTextField txtDescripcionAdjudicada;
     public javax.swing.JTextField txtDescripcionEntregada;
     public javax.swing.JTextField txtDescripcionOrden;
-    public javax.swing.JTextField txtDiasEntregaEntregada;
     public javax.swing.JTextField txtDiasEntregaOrden;
+    public javax.swing.JTextField txtDiasEntregada;
     public javax.swing.JTextField txtEncargadoAdjudicada;
     public javax.swing.JTextField txtEncargadoEntregada;
     public javax.swing.JTextField txtEncargadoOrden;
-    public javax.swing.JTextField txtEntregaAdjudicada;
     public javax.swing.JTextField txtInstituciónAdjudicada;
     public javax.swing.JTextField txtLugarEntregaOrden;
     public javax.swing.JTextField txtLugarEntregada;
-    private javax.swing.JTextField txtNumOrden;
+    public javax.swing.JTextField txtNumOrden;
     public javax.swing.JTextField txtVigenciaContratoOrden;
     // End of variables declaration//GEN-END:variables
 }

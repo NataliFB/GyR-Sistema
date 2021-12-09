@@ -33,11 +33,11 @@ END
 -- Procedimiento para actualizar una adjudicación
 GO
 CREATE PROCEDURE actualizar_adjudicacion
-	@cod_adjudicacion INT, @institucion VARCHAR(100), @dias_entrega TINYINT, @modalidad_dias BIT, @empresa BIT, 
+	@cod_adjudicacion INT, @dias_entrega TINYINT, @modalidad_dias BIT, @empresa BIT, 
 	@modalidad_entrega VARCHAR(30), @descripcion VARCHAR(100), @estado BIT, 
 	@observaciones VARCHAR(100)
 AS BEGIN
-	UPDATE adjudicaciones SET institucion = @institucion, dias_entrega = @dias_entrega, modalidad_dias = @modalidad_dias,
+	UPDATE adjudicaciones SET dias_entrega = @dias_entrega, modalidad_dias = @modalidad_dias,
 	empresa = @empresa, descripcion = @descripcion, estado = @estado, observaciones = @observaciones, modalidad_entrega = @modalidad_entrega
 	WHERE cod_adjudicacion = @cod_adjudicacion
 END 
@@ -46,38 +46,17 @@ END
 -- Procedimiento para mostrar las adjudicaciones	
 GO
 CREATE PROCEDURE mostrar_adjudicaciones
-	@filtro VARCHAR(100)
 AS BEGIN
 	SELECT cod_adjudicacion AS 'Código de adjudicación', cod_contratacion AS 'Contratación', institucion AS 'Institucion', 
 	CONCAT(dias_entrega, ' Días')  AS 'Días de entrega',
-	CAST(CASE WHEN modalidad_dias = 1 THEN 'Hábiles' ELSE 'NATURALES' END AS VARCHAR(50)) AS 'Modalidad de Días',
+	CAST(CASE WHEN modalidad_dias = 1 THEN 'Hábiles' ELSE 'Naturales' END AS VARCHAR(50)) AS 'Modalidad de Días',
 	CAST(CASE WHEN empresa = 1 THEN 'GyR Grupo Asesor' ELSE 'Principal Brands' END AS VARCHAR(50)) AS 'Empresa',
 	modalidad_entrega AS 'Modalidad de Entrega', descripcion AS 'Descripcion',
 	CAST(CASE WHEN estado = 1 THEN 'En Firme' ELSE 'En Duda' END AS VARCHAR(50)) AS 'Estado',
 	observaciones AS 'Observaciones',
 	CONCAT(empleado.nombre_Empleado, ' ', empleado.appelido1_Empleado) AS 'Encargado'
 	FROM adjudicaciones INNER JOIN empleado ON adjudicaciones.cod_empleado = empleado.cod_empleado
-	ORDER BY
-		CASE @filtro
-			WHEN 'cod_adjudicacion' THEN cod_adjudicacion
-		END,
-
-		CASE @filtro
-			WHEN 'cod_contratacion' THEN cod_contratacion
-			WHEN 'institucion' THEN institucion
-			WHEN 'dias_entrega' THEN CONCAT(dias_entrega, ' Días')
-			WHEN 'modalidad_entrega' THEN modalidad_entrega
-			WHEN 'descripcion' THEN descripcion
-		END,
-
-		CASE @filtro
-			WHEN 'modalidad_dias' THEN CAST(CASE WHEN modalidad_dias = 1 THEN 'Hábiles' ELSE 'NATURALES' END AS VARCHAR(50))
-			WHEN 'empresa' THEN CAST(CASE WHEN empresa = 1 THEN 'GyR Grupo Asesor' ELSE 'Principal Brands' END AS VARCHAR(50)) 
-		END,
-
-		CASE @filtro
-			WHEN 'cod_empleado' THEN CONCAT(empleado.nombre_Empleado, ' ', empleado.appelido1_Empleado)
-		END
+	ORDER BY cod_adjudicacion
 END
 
 -------------------------------------------------------------------------------------------------------------------------------------------

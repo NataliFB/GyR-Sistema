@@ -47,38 +47,14 @@ END
 -- Procedimiento para mostrar la tabla orden
 GO
 CREATE PROCEDURE mostrar_orden
-	@filtro VARCHAR(100)
-AS 
-BEGIN
+AS BEGIN
 	SELECT cod_orden AS 'Código de orden', cod_contratacion AS 'Contratación', CONCAT(dias_entrega, ' Días') AS 'Dias de Entrega',
 	vigencia_contrato AS 'Vigencia del Contrato',CONVERT(VARCHAR, fecha_limite, 100) AS 'Fecha Límite', 
 	descripcion AS 'Descripción', num_orden AS 'Número de Orden', lugar_entrega AS 'Lugar de Entrega', observaciones AS 'Observaciones', 
 	modalidad AS 'Modalidad', CONCAT(empleado.nombre_Empleado, ' ', empleado.appelido1_Empleado) AS 'Encargado de Contratacion',
 	empleado.cod_color AS 'Color del Empleado'
 	FROM orden INNER JOIN empleado ON empleado.cod_empleado = orden.cod_empleado 
-	ORDER BY
-		CASE @filtro
-			WHEN 'cod_orden' THEN cod_orden
-			WHEN 'vigencia_contrato' THEN vigencia_contrato
-			WHEN 'num_orden' THEN num_orden
-		END,
-
-		CASE @filtro
-			WHEN 'cod_contratacion' THEN cod_contratacion
-			WHEN 'dias_entrega' THEN CONCAT(dias_entrega, ' Días')
-			WHEN 'descripcion' THEN descripcion
-			WHEN 'lugar_entrega' THEN lugar_entrega
-			WHEN 'observaciones' THEN observaciones
-			WHEN 'modalidad' THEN modalidad
-		END,
-
-		CASE @filtro
-			WHEN 'fecha_limite' THEN CONVERT(VARCHAR, fecha_limite, 100)
-		END,
-
-		CASE @filtro
-			WHEN 'cod_empleado' THEN CONCAT(empleado.nombre_Empleado, ' ', empleado.appelido1_Empleado)
-		END
+	ORDER BY cod_orden
 END 
 
 -------------------------------------------------------------------------------------------------------------------------------------------

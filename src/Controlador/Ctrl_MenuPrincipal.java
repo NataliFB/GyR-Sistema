@@ -134,10 +134,11 @@ public class Ctrl_MenuPrincipal implements ActionListener {
 
         if (e.getSource() == frameMenu.btnAdjudicaciones) {
             Pnl_2 panel2 = new Pnl_2();
+            Consultas_Adjudicaciones consultas = new Consultas_Adjudicaciones();
             
             ResetearPanel();
             panel2.setSize(frameMenu.pnl_prin.getSize());
-            Ctrl_Adjudicaciones adjudicaciones = new Ctrl_Adjudicaciones(panel2);
+            Ctrl_Adjudicaciones adjudicaciones = new Ctrl_Adjudicaciones(panel2, consultas);
 
             frameMenu.pnl_prin.add(panel2);
         }
