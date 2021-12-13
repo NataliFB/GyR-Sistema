@@ -32,7 +32,7 @@ END
 -------------------------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para actualizar una adjudicación
 GO
-CREATE PROCEDURE actualizar_adjudicacion
+CREATE PROCEDURE modificar_adjudicacion
 	@cod_adjudicacion INT, @dias_entrega TINYINT, @modalidad_dias BIT, @empresa BIT, 
 	@modalidad_entrega VARCHAR(30), @descripcion VARCHAR(100), @estado BIT, 
 	@observaciones VARCHAR(100)
@@ -40,7 +40,7 @@ AS BEGIN
 	UPDATE adjudicaciones SET dias_entrega = @dias_entrega, modalidad_dias = @modalidad_dias,
 	empresa = @empresa, descripcion = @descripcion, estado = @estado, observaciones = @observaciones, modalidad_entrega = @modalidad_entrega
 	WHERE cod_adjudicacion = @cod_adjudicacion
-END 
+END
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para mostrar las adjudicaciones	
@@ -54,7 +54,7 @@ AS BEGIN
 	modalidad_entrega AS 'Modalidad de Entrega', descripcion AS 'Descripcion',
 	CAST(CASE WHEN estado = 1 THEN 'En Firme' ELSE 'En Duda' END AS VARCHAR(50)) AS 'Estado',
 	observaciones AS 'Observaciones',
-	CONCAT(empleado.nombre_Empleado, ' ', empleado.appelido1_Empleado) AS 'Encargado'
+	CONCAT(empleado.nombre_Empleado, ' ', empleado.apellido1_Empleado) AS 'Encargado', cod_color AS 'Color del empleado'
 	FROM adjudicaciones INNER JOIN empleado ON adjudicaciones.cod_empleado = empleado.cod_empleado
 	ORDER BY cod_adjudicacion
 END

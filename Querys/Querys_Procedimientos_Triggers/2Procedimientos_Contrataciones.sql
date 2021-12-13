@@ -25,7 +25,7 @@ CREATE PROCEDURE mostrar_contrataciones_completas
 AS BEGIN 
 	SELECT contrataciones.cod_Contratacion AS 'Contratación',institucion AS 'Institución',descripcion AS 'Descripcion',CONVERT(varchar,fecha_publicacion,100) AS 'Fecha Publicación', 
 	CONVERT(varchar,fecha_apertura,100) AS 'Fecha Apertura', estado AS 'Estado',
-	CONCAT(nombre_Empleado, ' ', appelido1_Empleado) AS 'Encargado', empleado.cod_color AS 'Color del empleado'
+	CONCAT(nombre_Empleado, ' ', apellido1_Empleado) AS 'Encargado', empleado.cod_color AS 'Color del empleado'
 	FROM (((contrataciones 
 	INNER JOIN responsable ON responsable.cod_Contratacion = contrataciones.cod_Contratacion) 
 	INNER JOIN estado_contratacion ON estado_contratacion.cod_Contratacion = contrataciones.cod_Contratacion)

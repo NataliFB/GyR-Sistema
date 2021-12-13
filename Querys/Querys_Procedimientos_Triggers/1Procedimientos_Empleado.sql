@@ -7,12 +7,14 @@ GO
 CREATE TRIGGER TR_EMPLEADO_AFTER ON empleado
 AFTER INSERT
 AS 
-	DECLARE @cod_empleado SMALLINT
+	DECLARE @apellido VARCHAR(50)
 	DECLARE @user VARCHAR(50)
 	DECLARE @nombre VARCHAR(50)
-	SET @nombre = (SELECT nombre_empleado FROM inserted)
+	DECLARE @cod_empleado SMALLINT
 	SET @cod_empleado = (SELECT cod_empleado FROM inserted)
-	SET @user = CONCAT(@nombre, @cod_empleado)
+	SET @nombre = (SELECT nombre_empleado FROM inserted)
+	SET @apellido = (SELECT apellido1_empleado FROM inserted)
+	SET @user = CONCAT(@nombre, SUBSTRING(@apellido, 0, 2))
 BEGIN	
 	EXEC ingresar_usuario @user, '1234', @cod_empleado
 END
@@ -73,7 +75,7 @@ GO
 CREATE PROCEDURE mostrar_empleados
 AS BEGIN
 	SELECT empleado.cod_empleado AS 'Código del empleado', usuario AS 'Nombre de Usuario',
-	CONCAT(nombre_empleado, ' ', appelido1_empleado, ' ', appelido2_empleado) AS 'Nombre de empleado',
+	CONCAT(nombre_empleado, ' ', apellido1_empleado, ' ', apellido2_empleado) AS 'Nombre de empleado',
 	nombre_rol AS 'Nivel'
 	FROM ((empleado INNER JOIN userEmpleado ON empleado.cod_empleado = userEmpleado.cod_empleado)
 	INNER JOIN roles ON roles.cod_rol = empleado.cod_rol)
@@ -98,9 +100,9 @@ CREATE PROCEDURE actualizar_empleado
 	@apellido2 VARCHAR(50), @cod_rol SMALLINT, @cod_color VARCHAR(7)
 AS
 	DECLARE @user VARCHAR(50)
-	SET @user = CONCAT(@nombre, @cod_empleado)
+	SET @user = CONCAT(@nombre, SUBSTRING(@apellido1, 0, 2))
 BEGIN
-	UPDATE empleado SET nombre_empleado = @nombre, appelido1_empleado = @apellido1, appelido2_empleado = @apellido2,
+	UPDATE empleado SET nombre_empleado = @nombre, apellido1_empleado = @apellido1, apellido2_empleado = @apellido2,
 	cod_rol = @cod_rol, cod_color = @cod_color WHERE cod_empleado = @cod_empleado
 	UPDATE userEmpleado SET usuario = @user WHERE cod_empleado = @cod_empleado
 END
@@ -112,7 +114,7 @@ CREATE PROC buscar_empleado
 	@usuario VARCHAR(50)
 AS BEGIN
 	SELECT empleado.cod_empleado, empleado.cod_color,
-	CONCAT(nombre_empleado, ' ', appelido1_empleado, ' ', appelido2_empleado),
+	CONCAT(nombre_empleado, ' ', apellido1_empleado, ' ', apellido2_empleado),
 	nombre_rol
 	FROM ((empleado INNER JOIN userEmpleado ON empleado.cod_empleado = userEmpleado.cod_empleado)
 	INNER JOIN roles ON roles.cod_rol = empleado.cod_rol)

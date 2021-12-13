@@ -21,11 +21,11 @@ public class Conexion_A {
 
         try {
             SQLServerDataSource sqlds = new SQLServerDataSource();
-            sqlds.setUser("sa");
+            sqlds.setUser("usuario");
             sqlds.setPassword("123");
             sqlds.setServerName("localhost");
             sqlds.setPortNumber(1433);
-            sqlds.setDatabaseName("pruebas");
+            sqlds.setDatabaseName("BD_Sistema");
             con = sqlds.getConnection();
 
             return con;

@@ -33,7 +33,7 @@ END
 -------------------------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para actualizar registros en la tabla orden
 GO
-CREATE PROCEDURE actualizar_orden
+CREATE PROCEDURE modificar_orden
 	@cod_orden INT, @dias_entrega TINYINT, @vigencia_contrato TINYINT, @fecha_limite DATE, @descripcion VARCHAR(100), 
 	@num_orden INT, @lugar_entrega VARCHAR(100), @observaciones VARCHAR(100), @modalidad VARCHAR(100)
 AS BEGIN
@@ -51,10 +51,10 @@ AS BEGIN
 	SELECT cod_orden AS 'Código de orden', cod_contratacion AS 'Contratación', CONCAT(dias_entrega, ' Días') AS 'Dias de Entrega',
 	vigencia_contrato AS 'Vigencia del Contrato',CONVERT(VARCHAR, fecha_limite, 100) AS 'Fecha Límite', 
 	descripcion AS 'Descripción', num_orden AS 'Número de Orden', lugar_entrega AS 'Lugar de Entrega', observaciones AS 'Observaciones', 
-	modalidad AS 'Modalidad', CONCAT(empleado.nombre_Empleado, ' ', empleado.appelido1_Empleado) AS 'Encargado de Contratacion',
+	modalidad AS 'Modalidad', CONCAT(empleado.nombre_Empleado, ' ', empleado.apellido1_Empleado) AS 'Encargado de Contratacion',
 	empleado.cod_color AS 'Color del Empleado'
 	FROM orden INNER JOIN empleado ON empleado.cod_empleado = orden.cod_empleado 
 	ORDER BY cod_orden
-END 
+END
 
 -------------------------------------------------------------------------------------------------------------------------------------------

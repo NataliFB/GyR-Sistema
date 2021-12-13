@@ -18,8 +18,8 @@ INSERT INTO roles values (3,'Contador')
 CREATE TABLE empleado(
 	cod_empleado SMALLINT IDENTITY PRIMARY KEY,
 	nombre_empleado VARCHAR(50) NOT NULL,
-	appelido1_empleado VARCHAR(50) NOT NULL,
-	appelido2_empleado VARCHAR(50) NOT NULL,
+	apellido1_empleado VARCHAR(50) NOT NULL,
+	apellido2_empleado VARCHAR(50) NOT NULL,
 	cod_rol SMALLINT NOT NULL,
 	cod_color VARCHAR(7) UNIQUE NOT NULL,
 
