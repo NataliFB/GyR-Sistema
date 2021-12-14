@@ -92,7 +92,7 @@ public class Consultas_Contrataciones extends Conexion_A {
             ps.setString(1, observaciones);
             ps.setString(2, contratacion);
             ps.execute();
-            
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             return false;
@@ -234,18 +234,28 @@ public class Consultas_Contrataciones extends Conexion_A {
      * @return Devuelve un arreglo de tipo Object con todos los datos que haya
      * con respecto a esa contratación
      */
-    public Object[] BuscarContratacion(String contratacion) {
+    public Object[] BuscarContratacion(String contratacion, int op) {
         Object[] datos = null;
 
         PreparedStatement ps;
         ResultSet rs;
         ResultSetMetaData rsmd;
 
-        try {
-            ps = getConnection().prepareStatement("SELECT institucion, descripcion, CONVERT(varchar,fecha_publicacion,100),"
+        String consulta = "";
+
+        if (op == 1) {
+            consulta = "SELECT institucion, descripcion, CONVERT(varchar,fecha_publicacion,100),"
                     + "CONVERT(varchar,fecha_apertura,100), estado, observaciones FROM contrataciones INNER JOIN estado_contratacion ON "
                     + "estado_contratacion.cod_contratacion = contrataciones.cod_contratacion "
-                    + "WHERE contrataciones.cod_contratacion = ?");
+                    + "WHERE contrataciones.cod_contratacion = ?";
+        }else if(op == 2){
+            consulta = "SELECT institucion, descripcion, CONVERT(varchar,fecha_publicacion,100),\n" +
+                "CONVERT(varchar,fecha_apertura,100), observaciones\n" +
+                "FROM contrataciones_incompletas WHERE contrataciones_incompletas.cod_contratacion = ?";
+        }
+
+        try {
+            ps = getConnection().prepareStatement(consulta);
             ps.setString(1, contratacion);
             rs = ps.executeQuery();
             rsmd = rs.getMetaData();
@@ -347,7 +357,7 @@ public class Consultas_Contrataciones extends Conexion_A {
         CallableStatement cs;
         PreparedStatement ps;
         ResultSet rs;
-        
+
         try {
             ps = getConnection().prepareStatement("SELECT R.cod_contratacion FROM responsable R INNER JOIN contrataciones C ON "
                     + "R.cod_contratacion = C.cod_contratacion WHERE R.cod_contratacion = ?");

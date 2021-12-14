@@ -9,6 +9,9 @@ CREATE TABLE contrataciones(
 	fecha_publicacion SMALLDATETIME NOT NULL,
 	fecha_apertura SMALLDATETIME NOT NULL,
 	observaciones VARCHAR(100)
+
+	cod_empleado SMALLINT NOT NULL,
+	FOREIGN KEY (cod_empleado) REFERENCES empleado(cod_empleado)
 )
 
 -- Tabla para guardar el estado de cada contratacion una vez ya se sepa
@@ -27,3 +30,12 @@ CREATE TABLE responsable(
 	FOREIGN KEY (cod_contratacion) REFERENCES contrataciones(cod_contratacion),
 	FOREIGN KEY (cod_empleado) REFERENCES empleado(cod_empleado)
 )		
+
+CREATE TABLE contrataciones_incompletas(
+	cod_contratacion VARCHAR(50),
+	institucion VARCHAR(100) NOT NULL,
+	descripcion VARCHAR(200) NOT NULL,
+	fecha_publicacion SMALLDATETIME NOT NULL,
+	fecha_apertura SMALLDATETIME NOT NULL,
+	observaciones VARCHAR(100),
+)

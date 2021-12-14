@@ -75,6 +75,7 @@ public class Ctrl_IngresarContr implements ActionListener {
         pnlC.txtFechaApertura.setText("");
         pnlC.txtInstitucion.setText("");
         pnlC.btgEstado.clearSelection();
+        pnlC.txaObservaciones.setText("");
 
         modC.setNumContratacion("");
         modC.setDescripcion("");
@@ -226,7 +227,7 @@ public class Ctrl_IngresarContr implements ActionListener {
                 if (e.getClickCount() == 2) {
                     Limpiar();
                     String contratación = String.valueOf(pnlC.tblContratacionesComp.getModel().getValueAt(pnlC.tblContratacionesComp.getSelectedRow(), 0));
-                    Object[] datos = consulta.BuscarContratacion(contratación);
+                    Object[] datos = consulta.BuscarContratacion(contratación, 1);
                     pnlC.txtContratacion.setText(contratación);
                     pnlC.txtInstitucion.setText(String.valueOf(datos[0]));
                     pnlC.txaDescripcion.setText(String.valueOf(datos[1]));
@@ -250,20 +251,13 @@ public class Ctrl_IngresarContr implements ActionListener {
                 if (e.getClickCount() == 2) {
                     Limpiar();
                     String contratación = String.valueOf(pnlC.tblContratacionesIncomp.getModel().getValueAt(pnlC.tblContratacionesIncomp.getSelectedRow(), 0));
-                    Object[] datos = consulta.BuscarContratacion(contratación);
+                    Object[] datos = consulta.BuscarContratacion(contratación, 2);
                     pnlC.txtContratacion.setText(contratación);
                     pnlC.txtInstitucion.setText(String.valueOf(datos[0]));
                     pnlC.txaDescripcion.setText(String.valueOf(datos[1]));
                     pnlC.txtFechaPublicacion.setText(String.valueOf(datos[2]));
                     pnlC.txtFechaApertura.setText(String.valueOf(datos[3]));
-                    if (String.valueOf(datos[4]).equals("Enviada")) {
-                        pnlC.rbtEnviada.setSelected(true);
-                    } else if (String.valueOf(datos[4]).equals("Descartada")) {
-                        pnlC.rbtDescartada.setSelected(true);
-                    } else {
-                        pnlC.btgEstado.clearSelection();
-                    }
-                    pnlC.txaObservaciones.setText(String.valueOf(datos[5]));
+                    pnlC.txaObservaciones.setText(String.valueOf(datos[4]));
                 }
             }
         });
