@@ -114,7 +114,9 @@ public class Consultas_Usuario extends Conexion_A {
      * false: Hubo un error
      */
     public boolean DatosUsuario(Mod_Usuario us) {
-
+        boolean[] permisos = new boolean[9];
+        
+        PreparedStatement ps;
         CallableStatement cs;
         ResultSet rs;
 
@@ -130,6 +132,17 @@ public class Consultas_Usuario extends Conexion_A {
                 us.setNivelAdm(rs.getString(4));
             }
 
+            ps = getConnection().prepareStatement("SELECT * FROM permisos WHERE cod_empleado = ?");
+            ps.setInt(1, us.getCodEmpleado());
+            rs = ps.executeQuery();
+            
+            while(rs.next()){
+                for(int i = 0; i < permisos.length; i++){
+                    permisos[i] = rs.getBoolean(i + 1);
+                }
+            }
+            us.setPermisos(permisos);
+            
         } catch (SQLException e) {
             System.err.println(e);
             return false;
@@ -185,12 +198,14 @@ public class Consultas_Usuario extends Conexion_A {
      * @param rol Recibe int para definir el rol que va a tener el empleado
      * @param color Recibe un String con el color en formato hexadecimal del
      * empleado
+     * @param permisos Arreglo de booleanos para determinar los permisos del
+     * usuario
      * @return Devuelve un booleano que significa si se pudo insertar los datos
      * en la base de datos<br>
      * true: se insertó<br>
      * false: no se insertó
      */
-    public boolean AgregarEmpleado(String nombre, String app1, String app2, int rol, String color) {
+    public boolean AgregarEmpleado(String nombre, String app1, String app2, int rol, String color, boolean[] permisos) {
 
         if (!ComprobarColor(color)) {
             JOptionPane.showMessageDialog(null, "Ya se encuentra en uso ese color");
@@ -200,15 +215,24 @@ public class Consultas_Usuario extends Conexion_A {
         CallableStatement cs;
 
         try {
-            cs = getConnection().prepareCall("{call insertar_empleados (?,?,?,?,?)}");
+            cs = getConnection().prepareCall("{call insertar_empleados (?,?,?,?,?,"
+                    + "?,?,?,?,?,?,?,?,?)}");
             cs.setString(1, nombre);
             cs.setString(2, app1);
             cs.setString(3, app2);
             cs.setInt(4, rol);
             cs.setString(5, color);
 
+            int j = 5;
+            for(int i = 0; i < permisos.length; i++){
+                j++;
+                cs.setBoolean(j, permisos[i]);
+            }
+            
             cs.execute();
 
+            cs = getConnection().prepareCall("{call insertar_permisos}");
+            
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             return false;
@@ -372,12 +396,12 @@ public class Consultas_Usuario extends Conexion_A {
      * false: no se modificó
      */
     public boolean ModificarEmpleado(String nombre, String app1, String app2, int rol, String color, int cod_empleado) {
-        
+
         if (!ComprobarColor(color)) {
             JOptionPane.showMessageDialog(null, "Ya se encuentra en uso ese color");
             return false;
         }
-        
+
         CallableStatement cs;
 
         try {

@@ -9,9 +9,10 @@ CREATE TABLE roles(
 
 -- Se añade los roles o niveles para administrar los empleados
 
-INSERT INTO roles values (1,'Administrador')
-INSERT INTO roles values (2,'Nivel Básico')
-INSERT INTO roles values (3,'Contador')
+INSERT INTO roles VALUES (1,'Administrador')
+INSERT INTO roles VALUES (2,'Nivel Básico')
+INSERT INTO roles VALUES (3,'Contador')
+INSERT INTO roles VALUES (4,'Personalizado')
 
 -- Tabla de Empleado que guarda los datos necesarios del empleado
 
@@ -32,5 +33,21 @@ CREATE TABLE userEmpleado(
 	usuario VARCHAR(50) PRIMARY KEY,
 	contraseña VARCHAR(MAX) NOT NULL,
 	cod_empleado SMALLINT NOT NULL,
+	FOREIGN KEY (cod_empleado) REFERENCES empleado(cod_empleado)
+)
+
+CREATE TABLE permisos(
+	ingresar_contrataciones BIT NOT NULL,
+	adjudicaciones BIT NOT NULL,
+	timbres BIT NOT NULL,
+	por_comprar BIT NOT NULL,
+	facturas BIT NOT NULL,
+	renta BIT NOT NULL,
+	proveedores BIT NOT NULL,
+	acceso_empleados BIT NOT NULL,
+	acceso_contrataciones BIT NOT NULL,
+
+	cod_empleado  SMALLINT NOT NULL,
+
 	FOREIGN KEY (cod_empleado) REFERENCES empleado(cod_empleado)
 )

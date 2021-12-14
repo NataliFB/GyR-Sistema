@@ -97,9 +97,7 @@ public class Consultas_Adjudicaciones extends Conexion_A {
      * en la base de datos
      */
     public boolean InsertarAdjudicacion(String institucion, int diasEntrega, boolean modalidadDias, boolean empresa, String modalidadEntrega,
-            String descripcion, boolean estado, String observaciones, String contratacion) {
-
-        Mod_Usuario us = new Mod_Usuario();
+            String descripcion, boolean estado, String observaciones, String contratacion, Mod_Usuario us) {
 
         CallableStatement cs;
         PreparedStatement ps;
@@ -131,30 +129,32 @@ public class Consultas_Adjudicaciones extends Conexion_A {
         ///
         ///
         ///
-        try {
-            ps = getConnection().prepareStatement("SELECT responsable.cod_empleado, CONCAT(empleado.nombre_Empleado, ' ', empleado.apellido1_Empleado) "
-                    + "FROM responsable INNER JOIN empleado ON responsable.cod_empleado = empleado.cod_empleado WHERE cod_contratacion = ?");
-            ps.setString(1, contratacion);
+        if (!us.getPermisos()[8]) {
+            try {
+                ps = getConnection().prepareStatement("SELECT responsable.cod_empleado, CONCAT(empleado.nombre_Empleado, ' ', empleado.apellido1_Empleado) "
+                        + "FROM responsable INNER JOIN empleado ON responsable.cod_empleado = empleado.cod_empleado WHERE cod_contratacion = ?");
+                ps.setString(1, contratacion);
 
-            rs = ps.executeQuery();
+                rs = ps.executeQuery();
 
-            while (rs.next()) {
-                if (rs.getInt(1) != us.getCodEmpleado()) {
-                    JOptionPane.showMessageDialog(null, "Esta contratacion le pertenece al empleado:\n"
-                            + rs.getString(2));
+                while (rs.next()) {
+                    if (rs.getInt(1) != us.getCodEmpleado()) {
+                        JOptionPane.showMessageDialog(null, "Esta contratacion le pertenece al empleado:\n"
+                                + rs.getString(2));
+                        return false;
+                    }
+                }
+
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+                return false;
+            } finally {
+                try {
+                    getConnection().close();
+                } catch (SQLException ex) {
+                    System.out.println(ex.getMessage());
                     return false;
                 }
-            }
-
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-            return false;
-        } finally {
-            try {
-                getConnection().close();
-            } catch (SQLException ex) {
-                System.out.println(ex.getMessage());
-                return false;
             }
         }
         ///
@@ -390,9 +390,7 @@ public class Consultas_Adjudicaciones extends Conexion_A {
      * @return Devuelve un booleano de si se inserto o no
      */
     public boolean InsertarOrden(int diasEntrega, int vigenciaContrato, String fechaLimite, String descripcion, int numOrden, String lugarEntrega,
-            String observaciones, String modalidad, String contratacion) {
-
-        Mod_Usuario us = new Mod_Usuario();
+            String observaciones, String modalidad, String contratacion, Mod_Usuario us) {
 
         CallableStatement cs;
         PreparedStatement ps;
@@ -424,30 +422,32 @@ public class Consultas_Adjudicaciones extends Conexion_A {
         ///
         ///
         ///
-        try {
-            ps = getConnection().prepareStatement("SELECT responsable.cod_empleado, CONCAT(empleado.nombre_Empleado, ' ', empleado.apellido1_Empleado) "
-                    + "FROM responsable INNER JOIN empleado ON responsable.cod_empleado = empleado.cod_empleado WHERE cod_contratacion = ?");
-            ps.setString(1, contratacion);
+        if (!us.getPermisos()[8]) {
+            try {
+                ps = getConnection().prepareStatement("SELECT responsable.cod_empleado, CONCAT(empleado.nombre_Empleado, ' ', empleado.apellido1_Empleado) "
+                        + "FROM responsable INNER JOIN empleado ON responsable.cod_empleado = empleado.cod_empleado WHERE cod_contratacion = ?");
+                ps.setString(1, contratacion);
 
-            rs = ps.executeQuery();
+                rs = ps.executeQuery();
 
-            while (rs.next()) {
-                if (rs.getInt(1) != us.getCodEmpleado()) {
-                    JOptionPane.showMessageDialog(null, "Esta contratacion le pertenece al empleado:\n"
-                            + rs.getString(2));
+                while (rs.next()) {
+                    if (rs.getInt(1) != us.getCodEmpleado()) {
+                        JOptionPane.showMessageDialog(null, "Esta contratacion le pertenece al empleado:\n"
+                                + rs.getString(2));
+                        return false;
+                    }
+                }
+
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+                return false;
+            } finally {
+                try {
+                    getConnection().close();
+                } catch (SQLException ex) {
+                    System.out.println(ex.getMessage());
                     return false;
                 }
-            }
-
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-            return false;
-        } finally {
-            try {
-                getConnection().close();
-            } catch (SQLException ex) {
-                System.out.println(ex.getMessage());
-                return false;
             }
         }
 
@@ -583,9 +583,7 @@ public class Consultas_Adjudicaciones extends Conexion_A {
      * registro
      */
     public boolean InsertarEntregada(int diasEntrega, String fecha, String lugarEntrega, String descripcion, boolean empresa, String observaciones,
-            String medioEntrega, String contratacion) {
-
-        Mod_Usuario us = new Mod_Usuario();
+            String medioEntrega, String contratacion, Mod_Usuario us) {
 
         CallableStatement cs;
         PreparedStatement ps;
@@ -617,30 +615,32 @@ public class Consultas_Adjudicaciones extends Conexion_A {
         ///
         ///
         ///
-        try {
-            ps = getConnection().prepareStatement("SELECT responsable.cod_empleado, CONCAT(empleado.nombre_Empleado, ' ', empleado.apellido1_Empleado) "
-                    + "FROM responsable INNER JOIN empleado ON responsable.cod_empleado = empleado.cod_empleado WHERE cod_contratacion = ?");
-            ps.setString(1, contratacion);
+        if (!us.getPermisos()[8]) {
+            try {
+                ps = getConnection().prepareStatement("SELECT responsable.cod_empleado, CONCAT(empleado.nombre_Empleado, ' ', empleado.apellido1_Empleado) "
+                        + "FROM responsable INNER JOIN empleado ON responsable.cod_empleado = empleado.cod_empleado WHERE cod_contratacion = ?");
+                ps.setString(1, contratacion);
 
-            rs = ps.executeQuery();
+                rs = ps.executeQuery();
 
-            while (rs.next()) {
-                if (rs.getInt(1) != us.getCodEmpleado()) {
-                    JOptionPane.showMessageDialog(null, "Esta contratacion le pertenece al empleado:\n"
-                            + rs.getString(2));
+                while (rs.next()) {
+                    if (rs.getInt(1) != us.getCodEmpleado()) {
+                        JOptionPane.showMessageDialog(null, "Esta contratacion le pertenece al empleado:\n"
+                                + rs.getString(2));
+                        return false;
+                    }
+                }
+
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+                return false;
+            } finally {
+                try {
+                    getConnection().close();
+                } catch (SQLException ex) {
+                    System.out.println(ex.getMessage());
                     return false;
                 }
-            }
-
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-            return false;
-        } finally {
-            try {
-                getConnection().close();
-            } catch (SQLException ex) {
-                System.out.println(ex.getMessage());
-                return false;
             }
         }
         ///
@@ -734,7 +734,7 @@ public class Consultas_Adjudicaciones extends Conexion_A {
      */
     public boolean ModificarEntregadas(int codEntregadas, int diasEntrega, String fecha, String lugarEntrega, String descripcion, boolean empresa, String observaciones,
             String medioEntrega) {
-        
+
         CallableStatement cs;
 
         try {

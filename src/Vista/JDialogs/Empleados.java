@@ -107,7 +107,7 @@ public class Empleados extends javax.swing.JDialog {
 
         jLabel6.setText("Color:");
 
-        cbxRol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Nivel Básico", "Contador" }));
+        cbxRol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Nivel Básico", "Contador", "Personalizado" }));
 
         btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
         btnAgregar.setText("Agregar");

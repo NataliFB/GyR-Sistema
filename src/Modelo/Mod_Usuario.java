@@ -13,6 +13,15 @@ public class Mod_Usuario {
     private static String nivelAdm;
     private static String color;
     private static int codEmpleado;
+    private static boolean[] permisos;
+
+    public static boolean[] getPermisos() {
+        return permisos;
+    }
+
+    public static void setPermisos(boolean[] permisos) {
+        Mod_Usuario.permisos = permisos;
+    }
 
     /**
      * Metodo que devuelve la variable color

@@ -24,12 +24,19 @@ END
 GO
 CREATE PROCEDURE insertar_empleados 
 	@nombre_empleado VARCHAR(50), @appelido1_empleado VARCHAR(50), @appelido2_empleado VARCHAR(50), @cod_rol SMALLINT,
-	@cod_color VARCHAR(7)
+	@cod_color VARCHAR(7),
+	@ingresar_contrataciones BIT, @adjudicaciones BIT, @timbres BIT, @por_comprar BIT, @facturas BIT, 
+	@renta BIT, @proveedores BIT, @acceso_empleados BIT, @acceso_contrataciones BIT
 AS 
 BEGIN
 	INSERT INTO empleado VALUES(@nombre_empleado, @appelido1_empleado, @appelido2_empleado, @cod_rol, @cod_color)
 END
-
+	DECLARE @cod_empleado SMALLINT
+	SET @cod_empleado = (SELECT cod_empleado FROM empleado WHERE nombre_empleado = @nombre_empleado AND cod_color = @cod_color)
+BEGIN
+	INSERT INTO permisos VALUES(@ingresar_contrataciones, @adjudicaciones, @timbres, @por_comprar, @facturas, @renta, @proveedores, @acceso_empleados, @acceso_contrataciones, @cod_empleado)
+END
+DROP PROC insertar_empleados
 ------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para guardar los usuarios en la tabla userEmpleado
 GO
@@ -90,7 +97,7 @@ CREATE PROCEDURE borrar_empleado
 AS BEGIN
 	DELETE userEmpleado WHERE cod_empleado = @cod_empleado
 	DELETE empleado WHERE cod_empleado = @cod_empleado
-END
+END 
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para actualizar datos de un empleado
