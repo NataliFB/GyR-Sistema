@@ -32,9 +32,10 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         PanelObjetos = new javax.swing.JPanel();
         spnDescripcion = new javax.swing.JScrollPane();
         txaDescripcion = new javax.swing.JTextArea();
+        scpObservaciones = new javax.swing.JScrollPane();
+        txaObservaciones = new javax.swing.JTextArea();
         txtFechaPublicacion = new javax.swing.JTextField();
         txtFechaApertura = new javax.swing.JTextField();
-        txtResponsable = new javax.swing.JTextField();
         txtContratacion = new javax.swing.JTextField();
         txtInstitucion = new javax.swing.JTextField();
         rbtEnviada = new javax.swing.JRadioButton();
@@ -43,9 +44,9 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         PanelOpciones = new javax.swing.JPanel();
         btnInsertarContratacion = new javax.swing.JButton();
         btnModificarContratacion = new javax.swing.JButton();
@@ -82,19 +83,24 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         spnDescripcion.setViewportView(txaDescripcion);
 
         PanelObjetos.add(spnDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, 280, 100));
-        PanelObjetos.add(txtFechaPublicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 280, -1));
-        PanelObjetos.add(txtFechaApertura, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 280, -1));
-        PanelObjetos.add(txtResponsable, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, 280, -1));
+
+        txaObservaciones.setColumns(20);
+        txaObservaciones.setRows(5);
+        scpObservaciones.setViewportView(txaObservaciones);
+
+        PanelObjetos.add(scpObservaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 270, 50));
+        PanelObjetos.add(txtFechaPublicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 280, -1));
+        PanelObjetos.add(txtFechaApertura, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 280, -1));
         PanelObjetos.add(txtContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 280, -1));
         PanelObjetos.add(txtInstitucion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 280, -1));
 
         btgEstado.add(rbtEnviada);
         rbtEnviada.setText("Enviada");
-        PanelObjetos.add(rbtEnviada, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, -1, -1));
+        PanelObjetos.add(rbtEnviada, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 160, -1, -1));
 
         btgEstado.add(rbtDescartada);
         rbtDescartada.setText("Descartada");
-        PanelObjetos.add(rbtDescartada, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 200, -1, -1));
+        PanelObjetos.add(rbtDescartada, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 160, -1, -1));
 
         jLabel1.setText("Número de Contratación");
         PanelObjetos.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
@@ -103,19 +109,19 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         PanelObjetos.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, -1, -1));
 
         jLabel3.setText("Fecha de publicación");
-        PanelObjetos.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+        PanelObjetos.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
         jLabel4.setText("Fecha de Apertura");
-        PanelObjetos.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
-
-        jLabel6.setText("Responsable");
-        PanelObjetos.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, -1, -1));
+        PanelObjetos.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
         jLabel7.setText("Estado");
-        PanelObjetos.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, -1, -1));
+        PanelObjetos.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, -1, -1));
 
         jLabel5.setText("Institución");
         PanelObjetos.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
+
+        jLabel9.setText("Observaciones");
+        PanelObjetos.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
 
         PanelOpciones.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Opciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
 
@@ -269,9 +275,9 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
@@ -279,15 +285,16 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
     private javax.swing.JTabbedPane jTabbedPane1;
     public javax.swing.JRadioButton rbtDescartada;
     public javax.swing.JRadioButton rbtEnviada;
+    private javax.swing.JScrollPane scpObservaciones;
     private javax.swing.JScrollPane spnDescripcion;
     public javax.swing.JTable tblContratacionesComp;
     public javax.swing.JTable tblContratacionesIncomp;
     public javax.swing.JTextArea txaDescripcion;
+    public javax.swing.JTextArea txaObservaciones;
     public javax.swing.JTextField txtBuscar;
     public javax.swing.JTextField txtContratacion;
     public javax.swing.JTextField txtFechaApertura;
     public javax.swing.JTextField txtFechaPublicacion;
     public javax.swing.JTextField txtInstitucion;
-    private javax.swing.JTextField txtResponsable;
     // End of variables declaration//GEN-END:variables
 }

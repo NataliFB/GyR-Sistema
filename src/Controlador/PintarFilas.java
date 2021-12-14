@@ -32,22 +32,21 @@ public class PintarFilas extends DefaultTableCellRenderer {
 
         Color color = null;
 
-        if (value instanceof String) {
-            String Dato = String.valueOf(table.getValueAt(row, 7));
-            String CadenaHex = Dato;
-            String aux = "";
-            for (int i = 0; i < CadenaHex.length(); i++) {
-                if (CadenaHex.charAt(i) != '#') {
-                    aux += CadenaHex.charAt(i);
-                }
+        String Dato = String.valueOf(table.getValueAt(row, table.getColumnCount() - 1));
+        String CadenaHex = Dato;
+        String aux = "";
+        for (int i = 0; i < CadenaHex.length(); i++) {
+            if (CadenaHex.charAt(i) != '#') {
+                aux += CadenaHex.charAt(i);
             }
-
-            int hex = Integer.parseInt(aux, 16);
-            int r = (hex & 0xFF0000) >> 16;
-            int g = (hex & 0xFF00) >> 8;
-            int b = (hex & 0xFF);
-            color = new Color(r, g, b);
         }
+
+        int hex = Integer.parseInt(aux, 16);
+        int r = (hex & 0xFF0000) >> 16;
+        int g = (hex & 0xFF00) >> 8;
+        int b = (hex & 0xFF);
+        color = new Color(r, g, b);
+        
         if (esOscuro(color)) {
             setForeground(Color.WHITE);
         } else {

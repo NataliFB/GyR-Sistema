@@ -43,6 +43,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pnl_prin = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1500, 800));
 
         PanelBtn.setLayout(new javax.swing.BoxLayout(PanelBtn, javax.swing.BoxLayout.PAGE_AXIS));
 

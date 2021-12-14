@@ -64,6 +64,7 @@ public class Pnl_2 extends javax.swing.JPanel {
         jLabel93 = new javax.swing.JLabel();
         jLabel94 = new javax.swing.JLabel();
         spnDiasEntregaAdjudicaciones = new javax.swing.JSpinner();
+        codAdjudicacion = new javax.swing.JLabel();
         pnlOrden = new javax.swing.JPanel();
         scpOrden = new javax.swing.JScrollPane();
         tblOrden = new javax.swing.JTable();
@@ -75,10 +76,8 @@ public class Pnl_2 extends javax.swing.JPanel {
         btnEliminarOrden = new javax.swing.JButton();
         PanelObjetosOrden = new javax.swing.JPanel();
         cmbModalidadOrden = new javax.swing.JComboBox<>();
-        txtVigenciaContratoOrden = new javax.swing.JTextField();
         txtContratacionOrden = new javax.swing.JTextField();
         txtEncargadoOrden = new javax.swing.JTextField();
-        txtDiasEntregaOrden = new javax.swing.JTextField();
         txtDescripcionOrden = new javax.swing.JTextField();
         txtLugarEntregaOrden = new javax.swing.JTextField();
         txtNumOrden = new javax.swing.JTextField();
@@ -95,11 +94,14 @@ public class Pnl_2 extends javax.swing.JPanel {
         jLabel102 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        spnDiasEntregaOrden = new javax.swing.JSpinner();
+        spnVigenciaContratoOrden = new javax.swing.JSpinner();
         PanelControlOrden = new javax.swing.JPanel();
         txtBuscarOrden = new javax.swing.JTextField();
         cmbBusquedaOrden = new javax.swing.JComboBox<>();
         btnRefrescarOrden = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
+        codOrden = new javax.swing.JLabel();
         pnlEntregada = new javax.swing.JPanel();
         scpEntregada = new javax.swing.JScrollPane();
         tblEntregada = new javax.swing.JTable();
@@ -113,7 +115,6 @@ public class Pnl_2 extends javax.swing.JPanel {
         cmbMedioEntregada = new javax.swing.JComboBox<>();
         txtContratacionEntregada = new javax.swing.JTextField();
         txtEncargadoEntregada = new javax.swing.JTextField();
-        txtDiasEntregada = new javax.swing.JTextField();
         txtDescripcionEntregada = new javax.swing.JTextField();
         txtLugarEntregada = new javax.swing.JTextField();
         rbtGyREntregada = new javax.swing.JRadioButton();
@@ -130,11 +131,13 @@ public class Pnl_2 extends javax.swing.JPanel {
         jLabel108 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel103 = new javax.swing.JLabel();
+        spnDiasEntregaEntregada = new javax.swing.JSpinner();
         PanelControlEntregada = new javax.swing.JPanel();
         txtBuscarEntregada = new javax.swing.JTextField();
         cmbBusquedaEntregada = new javax.swing.JComboBox<>();
         btnRefrescarEntregada = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
+        codEntregada = new javax.swing.JLabel();
 
         scpAdjudicada.setViewportView(tblAdjudicada);
 
@@ -310,6 +313,8 @@ public class Pnl_2 extends javax.swing.JPanel {
                 .addGap(0, 0, 0))
         );
 
+        codAdjudicacion.setText("NA");
+
         javax.swing.GroupLayout pnlAdjudicadaLayout = new javax.swing.GroupLayout(pnlAdjudicada);
         pnlAdjudicada.setLayout(pnlAdjudicadaLayout);
         pnlAdjudicadaLayout.setHorizontalGroup(
@@ -318,13 +323,12 @@ public class Pnl_2 extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlAdjudicadaLayout.createSequentialGroup()
-                        .addGroup(pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(scpAdjudicada)
-                            .addComponent(PanelBaseAdj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(20, 20, 20))
-                    .addGroup(pnlAdjudicadaLayout.createSequentialGroup()
                         .addComponent(PanelControlAdj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(codAdjudicacion))
+                    .addComponent(scpAdjudicada, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PanelBaseAdj, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
         pnlAdjudicadaLayout.setVerticalGroup(
             pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -332,7 +336,9 @@ public class Pnl_2 extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(PanelBaseAdj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PanelControlAdj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlAdjudicadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PanelControlAdj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(codAdjudicacion))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(scpAdjudicada, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)
                 .addContainerGap())
@@ -393,12 +399,10 @@ public class Pnl_2 extends javax.swing.JPanel {
         PanelObjetosOrden.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ingresar Orden", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
         PanelObjetosOrden.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cmbModalidadOrden.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elegir", "Según demanda", "Cantidad definida", "Del 50%", "Parcial" }));
+        cmbModalidadOrden.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Según demanda", "Cantidad definida", "Del 50%", "Parcial" }));
         PanelObjetosOrden.add(cmbModalidadOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 250, -1));
-        PanelObjetosOrden.add(txtVigenciaContratoOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 129, 250, -1));
         PanelObjetosOrden.add(txtContratacionOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 35, 250, -1));
         PanelObjetosOrden.add(txtEncargadoOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 132, 252, -1));
-        PanelObjetosOrden.add(txtDiasEntregaOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 82, 250, -1));
         PanelObjetosOrden.add(txtDescripcionOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 85, 250, -1));
         PanelObjetosOrden.add(txtLugarEntregaOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 38, 250, -1));
         PanelObjetosOrden.add(txtNumOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 250, -1));
@@ -439,6 +443,12 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         jLabel2.setText("Modalidad de Entrega");
         PanelObjetosOrden.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
+
+        spnDiasEntregaOrden.setModel(new javax.swing.SpinnerNumberModel(1, 0, null, 1));
+        PanelObjetosOrden.add(spnDiasEntregaOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 250, -1));
+
+        spnVigenciaContratoOrden.setModel(new javax.swing.SpinnerNumberModel(1, 0, null, 1));
+        PanelObjetosOrden.add(spnVigenciaContratoOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 250, -1));
 
         javax.swing.GroupLayout PanelBaseOrdenLayout = new javax.swing.GroupLayout(PanelBaseOrden);
         PanelBaseOrden.setLayout(PanelBaseOrdenLayout);
@@ -494,6 +504,8 @@ public class Pnl_2 extends javax.swing.JPanel {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
+        codOrden.setText("NA");
+
         javax.swing.GroupLayout pnlOrdenLayout = new javax.swing.GroupLayout(pnlOrden);
         pnlOrden.setLayout(pnlOrdenLayout);
         pnlOrdenLayout.setHorizontalGroup(
@@ -502,13 +514,12 @@ public class Pnl_2 extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(pnlOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlOrdenLayout.createSequentialGroup()
-                        .addGroup(pnlOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(scpOrden)
-                            .addComponent(PanelBaseOrden, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(20, 20, 20))
-                    .addGroup(pnlOrdenLayout.createSequentialGroup()
                         .addComponent(PanelControlOrden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(codOrden))
+                    .addComponent(scpOrden, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PanelBaseOrden, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
         pnlOrdenLayout.setVerticalGroup(
             pnlOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -516,7 +527,9 @@ public class Pnl_2 extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(PanelBaseOrden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PanelControlOrden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlOrdenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PanelControlOrden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(codOrden))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(scpOrden, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)
                 .addContainerGap())
@@ -577,11 +590,10 @@ public class Pnl_2 extends javax.swing.JPanel {
         PanelObjetosEntregada.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ingresar Orden", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
         PanelObjetosEntregada.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cmbMedioEntregada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elegir", "Encomienda", "Proveedor", "Encargado" }));
+        cmbMedioEntregada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Encomienda", "Proveedor", "Encargado" }));
         PanelObjetosEntregada.add(cmbMedioEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 250, -1));
         PanelObjetosEntregada.add(txtContratacionEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 35, 250, -1));
         PanelObjetosEntregada.add(txtEncargadoEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 132, 252, -1));
-        PanelObjetosEntregada.add(txtDiasEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 82, 250, -1));
         PanelObjetosEntregada.add(txtDescripcionEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 85, 250, -1));
         PanelObjetosEntregada.add(txtLugarEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 38, 250, -1));
 
@@ -626,6 +638,9 @@ public class Pnl_2 extends javax.swing.JPanel {
 
         jLabel103.setText("Empresa");
         PanelObjetosEntregada.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+
+        spnDiasEntregaEntregada.setModel(new javax.swing.SpinnerNumberModel(1, 0, null, 1));
+        PanelObjetosEntregada.add(spnDiasEntregaEntregada, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 250, -1));
 
         javax.swing.GroupLayout PanelBaseEntregadaLayout = new javax.swing.GroupLayout(PanelBaseEntregada);
         PanelBaseEntregada.setLayout(PanelBaseEntregadaLayout);
@@ -681,6 +696,8 @@ public class Pnl_2 extends javax.swing.JPanel {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
+        codEntregada.setText("NA");
+
         javax.swing.GroupLayout pnlEntregadaLayout = new javax.swing.GroupLayout(pnlEntregada);
         pnlEntregada.setLayout(pnlEntregadaLayout);
         pnlEntregadaLayout.setHorizontalGroup(
@@ -689,13 +706,12 @@ public class Pnl_2 extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlEntregadaLayout.createSequentialGroup()
-                        .addGroup(pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(scpEntregada)
-                            .addComponent(PanelBaseEntregada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(20, 20, 20))
-                    .addGroup(pnlEntregadaLayout.createSequentialGroup()
                         .addComponent(PanelControlEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(codEntregada))
+                    .addComponent(scpEntregada, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PanelBaseEntregada, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
         pnlEntregadaLayout.setVerticalGroup(
             pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -703,7 +719,9 @@ public class Pnl_2 extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(PanelBaseEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PanelControlEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlEntregadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PanelControlEntregada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(codEntregada))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(scpEntregada, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)
                 .addContainerGap())
@@ -762,6 +780,9 @@ public class Pnl_2 extends javax.swing.JPanel {
     public javax.swing.JComboBox<String> cmbMedioEntregada;
     public javax.swing.JComboBox<String> cmbModalidadAdjudicada;
     public javax.swing.JComboBox<String> cmbModalidadOrden;
+    public javax.swing.JLabel codAdjudicacion;
+    public javax.swing.JLabel codEntregada;
+    public javax.swing.JLabel codOrden;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -813,6 +834,9 @@ public class Pnl_2 extends javax.swing.JPanel {
     private javax.swing.JScrollPane scpObservacionesOrden;
     public javax.swing.JScrollPane scpOrden;
     public javax.swing.JSpinner spnDiasEntregaAdjudicaciones;
+    public javax.swing.JSpinner spnDiasEntregaEntregada;
+    public javax.swing.JSpinner spnDiasEntregaOrden;
+    public javax.swing.JSpinner spnVigenciaContratoOrden;
     public javax.swing.JTable tblAdjudicada;
     public javax.swing.JTable tblEntregada;
     public javax.swing.JTable tblOrden;
@@ -829,8 +853,6 @@ public class Pnl_2 extends javax.swing.JPanel {
     public javax.swing.JTextField txtDescripcionAdjudicada;
     public javax.swing.JTextField txtDescripcionEntregada;
     public javax.swing.JTextField txtDescripcionOrden;
-    public javax.swing.JTextField txtDiasEntregaOrden;
-    public javax.swing.JTextField txtDiasEntregada;
     public javax.swing.JTextField txtEncargadoAdjudicada;
     public javax.swing.JTextField txtEncargadoEntregada;
     public javax.swing.JTextField txtEncargadoOrden;
@@ -838,6 +860,5 @@ public class Pnl_2 extends javax.swing.JPanel {
     public javax.swing.JTextField txtLugarEntregaOrden;
     public javax.swing.JTextField txtLugarEntregada;
     public javax.swing.JTextField txtNumOrden;
-    public javax.swing.JTextField txtVigenciaContratoOrden;
     // End of variables declaration//GEN-END:variables
 }

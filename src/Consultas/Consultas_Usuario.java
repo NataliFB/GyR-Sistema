@@ -74,7 +74,7 @@ public class Consultas_Usuario extends Conexion_A {
         ResultSetMetaData rsmd;
 
         try {
-            ps = getConnection().prepareCall("SELECT nombre_empleado, appelido1_empleado, appelido2_empleado, cod_rol, cod_color "
+            ps = getConnection().prepareStatement("SELECT nombre_empleado, apellido1_empleado, apellido2_empleado, cod_rol, cod_color "
                     + "FROM empleado WHERE cod_empleado = ?");
             ps.setInt(1, Integer.parseInt(cod));
             rs = ps.executeQuery();

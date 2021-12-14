@@ -7,7 +7,8 @@ CREATE TABLE contrataciones(
 	institucion VARCHAR(100) NOT NULL,
 	descripcion VARCHAR(200) NOT NULL,
 	fecha_publicacion SMALLDATETIME NOT NULL,
-	fecha_apertura SMALLDATETIME NOT NULL 
+	fecha_apertura SMALLDATETIME NOT NULL,
+	observaciones VARCHAR(100)
 )
 
 -- Tabla para guardar el estado de cada contratacion una vez ya se sepa

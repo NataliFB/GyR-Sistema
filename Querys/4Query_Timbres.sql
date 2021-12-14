@@ -3,9 +3,9 @@ use BD_Sistema
 CREATE TABLE timbres(
 	cod_timbre INT IDENTITY PRIMARY KEY,
 	institucion VARCHAR(100) NOT NULL,
+	descripcion VARCHAR(100) NOT NULL,
 	monto MONEY NOT NULL,
 	estado VARCHAR(30) DEFAULT('Pendiente'),
-	producto VARCHAR(100) NOT NULL,
 	observaciones VARCHAR(100) DEFAULT ('Ninguna observación'),
 	
 	encargado_envio SMALLINT NOT NULL,
