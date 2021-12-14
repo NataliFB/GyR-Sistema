@@ -48,7 +48,7 @@ public class Ctrl_Usuario implements ActionListener {
      * Metodo que incializa la ventana
      */
     private void Iniciar() {
-        if (!modEmpleado.getNivelAdm().equals("Administrador")) {
+        if(!modEmpleado.getPermisos()[7]){
             frameUsuario.btnEmpleados.setVisible(false);
         }
         if (modEmpleado.getNivelAdm().equals("Contador")) {

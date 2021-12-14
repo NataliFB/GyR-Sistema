@@ -53,18 +53,37 @@ public class Ctrl_MenuPrincipal implements ActionListener {
         frameMenu.setExtendedState(MAXIMIZED_BOTH);
         frameMenu.setLocationRelativeTo(null);
 
-        frameMenu.setVisible(true);
-
-        if (modEmpleado.getNivelAdm().equals("Contador")) {
-            frameMenu.Adjudicaciones.setVisible(false);
+        if(!modEmpleado.getPermisos()[0]){
             frameMenu.IngrsarContr.setVisible(false);
-            frameMenu.PorComprar.setVisible(false);
-            frameMenu.Timbres.setVisible(false);
-            frameMenu.Proveedores.setVisible(false);
-            VentanaFacturas();
-        } else {
-            VentanaContratacion();
         }
+        
+        if(!modEmpleado.getPermisos()[1]){
+            frameMenu.Adjudicaciones.setVisible(false);
+        }
+        
+        if(!modEmpleado.getPermisos()[2]){
+            frameMenu.Timbres.setVisible(false);
+        }
+        
+        if(!modEmpleado.getPermisos()[3]){
+            frameMenu.PorComprar.setVisible(false);
+        }
+        
+        if(!modEmpleado.getPermisos()[4]){
+            frameMenu.Facturas.setVisible(false);
+        }
+        
+        if(!modEmpleado.getPermisos()[5]){
+            frameMenu.Renta.setVisible(false);
+        }
+        
+        if(!modEmpleado.getPermisos()[6]){
+            frameMenu.Proveedores.setVisible(false);
+        }
+        
+        frameMenu.setVisible(true);
+        
+        VentanaContratacion();
     }
 
     /**
@@ -140,7 +159,7 @@ public class Ctrl_MenuPrincipal implements ActionListener {
             
             ResetearPanel();
             panel2.setSize(frameMenu.pnl_prin.getSize());
-            Ctrl_Adjudicaciones adjudicaciones = new Ctrl_Adjudicaciones(panel2, consultas);
+            Ctrl_Adjudicaciones adjudicaciones = new Ctrl_Adjudicaciones(panel2, consultas, modEmpleado);
 
             frameMenu.pnl_prin.add(panel2);
         }

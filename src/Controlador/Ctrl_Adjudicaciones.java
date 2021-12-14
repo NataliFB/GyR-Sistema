@@ -22,7 +22,8 @@ public class Ctrl_Adjudicaciones implements ActionListener {
 
     private Pnl_2 panelAdjudicaiones;
     private Consultas_Adjudicaciones consultas;
-
+    private Mod_Usuario us;
+    
     /**
      * Constructor de la clase Ctrl_IngresarContr. Le asgina valores a variables
      * privadas, inicializa objetos y le añade eventos a los botones
@@ -33,10 +34,11 @@ public class Ctrl_Adjudicaciones implements ActionListener {
      * @param consultas Recibe un objeto de tipo Consultas_Adjudicaciones para
      * realizar conexion con la base de datos
      */
-    public Ctrl_Adjudicaciones(Pnl_2 viewPnl_2, Consultas_Adjudicaciones consultas) {
+    public Ctrl_Adjudicaciones(Pnl_2 viewPnl_2, Consultas_Adjudicaciones consultas, Mod_Usuario us) {
         this.panelAdjudicaiones = viewPnl_2;
         this.consultas = consultas;
-
+        this.us = us;
+        
         Iniciar();
 
         panelAdjudicaiones.btnLimpiarAdjudicada.addActionListener(this);
@@ -224,7 +226,7 @@ public class Ctrl_Adjudicaciones implements ActionListener {
                 }
 
                 if (JOptionPane.showConfirmDialog(null, "¿Desea continuar con los datos ingresados?", "Confirmar", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-                    if (consultas.InsertarAdjudicacion(institucion, diasEntrega, modalidadDias, empresa, modalidadEntrega, descripcion, estado, observaciones, contratacion)) {
+                    if (consultas.InsertarAdjudicacion(institucion, diasEntrega, modalidadDias, empresa, modalidadEntrega, descripcion, estado, observaciones, contratacion, us)) {
                         JOptionPane.showMessageDialog(null, "Adjudicación insertada");
                         CargarTablas();
                         Limpiar();
@@ -359,7 +361,7 @@ public class Ctrl_Adjudicaciones implements ActionListener {
                 if (!(modalidad.isEmpty()) && !(lugarEntrega.isEmpty()) && !(panelAdjudicaiones.txtNumOrden.getText().trim().isEmpty())) {
                     numOrden = Integer.parseInt(panelAdjudicaiones.txtNumOrden.getText().trim());
                     fecha = fecha = sdf.format(panelAdjudicaiones.jdcFechaLimiteOrden.getDate());
-                    if (consultas.InsertarOrden(diasEntrega, vigenciaContrato, fecha, descripcion, numOrden, lugarEntrega, observaciones, modalidad, contratacion)) {
+                    if (consultas.InsertarOrden(diasEntrega, vigenciaContrato, fecha, descripcion, numOrden, lugarEntrega, observaciones, modalidad, contratacion, us)) {
                         JOptionPane.showMessageDialog(null, "Registros ingresado con exito!");
                         Limpiar();
                         CargarTablas();
@@ -473,7 +475,7 @@ public class Ctrl_Adjudicaciones implements ActionListener {
                         }
 
                         fecha = fecha = sdf.format(panelAdjudicaiones.jdcFechaEntregada.getDate());
-                        if (consultas.InsertarEntregada(diasEntrega, fecha, lugarEntrega, descripcion, empresa, observaciones, medioEntrega, contratacion)) {
+                        if (consultas.InsertarEntregada(diasEntrega, fecha, lugarEntrega, descripcion, empresa, observaciones, medioEntrega, contratacion, us)) {
                             JOptionPane.showMessageDialog(null, "Registro ingresado con exito!");
                             Limpiar();
                             CargarTablas();

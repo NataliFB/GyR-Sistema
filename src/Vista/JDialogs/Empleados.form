@@ -278,10 +278,11 @@
         <Component class="javax.swing.JComboBox" name="cbxRol">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
+              <StringArray count="4">
                 <StringItem index="0" value="Administrador"/>
                 <StringItem index="1" value="Nivel B&#xe1;sico"/>
                 <StringItem index="2" value="Contador"/>
+                <StringItem index="3" value="Personalizado"/>
               </StringArray>
             </Property>
           </Properties>
