@@ -21,464 +21,793 @@ public class Pnl_1 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        tbpContenedor = new javax.swing.JTabbedPane();
         pnlGarantias = new javax.swing.JPanel();
+        scpGarantias = new javax.swing.JScrollPane();
+        tblGarantias = new javax.swing.JTable();
+        PanelControlGarantias = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        txtBuscarGarantias = new javax.swing.JTextField();
+        cmbBusquedaGarantias = new javax.swing.JComboBox<>();
+        btnRefrescarGarantias = new javax.swing.JButton();
+        PanelBaseGarantias = new javax.swing.JPanel();
+        PanelOpcionesGarantias = new javax.swing.JPanel();
+        btnInsertarGarantias = new javax.swing.JButton();
+        btnModificarGarantias = new javax.swing.JButton();
+        btnLimpiarGarantias = new javax.swing.JButton();
+        btnEliminarGarantias = new javax.swing.JButton();
+        PanelObjetosGarantias = new javax.swing.JPanel();
         txtContratacionGarantias = new javax.swing.JTextField();
-        txtInstitucionGarantias = new javax.swing.JTextField();
+        txtEncargadoContratacionGarantias = new javax.swing.JTextField();
+        txtInstituciónGarantias = new javax.swing.JTextField();
         txtEstadoGarantias = new javax.swing.JTextField();
         txtTiempoGarantias = new javax.swing.JTextField();
         txtObjetoGarantias = new javax.swing.JTextField();
         txtMontoGarantias = new javax.swing.JTextField();
-        txtEntregaGarantias = new javax.swing.JTextField();
-        txtEnvioGarantias = new javax.swing.JTextField();
+        txtEncargadoEnvioGarantias = new javax.swing.JTextField();
+        scpObservacionesGarantias = new javax.swing.JScrollPane();
+        txaObservacionGarantias = new javax.swing.JTextArea();
         jdcPagoGarantias = new com.toedter.calendar.JDateChooser();
         jdcDevolucionGarantias = new com.toedter.calendar.JDateChooser();
-        btnIngresarGarantias = new javax.swing.JButton();
-        btnModificarGarantias = new javax.swing.JButton();
-        btnBuscarGarantias = new javax.swing.JButton();
-        btnLimpiarGarantias = new javax.swing.JButton();
-        btnBorrarGarantias = new javax.swing.JButton();
-        cmbOrdenarGarantias = new javax.swing.JComboBox<>();
-        spnObservacionesGarantias = new javax.swing.JScrollPane();
-        txaObservacionesGarantias = new javax.swing.JTextArea();
-        spnGarantias = new javax.swing.JScrollPane();
-        tblGarantias = new javax.swing.JTable();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
         cmbTipoGarantias = new javax.swing.JComboBox<>();
-        pnlTimbres = new javax.swing.JPanel();
-        txtContratacionTimbres = new javax.swing.JTextField();
-        txtMontoTimbres = new javax.swing.JTextField();
-        txtInstitucionTimbres = new javax.swing.JTextField();
-        txtEstadoTimbres = new javax.swing.JTextField();
-        txtProductoTimbres = new javax.swing.JTextField();
-        txtEncargadoTimbres = new javax.swing.JTextField();
-        txtEnvioTimbres = new javax.swing.JTextField();
-        spnObservaionesTimbres = new javax.swing.JScrollPane();
-        txaObservacionesTimbres = new javax.swing.JTextArea();
-        spnTimbres = new javax.swing.JScrollPane();
+        jLabel91 = new javax.swing.JLabel();
+        lblLugarr9 = new javax.swing.JLabel();
+        jLabel95 = new javax.swing.JLabel();
+        jLabel96 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel97 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        codGarantias = new javax.swing.JLabel();
+        pnlTimbre = new javax.swing.JPanel();
+        scpTimbres = new javax.swing.JScrollPane();
         tblTimbres = new javax.swing.JTable();
-        btnIngresarTimbres = new javax.swing.JButton();
+        PanelControlTimbres = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        txtBuscarTimbres = new javax.swing.JTextField();
+        cmbBusquedaTimbres = new javax.swing.JComboBox<>();
+        btnRefrescarTimbres = new javax.swing.JButton();
+        PanelBaseTimbres = new javax.swing.JPanel();
+        PanelOpcionesTimbres = new javax.swing.JPanel();
+        btnInsertarTimbres = new javax.swing.JButton();
         btnModificarTimbres = new javax.swing.JButton();
         btnLimpiarTimbres = new javax.swing.JButton();
-        btnBorrarTimbres = new javax.swing.JButton();
-        btnBuscarTimbres = new javax.swing.JButton();
-        cmbOrdenarTimbres = new javax.swing.JComboBox<>();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
+        btnEliminarTimbres = new javax.swing.JButton();
+        PanelObjetosTimbres = new javax.swing.JPanel();
+        txtContratacionTimbres = new javax.swing.JTextField();
+        txtEncargadoContratacionTimbres = new javax.swing.JTextField();
+        txtInstituciónTimbres = new javax.swing.JTextField();
+        txtEstadoTimbres = new javax.swing.JTextField();
+        txtDescripcionTimbres = new javax.swing.JTextField();
+        txtMontoTimbres = new javax.swing.JTextField();
+        txtEncargadoEnvioTimbres = new javax.swing.JTextField();
+        scpObservacionesTimbres = new javax.swing.JScrollPane();
+        txaObservacionTimbres = new javax.swing.JTextArea();
+        jLabel90 = new javax.swing.JLabel();
+        lblLugarr8 = new javax.swing.JLabel();
+        jLabel92 = new javax.swing.JLabel();
+        jLabel94 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel93 = new javax.swing.JLabel();
+        codTimbres = new javax.swing.JLabel();
         pnlMuestras = new javax.swing.JPanel();
-        txtContratacionMuestras = new javax.swing.JTextField();
-        txtObjetoMuestras = new javax.swing.JTextField();
-        txtInstitucionMuestras = new javax.swing.JTextField();
-        txtCantidadMuestras = new javax.swing.JTextField();
-        txtEncargadoMuestras = new javax.swing.JTextField();
-        txtEstadoMuestras = new javax.swing.JTextField();
-        jdcEntregaMuestras = new com.toedter.calendar.JDateChooser();
-        jdcRetiroMuestras = new com.toedter.calendar.JDateChooser();
-        spnObservacionesMuestras = new javax.swing.JScrollPane();
-        txaObservacionesMuestras = new javax.swing.JTextArea();
-        spnMuestras = new javax.swing.JScrollPane();
+        scpMuestras = new javax.swing.JScrollPane();
         tblMuestras = new javax.swing.JTable();
-        cmbOrdenMuestras = new javax.swing.JComboBox<>();
-        btnIngresarMuestras = new javax.swing.JButton();
+        PanelControlMuestras = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        txtBuscarMuestras = new javax.swing.JTextField();
+        cmbBusquedaMuestras = new javax.swing.JComboBox<>();
+        btnRefrescarMuestras = new javax.swing.JButton();
+        PanelBaseMuestras = new javax.swing.JPanel();
+        PanelOpcionesMuestras = new javax.swing.JPanel();
+        btnInsertarMuestras = new javax.swing.JButton();
         btnModificarMuestras = new javax.swing.JButton();
-        btnBuscarMuestras = new javax.swing.JButton();
         btnLimpiarMuestras = new javax.swing.JButton();
-        btnBorrarMuestras = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
+        btnEliminarMuestras = new javax.swing.JButton();
+        PanelObjetosMuestras = new javax.swing.JPanel();
+        txtContratacionMuestras = new javax.swing.JTextField();
+        txtEncargadoMuestras = new javax.swing.JTextField();
+        txtInstituciónMuestras = new javax.swing.JTextField();
+        txtEstadoMuestras = new javax.swing.JTextField();
+        txtObjetoMuestras = new javax.swing.JTextField();
+        jdcFechaEntregaMuestras = new com.toedter.calendar.JDateChooser();
+        jdcFechaRetiroMuestras = new com.toedter.calendar.JDateChooser();
+        scpObservacionesMuestras = new javax.swing.JScrollPane();
+        txaObservacionMuestras = new javax.swing.JTextArea();
+        spnCantidadMuestras = new javax.swing.JSpinner();
+        jLabel98 = new javax.swing.JLabel();
+        lblLugarr10 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
+        jLabel100 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        codMuestras = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(979, 618));
+        setPreferredSize(new java.awt.Dimension(1200, 700));
 
-        pnlGarantias.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnlGarantias.add(txtContratacionGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 250, -1));
-        pnlGarantias.add(txtInstitucionGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 250, -1));
-        pnlGarantias.add(txtEstadoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 250, -1));
-        pnlGarantias.add(txtTiempoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 250, -1));
-        pnlGarantias.add(txtObjetoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 60, 250, -1));
-        pnlGarantias.add(txtMontoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 250, -1));
-        pnlGarantias.add(txtEntregaGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 150, 250, -1));
-        pnlGarantias.add(txtEnvioGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 250, -1));
-        pnlGarantias.add(jdcPagoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 250, -1));
-        pnlGarantias.add(jdcDevolucionGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, 250, -1));
+        scpGarantias.setViewportView(tblGarantias);
 
-        btnIngresarGarantias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
-        btnIngresarGarantias.setText("Ingresar");
-        pnlGarantias.add(btnIngresarGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 336, -1, -1));
+        PanelControlGarantias.setBorder(javax.swing.BorderFactory.createTitledBorder("Control Tabla"));
+
+        jLabel17.setText("Buscar");
+
+        btnRefrescarGarantias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/refresh.png"))); // NOI18N
+        btnRefrescarGarantias.setText("Refrescar");
+
+        javax.swing.GroupLayout PanelControlGarantiasLayout = new javax.swing.GroupLayout(PanelControlGarantias);
+        PanelControlGarantias.setLayout(PanelControlGarantiasLayout);
+        PanelControlGarantiasLayout.setHorizontalGroup(
+            PanelControlGarantiasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelControlGarantiasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtBuscarGarantias, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cmbBusquedaGarantias, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRefrescarGarantias, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        PanelControlGarantiasLayout.setVerticalGroup(
+            PanelControlGarantiasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlGarantiasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelControlGarantiasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(txtBuscarGarantias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbBusquedaGarantias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRefrescarGarantias))
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+
+        PanelOpcionesGarantias.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Opciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
+
+        btnInsertarGarantias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
+        btnInsertarGarantias.setText("Agregar");
 
         btnModificarGarantias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
         btnModificarGarantias.setText("Modificar");
-        pnlGarantias.add(btnModificarGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 336, -1, -1));
-
-        btnBuscarGarantias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
-        btnBuscarGarantias.setText("Buscar");
-        pnlGarantias.add(btnBuscarGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 336, -1, -1));
 
         btnLimpiarGarantias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarGarantias.setText("Limpiar");
-        pnlGarantias.add(btnLimpiarGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(387, 337, -1, -1));
 
-        btnBorrarGarantias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
-        btnBorrarGarantias.setText("Borrar");
-        pnlGarantias.add(btnBorrarGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(508, 339, -1, -1));
+        btnEliminarGarantias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
+        btnEliminarGarantias.setText("Eliminar");
 
-        cmbOrdenarGarantias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Seleccione>", "Contratación", "Cumplimiento", "Monto", "Estado", "Producto", "Encargado" }));
-        pnlGarantias.add(cmbOrdenarGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(694, 342, 240, -1));
+        javax.swing.GroupLayout PanelOpcionesGarantiasLayout = new javax.swing.GroupLayout(PanelOpcionesGarantias);
+        PanelOpcionesGarantias.setLayout(PanelOpcionesGarantiasLayout);
+        PanelOpcionesGarantiasLayout.setHorizontalGroup(
+            PanelOpcionesGarantiasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesGarantiasLayout.createSequentialGroup()
+                .addGroup(PanelOpcionesGarantiasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelOpcionesGarantiasLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnEliminarGarantias, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesGarantiasLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnLimpiarGarantias, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesGarantiasLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnModificarGarantias, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesGarantiasLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(btnInsertarGarantias, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        PanelOpcionesGarantiasLayout.setVerticalGroup(
+            PanelOpcionesGarantiasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesGarantiasLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(btnInsertarGarantias)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnModificarGarantias)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnLimpiarGarantias)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnEliminarGarantias, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
 
-        txaObservacionesGarantias.setColumns(20);
-        txaObservacionesGarantias.setRows(5);
-        spnObservacionesGarantias.setViewportView(txaObservacionesGarantias);
+        PanelObjetosGarantias.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ingresar Garantía", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
+        PanelObjetosGarantias.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelObjetosGarantias.add(txtContratacionGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 35, 250, -1));
+        PanelObjetosGarantias.add(txtEncargadoContratacionGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, 252, -1));
+        PanelObjetosGarantias.add(txtInstituciónGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 250, -1));
+        PanelObjetosGarantias.add(txtEstadoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 215, 250, -1));
+        PanelObjetosGarantias.add(txtTiempoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 250, -1));
+        PanelObjetosGarantias.add(txtObjetoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 125, 250, -1));
+        PanelObjetosGarantias.add(txtMontoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 250, -1));
+        PanelObjetosGarantias.add(txtEncargadoEnvioGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 125, 252, -1));
 
-        pnlGarantias.add(spnObservacionesGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, 250, -1));
+        txaObservacionGarantias.setColumns(20);
+        txaObservacionGarantias.setRows(5);
+        scpObservacionesGarantias.setViewportView(txaObservacionGarantias);
 
-        tblGarantias.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+        PanelObjetosGarantias.add(scpObservacionesGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 246, 252, 70));
+        PanelObjetosGarantias.add(jdcPagoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 35, 250, -1));
+        PanelObjetosGarantias.add(jdcDevolucionGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 80, 250, -1));
 
-            },
-            new String [] {
-                "Número Contrato", "Institución", "Objeto", "Monto", "Fecha pago", "Fecha solicitud", "Estado"
-            }
-        ));
-        spnGarantias.setViewportView(tblGarantias);
+        cmbTipoGarantias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "De Cumplimiento", "De Participación" }));
+        PanelObjetosGarantias.add(cmbTipoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 210, 250, -1));
 
-        pnlGarantias.add(spnGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 391, 960, 190));
+        jLabel91.setText("Número de Contratación");
+        PanelObjetosGarantias.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 35, -1, -1));
 
-        jLabel32.setText("Número de Contratación");
-        pnlGarantias.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 23, -1, -1));
+        lblLugarr9.setText("Institución");
+        PanelObjetosGarantias.add(lblLugarr9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
 
-        jLabel33.setText("Institución");
-        pnlGarantias.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, -1, -1));
+        jLabel95.setText("Encargado Contratación");
+        PanelObjetosGarantias.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, -1, -1));
 
-        jLabel34.setText("Observación");
-        pnlGarantias.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+        jLabel96.setText("Observación");
+        PanelObjetosGarantias.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, -1, -1));
 
-        jLabel35.setText("Fecha de Pago");
-        pnlGarantias.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 107, -1, -1));
+        jLabel53.setText("Fecha de Pago");
+        PanelObjetosGarantias.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 35, -1, -1));
 
-        jLabel36.setText("Estado");
-        pnlGarantias.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 149, -1, -1));
+        jLabel54.setText("Tiempo");
+        PanelObjetosGarantias.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
 
-        jLabel37.setText("Tiempo");
-        pnlGarantias.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 191, -1, -1));
+        jLabel55.setText("Estado");
+        PanelObjetosGarantias.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 215, -1, -1));
 
-        jLabel38.setText("Fecha devolución");
-        pnlGarantias.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 23, -1, -1));
+        jLabel56.setText("Objeto");
+        PanelObjetosGarantias.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 125, -1, -1));
 
-        jLabel39.setText("Objeto");
-        pnlGarantias.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 65, -1, -1));
+        jLabel57.setText("Monto");
+        PanelObjetosGarantias.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
 
-        jLabel40.setText("Encargado Contratación");
-        pnlGarantias.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 149, -1, -1));
+        jLabel58.setText("Fecha devolución");
+        PanelObjetosGarantias.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, -1, -1));
 
-        jLabel41.setText("Monto");
-        pnlGarantias.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 107, -1, -1));
+        jLabel97.setText("Encargado de Envio");
+        PanelObjetosGarantias.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 125, -1, -1));
 
-        jLabel42.setText("Tipo de Garantía");
-        pnlGarantias.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 230, -1, -1));
+        jLabel59.setText("Tipo de Garantía");
+        PanelObjetosGarantias.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 215, -1, -1));
 
-        jLabel15.setText("Ordenar por:");
-        pnlGarantias.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(617, 345, -1, -1));
+        javax.swing.GroupLayout PanelBaseGarantiasLayout = new javax.swing.GroupLayout(PanelBaseGarantias);
+        PanelBaseGarantias.setLayout(PanelBaseGarantiasLayout);
+        PanelBaseGarantiasLayout.setHorizontalGroup(
+            PanelBaseGarantiasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBaseGarantiasLayout.createSequentialGroup()
+                .addComponent(PanelObjetosGarantias, javax.swing.GroupLayout.PREFERRED_SIZE, 846, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PanelOpcionesGarantias, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        PanelBaseGarantiasLayout.setVerticalGroup(
+            PanelBaseGarantiasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBaseGarantiasLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(PanelBaseGarantiasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(PanelOpcionesGarantias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelObjetosGarantias, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
-        jLabel43.setText("Encargo de envio");
-        pnlGarantias.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 191, -1, -1));
+        codGarantias.setText("NA");
 
-        cmbTipoGarantias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Seleccione>", "De Cumplimiento", "De Participación" }));
-        pnlGarantias.add(cmbTipoGarantias, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 230, 250, -1));
+        javax.swing.GroupLayout pnlGarantiasLayout = new javax.swing.GroupLayout(pnlGarantias);
+        pnlGarantias.setLayout(pnlGarantiasLayout);
+        pnlGarantiasLayout.setHorizontalGroup(
+            pnlGarantiasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlGarantiasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlGarantiasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlGarantiasLayout.createSequentialGroup()
+                        .addComponent(PanelControlGarantias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(codGarantias))
+                    .addComponent(scpGarantias, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PanelBaseGarantias, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
+        );
+        pnlGarantiasLayout.setVerticalGroup(
+            pnlGarantiasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlGarantiasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(PanelBaseGarantias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addGroup(pnlGarantiasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PanelControlGarantias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(codGarantias))
+                .addGap(12, 12, 12)
+                .addComponent(scpGarantias, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+                .addGap(15, 15, 15))
+        );
 
-        jTabbedPane1.addTab("Garantías", pnlGarantias);
+        tbpContenedor.addTab("Garantías", pnlGarantias);
 
-        pnlTimbres.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnlTimbres.add(txtContratacionTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 250, -1));
-        pnlTimbres.add(txtMontoTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 250, -1));
-        pnlTimbres.add(txtInstitucionTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 250, -1));
-        pnlTimbres.add(txtEstadoTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 250, -1));
-        pnlTimbres.add(txtProductoTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, 250, -1));
-        pnlTimbres.add(txtEncargadoTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 60, 250, -1));
-        pnlTimbres.add(txtEnvioTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 250, -1));
+        scpTimbres.setViewportView(tblTimbres);
 
-        txaObservacionesTimbres.setColumns(20);
-        txaObservacionesTimbres.setRows(5);
-        spnObservaionesTimbres.setViewportView(txaObservacionesTimbres);
+        PanelControlTimbres.setBorder(javax.swing.BorderFactory.createTitledBorder("Control Tabla"));
 
-        pnlTimbres.add(spnObservaionesTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 250, -1));
+        jLabel16.setText("Buscar");
 
-        tblTimbres.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+        btnRefrescarTimbres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/refresh.png"))); // NOI18N
+        btnRefrescarTimbres.setText("Refrescar");
 
-            },
-            new String [] {
-                "Numero Contrato", "Institución", "Producto", "Monto", "Estado", "Enc. de Contratacion", "Enc. de Envio", "Observaciones"
-            }
-        ));
-        spnTimbres.setViewportView(tblTimbres);
+        javax.swing.GroupLayout PanelControlTimbresLayout = new javax.swing.GroupLayout(PanelControlTimbres);
+        PanelControlTimbres.setLayout(PanelControlTimbresLayout);
+        PanelControlTimbresLayout.setHorizontalGroup(
+            PanelControlTimbresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelControlTimbresLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtBuscarTimbres, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cmbBusquedaTimbres, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRefrescarTimbres, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        PanelControlTimbresLayout.setVerticalGroup(
+            PanelControlTimbresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlTimbresLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelControlTimbresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(txtBuscarTimbres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbBusquedaTimbres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRefrescarTimbres))
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
 
-        pnlTimbres.add(spnTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 354, 960, 235));
+        PanelOpcionesTimbres.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Opciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
 
-        btnIngresarTimbres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
-        btnIngresarTimbres.setText("Ingresar");
-        pnlTimbres.add(btnIngresarTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 299, -1, -1));
+        btnInsertarTimbres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
+        btnInsertarTimbres.setText("Agregar");
 
         btnModificarTimbres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
         btnModificarTimbres.setText("Modificar");
-        pnlTimbres.add(btnModificarTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 299, -1, -1));
 
         btnLimpiarTimbres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarTimbres.setText("Limpiar");
-        pnlTimbres.add(btnLimpiarTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(401, 300, -1, -1));
 
-        btnBorrarTimbres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
-        btnBorrarTimbres.setText("Borrar");
-        pnlTimbres.add(btnBorrarTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(522, 302, -1, -1));
+        btnEliminarTimbres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
+        btnEliminarTimbres.setText("Eliminar");
 
-        btnBuscarTimbres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
-        btnBuscarTimbres.setText("Buscar");
-        pnlTimbres.add(btnBuscarTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 299, -1, -1));
+        javax.swing.GroupLayout PanelOpcionesTimbresLayout = new javax.swing.GroupLayout(PanelOpcionesTimbres);
+        PanelOpcionesTimbres.setLayout(PanelOpcionesTimbresLayout);
+        PanelOpcionesTimbresLayout.setHorizontalGroup(
+            PanelOpcionesTimbresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesTimbresLayout.createSequentialGroup()
+                .addGroup(PanelOpcionesTimbresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelOpcionesTimbresLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnEliminarTimbres, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesTimbresLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnLimpiarTimbres, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesTimbresLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnModificarTimbres, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesTimbresLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(btnInsertarTimbres, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        PanelOpcionesTimbresLayout.setVerticalGroup(
+            PanelOpcionesTimbresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesTimbresLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(btnInsertarTimbres)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnModificarTimbres)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnLimpiarTimbres)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnEliminarTimbres, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
 
-        cmbOrdenarTimbres.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Contratación", "Monto", "Estado", "Producto", "Encargado" }));
-        pnlTimbres.add(cmbOrdenarTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 300, 182, -1));
+        PanelObjetosTimbres.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ingresar Timbre", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
+        PanelObjetosTimbres.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelObjetosTimbres.add(txtContratacionTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 35, 250, -1));
+        PanelObjetosTimbres.add(txtEncargadoContratacionTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 80, 252, -1));
+        PanelObjetosTimbres.add(txtInstituciónTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 250, -1));
+        PanelObjetosTimbres.add(txtEstadoTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 215, 250, -1));
+        PanelObjetosTimbres.add(txtDescripcionTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 125, 250, -1));
+        PanelObjetosTimbres.add(txtMontoTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 250, -1));
+        PanelObjetosTimbres.add(txtEncargadoEnvioTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 35, 252, -1));
 
-        jLabel1.setText("Número de Contratación");
-        pnlTimbres.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 23, -1, -1));
+        txaObservacionTimbres.setColumns(20);
+        txaObservacionTimbres.setRows(5);
+        scpObservacionesTimbres.setViewportView(txaObservacionTimbres);
 
-        jLabel2.setText("Descripción/Producto");
-        pnlTimbres.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 23, -1, -1));
+        PanelObjetosTimbres.add(scpObservacionesTimbres, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 125, 252, -1));
 
-        jLabel3.setText("Monto");
-        pnlTimbres.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, -1, -1));
+        jLabel90.setText("Número de Contratación");
+        PanelObjetosTimbres.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 35, -1, -1));
 
-        jLabel4.setText("Encargado contratación");
-        pnlTimbres.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 65, -1, -1));
+        lblLugarr8.setText("Institución");
+        PanelObjetosTimbres.add(lblLugarr8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
 
-        jLabel5.setText("Estado");
-        pnlTimbres.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 151, -1, -1));
+        jLabel92.setText("Encargado Contratación");
+        PanelObjetosTimbres.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, -1, -1));
 
-        jLabel6.setText("Ordenar por:");
-        pnlTimbres.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(631, 308, -1, -1));
+        jLabel94.setText("Observación");
+        PanelObjetosTimbres.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 125, -1, -1));
 
-        jLabel25.setText("Institución");
-        pnlTimbres.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 107, -1, -1));
+        jLabel48.setText("Estado");
+        PanelObjetosTimbres.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 215, -1, -1));
 
-        jLabel27.setText("Encargado de envio");
-        pnlTimbres.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 107, -1, -1));
+        jLabel49.setText("Descripción");
+        PanelObjetosTimbres.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 125, -1, -1));
 
-        jLabel44.setText("Observación");
-        pnlTimbres.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 193, -1, -1));
+        jLabel50.setText("Monto");
+        PanelObjetosTimbres.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
 
-        jTabbedPane1.addTab("Timbres", pnlTimbres);
+        jLabel93.setText("Encargado de Envio");
+        PanelObjetosTimbres.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 35, -1, -1));
 
-        pnlMuestras.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnlMuestras.add(txtContratacionMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 250, -1));
-        pnlMuestras.add(txtObjetoMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 250, -1));
-        pnlMuestras.add(txtInstitucionMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 250, -1));
-        pnlMuestras.add(txtCantidadMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, 250, -1));
-        pnlMuestras.add(txtEncargadoMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 60, 250, -1));
-        pnlMuestras.add(txtEstadoMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 250, -1));
-        pnlMuestras.add(jdcEntregaMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 250, -1));
-        pnlMuestras.add(jdcRetiroMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 100, 250, -1));
+        javax.swing.GroupLayout PanelBaseTimbresLayout = new javax.swing.GroupLayout(PanelBaseTimbres);
+        PanelBaseTimbres.setLayout(PanelBaseTimbresLayout);
+        PanelBaseTimbresLayout.setHorizontalGroup(
+            PanelBaseTimbresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBaseTimbresLayout.createSequentialGroup()
+                .addComponent(PanelObjetosTimbres, javax.swing.GroupLayout.PREFERRED_SIZE, 846, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PanelOpcionesTimbres, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        PanelBaseTimbresLayout.setVerticalGroup(
+            PanelBaseTimbresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBaseTimbresLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(PanelBaseTimbresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(PanelOpcionesTimbres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelObjetosTimbres, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
-        txaObservacionesMuestras.setColumns(20);
-        txaObservacionesMuestras.setRows(5);
-        spnObservacionesMuestras.setViewportView(txaObservacionesMuestras);
+        codTimbres.setText("NA");
 
-        pnlMuestras.add(spnObservacionesMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 250, -1));
+        javax.swing.GroupLayout pnlTimbreLayout = new javax.swing.GroupLayout(pnlTimbre);
+        pnlTimbre.setLayout(pnlTimbreLayout);
+        pnlTimbreLayout.setHorizontalGroup(
+            pnlTimbreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTimbreLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlTimbreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlTimbreLayout.createSequentialGroup()
+                        .addComponent(PanelControlTimbres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(codTimbres))
+                    .addComponent(scpTimbres, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PanelBaseTimbres, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
+        );
+        pnlTimbreLayout.setVerticalGroup(
+            pnlTimbreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTimbreLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(PanelBaseTimbres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addGroup(pnlTimbreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PanelControlTimbres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(codTimbres))
+                .addGap(12, 12, 12)
+                .addComponent(scpTimbres, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+                .addGap(15, 15, 15))
+        );
 
-        tblMuestras.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+        tbpContenedor.addTab("Timbres", pnlTimbre);
 
-            },
-            new String [] {
-                "Número Contrato", "Objeto", "Cantidad", "Fecha Entrega", "Fecha Retiro", "Estado", "Descripción"
-            }
-        ));
-        spnMuestras.setViewportView(tblMuestras);
+        scpMuestras.setViewportView(tblMuestras);
 
-        pnlMuestras.add(spnMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 346, 970, 243));
+        PanelControlMuestras.setBorder(javax.swing.BorderFactory.createTitledBorder("Control Tabla"));
 
-        cmbOrdenMuestras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Contratación", "Objeto", "Fecha entrega", "Fecha retiro", "Estado" }));
-        pnlMuestras.add(cmbOrdenMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, -1, -1));
+        jLabel18.setText("Buscar");
 
-        btnIngresarMuestras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
-        btnIngresarMuestras.setText("Ingresar");
-        pnlMuestras.add(btnIngresarMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 291, -1, -1));
+        btnRefrescarMuestras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/refresh.png"))); // NOI18N
+        btnRefrescarMuestras.setText("Refrescar");
+
+        javax.swing.GroupLayout PanelControlMuestrasLayout = new javax.swing.GroupLayout(PanelControlMuestras);
+        PanelControlMuestras.setLayout(PanelControlMuestrasLayout);
+        PanelControlMuestrasLayout.setHorizontalGroup(
+            PanelControlMuestrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelControlMuestrasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtBuscarMuestras, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cmbBusquedaMuestras, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRefrescarMuestras, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        PanelControlMuestrasLayout.setVerticalGroup(
+            PanelControlMuestrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlMuestrasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelControlMuestrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(txtBuscarMuestras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbBusquedaMuestras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRefrescarMuestras))
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+
+        PanelOpcionesMuestras.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Opciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
+
+        btnInsertarMuestras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
+        btnInsertarMuestras.setText("Agregar");
 
         btnModificarMuestras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
         btnModificarMuestras.setText("Modificar");
-        pnlMuestras.add(btnModificarMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(131, 291, -1, -1));
-
-        btnBuscarMuestras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
-        btnBuscarMuestras.setText("Buscar");
-        pnlMuestras.add(btnBuscarMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 291, -1, -1));
 
         btnLimpiarMuestras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
         btnLimpiarMuestras.setText("Limpiar");
-        pnlMuestras.add(btnLimpiarMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(383, 292, -1, -1));
 
-        btnBorrarMuestras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
-        btnBorrarMuestras.setText("Borrar");
-        pnlMuestras.add(btnBorrarMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 294, -1, -1));
+        btnEliminarMuestras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
+        btnEliminarMuestras.setText("Eliminar");
 
-        jLabel7.setText("Número de Contratación");
-        pnlMuestras.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 23, -1, -1));
+        javax.swing.GroupLayout PanelOpcionesMuestrasLayout = new javax.swing.GroupLayout(PanelOpcionesMuestras);
+        PanelOpcionesMuestras.setLayout(PanelOpcionesMuestrasLayout);
+        PanelOpcionesMuestrasLayout.setHorizontalGroup(
+            PanelOpcionesMuestrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesMuestrasLayout.createSequentialGroup()
+                .addGroup(PanelOpcionesMuestrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelOpcionesMuestrasLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnEliminarMuestras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesMuestrasLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnLimpiarMuestras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesMuestrasLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnModificarMuestras, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesMuestrasLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(btnInsertarMuestras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        PanelOpcionesMuestrasLayout.setVerticalGroup(
+            PanelOpcionesMuestrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesMuestrasLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(btnInsertarMuestras)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnModificarMuestras)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnLimpiarMuestras)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnEliminarMuestras, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
 
-        jLabel8.setText("Objeto");
-        pnlMuestras.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 65, -1, -1));
+        PanelObjetosMuestras.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ingresar Muestra", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
+        PanelObjetosMuestras.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelObjetosMuestras.add(txtContratacionMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 35, 250, -1));
+        PanelObjetosMuestras.add(txtEncargadoMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 125, 252, -1));
+        PanelObjetosMuestras.add(txtInstituciónMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 250, -1));
+        PanelObjetosMuestras.add(txtEstadoMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 215, 250, -1));
+        PanelObjetosMuestras.add(txtObjetoMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 125, 250, -1));
+        PanelObjetosMuestras.add(jdcFechaEntregaMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 35, 250, -1));
+        PanelObjetosMuestras.add(jdcFechaRetiroMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 80, 250, -1));
 
-        jLabel9.setText("Encargado");
-        pnlMuestras.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 65, -1, -1));
+        txaObservacionMuestras.setColumns(20);
+        txaObservacionMuestras.setRows(5);
+        scpObservacionesMuestras.setViewportView(txaObservacionMuestras);
 
-        jLabel10.setText("Cantidad");
-        pnlMuestras.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 23, -1, -1));
+        PanelObjetosMuestras.add(scpObservacionesMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, 252, -1));
 
-        jLabel11.setText("Fecha entrega");
-        pnlMuestras.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 146, -1, -1));
+        spnCantidadMuestras.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        PanelObjetosMuestras.add(spnCantidadMuestras, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 250, -1));
 
-        jLabel12.setText("Fecha retiro");
-        pnlMuestras.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 107, -1, -1));
+        jLabel98.setText("Número de Contratación");
+        PanelObjetosMuestras.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 35, -1, -1));
 
-        jLabel13.setText("Estado");
-        pnlMuestras.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 144, -1, -1));
+        lblLugarr10.setText("Institución");
+        PanelObjetosMuestras.add(lblLugarr10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
 
-        jLabel14.setText("Ordenar por");
-        pnlMuestras.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(613, 300, -1, -1));
+        jLabel99.setText("Encargado");
+        PanelObjetosMuestras.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 125, -1, -1));
 
-        jLabel23.setText("Institución");
-        pnlMuestras.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 104, -1, -1));
+        jLabel100.setText("Observación");
+        PanelObjetosMuestras.add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, -1, -1));
 
-        jLabel45.setText("Observación");
-        pnlMuestras.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 185, -1, -1));
+        jLabel60.setText("Fecha de Entrega");
+        PanelObjetosMuestras.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 35, -1, -1));
 
-        jTabbedPane1.addTab("Muestras", pnlMuestras);
+        jLabel61.setText("Cantidad");
+        PanelObjetosMuestras.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
+
+        jLabel62.setText("Estado");
+        PanelObjetosMuestras.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 215, -1, -1));
+
+        jLabel63.setText("Objeto");
+        PanelObjetosMuestras.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 125, -1, -1));
+
+        jLabel65.setText("Fecha de Retiro");
+        PanelObjetosMuestras.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, -1, -1));
+
+        javax.swing.GroupLayout PanelBaseMuestrasLayout = new javax.swing.GroupLayout(PanelBaseMuestras);
+        PanelBaseMuestras.setLayout(PanelBaseMuestrasLayout);
+        PanelBaseMuestrasLayout.setHorizontalGroup(
+            PanelBaseMuestrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBaseMuestrasLayout.createSequentialGroup()
+                .addComponent(PanelObjetosMuestras, javax.swing.GroupLayout.PREFERRED_SIZE, 846, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PanelOpcionesMuestras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        PanelBaseMuestrasLayout.setVerticalGroup(
+            PanelBaseMuestrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBaseMuestrasLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(PanelBaseMuestrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(PanelOpcionesMuestras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelObjetosMuestras, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        codMuestras.setText("NA");
+
+        javax.swing.GroupLayout pnlMuestrasLayout = new javax.swing.GroupLayout(pnlMuestras);
+        pnlMuestras.setLayout(pnlMuestrasLayout);
+        pnlMuestrasLayout.setHorizontalGroup(
+            pnlMuestrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlMuestrasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlMuestrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlMuestrasLayout.createSequentialGroup()
+                        .addComponent(PanelControlMuestras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(codMuestras))
+                    .addComponent(scpMuestras, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PanelBaseMuestras, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
+        );
+        pnlMuestrasLayout.setVerticalGroup(
+            pnlMuestrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlMuestrasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(PanelBaseMuestras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addGroup(pnlMuestrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PanelControlMuestras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(codMuestras))
+                .addGap(12, 12, 12)
+                .addComponent(scpMuestras, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+                .addGap(15, 15, 15))
+        );
+
+        tbpContenedor.addTab("Muestras", pnlMuestras);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 979, Short.MAX_VALUE)
+            .addComponent(tbpContenedor)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(tbpContenedor)
         );
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnBorrarGarantias;
-    public javax.swing.JButton btnBorrarMuestras;
-    public javax.swing.JButton btnBorrarTimbres;
-    public javax.swing.JButton btnBuscarGarantias;
-    public javax.swing.JButton btnBuscarMuestras;
-    public javax.swing.JButton btnBuscarTimbres;
-    public javax.swing.JButton btnIngresarGarantias;
-    public javax.swing.JButton btnIngresarMuestras;
-    public javax.swing.JButton btnIngresarTimbres;
+    private javax.swing.JPanel PanelBaseGarantias;
+    private javax.swing.JPanel PanelBaseMuestras;
+    private javax.swing.JPanel PanelBaseTimbres;
+    private javax.swing.JPanel PanelControlGarantias;
+    private javax.swing.JPanel PanelControlMuestras;
+    private javax.swing.JPanel PanelControlTimbres;
+    private javax.swing.JPanel PanelObjetosGarantias;
+    private javax.swing.JPanel PanelObjetosMuestras;
+    private javax.swing.JPanel PanelObjetosTimbres;
+    private javax.swing.JPanel PanelOpcionesGarantias;
+    private javax.swing.JPanel PanelOpcionesMuestras;
+    private javax.swing.JPanel PanelOpcionesTimbres;
+    public javax.swing.JButton btnEliminarGarantias;
+    public javax.swing.JButton btnEliminarMuestras;
+    public javax.swing.JButton btnEliminarTimbres;
+    public javax.swing.JButton btnInsertarGarantias;
+    public javax.swing.JButton btnInsertarMuestras;
+    public javax.swing.JButton btnInsertarTimbres;
     public javax.swing.JButton btnLimpiarGarantias;
     public javax.swing.JButton btnLimpiarMuestras;
     public javax.swing.JButton btnLimpiarTimbres;
     public javax.swing.JButton btnModificarGarantias;
     public javax.swing.JButton btnModificarMuestras;
     public javax.swing.JButton btnModificarTimbres;
-    public javax.swing.JComboBox<String> cmbOrdenMuestras;
-    public javax.swing.JComboBox<String> cmbOrdenarGarantias;
-    public javax.swing.JComboBox<String> cmbOrdenarTimbres;
+    public javax.swing.JButton btnRefrescarGarantias;
+    public javax.swing.JButton btnRefrescarMuestras;
+    public javax.swing.JButton btnRefrescarTimbres;
+    public javax.swing.JComboBox<String> cmbBusquedaGarantias;
+    public javax.swing.JComboBox<String> cmbBusquedaMuestras;
+    public javax.swing.JComboBox<String> cmbBusquedaTimbres;
     public javax.swing.JComboBox<String> cmbTipoGarantias;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    public javax.swing.JTabbedPane jTabbedPane1;
+    public javax.swing.JLabel codGarantias;
+    public javax.swing.JLabel codMuestras;
+    public javax.swing.JLabel codTimbres;
+    private javax.swing.JLabel jLabel100;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel90;
+    private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
     public com.toedter.calendar.JDateChooser jdcDevolucionGarantias;
-    public com.toedter.calendar.JDateChooser jdcEntregaMuestras;
+    public com.toedter.calendar.JDateChooser jdcFechaEntregaMuestras;
+    public com.toedter.calendar.JDateChooser jdcFechaRetiroMuestras;
     public com.toedter.calendar.JDateChooser jdcPagoGarantias;
-    public com.toedter.calendar.JDateChooser jdcRetiroMuestras;
-    public javax.swing.JPanel pnlGarantias;
-    public javax.swing.JPanel pnlMuestras;
-    public javax.swing.JPanel pnlTimbres;
-    public javax.swing.JScrollPane spnGarantias;
-    private javax.swing.JScrollPane spnMuestras;
-    private javax.swing.JScrollPane spnObservacionesGarantias;
-    private javax.swing.JScrollPane spnObservacionesMuestras;
-    private javax.swing.JScrollPane spnObservaionesTimbres;
-    private javax.swing.JScrollPane spnTimbres;
-    private javax.swing.JTable tblGarantias;
+    private javax.swing.JLabel lblLugarr10;
+    private javax.swing.JLabel lblLugarr8;
+    private javax.swing.JLabel lblLugarr9;
+    private javax.swing.JPanel pnlGarantias;
+    private javax.swing.JPanel pnlMuestras;
+    private javax.swing.JPanel pnlTimbre;
+    public javax.swing.JScrollPane scpGarantias;
+    public javax.swing.JScrollPane scpMuestras;
+    private javax.swing.JScrollPane scpObservacionesGarantias;
+    private javax.swing.JScrollPane scpObservacionesMuestras;
+    private javax.swing.JScrollPane scpObservacionesTimbres;
+    public javax.swing.JScrollPane scpTimbres;
+    public javax.swing.JSpinner spnCantidadMuestras;
+    public javax.swing.JTable tblGarantias;
     public javax.swing.JTable tblMuestras;
     public javax.swing.JTable tblTimbres;
-    public javax.swing.JTextArea txaObservacionesGarantias;
-    public javax.swing.JTextArea txaObservacionesMuestras;
-    public javax.swing.JTextArea txaObservacionesTimbres;
-    public javax.swing.JTextField txtCantidadMuestras;
+    public javax.swing.JTabbedPane tbpContenedor;
+    public javax.swing.JTextArea txaObservacionGarantias;
+    public javax.swing.JTextArea txaObservacionMuestras;
+    public javax.swing.JTextArea txaObservacionTimbres;
+    public javax.swing.JTextField txtBuscarGarantias;
+    public javax.swing.JTextField txtBuscarMuestras;
+    public javax.swing.JTextField txtBuscarTimbres;
     public javax.swing.JTextField txtContratacionGarantias;
     public javax.swing.JTextField txtContratacionMuestras;
     public javax.swing.JTextField txtContratacionTimbres;
+    public javax.swing.JTextField txtDescripcionTimbres;
+    public javax.swing.JTextField txtEncargadoContratacionGarantias;
+    public javax.swing.JTextField txtEncargadoContratacionTimbres;
+    public javax.swing.JTextField txtEncargadoEnvioGarantias;
+    public javax.swing.JTextField txtEncargadoEnvioTimbres;
     public javax.swing.JTextField txtEncargadoMuestras;
-    public javax.swing.JTextField txtEncargadoTimbres;
-    public javax.swing.JTextField txtEntregaGarantias;
-    public javax.swing.JTextField txtEnvioGarantias;
-    public javax.swing.JTextField txtEnvioTimbres;
     public javax.swing.JTextField txtEstadoGarantias;
     public javax.swing.JTextField txtEstadoMuestras;
     public javax.swing.JTextField txtEstadoTimbres;
-    public javax.swing.JTextField txtInstitucionGarantias;
-    public javax.swing.JTextField txtInstitucionMuestras;
-    public javax.swing.JTextField txtInstitucionTimbres;
+    public javax.swing.JTextField txtInstituciónGarantias;
+    public javax.swing.JTextField txtInstituciónMuestras;
+    public javax.swing.JTextField txtInstituciónTimbres;
     public javax.swing.JTextField txtMontoGarantias;
     public javax.swing.JTextField txtMontoTimbres;
     public javax.swing.JTextField txtObjetoGarantias;
     public javax.swing.JTextField txtObjetoMuestras;
-    public javax.swing.JTextField txtProductoTimbres;
     public javax.swing.JTextField txtTiempoGarantias;
     // End of variables declaration//GEN-END:variables
 }

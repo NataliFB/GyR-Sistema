@@ -239,6 +239,7 @@ public class Ctrl_IngresarContr implements ActionListener {
                     } else {
                         pnlC.btgEstado.clearSelection();
                     }
+                    pnlC.txaObservaciones.setText(String.valueOf(datos[5]));
                 }
             }
         });
@@ -262,6 +263,7 @@ public class Ctrl_IngresarContr implements ActionListener {
                     } else {
                         pnlC.btgEstado.clearSelection();
                     }
+                    pnlC.txaObservaciones.setText(String.valueOf(datos[5]));
                 }
             }
         });
@@ -279,7 +281,7 @@ public class Ctrl_IngresarContr implements ActionListener {
             } else {
                 estado = "Descartada";
             }
-            if (consulta.IngresarEstado(pnlC.txtContratacion.getText(), estado)) {
+            if (consulta.ModificarContratacion(pnlC.txtContratacion.getText(), estado, pnlC.txaObservaciones.getText())) {
                 JOptionPane.showMessageDialog(null, "Se actualizo con exito la contratación!");
                 CargarTablaIncompletas();
                 CargarTablasCompletas();

@@ -6,8 +6,11 @@ GO
 CREATE PROCEDURE insertar_contratacion 
 	@cod_contratacion VARCHAR(50), @institucion VARCHAR(100), @descripcion VARCHAR(200), 
 	@fecha_publicacion SMALLDATETIME, @fecha_apertura SMALLDATETIME
-AS BEGIN
-	INSERT INTO contrataciones VALUES (@cod_contratacion, @institucion, @descripcion, @fecha_publicacion, @fecha_apertura)
+AS 
+	DECLARE @observaciones VARCHAR(100)
+	SET @observaciones = 'Ninguna observación'
+BEGIN
+	INSERT INTO contrataciones VALUES (@cod_contratacion, @institucion, @descripcion, @fecha_publicacion, @fecha_apertura, @observaciones)
 END
 
 ---------------------------------------------------------------------------------------------------------------------------------
@@ -25,12 +28,12 @@ CREATE PROCEDURE mostrar_contrataciones_completas
 AS BEGIN 
 	SELECT contrataciones.cod_Contratacion AS 'Contratación',institucion AS 'Institución',descripcion AS 'Descripcion',CONVERT(varchar,fecha_publicacion,100) AS 'Fecha Publicación', 
 	CONVERT(varchar,fecha_apertura,100) AS 'Fecha Apertura', estado AS 'Estado',
-	CONCAT(nombre_Empleado, ' ', apellido1_Empleado) AS 'Encargado', empleado.cod_color AS 'Color del empleado'
+	CONCAT(nombre_Empleado, ' ', apellido1_Empleado) AS 'Encargado', observaciones AS 'Observaciones', empleado.cod_color AS 'Color del empleado'
 	FROM (((contrataciones 
 	INNER JOIN responsable ON responsable.cod_Contratacion = contrataciones.cod_Contratacion) 
 	INNER JOIN estado_contratacion ON estado_contratacion.cod_Contratacion = contrataciones.cod_Contratacion)
 	INNER JOIN empleado ON empleado.cod_Empleado = responsable.cod_Empleado) ORDER BY CONVERT(varchar,fecha_apertura,100)
-END
+END 
 
 ---------------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para mostrar las contrataciones ingresadas
@@ -39,7 +42,7 @@ CREATE PROCEDURE mostrar_contrataciones
 AS BEGIN
 	SELECT C.cod_contratacion AS 'Contratacion', institucion AS 'Institución', descripcion AS 'Descripción', 
 	CONVERT(varchar,fecha_publicacion,100) AS 'Fecha Publicación', 
-	CONVERT(varchar,fecha_apertura,100) AS 'Fecha Apertura', estado AS 'Estado' 
+	CONVERT(varchar,fecha_apertura,100) AS 'Fecha Apertura', estado AS 'Estado', C.observaciones AS 'Observaciones'
 	FROM contrataciones C	
 	INNER JOIN estado_contratacion EC ON C.cod_contratacion = EC.cod_contratacion
 	ORDER BY CONVERT(varchar,fecha_apertura,100)

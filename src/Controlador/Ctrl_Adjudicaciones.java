@@ -3,31 +3,14 @@ package Controlador;
 import Consultas.Consultas_Adjudicaciones;
 import Modelo.Mod_Usuario;
 import Vista.Paneles.Pnl_2;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.text.DateFormat;
-import java.text.ParseException;
+import java.awt.event.*;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.ButtonGroup;
-import javax.swing.ButtonModel;
-import javax.swing.JComboBox;
-import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.RowFilter;
-import javax.swing.event.CaretEvent;
-import javax.swing.event.CaretListener;
-import javax.swing.table.TableModel;
-import javax.swing.table.TableRowSorter;
+import javax.swing.*;
+import javax.swing.event.*;
+import javax.swing.table.*;
 
 /**
  * Clase para las acciones que ejecutan los botones en la ventana de
@@ -748,6 +731,10 @@ public class Ctrl_Adjudicaciones implements ActionListener {
 
                 if (e.getSource() == panelAdjudicaiones.tblOrden) {
                     Limpiar();
+                    LocalDate ld;
+                    Date fecha;
+                    ZoneId defaultZoneId = ZoneId.systemDefault();
+                    
                     int cod = Integer.parseInt(String.valueOf(panelAdjudicaiones.tblOrden.getModel().
                             getValueAt(panelAdjudicaiones.tblOrden.getSelectedRow(), 0)));
                     panelAdjudicaiones.codOrden.setText(String.valueOf(cod));
@@ -757,6 +744,10 @@ public class Ctrl_Adjudicaciones implements ActionListener {
                     panelAdjudicaiones.spnDiasEntregaOrden.getModel().setValue(datos[1]);
                     panelAdjudicaiones.spnVigenciaContratoOrden.getModel().setValue(datos[2]);
 
+                    ld = LocalDate.parse(String.valueOf(datos[3]));
+                    fecha = Date.from(ld.atStartOfDay(defaultZoneId).toInstant());
+                    panelAdjudicaiones.jdcFechaLimiteOrden.setDate(fecha);
+                    
                     panelAdjudicaiones.txtDescripcionOrden.setText(String.valueOf(datos[4]));
                     panelAdjudicaiones.txtNumOrden.setText(String.valueOf(datos[5]));
                     panelAdjudicaiones.txtLugarEntregaOrden.setText(String.valueOf(datos[6]));
@@ -768,6 +759,10 @@ public class Ctrl_Adjudicaciones implements ActionListener {
 
                 if (e.getSource() == panelAdjudicaiones.tblEntregada) {
                     Limpiar();
+                    LocalDate ld;
+                    Date fecha;
+                    ZoneId defaultZoneId = ZoneId.systemDefault();
+                    
                     int cod = Integer.parseInt(String.valueOf(panelAdjudicaiones.tblEntregada.getModel().
                             getValueAt(panelAdjudicaiones.tblEntregada.getSelectedRow(), 0)));
                     panelAdjudicaiones.codEntregada.setText(String.valueOf(cod));
@@ -776,6 +771,10 @@ public class Ctrl_Adjudicaciones implements ActionListener {
                     panelAdjudicaiones.txtContratacionEntregada.setText(String.valueOf(datos[0]));
                     panelAdjudicaiones.spnDiasEntregaEntregada.getModel().setValue(datos[1]);
 
+                    ld = LocalDate.parse(String.valueOf(datos[2]));
+                    fecha = Date.from(ld.atStartOfDay(defaultZoneId).toInstant());
+                    panelAdjudicaiones.jdcFechaEntregada.setDate(fecha);
+                    
                     panelAdjudicaiones.txtLugarEntregada.setText(String.valueOf(datos[3]));
                     panelAdjudicaiones.txtDescripcionEntregada.setText(String.valueOf(datos[4]));
 

@@ -79,7 +79,7 @@ public class Consultas_Contrataciones extends Conexion_A {
      * true: se insertó<br>
      * false: no se insertó
      */
-    public boolean IngresarEstado(String contratacion, String estado) {
+    public boolean ModificarContratacion(String contratacion, String estado, String observaciones) {
         PreparedStatement ps;
 
         try {
@@ -88,6 +88,11 @@ public class Consultas_Contrataciones extends Conexion_A {
             ps.setString(2, contratacion);
             ps.execute();
 
+            ps = getConnection().prepareStatement("UPDATE contrataciones SET observaciones = ? WHERE cod_contratacion = ?");
+            ps.setString(1, observaciones);
+            ps.setString(2, contratacion);
+            ps.execute();
+            
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             return false;
@@ -238,7 +243,7 @@ public class Consultas_Contrataciones extends Conexion_A {
 
         try {
             ps = getConnection().prepareStatement("SELECT institucion, descripcion, CONVERT(varchar,fecha_publicacion,100),"
-                    + "CONVERT(varchar,fecha_apertura,100), estado FROM contrataciones INNER JOIN estado_contratacion ON "
+                    + "CONVERT(varchar,fecha_apertura,100), estado, observaciones FROM contrataciones INNER JOIN estado_contratacion ON "
                     + "estado_contratacion.cod_contratacion = contrataciones.cod_contratacion "
                     + "WHERE contrataciones.cod_contratacion = ?");
             ps.setString(1, contratacion);
@@ -342,29 +347,6 @@ public class Consultas_Contrataciones extends Conexion_A {
         CallableStatement cs;
         PreparedStatement ps;
         ResultSet rs;
-
-        try {
-            ps = getConnection().prepareStatement("SELECT estado FROM estado_contratacion WHERE cod_contratacion = ?");
-            ps.setString(1, contratacion);
-
-            rs = ps.executeQuery();
-
-            while(rs.next()){
-                if(!(rs.getString(1).equals("Enviada"))){
-                    JOptionPane.showMessageDialog(null, "El estado de la contratación debe de ser enviado");
-                    return false;
-                }
-            }
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-            return false;
-        } finally {
-            try {
-                getConnection().close();
-            } catch (SQLException ex) {
-                System.out.println(ex.getMessage());
-            }
-        }
         
         try {
             ps = getConnection().prepareStatement("SELECT R.cod_contratacion FROM responsable R INNER JOIN contrataciones C ON "

@@ -4,7 +4,7 @@ USE BD_Sistema
 -- Procedimiento para guardar las garantias
 GO
 CREATE PROCEDURE insertar_garantia 
-	@institucion VARCHAR(100), @fecha_pago DATE, @fecha_devolucion DATE, @tiempo DATE, @estado VARCHAR(30), 
+	@institucion VARCHAR(100), @fecha_pago DATE, @fecha_devolucion DATE, @tiempo VARCHAR(100), @estado VARCHAR(30), 
 	@objeto VARCHAR(50), @observaciones VARCHAR(100), @monto MONEY, @tipo_garantia VARCHAR(50), @cod_empleado SMALLINT, 
 	@cod_contratacion VARCHAR(50)
 AS 
@@ -33,59 +33,30 @@ END
 ---------------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para actualizar una garantia
 GO
-CREATE PROCEDURE actualizar_garantia 
-	@cod_garantia INT,@institucion VARCHAR(100), @fecha_pago DATE, @fecha_devolucion DATE, @tiempo DATE, @estado VARCHAR(30), 
+CREATE PROCEDURE modificar_garantia 
+	@cod_garantia INT,@institucion VARCHAR(100), @fecha_pago DATE, @fecha_devolucion DATE, @tiempo VARCHAR(100), @estado VARCHAR(30), 
 	@objeto VARCHAR(50), @observaciones VARCHAR(100), @monto MONEY, @tipo_garantia VARCHAR(50), @encargado_envio SMALLINT
 AS BEGIN
 	UPDATE garantias SET institucion = @institucion, fecha_pago = @fecha_pago, fecha_devolucion = @fecha_devolucion, tiempo = @tiempo,
 	estado = @estado, objeto = @objeto, observaciones = @observaciones, monto = @monto, tipo_garantia = @tipo_garantia, encargado_envio = @encargado_envio
 	WHERE cod_garantia = @cod_garantia
-END
+END 
 
 ---------------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para mostrar las garantias
 GO
 CREATE PROCEDURE mostrar_garantias
-	@filtro VARCHAR(100)
 AS BEGIN
 	SELECT cod_garantia AS 'Código de garantia', cod_contratacion AS 'Contratacion',institucion AS 'Institución', 
 	CONVERT(VARCHAR,fecha_pago,100) AS 'Fecha de pago', CONVERT(VARCHAR,fecha_devolucion,100) AS 'Fecha de devolución',
 	CONVERT(VARCHAR,tiempo,100) AS 'Tiempo de devolucion', estado AS 'Estado', objeto AS 'Objeto', observaciones AS 'Observaciones', monto AS 'Monto',
 	tipo_garantia AS 'Tipo de Garantia',
-	CONCAT(EMP1.nombre_Empleado, ' ', EMP1.appelido1_Empleado) AS 'Encargado de Envio',
-	CONCAT(EMP2.nombre_Empleado, ' ', EMP2.appelido1_Empleado) AS 'Encargado de Contratacion',
+	CONCAT(EMP1.nombre_Empleado, ' ', EMP1.apellido1_Empleado) AS 'Encargado de Envio',
+	CONCAT(EMP2.nombre_Empleado, ' ', EMP2.apellido1_Empleado) AS 'Encargado de Contratacion',
 	EMP2.cod_color AS 'Color del Empleado'
 	FROM (garantias INNER JOIN empleado EMP1 ON garantias.encargado_envio = EMP1.cod_empleado)
 	INNER JOIN empleado EMP2 ON EMP2.cod_empleado = garantias.cod_empleado
-	ORDER BY 
-		
-		CASE @filtro
-			WHEN 'cod_garantia' THEN cod_garantia
-		END,
-		
-		CASE @filtro
-			WHEN 'cod_contratacion' THEN cod_contratacion
-			WHEN 'institucion' THEN institucion
-			WHEN 'estado' THEN estado
-			WHEN 'objeto' THEN objeto
-			WHEN 'observaciones' THEN observaciones
-			WHEN 'tipo_garantia' THEN tipo_garantia
-		END,
-
-		CASE @filtro
-			WHEN 'fecha_pago' THEN CONVERT(VARCHAR,fecha_pago,100)
-			WHEN 'fecha_devolucion' THEN CONVERT(VARCHAR,fecha_devolucion,100)
-			WHEN 'tiempo' THEN CONVERT(VARCHAR,tiempo,100)
-		END,
-
-		CASE @filtro
-			WHEN 'encargado_envio' THEN CONCAT(EMP1.nombre_Empleado, ' ', EMP1.appelido1_Empleado)
-			WHEN 'cod_empleado' THEN CONCAT(EMP2.nombre_Empleado, ' ', EMP2.appelido1_Empleado)
-		END,
-
-		CASE @filtro
-			WHEN 'monto' THEN monto
-		END
+	ORDER BY cod_garantia
 END
 
 ---------------------------------------------------------------------------------------------------------------------------------

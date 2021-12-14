@@ -7,7 +7,7 @@ CREATE TABLE garantias(
 	institucion VARCHAR(100) NOT NULL,
 	fecha_pago DATE NOT NULL,
 	fecha_devolucion DATE default(null),
-	tiempo DATE NOT NULL,
+	tiempo VARCHAR(100) NOT NULL,
 	estado VARCHAR(30) DEFAULT('Pendiente'),
 	objeto VARCHAR(50) NOT NULL,
 	observaciones VARCHAR(100) DEFAULT('Ninguna observación'),

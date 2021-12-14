@@ -125,9 +125,11 @@ public class Ctrl_MenuPrincipal implements ActionListener {
 
         if (e.getSource() == frameMenu.btnTimbre) {
             Pnl_1 panel1 = new Pnl_1();
-
+            Consultas_TimbresGarantiasMuestras consultas = new Consultas_TimbresGarantiasMuestras();
+            
             ResetearPanel();
-            Ctrl_TimbresGarantiasMuestras timbre = new Ctrl_TimbresGarantiasMuestras(panel1);
+            panel1.setSize(frameMenu.pnl_prin.getSize());
+            Ctrl_TimbresGarantiasMuestras timbre = new Ctrl_TimbresGarantiasMuestras(panel1, consultas);
 
             frameMenu.pnl_prin.add(panel1);
         }
