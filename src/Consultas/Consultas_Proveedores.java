@@ -221,5 +221,4 @@ public class Consultas_Proveedores extends Conexion_A {
         }
 
         return true;
-    }
-}
+    }}
