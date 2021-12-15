@@ -48,7 +48,6 @@ public class Pnl_3 extends javax.swing.JPanel {
         jLabel57 = new javax.swing.JLabel();
         panelProveedores = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        txtBuscarProvPorComprar = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -57,6 +56,7 @@ public class Pnl_3 extends javax.swing.JPanel {
         txtProvFantPorComprar = new javax.swing.JTextField();
         spnBancosCuentasPorComprar = new javax.swing.JScrollPane();
         txaCuentasBancosPorComprar = new javax.swing.JTextArea();
+        cmbProveedores = new javax.swing.JComboBox<>();
         codPorComprar = new javax.swing.JLabel();
 
         scpPorComprar.setViewportView(tblPorComprar);
@@ -176,7 +176,6 @@ public class Pnl_3 extends javax.swing.JPanel {
 
         jLabel1.setText("Buscar");
         panelProveedores.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
-        panelProveedores.add(txtBuscarProvPorComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 230, -1));
 
         jLabel2.setText("Proveedor Fantasía");
         panelProveedores.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
@@ -195,6 +194,8 @@ public class Pnl_3 extends javax.swing.JPanel {
         spnBancosCuentasPorComprar.setViewportView(txaCuentasBancosPorComprar);
 
         panelProveedores.add(spnBancosCuentasPorComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 340, -1));
+
+        panelProveedores.add(cmbProveedores, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 230, -1));
 
         PanelObjetosPorComprar.add(panelProveedores, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 380, 300));
 
@@ -274,6 +275,7 @@ public class Pnl_3 extends javax.swing.JPanel {
     public javax.swing.JButton btnModificarPorComprar;
     public javax.swing.JButton btnRefrescarPorComprar;
     public javax.swing.JComboBox<String> cmbBusquedaPorComprar;
+    public javax.swing.JComboBox<String> cmbProveedores;
     public javax.swing.JLabel codPorComprar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel17;
@@ -291,16 +293,15 @@ public class Pnl_3 extends javax.swing.JPanel {
     public javax.swing.JScrollPane scpPorComprar;
     private javax.swing.JScrollPane spnBancosCuentasPorComprar;
     public javax.swing.JTable tblPorComprar;
-    private javax.swing.JTextArea txaCuentasBancosPorComprar;
+    public javax.swing.JTextArea txaCuentasBancosPorComprar;
     public javax.swing.JTextArea txaObservacionPorComprar;
     public javax.swing.JTextField txtBuscarPorComprar;
-    private javax.swing.JTextField txtBuscarProvPorComprar;
-    private javax.swing.JTextField txtCedulaPorComprar;
+    public javax.swing.JTextField txtCedulaPorComprar;
     public javax.swing.JTextField txtContratacionPorComprar;
     public javax.swing.JTextField txtCostoPorComprar;
     public javax.swing.JTextField txtMontoPorComprar;
     public javax.swing.JTextField txtObjetoPorComprar;
-    private javax.swing.JTextField txtProvFantPorComprar;
-    private javax.swing.JTextField txtProvRealPorComprar;
+    public javax.swing.JTextField txtProvFantPorComprar;
+    public javax.swing.JTextField txtProvRealPorComprar;
     // End of variables declaration//GEN-END:variables
 }

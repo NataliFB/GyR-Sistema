@@ -167,10 +167,11 @@ public class Ctrl_MenuPrincipal implements ActionListener {
 
         if (e.getSource() == frameMenu.btnPorComprar) {
             Pnl_3 panel3 = new Pnl_3();
+            Consultas_PorComprar consultas = new Consultas_PorComprar();
 
             ResetearPanel();
             panel3.setSize(frameMenu.pnl_prin.getSize());
-            Ctrl_PorComprar porComprar = new Ctrl_PorComprar(panel3);
+            Ctrl_PorComprar porComprar = new Ctrl_PorComprar(panel3, consultas);
 
             frameMenu.pnl_prin.add(panel3);
         }

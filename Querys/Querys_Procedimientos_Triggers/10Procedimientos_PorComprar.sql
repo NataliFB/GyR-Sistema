@@ -34,7 +34,6 @@ END
 -------------------------------------------------------------------------------------------------------------------------------------------
 GO
 CREATE PROCEDURE mostrar_porcomprar
-	@filtro VARCHAR(100)
 AS BEGIN
 	SELECT cod_porcomprar AS 'Código de compra', cod_contratacion AS 'Contratación', objeto AS 'Objeto', monto_ofertado AS 'Monto ofertado', 
 	costo AS 'Costo', P.proveedor_real AS 'Proveedor Real', P.proveedor_fantasia AS 'Proveedor Fantasía', P.cedula AS 'Cédula Jurídica',
@@ -49,23 +48,7 @@ AS BEGIN
 		FOR XML PATH('')),
 		1, 2, '') AS 'Cuentas'
 	FROM (por_comprar INNER JOIN proveedores P ON por_comprar.cod_proveedor = P.cod_proveedor)
-	ORDER BY
-		CASE @filtro
-			WHEN 'cod_porcomprar' THEN cod_porcomprar
-		END,
-
-		CASE @filtro
-			WHEN 'cod_contratacion' THEN cod_contratacion
-			WHEN 'objeto' THEN objeto
-			WHEN 'proveedor_real' THEN P.proveedor_real
-			WHEN 'proveedor_fantasia' THEN P.proveedor_fantasia
-		END,
-
-		CASE @filtro
-			WHEN 'monto_ofertado' THEN monto_ofertado
-			WHEN 'costo' THEN costo
-		END
-
+	ORDER BY cod_porcomprar
 END
 
 -------------------------------------------------------------------------------------------------------------------------------------------
