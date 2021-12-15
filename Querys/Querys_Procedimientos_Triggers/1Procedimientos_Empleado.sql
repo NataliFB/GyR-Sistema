@@ -36,7 +36,7 @@ END
 BEGIN
 	INSERT INTO permisos VALUES(@ingresar_contrataciones, @adjudicaciones, @timbres, @por_comprar, @facturas, @renta, @proveedores, @acceso_empleados, @acceso_contrataciones, @cod_empleado)
 END
-DROP PROC insertar_empleados
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para guardar los usuarios en la tabla userEmpleado
 GO

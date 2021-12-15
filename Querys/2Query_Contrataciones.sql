@@ -8,7 +8,7 @@ CREATE TABLE contrataciones(
 	descripcion VARCHAR(200) NOT NULL,
 	fecha_publicacion SMALLDATETIME NOT NULL,
 	fecha_apertura SMALLDATETIME NOT NULL,
-	observaciones VARCHAR(100)
+	observaciones VARCHAR(100),
 
 	cod_empleado SMALLINT NOT NULL,
 	FOREIGN KEY (cod_empleado) REFERENCES empleado(cod_empleado)

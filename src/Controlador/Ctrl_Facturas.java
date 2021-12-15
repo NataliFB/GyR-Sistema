@@ -18,7 +18,6 @@ public class Ctrl_Facturas implements ActionListener{
     }
     
     private void Iniciar(){
-        panelFacturas.setSize(panelFacturas.getPreferredSize());
         panelFacturas.setVisible(true);
     }
     
@@ -35,7 +34,6 @@ public class Ctrl_Facturas implements ActionListener{
         panelFacturas.txtObservacionFacturas.setText("");
         panelFacturas.txtRentaFacturas.setText("");
         panelFacturas.txtTransferenciaFacturas.setText("");
-        panelFacturas.cmbOrdenFacturas.setSelectedIndex(0);
         panelFacturas.btgMetodo.clearSelection();
         panelFacturas.btgMoneda.clearSelection();
     }

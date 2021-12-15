@@ -21,6 +21,7 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
     private void initComponents() {
 
         btgEstado = new javax.swing.ButtonGroup();
+        panelBase = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -28,11 +29,16 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblContratacionesIncomp = new javax.swing.JTable();
-        PanelBase = new javax.swing.JPanel();
+        PanelControl = new javax.swing.JPanel();
+        jLabel48 = new javax.swing.JLabel();
+        txtBuscar = new javax.swing.JTextField();
+        cmbBusqueda = new javax.swing.JComboBox<>();
+        btnRefrescar = new javax.swing.JButton();
+        PanelBaseObj = new javax.swing.JPanel();
         PanelObjetos = new javax.swing.JPanel();
-        spnDescripcion = new javax.swing.JScrollPane();
+        spnDescripcion4 = new javax.swing.JScrollPane();
         txaDescripcion = new javax.swing.JTextArea();
-        scpObservaciones = new javax.swing.JScrollPane();
+        scpObservaciones4 = new javax.swing.JScrollPane();
         txaObservaciones = new javax.swing.JTextArea();
         txtFechaPublicacion = new javax.swing.JTextField();
         txtFechaApertura = new javax.swing.JTextField();
@@ -40,24 +46,19 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
         txtInstitucion = new javax.swing.JTextField();
         rbtEnviada = new javax.swing.JRadioButton();
         rbtDescartada = new javax.swing.JRadioButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
         PanelOpciones = new javax.swing.JPanel();
         btnInsertarContratacion = new javax.swing.JButton();
         btnModificarContratacion = new javax.swing.JButton();
         btnLimpiarContratacion = new javax.swing.JButton();
         btnEliminarContratacion = new javax.swing.JButton();
         btnTomarContratacion = new javax.swing.JButton();
-        PanelControl = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        txtBuscar = new javax.swing.JTextField();
-        cmbBusqueda = new javax.swing.JComboBox<>();
-        btnRefrescar = new javax.swing.JButton();
 
         jPanel2.setLayout(new java.awt.BorderLayout());
 
@@ -75,53 +76,87 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("Contrataciones agregadas", jPanel3);
 
+        PanelControl.setBorder(javax.swing.BorderFactory.createTitledBorder("Control Tabla"));
+
+        jLabel48.setText("Buscar");
+
+        cmbBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Contratación", "Institución", "Descripción", "Fecha de Publicación", "Fecha de Apertura", "Estado", "Encargado" }));
+
+        btnRefrescar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/refresh.png"))); // NOI18N
+        btnRefrescar.setText("Refrescar");
+
+        javax.swing.GroupLayout PanelControlLayout = new javax.swing.GroupLayout(PanelControl);
+        PanelControl.setLayout(PanelControlLayout);
+        PanelControlLayout.setHorizontalGroup(
+            PanelControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelControlLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jLabel48)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cmbBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRefrescar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+        PanelControlLayout.setVerticalGroup(
+            PanelControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel48)
+                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRefrescar))
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+
         PanelObjetos.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ingresar Contratación", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
         PanelObjetos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txaDescripcion.setColumns(20);
         txaDescripcion.setRows(5);
-        spnDescripcion.setViewportView(txaDescripcion);
+        spnDescripcion4.setViewportView(txaDescripcion);
 
-        PanelObjetos.add(spnDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, 280, 100));
+        PanelObjetos.add(spnDescripcion4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, 280, 100));
 
         txaObservaciones.setColumns(20);
         txaObservaciones.setRows(5);
-        scpObservaciones.setViewportView(txaObservaciones);
+        scpObservaciones4.setViewportView(txaObservaciones);
 
-        PanelObjetos.add(scpObservaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 270, 50));
+        PanelObjetos.add(scpObservaciones4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 270, 50));
         PanelObjetos.add(txtFechaPublicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 280, -1));
         PanelObjetos.add(txtFechaApertura, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 280, -1));
         PanelObjetos.add(txtContratacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 280, -1));
         PanelObjetos.add(txtInstitucion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 280, -1));
 
-        btgEstado.add(rbtEnviada);
         rbtEnviada.setText("Enviada");
         PanelObjetos.add(rbtEnviada, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 160, -1, -1));
 
-        btgEstado.add(rbtDescartada);
         rbtDescartada.setText("Descartada");
         PanelObjetos.add(rbtDescartada, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 160, -1, -1));
 
-        jLabel1.setText("Número de Contratación");
-        PanelObjetos.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
+        jLabel30.setText("Número de Contratación");
+        PanelObjetos.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
-        jLabel2.setText("Descripción");
-        PanelObjetos.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, -1, -1));
+        jLabel31.setText("Descripción");
+        PanelObjetos.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, -1, -1));
 
-        jLabel3.setText("Fecha de publicación");
-        PanelObjetos.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
+        jLabel32.setText("Fecha de publicación");
+        PanelObjetos.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
-        jLabel4.setText("Fecha de Apertura");
-        PanelObjetos.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        jLabel33.setText("Fecha de Apertura");
+        PanelObjetos.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
-        jLabel7.setText("Estado");
-        PanelObjetos.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, -1, -1));
+        jLabel34.setText("Estado");
+        PanelObjetos.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, -1, -1));
 
-        jLabel5.setText("Institución");
-        PanelObjetos.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
+        jLabel35.setText("Institución");
+        PanelObjetos.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
 
-        jLabel9.setText("Observaciones");
-        PanelObjetos.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+        jLabel36.setText("Observaciones");
+        PanelObjetos.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
 
         PanelOpciones.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Opciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
 
@@ -147,11 +182,11 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
             .addGroup(PanelOpcionesLayout.createSequentialGroup()
                 .addGap(11, 11, 11)
                 .addGroup(PanelOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnInsertarContratacion, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
-                    .addComponent(btnModificarContratacion, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
-                    .addComponent(btnLimpiarContratacion, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
-                    .addComponent(btnEliminarContratacion, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
-                    .addComponent(btnTomarContratacion, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE))
+                    .addComponent(btnInsertarContratacion, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                    .addComponent(btnModificarContratacion, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                    .addComponent(btnLimpiarContratacion, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                    .addComponent(btnEliminarContratacion, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                    .addComponent(btnTomarContratacion, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE))
                 .addGap(11, 11, 11))
         );
         PanelOpcionesLayout.setVerticalGroup(
@@ -170,95 +205,69 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout PanelBaseLayout = new javax.swing.GroupLayout(PanelBase);
-        PanelBase.setLayout(PanelBaseLayout);
-        PanelBaseLayout.setHorizontalGroup(
-            PanelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBaseLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(PanelObjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 874, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout PanelBaseObjLayout = new javax.swing.GroupLayout(PanelBaseObj);
+        PanelBaseObj.setLayout(PanelBaseObjLayout);
+        PanelBaseObjLayout.setHorizontalGroup(
+            PanelBaseObjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBaseObjLayout.createSequentialGroup()
+                .addComponent(PanelObjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 880, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PanelOpciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        PanelBaseLayout.setVerticalGroup(
-            PanelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelBaseLayout.createSequentialGroup()
+        PanelBaseObjLayout.setVerticalGroup(
+            PanelBaseObjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBaseObjLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(PanelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(PanelBaseObjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(PanelOpciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(PanelObjetos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        PanelControl.setBorder(javax.swing.BorderFactory.createTitledBorder("Control Tabla"));
-
-        jLabel8.setText("Buscar");
-
-        cmbBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Contratación", "Institución", "Descripción", "Fecha de Publicación", "Fecha de Apertura", "Estado", "Encargado" }));
-
-        btnRefrescar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/refresh.png"))); // NOI18N
-        btnRefrescar.setText("Refrescar");
-
-        javax.swing.GroupLayout PanelControlLayout = new javax.swing.GroupLayout(PanelControl);
-        PanelControl.setLayout(PanelControlLayout);
-        PanelControlLayout.setHorizontalGroup(
-            PanelControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelControlLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cmbBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnRefrescar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        javax.swing.GroupLayout panelBaseLayout = new javax.swing.GroupLayout(panelBase);
+        panelBase.setLayout(panelBaseLayout);
+        panelBaseLayout.setHorizontalGroup(
+            panelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBaseLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(panelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelBaseLayout.createSequentialGroup()
+                        .addComponent(PanelControl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(panelBaseLayout.createSequentialGroup()
+                        .addGroup(panelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(PanelBaseObj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTabbedPane1))
+                        .addContainerGap(20, Short.MAX_VALUE))))
         );
-        PanelControlLayout.setVerticalGroup(
-            PanelControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelControlLayout.createSequentialGroup()
+        panelBaseLayout.setVerticalGroup(
+            panelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBaseLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(PanelControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRefrescar))
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PanelBase, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jTabbedPane1)))
-                .addContainerGap(20, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(PanelControl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(PanelBase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PanelBaseObj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PanelControl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelBase, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelBase, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel PanelBase;
+    private javax.swing.JPanel PanelBaseObj;
     private javax.swing.JPanel PanelControl;
     private javax.swing.JPanel PanelObjetos;
     private javax.swing.JPanel PanelOpciones;
@@ -270,23 +279,24 @@ public class Pn_IngresarContr extends javax.swing.JPanel {
     public javax.swing.JButton btnRefrescar;
     public javax.swing.JButton btnTomarContratacion;
     public javax.swing.JComboBox<String> cmbBusqueda;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel48;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JPanel panelBase;
     public javax.swing.JRadioButton rbtDescartada;
     public javax.swing.JRadioButton rbtEnviada;
-    private javax.swing.JScrollPane scpObservaciones;
-    private javax.swing.JScrollPane spnDescripcion;
+    private javax.swing.JScrollPane scpObservaciones4;
+    private javax.swing.JScrollPane spnDescripcion4;
     public javax.swing.JTable tblContratacionesComp;
     public javax.swing.JTable tblContratacionesIncomp;
     public javax.swing.JTextArea txaDescripcion;

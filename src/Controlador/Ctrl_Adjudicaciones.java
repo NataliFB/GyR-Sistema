@@ -632,8 +632,8 @@ public class Ctrl_Adjudicaciones implements ActionListener {
                 String institucion = "";
                 JTextField text = (JTextField) e.getSource();
                 if (!(text.getText().trim().isEmpty())) {
-                    institucion = consultas.BuscarContratacion(text.getText());
-                    if (!(institucion.equals("Vacio"))) {
+                    institucion = String.valueOf(consultas.BuscarContratacion(text.getText())[0]);
+                    if (!(institucion == null)) {
                         if (text == panelAdjudicaiones.txtContratacionAdjudicada) {
                             panelAdjudicaiones.txtInstituciónAdjudicada.setText(institucion);
                             panelAdjudicaiones.txtContratacionAdjudicada.setEditable(false);
@@ -646,6 +646,7 @@ public class Ctrl_Adjudicaciones implements ActionListener {
 
                         if (text == panelAdjudicaiones.txtContratacionOrden) {
                             panelAdjudicaiones.txtContratacionOrden.setEditable(false);
+                            panelAdjudicaiones.spnDiasEntregaOrden.getModel().setValue(consultas.BuscarContratacion(text.getText())[1]);
                         }
                     } else {
                         JOptionPane.showMessageDialog(null, "Revise que los datos ingresados están correctos");

@@ -20,172 +20,287 @@ public class Pnl_3 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        txtProveedorReal = new javax.swing.JTextField();
+        pnlPorComprar = new javax.swing.JPanel();
+        scpPorComprar = new javax.swing.JScrollPane();
+        tblPorComprar = new javax.swing.JTable();
+        PanelControlPorComprar = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        txtBuscarPorComprar = new javax.swing.JTextField();
+        cmbBusquedaPorComprar = new javax.swing.JComboBox<>();
+        btnRefrescarPorComprar = new javax.swing.JButton();
+        PanelBasePorComprar = new javax.swing.JPanel();
+        PanelOpcionesPorComprar = new javax.swing.JPanel();
+        btnInsertarPorComprar = new javax.swing.JButton();
+        btnModificarPorComprar = new javax.swing.JButton();
+        btnLimpiarPorComprar = new javax.swing.JButton();
+        btnEliminarPorComprar = new javax.swing.JButton();
+        PanelObjetosPorComprar = new javax.swing.JPanel();
+        txtContratacionPorComprar = new javax.swing.JTextField();
+        txtObjetoPorComprar = new javax.swing.JTextField();
+        txtMontoPorComprar = new javax.swing.JTextField();
+        txtCostoPorComprar = new javax.swing.JTextField();
+        scpObservacionesPorComprar = new javax.swing.JScrollPane();
+        txaObservacionPorComprar = new javax.swing.JTextArea();
+        jLabel91 = new javax.swing.JLabel();
+        lblLugarr9 = new javax.swing.JLabel();
+        jLabel96 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        panelProveedores = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        txtCosto = new javax.swing.JTextField();
-        txtMontoOfertado = new javax.swing.JTextField();
+        txtBuscarProvPorComprar = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        txtNumeroContrato = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtObjeto = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        txtCedula = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        txtProveedorFan = new javax.swing.JTextField();
-        btnInsertarDemanda = new javax.swing.JButton();
-        btnModificarDemanda = new javax.swing.JButton();
-        btnBuscarDemanda = new javax.swing.JButton();
-        btnEliminarDemanda = new javax.swing.JButton();
-        jLabel35 = new javax.swing.JLabel();
-        cmbOrdenDemanda = new javax.swing.JComboBox<>();
-        scpObservacionesDemanda = new javax.swing.JScrollPane();
-        txaObservacionesDemanda = new javax.swing.JTextArea();
-        jLabel43 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tblBancosCuentas = new javax.swing.JTable();
-        jLabel7 = new javax.swing.JLabel();
-        btnLimpiar = new javax.swing.JButton();
+        txtCedulaPorComprar = new javax.swing.JTextField();
+        txtProvRealPorComprar = new javax.swing.JTextField();
+        txtProvFantPorComprar = new javax.swing.JTextField();
+        spnBancosCuentasPorComprar = new javax.swing.JScrollPane();
+        txaCuentasBancosPorComprar = new javax.swing.JTextArea();
+        codPorComprar = new javax.swing.JLabel();
 
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        scpPorComprar.setViewportView(tblPorComprar);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Número Contratación", "Proveedor", "Objeto", "Costo", "Monto Ofertado", "Cuentas", "Banco", "Observación"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+        PanelControlPorComprar.setBorder(javax.swing.BorderFactory.createTitledBorder("Control Tabla"));
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 427, 967, 197));
+        jLabel17.setText("Buscar");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Por comprar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 18))); // NOI18N
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btnRefrescarPorComprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/refresh.png"))); // NOI18N
+        btnRefrescarPorComprar.setText("Refrescar");
 
-        jLabel5.setText("Prov. Real");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 250, -1, 14));
-        jPanel1.add(txtProveedorReal, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 190, -1));
+        javax.swing.GroupLayout PanelControlPorComprarLayout = new javax.swing.GroupLayout(PanelControlPorComprar);
+        PanelControlPorComprar.setLayout(PanelControlPorComprarLayout);
+        PanelControlPorComprarLayout.setHorizontalGroup(
+            PanelControlPorComprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelControlPorComprarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtBuscarPorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cmbBusquedaPorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRefrescarPorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        PanelControlPorComprarLayout.setVerticalGroup(
+            PanelControlPorComprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlPorComprarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelControlPorComprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(txtBuscarPorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbBusquedaPorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRefrescarPorComprar))
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
 
-        jLabel1.setText("Bancos y cuentas");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, -1, -1));
-        jPanel1.add(txtCosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 190, -1));
-        jPanel1.add(txtMontoOfertado, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 190, -1));
+        PanelOpcionesPorComprar.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Opciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
 
-        jLabel2.setText("Monto ofertado");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 120, -1, -1));
-        jPanel1.add(txtNumeroContrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 190, -1));
+        btnInsertarPorComprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
+        btnInsertarPorComprar.setText("Agregar");
 
-        jLabel3.setText("Objeto");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 81, -1, -1));
-        jPanel1.add(txtObjeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 190, -1));
+        btnModificarPorComprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
+        btnModificarPorComprar.setText("Modificar");
 
-        jLabel4.setText("Costo");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 207, -1, -1));
+        btnLimpiarPorComprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
+        btnLimpiarPorComprar.setText("Limpiar");
 
-        jLabel10.setText("Cedula juridica");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 160, -1, -1));
-        jPanel1.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 190, -1));
+        btnEliminarPorComprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
+        btnEliminarPorComprar.setText("Eliminar");
 
-        jLabel15.setText("Prov. Fantasía");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 292, -1, 14));
-        jPanel1.add(txtProveedorFan, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 190, -1));
+        javax.swing.GroupLayout PanelOpcionesPorComprarLayout = new javax.swing.GroupLayout(PanelOpcionesPorComprar);
+        PanelOpcionesPorComprar.setLayout(PanelOpcionesPorComprarLayout);
+        PanelOpcionesPorComprarLayout.setHorizontalGroup(
+            PanelOpcionesPorComprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesPorComprarLayout.createSequentialGroup()
+                .addGroup(PanelOpcionesPorComprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelOpcionesPorComprarLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnEliminarPorComprar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesPorComprarLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnLimpiarPorComprar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesPorComprarLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnModificarPorComprar, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE))
+                    .addGroup(PanelOpcionesPorComprarLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(btnInsertarPorComprar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        PanelOpcionesPorComprarLayout.setVerticalGroup(
+            PanelOpcionesPorComprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcionesPorComprarLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(btnInsertarPorComprar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnModificarPorComprar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnLimpiarPorComprar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btnEliminarPorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
 
-        btnInsertarDemanda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salvar.png"))); // NOI18N
-        btnInsertarDemanda.setText("Agregar");
-        jPanel1.add(btnInsertarDemanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, -1, -1));
+        PanelObjetosPorComprar.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Por Comprar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans", 1, 18))); // NOI18N
+        PanelObjetosPorComprar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelObjetosPorComprar.add(txtContratacionPorComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 35, 250, -1));
+        PanelObjetosPorComprar.add(txtObjetoPorComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 250, -1));
+        PanelObjetosPorComprar.add(txtMontoPorComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 125, 250, -1));
+        PanelObjetosPorComprar.add(txtCostoPorComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 250, -1));
 
-        btnModificarDemanda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar.png"))); // NOI18N
-        btnModificarDemanda.setText("Modificar");
-        jPanel1.add(btnModificarDemanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, -1, -1));
+        txaObservacionPorComprar.setColumns(20);
+        txaObservacionPorComprar.setRows(5);
+        scpObservacionesPorComprar.setViewportView(txaObservacionPorComprar);
 
-        btnBuscarDemanda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
-        btnBuscarDemanda.setText("Buscar");
-        jPanel1.add(btnBuscarDemanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, -1, -1));
+        PanelObjetosPorComprar.add(scpObservacionesPorComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 252, 90));
 
-        btnEliminarDemanda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/borrar-archivo.png"))); // NOI18N
-        btnEliminarDemanda.setText("Eliminar");
-        jPanel1.add(btnEliminarDemanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, -1, 33));
+        jLabel91.setText("Número de Contratación");
+        PanelObjetosPorComprar.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 35, -1, -1));
 
-        jLabel35.setText("Ordenar por:");
-        jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 380, -1, -1));
+        lblLugarr9.setText("Objeto");
+        PanelObjetosPorComprar.add(lblLugarr9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
 
-        cmbOrdenDemanda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número Orden", "Descripción", "Días de entrega", "Orden", "Facturado", "Entregado" }));
-        jPanel1.add(cmbOrdenDemanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 380, 250, -1));
+        jLabel96.setText("Observación");
+        PanelObjetosPorComprar.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
 
-        txaObservacionesDemanda.setColumns(20);
-        txaObservacionesDemanda.setRows(5);
-        scpObservacionesDemanda.setViewportView(txaObservacionesDemanda);
+        jLabel56.setText("Monto Ofertado");
+        PanelObjetosPorComprar.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 125, -1, -1));
 
-        jPanel1.add(scpObservacionesDemanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, 450, 100));
+        jLabel57.setText("Costo");
+        PanelObjetosPorComprar.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
 
-        jLabel43.setText("Observación");
-        jPanel1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, -1, -1));
+        panelProveedores.setBorder(javax.swing.BorderFactory.createTitledBorder("Proveedores"));
+        panelProveedores.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tblBancosCuentas.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Banco", "Cuenta"
-            }
-        ));
-        jScrollPane2.setViewportView(tblBancosCuentas);
+        jLabel1.setText("Buscar");
+        panelProveedores.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
+        panelProveedores.add(txtBuscarProvPorComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 230, -1));
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, 450, 170));
+        jLabel2.setText("Proveedor Fantasía");
+        panelProveedores.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
-        jLabel7.setText("Número contratación");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 39, -1, -1));
+        jLabel3.setText("Proveedor Real");
+        panelProveedores.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
-        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/limpiar.png"))); // NOI18N
-        btnLimpiar.setText("Limpiar");
-        jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 370, 110, -1));
+        jLabel4.setText("Cédula Jurídica");
+        panelProveedores.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
+        panelProveedores.add(txtCedulaPorComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 230, -1));
+        panelProveedores.add(txtProvRealPorComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 230, -1));
+        panelProveedores.add(txtProvFantPorComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 230, -1));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 967, 415));
+        txaCuentasBancosPorComprar.setColumns(20);
+        txaCuentasBancosPorComprar.setRows(5);
+        spnBancosCuentasPorComprar.setViewportView(txaCuentasBancosPorComprar);
+
+        panelProveedores.add(spnBancosCuentasPorComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 340, -1));
+
+        PanelObjetosPorComprar.add(panelProveedores, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 380, 300));
+
+        javax.swing.GroupLayout PanelBasePorComprarLayout = new javax.swing.GroupLayout(PanelBasePorComprar);
+        PanelBasePorComprar.setLayout(PanelBasePorComprarLayout);
+        PanelBasePorComprarLayout.setHorizontalGroup(
+            PanelBasePorComprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBasePorComprarLayout.createSequentialGroup()
+                .addComponent(PanelObjetosPorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 846, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PanelOpcionesPorComprar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        PanelBasePorComprarLayout.setVerticalGroup(
+            PanelBasePorComprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBasePorComprarLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(PanelBasePorComprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(PanelOpcionesPorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelObjetosPorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        codPorComprar.setText("NA");
+
+        javax.swing.GroupLayout pnlPorComprarLayout = new javax.swing.GroupLayout(pnlPorComprar);
+        pnlPorComprar.setLayout(pnlPorComprarLayout);
+        pnlPorComprarLayout.setHorizontalGroup(
+            pnlPorComprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlPorComprarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlPorComprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlPorComprarLayout.createSequentialGroup()
+                        .addComponent(PanelControlPorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(codPorComprar))
+                    .addComponent(scpPorComprar, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PanelBasePorComprar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
+        );
+        pnlPorComprarLayout.setVerticalGroup(
+            pnlPorComprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlPorComprarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(PanelBasePorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addGroup(pnlPorComprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PanelControlPorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(codPorComprar))
+                .addGap(12, 12, 12)
+                .addComponent(scpPorComprar, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                .addGap(15, 15, 15))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(pnlPorComprar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlPorComprar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnBuscarDemanda;
-    public javax.swing.JButton btnEliminarDemanda;
-    public javax.swing.JButton btnInsertarDemanda;
-    public javax.swing.JButton btnLimpiar;
-    public javax.swing.JButton btnModificarDemanda;
-    public javax.swing.JComboBox<String> cmbOrdenDemanda;
+    private javax.swing.JPanel PanelBasePorComprar;
+    private javax.swing.JPanel PanelControlPorComprar;
+    private javax.swing.JPanel PanelObjetosPorComprar;
+    private javax.swing.JPanel PanelOpcionesPorComprar;
+    public javax.swing.JButton btnEliminarPorComprar;
+    public javax.swing.JButton btnInsertarPorComprar;
+    public javax.swing.JButton btnLimpiarPorComprar;
+    public javax.swing.JButton btnModificarPorComprar;
+    public javax.swing.JButton btnRefrescarPorComprar;
+    public javax.swing.JComboBox<String> cmbBusquedaPorComprar;
+    public javax.swing.JLabel codPorComprar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JScrollPane scpObservacionesDemanda;
-    public javax.swing.JTable tblBancosCuentas;
-    public javax.swing.JTextArea txaObservacionesDemanda;
-    public javax.swing.JTextField txtCedula;
-    public javax.swing.JTextField txtCosto;
-    public javax.swing.JTextField txtMontoOfertado;
-    public javax.swing.JTextField txtNumeroContrato;
-    public javax.swing.JTextField txtObjeto;
-    public javax.swing.JTextField txtProveedorFan;
-    public javax.swing.JTextField txtProveedorReal;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel lblLugarr9;
+    private javax.swing.JPanel panelProveedores;
+    private javax.swing.JPanel pnlPorComprar;
+    private javax.swing.JScrollPane scpObservacionesPorComprar;
+    public javax.swing.JScrollPane scpPorComprar;
+    private javax.swing.JScrollPane spnBancosCuentasPorComprar;
+    public javax.swing.JTable tblPorComprar;
+    private javax.swing.JTextArea txaCuentasBancosPorComprar;
+    public javax.swing.JTextArea txaObservacionPorComprar;
+    public javax.swing.JTextField txtBuscarPorComprar;
+    private javax.swing.JTextField txtBuscarProvPorComprar;
+    private javax.swing.JTextField txtCedulaPorComprar;
+    public javax.swing.JTextField txtContratacionPorComprar;
+    public javax.swing.JTextField txtCostoPorComprar;
+    public javax.swing.JTextField txtMontoPorComprar;
+    public javax.swing.JTextField txtObjetoPorComprar;
+    private javax.swing.JTextField txtProvFantPorComprar;
+    private javax.swing.JTextField txtProvRealPorComprar;
     // End of variables declaration//GEN-END:variables
 }

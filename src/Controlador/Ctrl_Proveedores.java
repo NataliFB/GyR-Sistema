@@ -17,13 +17,12 @@ public class Ctrl_Proveedores implements ActionListener{
     
         Iniciar();
         
-        panelProveedor.btnLimpiarProv.addActionListener(this);
+        panelProveedor.btnLimpiarProveedores.addActionListener(this);
         panelProveedor.btnAgregarCuentaBanco.addActionListener(this);
         panelProveedor.btnAgregarArt.addActionListener(this);
     }
     
     private void Iniciar(){
-        panelProveedor.setSize(panelProveedor.getPreferredSize());
         panelProveedor.setVisible(true);
     }
     
@@ -37,12 +36,11 @@ public class Ctrl_Proveedores implements ActionListener{
         panelProveedor.txtProvReal.setText("");
         panelProveedor.txtTelProv.setText("");
         panelProveedor.txtUbicacionProv.setText("");
-        panelProveedor.cmbOrdenProv.setSelectedIndex(0);
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == panelProveedor.btnLimpiarProv){
+        if(e.getSource() == panelProveedor.btnLimpiarProveedores){
             Limpiar();
         }
         
