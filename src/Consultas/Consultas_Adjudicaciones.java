@@ -22,7 +22,8 @@ public class Consultas_Adjudicaciones extends Conexion_A {
      * @return Devuelve el dato de la institución relacionada a la contratación
      * si devuelve es porque 'vacio' no se encuentra la contratación
      */
-    public String BuscarContratacion(String contratacion) {
+    public Object[] BuscarContratacion(String contratacion) {
+        Object datos[] = new Object[2];
         String institucion = "";
         PreparedStatement ps;
         ResultSet rs;
@@ -35,18 +36,29 @@ public class Consultas_Adjudicaciones extends Conexion_A {
 
             if (rs.next()) {
                 institucion = rs.getString(1);
+                datos[0] = institucion;
+                
+                ps = getConnection().prepareCall("SELECT dias_entrega FROM adjudicaciones WHERE cod_contratacion = ?");
+                ps.setString(1, contratacion);
+                
+                rs = ps.executeQuery();
+                
+                if(rs.next()){
+                    datos[1] = rs.getInt(1);
+                }
+                
             } else {
-                return "Vacio";
+                return null;
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-            return "Vacio";
+            return null;
         } finally {
             try {
                 getConnection().close();
             } catch (SQLException ex) {
                 System.out.println(ex.getMessage());
-                return "Vacio";
+                return null;
             }
         }
         ///
@@ -57,7 +69,7 @@ public class Consultas_Adjudicaciones extends Conexion_A {
 
             if (!rs.next()) {
                 JOptionPane.showMessageDialog(null, "Esta contratación no tiene ningún responsable. \nAsignese como responsable para adjudicarla.");
-                return "Vacio";
+                return null;
             }
 
         } catch (SQLException e) {
@@ -69,7 +81,7 @@ public class Consultas_Adjudicaciones extends Conexion_A {
                 System.out.println(ex.getMessage());
             }
         }
-        return institucion;
+        return datos;
     }
 
     /**

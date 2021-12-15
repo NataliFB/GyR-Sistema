@@ -18,7 +18,6 @@ public class Ctrl_Renta implements ActionListener{
     }
     
     private void Iniciar(){
-        panelRenta.setSize(panelRenta.getPreferredSize());
         panelRenta.setVisible(true);
     }
     
@@ -35,7 +34,6 @@ public class Ctrl_Renta implements ActionListener{
         panelRenta.txtTelefonoRenta.setText("");
         panelRenta.txtTotalRenta.setText("");
         panelRenta.txtrenta.setText("");
-        panelRenta.cmbOrdenRenta.setSelectedIndex(0);
         panelRenta.cbmModalidadRenta.setSelectedIndex(0);
         panelRenta.btgMoneda.clearSelection();        
         panelRenta.btgTipo.clearSelection();

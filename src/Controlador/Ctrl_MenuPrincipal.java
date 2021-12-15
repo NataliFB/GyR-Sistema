@@ -104,7 +104,7 @@ public class Ctrl_MenuPrincipal implements ActionListener {
         Consultas_Contrataciones consultas = new Consultas_Contrataciones();
 
         ResetearPanel();
-        view.setSize(frameMenu.getSize());
+        view.setSize(frameMenu.pnl_prin.getSize());
         Ctrl_IngresarContr controlador = new Ctrl_IngresarContr(view, model, consultas);
 
         frameMenu.pnl_prin.add(view);
@@ -116,6 +116,7 @@ public class Ctrl_MenuPrincipal implements ActionListener {
     private void VentanaFacturas() {
         Pnl_4 panel4 = new Pnl_4();
 
+        panel4.setSize(frameMenu.pnl_prin.getSize());
         ResetearPanel();
         Ctrl_Facturas facturas = new Ctrl_Facturas(panel4);
 
@@ -168,6 +169,7 @@ public class Ctrl_MenuPrincipal implements ActionListener {
             Pnl_3 panel3 = new Pnl_3();
 
             ResetearPanel();
+            panel3.setSize(frameMenu.pnl_prin.getSize());
             Ctrl_PorComprar porComprar = new Ctrl_PorComprar(panel3);
 
             frameMenu.pnl_prin.add(panel3);
@@ -180,6 +182,7 @@ public class Ctrl_MenuPrincipal implements ActionListener {
         if (e.getSource() == frameMenu.btnRenta) {
             Pnl_5 panel5 = new Pnl_5();
 
+            panel5.setSize(frameMenu.pnl_prin.getSize());
             ResetearPanel();
             Ctrl_Renta renta = new Ctrl_Renta(panel5);
 
@@ -189,6 +192,7 @@ public class Ctrl_MenuPrincipal implements ActionListener {
         if (e.getSource() == frameMenu.btnProveedores) {
             Pnl_Proveedor panelProveedor = new Pnl_Proveedor();
 
+            panelProveedor.setSize(frameMenu.pnl_prin.getSize());
             ResetearPanel();
             Ctrl_Proveedores proveedor = new Ctrl_Proveedores(panelProveedor);
 

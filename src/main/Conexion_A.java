@@ -21,7 +21,7 @@ public class Conexion_A {
 
         try {
             SQLServerDataSource sqlds = new SQLServerDataSource();
-            sqlds.setUser("usuario");
+            sqlds.setUser("sa");
             sqlds.setPassword("123");
             sqlds.setServerName("localhost");
             sqlds.setPortNumber(1433);
