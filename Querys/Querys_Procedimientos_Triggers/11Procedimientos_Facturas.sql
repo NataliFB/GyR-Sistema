@@ -43,40 +43,12 @@ END
 -- Procedimiento para mostrar las facturas
 GO
 CREATE PROCEDURE mostrar_facturas
-	@filtro VARCHAR(100)
 AS BEGIN
 	SELECT cod_factura AS 'Código de Factura', cod_contratacion AS 'Contratacion' ,institucion AS 'Institución', fecha_factura AS 'Fecha Factura', fecha_cancelado AS 'Fecha Cancelado',
 	transferencia AS 'Transferencia', estado AS 'Estado', efectivo AS 'Efectivo', moneda AS 'Moneda', 
 	institucion_cedida AS 'Institucion Cedida', banco AS 'Banco', observaciones AS 'Observaciones'
 	FROM facturas
-	ORDER BY
-		CASE @filtro
-			WHEN 'cod_factura' THEN cod_factura
-			WHEN 'transferencia' THEN transferencia
-		END,
-
-		CASE @filtro
-			WHEN 'cod_contratacion' THEN cod_contratacion
-			WHEN 'institucion' THEN institucion
-			WHEN 'institucion_cedidad' THEN institucion_cedida
-			WHEN 'banco' THEN banco
-			WHEN 'observaciones' THEN observaciones
-		END,
-
-		CASE @filtro
-			WHEN 'fecha_factura' THEN fecha_factura
-			WHEN 'fecha_cancelado' THEN fecha_cancelado
-			WHEN 'estado' THEN estado
-		END,
-
-		CASE @filtro
-			WHEN 'efectivo' THEN efectivo
-			WHEN 'moneda' THEN moneda
-		END,
-
-		CASE @filtro
-			WHEN 'monto' THEN monto
-		END
+	ORDER BY cod_factura
 END
 
 -------------------------------------------------------------------------------------------------------------------------------------------

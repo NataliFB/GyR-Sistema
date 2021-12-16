@@ -23,8 +23,11 @@ CREATE TABLE bancos_cuentas(
 )
 
 CREATE TABLE articulos(
-	cod_articulo INT IDENTITY PRIMARY KEY,
-	nombre_articulo VARCHAR(50) NOT NULL
+	nombre_articulo VARCHAR(50) NOT NULL,
+
+	cod_proveedor INT NOT NULL,
+
+	FOREIGN KEY (cod_proveedor) REFERENCES proveedores(cod_proveedor)
 )
 
 CREATE TABLE articulos_proveedores(
@@ -34,4 +37,3 @@ CREATE TABLE articulos_proveedores(
 	FOREIGN KEY (cod_proveedor) REFERENCES proveedores(cod_proveedor),
 	FOREIGN KEY (cod_articulo) REFERENCES articulos(cod_articulo)
 )
-INSERT INTO proveedores VALUES ('Proveedor Real', 'Proveedor Fantasia', 'correo@proveedor.com', 01234567, 00000000, 123456789, 'Contacto', 'Ubicación', 'Ninguna observación')

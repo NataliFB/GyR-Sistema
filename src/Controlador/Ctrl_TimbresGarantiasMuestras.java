@@ -148,14 +148,17 @@ public class Ctrl_TimbresGarantiasMuestras implements ActionListener {
         panelTimbres.tblMuestras.setModel(consultas.CargarDatos("muestras"));
         panelTimbres.tblTimbres.setModel(consultas.CargarDatos("timbres"));
 
+        panelTimbres.cmbBusquedaGarantias.removeAllItems();
         for (int i = 0; i < panelTimbres.tblGarantias.getColumnCount(); i++) {
             panelTimbres.cmbBusquedaGarantias.addItem(String.valueOf(panelTimbres.tblGarantias.getModel().getColumnName(i)));
         }
 
+        panelTimbres.cmbBusquedaMuestras.removeAllItems();
         for (int i = 0; i < panelTimbres.tblMuestras.getColumnCount(); i++) {
             panelTimbres.cmbBusquedaMuestras.addItem(String.valueOf(panelTimbres.tblMuestras.getModel().getColumnName(i)));
         }
 
+        panelTimbres.cmbBusquedaTimbres.removeAllItems();
         for (int i = 0; i < panelTimbres.tblTimbres.getColumnCount(); i++) {
             panelTimbres.cmbBusquedaTimbres.addItem(String.valueOf(panelTimbres.tblTimbres.getModel().getColumnName(i)));
         }

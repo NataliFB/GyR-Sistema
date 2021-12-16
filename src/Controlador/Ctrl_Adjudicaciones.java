@@ -138,14 +138,17 @@ public class Ctrl_Adjudicaciones implements ActionListener {
         panelAdjudicaiones.tblOrden.setModel(consultas.CargarTabla("orden"));
         panelAdjudicaiones.tblEntregada.setModel(consultas.CargarTabla("entregadas"));
 
+        panelAdjudicaiones.cmbBusquedaAdjudicada.removeAllItems();
         for (int i = 0; i < panelAdjudicaiones.tblAdjudicada.getColumnCount(); i++) {
             panelAdjudicaiones.cmbBusquedaAdjudicada.addItem(String.valueOf(panelAdjudicaiones.tblAdjudicada.getModel().getColumnName(i)));
         }
-
+        
+        panelAdjudicaiones.cmbBusquedaEntregada.removeAllItems();
         for (int i = 0; i < panelAdjudicaiones.tblEntregada.getColumnCount(); i++) {
             panelAdjudicaiones.cmbBusquedaEntregada.addItem(String.valueOf(panelAdjudicaiones.tblEntregada.getModel().getColumnName(i)));
         }
 
+        panelAdjudicaiones.cmbBusquedaOrden.removeAllItems();
         for (int i = 0; i < panelAdjudicaiones.tblOrden.getColumnCount(); i++) {
             panelAdjudicaiones.cmbBusquedaOrden.addItem(String.valueOf(panelAdjudicaiones.tblOrden.getModel().getColumnName(i)));
         }

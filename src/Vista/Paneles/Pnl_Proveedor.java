@@ -44,12 +44,12 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         jLabel28 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        txtContProv = new javax.swing.JTextField();
-        txtCelProv = new javax.swing.JTextField();
+        txtContactoProv = new javax.swing.JTextField();
+        txtCelularProv = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
         btnAgregarCuentaBanco = new javax.swing.JButton();
         txtUbicacionProv = new javax.swing.JTextField();
-        txtCedProv1 = new javax.swing.JTextField();
+        txtCedulaProv = new javax.swing.JTextField();
         scpObservacionesProv = new javax.swing.JScrollPane();
         txaObservacionProv = new javax.swing.JTextArea();
         txtTelProv = new javax.swing.JTextField();
@@ -166,8 +166,8 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
 
         jLabel8.setText("Celular");
         PanelObjetosProveedores.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
-        PanelObjetosProveedores.add(txtContProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 250, -1));
-        PanelObjetosProveedores.add(txtCelProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 250, -1));
+        PanelObjetosProveedores.add(txtContactoProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 250, -1));
+        PanelObjetosProveedores.add(txtCelularProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 250, -1));
 
         jLabel25.setText("Proveedor Fantasía");
         PanelObjetosProveedores.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
@@ -176,7 +176,7 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
         btnAgregarCuentaBanco.setText("Agregar Cuentas y Bancos");
         PanelObjetosProveedores.add(btnAgregarCuentaBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, -1, 40));
         PanelObjetosProveedores.add(txtUbicacionProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 80, 250, -1));
-        PanelObjetosProveedores.add(txtCedProv1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 250, -1));
+        PanelObjetosProveedores.add(txtCedulaProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 250, -1));
 
         txaObservacionProv.setColumns(20);
         txaObservacionProv.setRows(5);
@@ -261,7 +261,7 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelBaseProveedores;
     private javax.swing.JPanel PanelControlRenta;
-    private javax.swing.JPanel PanelObjetosProveedores;
+    public javax.swing.JPanel PanelObjetosProveedores;
     private javax.swing.JPanel PanelOpcionesProveedores;
     public javax.swing.JButton btnAgregarArt;
     public javax.swing.JButton btnAgregarCuentaBanco;
@@ -288,9 +288,9 @@ public class Pnl_Proveedor extends javax.swing.JPanel {
     public javax.swing.JTable tblProveedores;
     public javax.swing.JTextArea txaObservacionProv;
     public javax.swing.JTextField txtBuscarProveedores;
-    public javax.swing.JTextField txtCedProv1;
-    public javax.swing.JTextField txtCelProv;
-    public javax.swing.JTextField txtContProv;
+    public javax.swing.JTextField txtCedulaProv;
+    public javax.swing.JTextField txtCelularProv;
+    public javax.swing.JTextField txtContactoProv;
     public javax.swing.JTextField txtCorreoProv;
     public javax.swing.JTextField txtProvFantasia;
     public javax.swing.JTextField txtProvReal;

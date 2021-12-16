@@ -58,6 +58,7 @@ public class Pnl_3 extends javax.swing.JPanel {
         txaCuentasBancosPorComprar = new javax.swing.JTextArea();
         cmbProveedores = new javax.swing.JComboBox<>();
         codPorComprar = new javax.swing.JLabel();
+        codProveedor = new javax.swing.JLabel();
 
         scpPorComprar.setViewportView(tblPorComprar);
 
@@ -220,6 +221,8 @@ public class Pnl_3 extends javax.swing.JPanel {
 
         codPorComprar.setText("NA");
 
+        codProveedor.setText("NA");
+
         javax.swing.GroupLayout pnlPorComprarLayout = new javax.swing.GroupLayout(pnlPorComprar);
         pnlPorComprar.setLayout(pnlPorComprarLayout);
         pnlPorComprarLayout.setHorizontalGroup(
@@ -230,6 +233,8 @@ public class Pnl_3 extends javax.swing.JPanel {
                     .addGroup(pnlPorComprarLayout.createSequentialGroup()
                         .addComponent(PanelControlPorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(codProveedor)
+                        .addGap(18, 18, 18)
                         .addComponent(codPorComprar))
                     .addComponent(scpPorComprar, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(PanelBasePorComprar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -243,7 +248,9 @@ public class Pnl_3 extends javax.swing.JPanel {
                 .addGap(6, 6, 6)
                 .addGroup(pnlPorComprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(PanelControlPorComprar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(codPorComprar))
+                    .addGroup(pnlPorComprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(codPorComprar)
+                        .addComponent(codProveedor)))
                 .addGap(12, 12, 12)
                 .addComponent(scpPorComprar, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
                 .addGap(15, 15, 15))
@@ -267,7 +274,7 @@ public class Pnl_3 extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelBasePorComprar;
     private javax.swing.JPanel PanelControlPorComprar;
-    private javax.swing.JPanel PanelObjetosPorComprar;
+    public javax.swing.JPanel PanelObjetosPorComprar;
     private javax.swing.JPanel PanelOpcionesPorComprar;
     public javax.swing.JButton btnEliminarPorComprar;
     public javax.swing.JButton btnInsertarPorComprar;
@@ -277,6 +284,7 @@ public class Pnl_3 extends javax.swing.JPanel {
     public javax.swing.JComboBox<String> cmbBusquedaPorComprar;
     public javax.swing.JComboBox<String> cmbProveedores;
     public javax.swing.JLabel codPorComprar;
+    public javax.swing.JLabel codProveedor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
@@ -287,11 +295,11 @@ public class Pnl_3 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel96;
     private javax.swing.JLabel lblLugarr9;
-    private javax.swing.JPanel panelProveedores;
+    public javax.swing.JPanel panelProveedores;
     private javax.swing.JPanel pnlPorComprar;
-    private javax.swing.JScrollPane scpObservacionesPorComprar;
+    public javax.swing.JScrollPane scpObservacionesPorComprar;
     public javax.swing.JScrollPane scpPorComprar;
-    private javax.swing.JScrollPane spnBancosCuentasPorComprar;
+    public javax.swing.JScrollPane spnBancosCuentasPorComprar;
     public javax.swing.JTable tblPorComprar;
     public javax.swing.JTextArea txaCuentasBancosPorComprar;
     public javax.swing.JTextArea txaObservacionPorComprar;
