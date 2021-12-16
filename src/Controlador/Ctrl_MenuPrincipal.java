@@ -3,6 +3,8 @@ package Controlador;
 import Consultas.*;
 import Modelo.*;
 import Vista.Frames.*;
+import Vista.JDialogs.AgregarArticulo;
+import Vista.JDialogs.AgregarCuentaBanco;
 import Vista.Paneles.*;
 import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.awt.event.ActionEvent;
@@ -171,7 +173,7 @@ public class Ctrl_MenuPrincipal implements ActionListener {
 
             ResetearPanel();
             panel3.setSize(frameMenu.pnl_prin.getSize());
-            Ctrl_PorComprar porComprar = new Ctrl_PorComprar(panel3, consultas);
+            Ctrl_PorComprar porComprar = new Ctrl_PorComprar(panel3, consultas, modEmpleado);
 
             frameMenu.pnl_prin.add(panel3);
         }
@@ -192,10 +194,13 @@ public class Ctrl_MenuPrincipal implements ActionListener {
 
         if (e.getSource() == frameMenu.btnProveedores) {
             Pnl_Proveedor panelProveedor = new Pnl_Proveedor();
-
+            Consultas_Proveedores consultas = new Consultas_Proveedores();
+            AgregarArticulo ar = new AgregarArticulo(frameMenu, true);
+            AgregarCuentaBanco acb = new AgregarCuentaBanco(frameMenu, true);
+            
             panelProveedor.setSize(frameMenu.pnl_prin.getSize());
             ResetearPanel();
-            Ctrl_Proveedores proveedor = new Ctrl_Proveedores(panelProveedor);
+            Ctrl_Proveedores proveedor = new Ctrl_Proveedores(panelProveedor, consultas, acb, ar);
 
             frameMenu.pnl_prin.add(panelProveedor);
         }

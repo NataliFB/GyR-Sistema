@@ -27,18 +27,11 @@ END
 -- Procedimiento para insertar artículos
 GO
 CREATE PROCEDURE insertar_articulos
-	@articulo VARCHAR(50)
+	@articulo VARCHAR(50), @cod_proovedor INT
 AS BEGIN
-	INSERT INTO articulos VALUES (@articulo)
+	INSERT INTO articulos VALUES (@articulo, @cod_proovedor)
 END
--------------------------------------------------------------------------------------------------------------------------------------------
--- Procedimiento para rellenar la tabla intermedia de articulos-proveedores
-GO
-CREATE PROCEDURE insertar_proveedor_articulos
-	@cod_articulo INT, @cod_proveedor INT
-AS BEGIN
-	INSERT INTO articulos_proveedores VALUES (@cod_proveedor, @cod_articulo)
-END
+
 -------------------------------------------------------------------------------------------------------------------------------------------
 -- Procedimiento para borrar un proveedor
 GO
@@ -52,11 +45,11 @@ END
 -------------------------------------------------------------------------------------------------------------------------------------------
 -- Actualizar proveedor
 GO
-CREATE PROCEDURE actualizar_proveedor
+CREATE PROCEDURE modificar_proveedor
 	@cod_proveedor INT, @proveedor_real VARCHAR(100), @proveedor_fantasia VARCHAR(100), @correo VARCHAR(50), @telefono INT, @celular INT, 
 	@cedula INT, @contacto VARCHAR(50), @ubicacion VARCHAR(100), @observaciones VARCHAR(100)
 AS BEGIN
-	UPDATE proveedores SET proveedor_real = @proveedor_real, cod_proveedor = @cod_proveedor, correo = @correo, telefono = @telefono, celular = @celular,
+	UPDATE proveedores SET proveedor_real = @proveedor_real, correo = @correo, telefono = @telefono, celular = @celular,
 	cedula = @cedula, contacto = @contacto, ubicacion = @ubicacion, observaciones = @observaciones WHERE cod_proveedor = @cod_proveedor
 END
 
@@ -74,7 +67,6 @@ END
 -- Mostrar proveedores
 GO
 CREATE PROCEDURE mostrar_proveedores
-	@filtro VARCHAR(100)
 AS BEGIN
 	SELECT cod_proveedor AS 'Código de proveedor', proveedor_real AS 'Proveedor Real', proveedor_fantasia AS 'Proveedor Fantasia',
 	correo AS 'Correo', telefono AS 'Teléfono', celular AS 'Celular', cedula AS 'Cédula Jurídica', contacto AS 'Contacto', ubicacion AS 'Ubicación',
@@ -82,13 +74,12 @@ AS BEGIN
 	STUFF(
 		(SELECT ', ' + AR.nombre_articulo 
 		FROM articulos AR 
-		INNER JOIN articulos_proveedores AP ON AR.cod_articulo = AP.cod_articulo
-		WHERE proveedores.cod_proveedor = AP.cod_proveedor
+		INNER JOIN proveedores AP ON AR.cod_proveedor = AP.cod_proveedor
 		FOR XML PATH('')),
 		1, 2, '') AS 'Artículos',
 	STUFF(
 		(SELECT ', ' + bancos_cuentas.banco FROM bancos_cuentas 
-		INNER JOIN proveedores ON bancos_cuentas.cod_proveedor = proveedores.cod_proveedor
+		INNER JOIN proveedores ON bancos_cuentas.cod_proveedor = proveedores.cod_proveedor WHERE proveedores.cod_proveedor = bancos_cuentas.cod_proveedor
 		FOR XML PATH('')),
 		1, 2, '') AS 'Bancos',
 	STUFF(
@@ -97,20 +88,5 @@ AS BEGIN
 		FOR XML PATH('')),
 		1, 2, '') AS 'Cuentas'
 	FROM proveedores
-	ORDER BY
-		CASE @filtro
-			WHEN 'cod_proveedor' THEN cod_proveedor
-			WHEN 'telefono' THEN telefono
-			WHEN 'celular' THEN celular
-			WHEN 'cedula' THEN cedula
-		END,
-
-		CASE @filtro
-			WHEN 'proveedor_real' THEN proveedor_real
-			WHEN 'proveedor_fantasia' THEN proveedor_fantasia
-			WHEN 'correo' THEN correo
-			WHEN 'contacto' THEN contacto
-			WHEN 'ubicacion' THEN ubicacion
-		END
 END
 -------------------------------------------------------------------------------------------------------------------------------------------

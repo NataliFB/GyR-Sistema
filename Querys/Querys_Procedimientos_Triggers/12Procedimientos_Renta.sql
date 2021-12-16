@@ -36,7 +36,6 @@ END
 -- Mostrar renta
 GO
 CREATE PROC mostrar_renta
-	@filtro VARCHAR(100)
 AS BEGIN
 	SELECT cod_renta AS 'Código de Renta', cod_contratacion AS 'Contratación', num_facura AS 'Número de Factura', 
 	descripcion AS 'Descripción', modalidad AS 'Modalidad', p.telefono AS 'Teléfono', CONVERT(VARCHAR, fecha_renta, 100) AS 'Fecha de Renta',
@@ -54,29 +53,6 @@ AS BEGIN
 		END AS VARCHAR) AS 'Tipo de Renta',
 	p.proveedor_real AS 'Proveedor Real', p.cedula AS 'Cédula Jurídica'
 	FROM renta INNER JOIN proveedores p ON p.cod_proveedor = renta.cod_proveedor
-	ORDER BY
-		CASE @filtro
-			WHEN 'cod_renta' THEN cod_renta
-			WHEN 'num_factura' THEN num_facura
-			WHEN 'telefono' THEN p.telefono
-		END,
-
-		CASE @filtro
-			WHEN 'cod_contratacion' THEN cod_renta
-			WHEN 'descripcion' THEN descripcion
-			WHEN 'modalidad' THEN modalidad
-			WHEN 'fecha_renta' THEN CONVERT(VARCHAR, fecha_renta, 100)
-			WHEN 'nacionalidad' THEN nacionalidad
-			WHEN 'moneda' THEN CAST(CASE WHEN moneda = 0 THEN 'Colón' ELSE 'Dolar' END AS VARCHAR)
-			WHEN 'tipo_renta' THEN CAST(CASE WHEN tipo_renta = 0 THEN 'Gasto' ELSE 'Venta' END AS VARCHAR)
-			WHEN 'cod_proveedor' THEN p.cod_proveedor
-		END,
-
-		CASE @filtro
-			WHEN 'subtotal' THEN subtotal
-			WHEN 'impuesto' THEN impuesto
-			WHEN 'renta' THEN renta
-			WHEN 'total' THEN total
-		END
+	ORDER BY cod_renta
 END
 -------------------------------------------------------------------------------------------------------------------------------------------
