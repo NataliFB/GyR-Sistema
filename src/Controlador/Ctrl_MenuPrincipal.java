@@ -117,10 +117,11 @@ public class Ctrl_MenuPrincipal implements ActionListener {
      */
     private void VentanaFacturas() {
         Pnl_4 panel4 = new Pnl_4();
-
+        Consultas_Facturas consultas = new Consultas_Facturas();
+        
         panel4.setSize(frameMenu.pnl_prin.getSize());
         ResetearPanel();
-        Ctrl_Facturas facturas = new Ctrl_Facturas(panel4);
+        Ctrl_Facturas facturas = new Ctrl_Facturas(panel4, consultas);
 
         frameMenu.pnl_prin.add(panel4);
     }

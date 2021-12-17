@@ -294,7 +294,7 @@ public class Pnl_4 extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelBaseFacturas;
     private javax.swing.JPanel PanelControlFacturas;
-    private javax.swing.JPanel PanelObjetosFacturas;
+    public javax.swing.JPanel PanelObjetosFacturas;
     private javax.swing.JPanel PanelOpcionesFacturas;
     public javax.swing.ButtonGroup btgMetodo;
     public javax.swing.ButtonGroup btgMoneda;
@@ -302,9 +302,9 @@ public class Pnl_4 extends javax.swing.JPanel {
     public javax.swing.JButton btnInsertarFacturas;
     public javax.swing.JButton btnLimpiarFacturas;
     public javax.swing.JButton btnModificarFacturas;
-    private javax.swing.JButton btnRefrescarFacturas;
-    private javax.swing.JComboBox<String> cmbBusquedaFacturas;
-    private javax.swing.JLabel codFacturas;
+    public javax.swing.JButton btnRefrescarFacturas;
+    public javax.swing.JComboBox<String> cmbBusquedaFacturas;
+    public javax.swing.JLabel codFacturas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -327,10 +327,10 @@ public class Pnl_4 extends javax.swing.JPanel {
     public javax.swing.JRadioButton rbtDolares;
     public javax.swing.JRadioButton rbtEfectivo;
     public javax.swing.JRadioButton rbtTarjeta;
-    private javax.swing.JScrollPane scpFacturas;
-    private javax.swing.JTable tblFacturas;
+    public javax.swing.JScrollPane scpFacturas;
+    public javax.swing.JTable tblFacturas;
     public javax.swing.JTextField txtBancoFacturas;
-    private javax.swing.JTextField txtBuscarFacturas;
+    public javax.swing.JTextField txtBuscarFacturas;
     public javax.swing.JTextField txtContratacionFacturas;
     public javax.swing.JTextField txtDescripcionFacturas;
     public javax.swing.JTextField txtEstadoFacturas;

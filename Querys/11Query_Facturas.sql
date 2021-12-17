@@ -16,5 +16,8 @@ CREATE TABLE facturas(
 
 	cod_contratacion VARCHAR(50) NOT NULL,
 
+	renta MONEY NOT NULL,
+	descripcion VARCHAR(100) NOT NULL
+
 	FOREIGN KEY (cod_contratacion) REFERENCES contrataciones(cod_contratacion)
 )
